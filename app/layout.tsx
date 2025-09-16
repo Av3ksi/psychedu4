@@ -11,26 +11,19 @@ import { Analytics } from "@vercel/analytics/react"
 
 const geist = Geist({ subsets: ['latin'] });
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={geist.className}>
         <Analytics mode="auto" />
-        {/* <PostHogErrorBoundary>
-          <PostHogProvider> */}
-            <AuthProvider>   
-                <ProtectedRoute>
-                  <TopBar />    
-                  <main>{children}</main>
-                </ProtectedRoute>
-            </AuthProvider>
-          {/* </PostHogProvider>
-        </PostHogErrorBoundary> */}
+        <AuthProvider>   
+          <ProtectedRoute>
+            <TopBar />    
+            <main>{children}</main>
+          </ProtectedRoute>
+        </AuthProvider>
       </body>
     </html>
   );
 }
+
