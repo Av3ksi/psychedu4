@@ -1,6 +1,5 @@
 "use client";
 
-import { useAuth } from "@/contexts/AuthContext";
 import { PricingSection } from "@/components/PricingSection";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -9,7 +8,7 @@ import { motion } from "framer-motion";
 import { VideoModal } from "@/components/VideoModal";
 
 // -------------------------------------------------------------
-// Psychedu Landing Page (bereinigt, nur genutzte Imports)
+// Psychedu Landing Page (bereinigt, ohne ungenutzte Variablen)
 // -------------------------------------------------------------
 
 const workflowSections = [
@@ -74,9 +73,20 @@ const workflowSections = [
   },
 ];
 
+// Helpers
+function useSectionProgressValues(numSections: number) {
+  const scrollYProgress = 0; // dummy placeholder für deploy, kann angepasst werden
+  const section1Progress = scrollYProgress;
+  const section2Progress = scrollYProgress;
+  const section3Progress = scrollYProgress;
+  const section4Progress = scrollYProgress;
+  return [section1Progress, section2Progress, section3Progress, section4Progress];
+}
+
 export default function LandingPage() {
-  const router = useRouter();
   const [activeSection, setActiveSection] = useState("overview");
+  const sectionProgressValues = useSectionProgressValues(workflowSections.length);
+  const router = useRouter();
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   return (
@@ -98,21 +108,21 @@ export default function LandingPage() {
               >
                 <div className="relative">
                   <span
-                    className={`w-8 h-8 rounded-full flex items-center justify-center mr-2 transition-all ${
-                      activeSection === section.id
+                    className={`w-8 h-8 rounded-full flex items-center justify-center mr-2 transition-all
+                      ${activeSection === section.id
                         ? "bg-primary dark:bg-primary-light text-white"
                         : "bg-primary/10 dark:bg-primary-light/10 text-primary dark:text-primary-light group-hover:bg-primary/20 dark:group-hover:bg-primary-light/20"
-                    }`}
+                      }`}
                   >
                     {index + 1}
                   </span>
                 </div>
                 <span
-                  className={`text-sm font-medium hidden md:block whitespace-nowrap ${
-                    activeSection === section.id
+                  className={`text-sm font-medium hidden md:block whitespace-nowrap
+                    ${activeSection === section.id
                       ? "text-primary dark:text-primary-light"
                       : "text-slate-600 dark:text-slate-300 group-hover:text-primary dark:group-hover:text-primary-light"
-                  }`}
+                    }`}
                 >
                   {section.title}
                 </span>
@@ -168,12 +178,8 @@ export default function LandingPage() {
           onViewportEnter={() => setActiveSection(section.id)}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">
-              {section.title}
-            </h2>
-            <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">
-              {section.description}
-            </p>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">{section.title}</h2>
+            <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">{section.description}</p>
 
             {section.metrics && (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-12">
@@ -185,12 +191,8 @@ export default function LandingPage() {
                     transition={{ delay: i * 0.1 }}
                     className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
                   >
-                    <div className="text-3xl font-bold text-primary mb-2">
-                      {metric.value}
-                    </div>
-                    <div className="text-sm text-slate-500 dark:text-slate-400">
-                      {metric.label}
-                    </div>
+                    <div className="text-3xl font-bold text-primary mb-2">{metric.value}</div>
+                    <div className="text-sm text-slate-500 dark:text-slate-400">{metric.label}</div>
                   </motion.div>
                 ))}
               </div>
@@ -202,19 +204,11 @@ export default function LandingPage() {
       ))}
 
       {/* CTA */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        className="relative py-20"
-      >
+      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="relative py-20">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-light/10 to-accent-light/10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="bg-white dark:bg-neutral-dark rounded-xl shadow-xl p-12 border border-slate-200 dark:border-slate-700 text-center">
-            <motion.h2
-              initial={{ y: 20 }}
-              whileInView={{ y: 0 }}
-              className="text-3xl font-bold text-slate-900 dark:text-white"
-            >
+            <motion.h2 initial={{ y: 20 }} whileInView={{ y: 0 }} className="text-3xl font-bold text-slate-900 dark:text-white">
               Ready to earn your Psychology Bachelor faster?
             </motion.h2>
             <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">
