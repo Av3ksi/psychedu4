@@ -1,21 +1,24 @@
 "use client";
 
+import { useAuth } from "@/contexts/AuthContext";
+import { PricingSection } from "@/components/PricingSection";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Link } from "react-scroll"; // Korrekt importiert
+import { Link as ScrollLink } from "react-scroll";
 import { motion } from "framer-motion";
-
-import { PricingSection } from "@/components/PricingSection";
-import { TypewriterEffect } from "@/components/TypewriterEffect";
 import { VideoModal } from "@/components/VideoModal";
 
-// Sections
+// -------------------------------------------------------------
+// Psychedu Landing Page (bereinigt, nur genutzte Imports)
+// -------------------------------------------------------------
+
 const workflowSections = [
   {
     id: "overview",
     title: "Psychedu Overview",
-    description: "Get your Psychology Bachelor online — faster. Multilingual learning, guided study plans, and pro support.",
-    bgColor: "bg-white dark:bg-[#0B1120]"
+    description:
+      "Get your Psychology Bachelor online — faster. Multilingual learning, guided study plans, and pro support.",
+    bgColor: "bg-white dark:bg-[#0B1120]",
   },
   {
     id: "authentication",
@@ -25,8 +28,8 @@ const workflowSections = [
     metrics: [
       { label: "Languages", value: "All" },
       { label: "Study Duration", value: "~12 mo" },
-      { label: "Progress Tracking", value: "Real-time" }
-    ]
+      { label: "Progress Tracking", value: "Real-time" },
+    ],
   },
   {
     id: "payments",
@@ -36,37 +39,39 @@ const workflowSections = [
     metrics: [
       { label: "Monthly", value: "20" },
       { label: "Yearly", value: "200" },
-      { label: "Trial", value: "Yes" }
-    ]
+      { label: "Trial", value: "Yes" },
+    ],
   },
   {
     id: "database",
     title: "Learning Platform",
-    description: "Structured modules, quizzes, and resources aligned to bachelor-level psychology.",
+    description:
+      "Structured modules, quizzes, and resources aligned to bachelor-level psychology.",
     bgColor: "bg-slate-50 dark:bg-[#0B1120]",
     metrics: [
       { label: "Modules", value: "50+" },
       { label: "Assessments", value: "Weekly" },
-      { label: "Resources", value: "Library" }
-    ]
+      { label: "Resources", value: "Library" },
+    ],
   },
   {
     id: "features",
     title: "Multilingual & Support",
-    description: "Learn in every language with live tutoring, office hours, and community.",
+    description:
+      "Learn in every language with live tutoring, office hours, and community.",
     bgColor: "bg-white dark:bg-[#0B1120]",
     metrics: [
       { label: "Languages", value: "Global" },
       { label: "Tutors", value: "Experts" },
-      { label: "Office Hours", value: "Weekly" }
-    ]
+      { label: "Office Hours", value: "Weekly" },
+    ],
   },
   {
     id: "pricing",
     title: "Plans",
     description: "20/month or 200/year — pick what fits",
-    bgColor: "bg-slate-50 dark:bg-[#0B1120]"
-  }
+    bgColor: "bg-slate-50 dark:bg-[#0B1120]",
+  },
 ];
 
 export default function LandingPage() {
@@ -81,11 +86,11 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4 overflow-x-auto hide-scrollbar">
             {workflowSections.map((section, index) => (
-              <Link
+              <ScrollLink
                 key={section.id}
                 to={section.id}
-                spy={true}
-                smooth={true}
+                spy
+                smooth
                 offset={-100}
                 duration={500}
                 onSetActive={() => setActiveSection(section.id)}
@@ -93,23 +98,25 @@ export default function LandingPage() {
               >
                 <div className="relative">
                   <span
-                    className={`w-8 h-8 rounded-full flex items-center justify-center mr-2 transition-all
-                      ${activeSection === section.id
+                    className={`w-8 h-8 rounded-full flex items-center justify-center mr-2 transition-all ${
+                      activeSection === section.id
                         ? "bg-primary dark:bg-primary-light text-white"
-                        : "bg-primary/10 dark:bg-primary-light/10 text-primary dark:text-primary-light group-hover:bg-primary/20 dark:group-hover:bg-primary-light/20"}`}
+                        : "bg-primary/10 dark:bg-primary-light/10 text-primary dark:text-primary-light group-hover:bg-primary/20 dark:group-hover:bg-primary-light/20"
+                    }`}
                   >
                     {index + 1}
                   </span>
                 </div>
                 <span
-                  className={`text-sm font-medium hidden md:block whitespace-nowrap
-                    ${activeSection === section.id
+                  className={`text-sm font-medium hidden md:block whitespace-nowrap ${
+                    activeSection === section.id
                       ? "text-primary dark:text-primary-light"
-                      : "text-slate-600 dark:text-slate-300 group-hover:text-primary dark:group-hover:text-primary-light"}`}
+                      : "text-slate-600 dark:text-slate-300 group-hover:text-primary dark:group-hover:text-primary-light"
+                  }`}
                 >
                   {section.title}
                 </span>
-              </Link>
+              </ScrollLink>
             ))}
           </div>
         </div>
@@ -161,8 +168,12 @@ export default function LandingPage() {
           onViewportEnter={() => setActiveSection(section.id)}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">{section.title}</h2>
-            <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">{section.description}</p>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">
+              {section.title}
+            </h2>
+            <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">
+              {section.description}
+            </p>
 
             {section.metrics && (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-12">
@@ -174,8 +185,12 @@ export default function LandingPage() {
                     transition={{ delay: i * 0.1 }}
                     className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
                   >
-                    <div className="text-3xl font-bold text-primary mb-2">{metric.value}</div>
-                    <div className="text-sm text-slate-500 dark:text-slate-400">{metric.label}</div>
+                    <div className="text-3xl font-bold text-primary mb-2">
+                      {metric.value}
+                    </div>
+                    <div className="text-sm text-slate-500 dark:text-slate-400">
+                      {metric.label}
+                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -187,11 +202,19 @@ export default function LandingPage() {
       ))}
 
       {/* CTA */}
-      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="relative py-20">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        className="relative py-20"
+      >
         <div className="absolute inset-0 bg-gradient-to-br from-primary-light/10 to-accent-light/10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="bg-white dark:bg-neutral-dark rounded-xl shadow-xl p-12 border border-slate-200 dark:border-slate-700 text-center">
-            <motion.h2 initial={{ y: 20 }} whileInView={{ y: 0 }} className="text-3xl font-bold text-slate-900 dark:text-white">
+            <motion.h2
+              initial={{ y: 20 }}
+              whileInView={{ y: 0 }}
+              className="text-3xl font-bold text-slate-900 dark:text-white"
+            >
               Ready to earn your Psychology Bachelor faster?
             </motion.h2>
             <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">
