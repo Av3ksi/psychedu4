@@ -4,17 +4,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { PricingSection } from '@/components/PricingSection';
 import { useTrialStatus } from '@/hooks/useTrialStatus';
 import { TypewriterEffect } from '@/components/TypewriterEffect';
-import { FaReddit } from 'react-icons/fa';
-import {
-  FaGithub,
-  FaDiscord,
-  FaProductHunt,
-  FaXTwitter,
-  FaHackerNews,
-  FaInstagram,
-  FaTiktok,
-  FaYoutube
-} from 'react-icons/fa6';
+
 import { Lock, CreditCard, Moon } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
