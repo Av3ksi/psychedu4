@@ -7,10 +7,6 @@ import { Link as ScrollLink } from "react-scroll";
 import { motion } from "framer-motion";
 import { VideoModal } from "@/components/VideoModal";
 
-// -------------------------------------------------------------
-// Psychedu Landing Page (bereinigt, ohne ungenutzte Variablen)
-// -------------------------------------------------------------
-
 const workflowSections = [
   {
     id: "overview",
@@ -73,19 +69,8 @@ const workflowSections = [
   },
 ];
 
-// Helpers
-function useSectionProgressValues(numSections: number) {
-  const scrollYProgress = 0; // dummy placeholder für deploy, kann angepasst werden
-  const section1Progress = scrollYProgress;
-  const section2Progress = scrollYProgress;
-  const section3Progress = scrollYProgress;
-  const section4Progress = scrollYProgress;
-  return [section1Progress, section2Progress, section3Progress, section4Progress];
-}
-
 export default function LandingPage() {
   const [activeSection, setActiveSection] = useState("overview");
-  const sectionProgressValues = useSectionProgressValues(workflowSections.length);
   const router = useRouter();
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
