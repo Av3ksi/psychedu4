@@ -1,45 +1,13 @@
 "use client";
 
-import { useAuth } from '@/contexts/AuthContext';
-import { PricingSection } from '@/components/PricingSection';
-import { useTrialStatus } from '@/hooks/useTrialStatus';
-import { TypewriterEffect } from '@/components/TypewriterEffect';
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { Link } from "react-scroll"; // Korrekt importiert
+import { motion } from "framer-motion";
 
-import { Lock, CreditCard, Moon } from 'lucide-react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { Link as ScrollLink } from 'react-scroll';
-import { VideoModal } from '@/components/VideoModal';
-
-// -------------------------------------------------------------
-// Psychedu Landing Page (logic same, content adapted)
-// -------------------------------------------------------------
-
-// Workflow steps
-const workflowSteps = [
-  {
-    title: "Enroll",
-    description: "Sign up and choose monthly or yearly plan",
-    preview: <TypewriterEffect text="Creating your student account…" />
-  },
-  {
-    title: "Study Plan",
-    description: "Personalized 12-month psychology roadmap",
-    preview: <TypewriterEffect text="Building your 1-year study plan…" />
-  },
-  {
-    title: "Learn Anywhere",
-    description: "Multilingual content, live sessions, assessments",
-    preview: <TypewriterEffect text="Launching your next module…" />
-  },
-  {
-    title: "Graduate",
-    description: "Fast-track to your psychology bachelor",
-    preview: <TypewriterEffect text="Preparing graduation checklist…" />
-  }
-];
+import { PricingSection } from "@/components/PricingSection";
+import { TypewriterEffect } from "@/components/TypewriterEffect";
+import { VideoModal } from "@/components/VideoModal";
 
 // Sections
 const workflowSections = [
@@ -101,22 +69,9 @@ const workflowSections = [
   }
 ];
 
-// Helpers
-function useSectionProgressValues(numSections: number) {
-  const { scrollYProgress } = useScroll();
-  const section1Progress = useTransform(scrollYProgress, [0 / numSections, 1 / numSections], [0, 1]);
-  const section2Progress = useTransform(scrollYProgress, [1 / numSections, 2 / numSections], [0, 1]);
-  const section3Progress = useTransform(scrollYProgress, [2 / numSections, 3 / numSections], [0, 1]);
-  const section4Progress = useTransform(scrollYProgress, [3 / numSections, 4 / numSections], [0, 1]);
-  return [section1Progress, section2Progress, section3Progress, section4Progress];
-}
-
 export default function LandingPage() {
-  const { user } = useAuth();
-  const { isInTrial } = useTrialStatus();
-  const [activeSection, setActiveSection] = useState("overview");
-  const sectionProgressValues = useSectionProgressValues(workflowSections.length);
   const router = useRouter();
+  const [activeSection, setActiveSection] = useState("overview");
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   return (
@@ -126,11 +81,11 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4 overflow-x-auto hide-scrollbar">
             {workflowSections.map((section, index) => (
-              <ScrollLink
+              <Link
                 key={section.id}
                 to={section.id}
-                spy
-                smooth
+                spy={true}
+                smooth={true}
                 offset={-100}
                 duration={500}
                 onSetActive={() => setActiveSection(section.id)}
@@ -140,8 +95,8 @@ export default function LandingPage() {
                   <span
                     className={`w-8 h-8 rounded-full flex items-center justify-center mr-2 transition-all
                       ${activeSection === section.id
-                        ? 'bg-primary dark:bg-primary-light text-white'
-                        : 'bg-primary/10 dark:bg-primary-light/10 text-primary dark:text-primary-light group-hover:bg-primary/20 dark:group-hover:bg-primary-light/20'}`}
+                        ? "bg-primary dark:bg-primary-light text-white"
+                        : "bg-primary/10 dark:bg-primary-light/10 text-primary dark:text-primary-light group-hover:bg-primary/20 dark:group-hover:bg-primary-light/20"}`}
                   >
                     {index + 1}
                   </span>
@@ -149,12 +104,12 @@ export default function LandingPage() {
                 <span
                   className={`text-sm font-medium hidden md:block whitespace-nowrap
                     ${activeSection === section.id
-                      ? 'text-primary dark:text-primary-light'
-                      : 'text-slate-600 dark:text-slate-300 group-hover:text-primary dark:group-hover:text-primary-light'}`}
+                      ? "text-primary dark:text-primary-light"
+                      : "text-slate-600 dark:text-slate-300 group-hover:text-primary dark:group-hover:text-primary-light"}`}
                 >
                   {section.title}
                 </span>
-              </ScrollLink>
+              </Link>
             ))}
           </div>
         </div>
@@ -167,7 +122,9 @@ export default function LandingPage() {
           <div className="relative pt-20 pb-16 sm:pb-24 text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white">
               <span className="block">Psychedu — Psychology Bachelor</span>
-              <span className="block text-primary dark:text-primary-light">Get your degree online in ~1 year</span>
+              <span className="block text-primary dark:text-primary-light">
+                Get your degree online in ~1 year
+              </span>
             </h1>
             <p className="mt-6 max-w-2xl mx-auto text-lg text-slate-600 dark:text-slate-300">
               Study faster with a guided, multilingual program. Learn anywhere, stay on track, and graduate sooner.
@@ -182,7 +139,7 @@ export default function LandingPage() {
                 Watch Overview
               </motion.button>
               <button
-                onClick={() => router.push('/dashboard')}
+                onClick={() => router.push("/dashboard")}
                 className="px-8 py-3 bg-white dark:bg-neutral-dark text-primary dark:text-primary-light border-2 border-primary rounded-lg shadow-lg"
               >
                 Start Free Trial
@@ -252,7 +209,7 @@ export default function LandingPage() {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                onClick={() => router.push('/dashboard')}
+                onClick={() => router.push("/dashboard")}
                 className="px-8 py-3 bg-white dark:bg-neutral-dark text-primary dark:text-primary-light border-2 border-primary rounded-lg shadow-lg"
               >
                 Start Free Trial
