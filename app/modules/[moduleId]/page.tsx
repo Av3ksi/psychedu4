@@ -1,13 +1,13 @@
 'use client';
 
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation'; // useRouter wurde hier entfernt
 import { useSubscription } from '@/hooks/useSubscription';
 import LoadingSpinner from '@/components/LoadingSpinner';
 import Link from 'next/link';
 
 export default function ModuleDetailPage() {
   const { moduleId } = useParams();
-  const router = useRouter();
+  // const router = useRouter(); // --- DIESE ZEILE WURDE ENTFERNT ---
   const { subscription, isLoading: isSubLoading } = useSubscription();
 
   if (isSubLoading) {
