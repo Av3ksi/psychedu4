@@ -6,7 +6,7 @@ import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useSubscription } from '@/hooks/useSubscription';
 import { useTrialStatus } from '@/hooks/useTrialStatus';
-import { BuyMeCoffee } from './BuyMeCoffee';
+// import { BuyMeCoffee } from './BuyMeCoffee'; // --- ENTFERNT ---
 
 export default function TopBar() {
   const { user, signOut } = useAuth();
@@ -61,14 +61,14 @@ export default function TopBar() {
           href="/"
           className="text-md sm:text-lg font-medium flex items-center gap-2 hover:opacity-80 transition-opacity"
         >
-          <span className="text-2xl">🎬</span>
-          <span className="font-sans">NextTemp</span>
+          <span className="text-2xl">🎓</span>
+          <span className="font-sans">Psychedu</span>
         </Link>
 
         <div className="flex items-center gap-4">
           {!user ? (
             <>
-              <BuyMeCoffee />
+              {/* <BuyMeCoffee /> --- ENTFERNT --- */}
               <Link
                 href="/login"
                 className="px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-dark rounded-full transition-colors shadow-subtle hover:shadow-hover"
@@ -94,7 +94,7 @@ export default function TopBar() {
                   </button>
                 )}
 
-              <BuyMeCoffee />
+              {/* <BuyMeCoffee /> --- ENTFERNT --- */}
 
               {/* "Start Free Trial / Start Building" button */}
               {!isLoadingSubscription && (subscription || isInTrial) && pathname !== '/dashboard' && (
@@ -158,4 +158,3 @@ export default function TopBar() {
     </div>
   );
 }
-
