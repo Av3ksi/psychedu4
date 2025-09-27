@@ -1,4 +1,3 @@
-// app/profile/page.tsx (bereinigt, ohne Trial)
 'use client';
 
 import { useEffect, useState, Suspense } from 'react';
@@ -26,6 +25,9 @@ function CustomStripeButton({ priceId, label, planName, price }: CustomStripeBut
   const handleCheckout = async () => {
     setLoading(true);
     try {
+      if (!priceId) {
+        throw new Error('Price ID is missing.');
+      }
       const { data: { session } } = await supabase.auth.getSession();
       if (!session) {
         throw new Error('User is not authenticated.');
@@ -52,7 +54,7 @@ function CustomStripeButton({ priceId, label, planName, price }: CustomStripeBut
   return (
     <button
       onClick={handleCheckout}
-      disabled={loading}
+      disabled={loading || !priceId}
       className="w-full text-left p-4 border rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 disabled:opacity-50 transition-all"
     >
       <div className="flex justify-between items-center">
@@ -179,7 +181,7 @@ function ProfileContent() {
               <div className="space-y-3 text-slate-800 dark:text-slate-200">
                 <div className="flex justify-between">
                     <span className="font-medium">Status:</span>
-                    <span className="font-bold text-green-500">
+                    <span className={`font-bold text-green-500`}>
                         Premium Aktiv
                     </span>
                 </div>
@@ -222,14 +224,15 @@ function ProfileContent() {
                 <p className="text-center">Wähle einen Plan, um vollen Zugriff zu erhalten.</p>
                 
                 <div className="space-y-3 pt-4">
+                  {/* --- KORREKTUR HIER --- */}
                   <CustomStripeButton 
-                    priceId={process.env.NEXT_PUBLIC_STRIPE_MONTHLY_PRICE_ID!}
+                    priceId={process.env.NEXT_PUBLIC_STRIPE_MONTHLY_PRICE_ID || ''}
                     label="Abonnieren"
                     planName="Monats-Abo"
                     price="20 CHF / Monat"
                   />
                   <CustomStripeButton 
-                    priceId={process.env.NEXT_PUBLIC_STRIPE_YEARLY_PRICE_ID!}
+                    priceId={process.env.NEXT_PUBLIC_STRIPE_YEARLY_PRICE_ID || ''}
                     label="Abonnieren"
                     planName="Jahres-Abo"
                     price="200 CHF / Jahr"
