@@ -1,3 +1,4 @@
+// app/profile/page.tsx (FINALE, KORRIGIERTE VERSION)
 'use client';
 
 import { useEffect, useState, Suspense } from 'react';
@@ -10,7 +11,9 @@ import LoadingSpinner from '@/components/LoadingSpinner';
 import { ErrorBoundary } from 'react-error-boundary';
 import { fetchProfileProgress } from '@/utils/modules';
 
-// CustomStripeButton Komponente bleibt unverändert...
+const monthlyPriceId = process.env.NEXT_PUBLIC_STRIPE_MONTHLY_PRICE_ID || '';
+const yearlyPriceId = process.env.NEXT_PUBLIC_STRIPE_YEARLY_PRICE_ID || '';
+
 interface CustomStripeButtonProps {
   priceId: string;
   label: string;
@@ -26,7 +29,7 @@ function CustomStripeButton({ priceId, label, planName, price }: CustomStripeBut
     setLoading(true);
     try {
       if (!priceId) {
-        throw new Error('Price ID is missing.');
+        throw new Error('Price ID is missing. Please check your environment variables.');
       }
       const { data: { session } } = await supabase.auth.getSession();
       if (!session) {
@@ -181,14 +184,14 @@ function ProfileContent() {
               <div className="space-y-3 text-slate-800 dark:text-slate-200">
                 <div className="flex justify-between">
                     <span className="font-medium">Status:</span>
-                    <span className={`font-bold text-green-500`}>
+                    <span className="font-bold text-green-500">
                         Premium Aktiv
                     </span>
                 </div>
                 <div className="flex justify-between">
                     <span className="font-medium">Aktueller Plan:</span>
                     <span>
-                        {subscription.price_id === process.env.NEXT_PUBLIC_STRIPE_MONTHLY_PRICE_ID ? 'Monats-Abo' : 'Jahres-Abo'}
+                        {subscription.price_id === monthlyPriceId ? 'Monats-Abo' : 'Jahres-Abo'}
                     </span>
                 </div>
                  <div className="flex justify-between">
@@ -224,15 +227,14 @@ function ProfileContent() {
                 <p className="text-center">Wähle einen Plan, um vollen Zugriff zu erhalten.</p>
                 
                 <div className="space-y-3 pt-4">
-                  {/* --- KORREKTUR HIER --- */}
                   <CustomStripeButton 
-                    priceId={process.env.NEXT_PUBLIC_STRIPE_MONTHLY_PRICE_ID || ''}
+                    priceId={monthlyPriceId}
                     label="Abonnieren"
                     planName="Monats-Abo"
                     price="20 CHF / Monat"
                   />
                   <CustomStripeButton 
-                    priceId={process.env.NEXT_PUBLIC_STRIPE_YEARLY_PRICE_ID || ''}
+                    priceId={yearlyPriceId}
                     label="Abonnieren"
                     planName="Jahres-Abo"
                     price="200 CHF / Jahr"
