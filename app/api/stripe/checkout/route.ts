@@ -1,10 +1,9 @@
-// app/api/stripe/checkout/route.ts (korrigiert)
+// app/api/stripe/checkout/route.ts (repariert & ohne Trial)
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import Stripe from 'stripe';
 import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
-// import { supabaseAdmin } from '@/utils/supabase-admin'; // ENTFERNT
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
@@ -27,7 +26,7 @@ export async function POST(request: NextRequest) {
       const token = authHeader.replace('Bearer ', '');
       const { data: userData, error } = await supabase.auth.getUser(token);
       if (!error && userData.user) {
-        user = userData.user;
+        user = userData.user; // KORREKTUR: Diese Zeile wurde repariert
       }
     }
   }
@@ -41,9 +40,7 @@ export async function POST(request: NextRequest) {
       payment_method_types: ['card'],
       line_items: [{ price: priceId, quantity: 1 }],
       mode: 'subscription',
-      subscription_data: {
-        trial_period_days: 3,
-      },
+      // subscription_data: { trial_period_days: 3 }, // ENTFERNT
       success_url: `${process.env.NEXT_PUBLIC_APP_URL}/profile?payment=success`,
       cancel_url: `${process.env.NEXT_PUBLIC_APP_URL}/profile`,
       client_reference_id: user.id,

@@ -1,4 +1,4 @@
-// app/profile/page.tsx (bereinigt)
+// app/profile/page.tsx (bereinigt, ohne Trial)
 'use client';
 
 import { useEffect, useState, Suspense } from 'react';
@@ -6,13 +6,12 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useAuth } from '@/contexts/AuthContext';
 import { useSubscription } from '@/hooks/useSubscription';
-// import { useTrialStatus } from '@/hooks/useTrialStatus'; // ENTFERNT
 import { AccountManagement } from '@/components/AccountManagement';
 import LoadingSpinner from '@/components/LoadingSpinner';
 import { ErrorBoundary } from 'react-error-boundary';
 import { fetchProfileProgress } from '@/utils/modules';
 
-// ... (CustomStripeButton Komponente bleibt unverändert)
+// CustomStripeButton Komponente bleibt unverändert...
 interface CustomStripeButtonProps {
   priceId: string;
   label: string;
@@ -78,12 +77,6 @@ function ProfileContent() {
   const paymentStatus = searchParams.get('payment');
   const [prog, setProg] = useState({ percent: 0, completed_modules: 0, total_modules: 10 });
 
-  // Die entfernten, ungenutzten States:
-  // const { isInTrial, trialEndTime } = useTrialStatus();
-  // const [isCancelModalOpen, setIsCancelModalOpen] = useState(false);
-  // const [isCancelling, setIsCancelling] = useState(false);
-  // const [error, setError] = useState<string | null>(null);
-
   useEffect(() => {
     if (!user?.id) return;
     fetchProfileProgress().then(setProg).catch(() => setProg({ percent: 0, completed_modules: 0, total_modules: 10 }));
@@ -112,7 +105,7 @@ function ProfileContent() {
   useEffect(() => {
     if (user?.id) fetchSubscription();
   }, [user?.id, fetchSubscription]);
-
+    
   const handleReactivateSubscription = async () => {
     if (!subscription?.stripe_subscription_id) return;
     try {
@@ -144,7 +137,6 @@ function ProfileContent() {
 
           <h1 className="text-3xl font-bold mb-8 text-slate-900 dark:text-white">Profil</h1>
           <AccountManagement />
-
           <div className="bg-white dark:bg-neutral-dark border border-slate-200 dark:border-slate-700 rounded-lg shadow p-6 mb-8">
             <div className="flex items-center justify-between mb-3">
               <h2 className="text-xl font-semibold text-slate-900 dark:text-white">Studienfortschritt</h2>
@@ -176,7 +168,6 @@ function ProfileContent() {
             </div>
           </div>
 
-
           <div className="bg-white dark:bg-neutral-dark border border-slate-200 dark:border-slate-700 rounded-lg shadow p-6 mb-8">
             <h2 className="text-xl font-semibold mb-4 text-slate-900 dark:text-white">Abonnement-Status</h2>
             {isLoadingSubscription ? (
@@ -188,8 +179,8 @@ function ProfileContent() {
               <div className="space-y-3 text-slate-800 dark:text-slate-200">
                 <div className="flex justify-between">
                     <span className="font-medium">Status:</span>
-                    <span className={`font-bold ${subscription.status === 'trialing' ? 'text-yellow-500' : 'text-green-500'}`}>
-                        {subscription.status === 'trialing' ? 'Premium Trial' : 'Premium Aktiv'}
+                    <span className="font-bold text-green-500">
+                        Premium Aktiv
                     </span>
                 </div>
                 <div className="flex justify-between">
@@ -233,13 +224,13 @@ function ProfileContent() {
                 <div className="space-y-3 pt-4">
                   <CustomStripeButton 
                     priceId={process.env.NEXT_PUBLIC_STRIPE_MONTHLY_PRICE_ID!}
-                    label="3 Tage testen"
+                    label="Abonnieren"
                     planName="Monats-Abo"
                     price="20 CHF / Monat"
                   />
                   <CustomStripeButton 
                     priceId={process.env.NEXT_PUBLIC_STRIPE_YEARLY_PRICE_ID!}
-                    label="3 Tage testen"
+                    label="Abonnieren"
                     planName="Jahres-Abo"
                     price="200 CHF / Jahr"
                   />
