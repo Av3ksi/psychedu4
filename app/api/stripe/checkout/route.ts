@@ -1,10 +1,10 @@
-// app/api/stripe/checkout/route.ts (NEUE, ROBUSTERE VERSION)
+// app/api/stripe/checkout/route.ts (korrigiert)
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import Stripe from 'stripe';
 import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
-import { supabaseAdmin } from '@/utils/supabase-admin'; // Admin-Client für Fallback
+// import { supabaseAdmin } from '@/utils/supabase-admin'; // ENTFERNT
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
@@ -15,18 +15,13 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Price ID is required' }, { status: 400 });
   }
 
-  let user = null;
-
-  // VERSUCH 1: Benutzer über Cookies holen (Standardweg)
+  let user;
   const supabase = createRouteHandlerClient({ cookies });
   const { data: { session } } = await supabase.auth.getSession();
+  
   if (session?.user) {
     user = session.user;
-  }
-
-  // VERSUCH 2 (FALLBACK): Benutzer über Authorization-Header holen
-  // Dies ist sehr nützlich für localhost und direkte API-Aufrufe.
-  if (!user) {
+  } else {
     const authHeader = request.headers.get('Authorization');
     if (authHeader) {
       const token = authHeader.replace('Bearer ', '');
@@ -36,9 +31,8 @@ export async function POST(request: NextRequest) {
       }
     }
   }
-  
+
   if (!user) {
-    // Wenn beide Methoden fehlschlagen, geben wir den Fehler zurück.
     return NextResponse.json({ error: 'User not found' }, { status: 401 });
   }
 
@@ -47,6 +41,9 @@ export async function POST(request: NextRequest) {
       payment_method_types: ['card'],
       line_items: [{ price: priceId, quantity: 1 }],
       mode: 'subscription',
+      subscription_data: {
+        trial_period_days: 3,
+      },
       success_url: `${process.env.NEXT_PUBLIC_APP_URL}/profile?payment=success`,
       cancel_url: `${process.env.NEXT_PUBLIC_APP_URL}/profile`,
       client_reference_id: user.id,

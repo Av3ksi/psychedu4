@@ -14,6 +14,7 @@ export interface Subscription {
   current_period_end: string;
   created_at: string;
   updated_at: string;
+  price_id: string; // <-- HIER IST DIE HINZUGEFÜGTE ZEILE
 }
 
 export function useSubscription() {
@@ -175,4 +176,4 @@ export function useSubscription() {
     }, [debouncedSyncWithStripe]),
     fetchSubscription // Expose fetch function for manual refresh
   };
-} 
+}

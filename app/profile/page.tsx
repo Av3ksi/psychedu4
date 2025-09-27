@@ -1,4 +1,4 @@
-// app/profile/page.tsx (aktualisiert mit detailliertem Abo-Status)
+// app/profile/page.tsx (bereinigt)
 'use client';
 
 import { useEffect, useState, Suspense } from 'react';
@@ -6,13 +6,13 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useAuth } from '@/contexts/AuthContext';
 import { useSubscription } from '@/hooks/useSubscription';
-import { useTrialStatus } from '@/hooks/useTrialStatus';
+// import { useTrialStatus } from '@/hooks/useTrialStatus'; // ENTFERNT
 import { AccountManagement } from '@/components/AccountManagement';
 import LoadingSpinner from '@/components/LoadingSpinner';
 import { ErrorBoundary } from 'react-error-boundary';
 import { fetchProfileProgress } from '@/utils/modules';
 
-// Eigener Button für Stripe Checkout
+// ... (CustomStripeButton Komponente bleibt unverändert)
 interface CustomStripeButtonProps {
   priceId: string;
   label: string;
@@ -31,7 +31,6 @@ function CustomStripeButton({ priceId, label, planName, price }: CustomStripeBut
       if (!session) {
         throw new Error('User is not authenticated.');
       }
-
       const response = await fetch('/api/stripe/checkout', {
         method: 'POST',
         headers: {
@@ -40,16 +39,9 @@ function CustomStripeButton({ priceId, label, planName, price }: CustomStripeBut
         },
         body: JSON.stringify({ priceId }),
       });
-
       const { url, error } = await response.json();
-
-      if (error) {
-        throw new Error(error);
-      }
-
-      if (url) {
-        window.location.href = url;
-      }
+      if (error) throw new Error(error);
+      if (url) window.location.href = url;
     } catch (error) {
       console.error('Checkout failed:', error);
       alert(`Ein Fehler ist aufgetreten: ${error instanceof Error ? error.message : 'Unbekannter Fehler'}`);
@@ -77,17 +69,20 @@ function CustomStripeButton({ priceId, label, planName, price }: CustomStripeBut
   );
 }
 
+
 function ProfileContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { user } = useAuth();
   const { subscription, isLoading: isLoadingSubscription, syncWithStripe, fetchSubscription } = useSubscription();
-  const { isInTrial, trialEndTime } = useTrialStatus();
   const paymentStatus = searchParams.get('payment');
-  const [isCancelModalOpen, setIsCancelModalOpen] = useState(false);
-  const [isCancelling, setIsCancelling] = useState(false);
-  const [error, setError] = useState<string | null>(null);
   const [prog, setProg] = useState({ percent: 0, completed_modules: 0, total_modules: 10 });
+
+  // Die entfernten, ungenutzten States:
+  // const { isInTrial, trialEndTime } = useTrialStatus();
+  // const [isCancelModalOpen, setIsCancelModalOpen] = useState(false);
+  // const [isCancelling, setIsCancelling] = useState(false);
+  // const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!user?.id) return;
@@ -104,10 +99,8 @@ function ProfileContent() {
     if (subscription?.stripe_subscription_id) {
       try {
         syncWithStripe(subscription.stripe_subscription_id);
-        console.log('Subscription synced with Stripe successfully');
       } catch (err: unknown) {
         console.error('Error syncing with Stripe:', err);
-        setError('Unable to load subscription details');
       }
     }
   }, [syncWithStripe, subscription?.stripe_subscription_id]);
@@ -119,26 +112,6 @@ function ProfileContent() {
   useEffect(() => {
     if (user?.id) fetchSubscription();
   }, [user?.id, fetchSubscription]);
-
-
-  const handleCancelSubscription = async () => {
-    if (!subscription?.stripe_subscription_id) return;
-    setIsCancelling(true);
-    try {
-      const response = await fetch('/api/stripe/cancel', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ subscriptionId: subscription.stripe_subscription_id }),
-      });
-      if (!response.ok) throw new Error('Failed to cancel subscription');
-      setIsCancelModalOpen(false);
-      router.refresh();
-    } catch (error) {
-      console.error('Error canceling subscription:', error);
-    } finally {
-      setIsCancelling(false);
-    }
-  };
 
   const handleReactivateSubscription = async () => {
     if (!subscription?.stripe_subscription_id) return;
@@ -212,12 +185,11 @@ function ProfileContent() {
                   <span>Lade Abo-Details...</span>
               </div>
             ) : subscription ? (
-              // --- ANZEIGE FÜR AKTIVE ABOS ---
               <div className="space-y-3 text-slate-800 dark:text-slate-200">
                 <div className="flex justify-between">
                     <span className="font-medium">Status:</span>
-                    <span className="font-bold text-green-500">
-                        Premium Aktiv
+                    <span className={`font-bold ${subscription.status === 'trialing' ? 'text-yellow-500' : 'text-green-500'}`}>
+                        {subscription.status === 'trialing' ? 'Premium Trial' : 'Premium Aktiv'}
                     </span>
                 </div>
                 <div className="flex justify-between">
@@ -232,7 +204,6 @@ function ProfileContent() {
                         {new Date(subscription.current_period_end).toLocaleDateString()}
                     </span>
                 </div>
-
                  {subscription.cancel_at_period_end ? (
                   <div className="mt-4 p-4 bg-yellow-50 dark:bg-yellow-900/30 rounded-lg">
                     <p className="text-yellow-700 dark:text-yellow-400 mb-2">
@@ -246,16 +217,10 @@ function ProfileContent() {
                     </button>
                   </div>
                 ) : (
-                  <button
-                    onClick={() => setIsCancelModalOpen(true)}
-                    className="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg mt-4"
-                  >
-                    Abo kündigen
-                  </button>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 pt-4">Du kannst dein Abo in den Stripe-Einstellungen verwalten.</p>
                 )}
               </div>
             ) : (
-              // --- ANZEIGE FÜR NICHT-PREMIUM NUTZER ---
               <div className="mt-4 space-y-4 text-slate-800 dark:text-slate-200">
                  <div className="flex justify-between text-slate-800 dark:text-slate-200">
                     <span className="font-medium">Status:</span>
@@ -263,23 +228,18 @@ function ProfileContent() {
                         Kein Premium
                     </span>
                 </div>
-
-                {isInTrial ? (
-                  <p className="text-yellow-700 dark:text-yellow-400 text-center">Du befindest dich in deiner 48-Stunden-Testphase.</p>
-                ) : (
-                  <p className="text-center">Wähle einen Plan, um vollen Zugriff zu erhalten.</p>
-                )}
+                <p className="text-center">Wähle einen Plan, um vollen Zugriff zu erhalten.</p>
                 
                 <div className="space-y-3 pt-4">
                   <CustomStripeButton 
                     priceId={process.env.NEXT_PUBLIC_STRIPE_MONTHLY_PRICE_ID!}
-                    label="Abonnieren"
+                    label="3 Tage testen"
                     planName="Monats-Abo"
                     price="20 CHF / Monat"
                   />
                   <CustomStripeButton 
                     priceId={process.env.NEXT_PUBLIC_STRIPE_YEARLY_PRICE_ID!}
-                    label="Abonnieren"
+                    label="3 Tage testen"
                     planName="Jahres-Abo"
                     price="200 CHF / Jahr"
                   />
