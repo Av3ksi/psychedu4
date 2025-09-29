@@ -1,4 +1,4 @@
-// app/profile/page.tsx (FINALE, KORRIGIERTE VERSION)
+// app/profile/page.tsx (Stabile Version)
 'use client';
 
 import { useEffect, useState, Suspense } from 'react';
@@ -11,9 +11,11 @@ import LoadingSpinner from '@/components/LoadingSpinner';
 import { ErrorBoundary } from 'react-error-boundary';
 import { fetchProfileProgress } from '@/utils/modules';
 
+// Die Preis-IDs werden hier als Konstanten definiert.
 const monthlyPriceId = process.env.NEXT_PUBLIC_STRIPE_MONTHLY_PRICE_ID || '';
 const yearlyPriceId = process.env.NEXT_PUBLIC_STRIPE_YEARLY_PRICE_ID || '';
 
+// CustomStripeButton Komponente
 interface CustomStripeButtonProps {
   priceId: string;
   label: string;
