@@ -4,13 +4,8 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
-// --- NEU: Genaue Typ-Definitionen für unsere Daten ---
-interface QuizItem {
-  q: string;
-  a: string[];
-  correct: number;
-}
-
+// --- Genaue Typ-Definitionen für unsere Daten ---
+// 'QuizItem' wurde entfernt, da es nicht verwendet wird.
 interface ModuleContent {
   grundwissen: string;
   anwendbarkeit: string;
@@ -24,16 +19,13 @@ interface StatisticsModule {
   relevance: string;
   content: ModuleContent;
 }
-// --- ENDE DER NEUEN DEFINITIONEN ---
+// --- ENDE DER DEFINITIONEN ---
 
 
-// Wir benötigen die Daten hier erneut, um den Inhalt anzuzeigen.
-// Später kann man dies in eine geteilte Datei auslagern.
 const statisticsModules: StatisticsModule[] = [
     { id: 1, title: "Einführung & Grundbegriffe", relevance: "green", content: { grundwissen: "Hier steht die ausführliche Theorie zum Thema Grundbegriffe...", anwendbarkeit: "Hier stehen die ausführlichen Beispiele zur Anwendbarkeit...", lehrersein: "Hier steht der ausführliche Text zur Meisterklasse...", uebungen: "Hier kommen die interaktiven Übungen hin..." }},
-    // ... füge hier die VOLLSTÄNDIGEN Inhalte für alle 16 Module ein
-    // (Ich habe sie hier zur Kürze weggelassen, du solltest deine vollständige Liste hier haben)
     { id: 2, title: "Datenerhebung & Studiendesign", relevance: "orange", content: { grundwissen: "...", anwendbarkeit: "...", lehrersein: "...", uebungen: "..." }},
+    // ... füge hier die VOLLSTÄNDIGEN Inhalte für alle 16 Module ein
 ];
 
 export default function LessonDetailPage() {
@@ -48,11 +40,8 @@ export default function LessonDetailPage() {
     return <div>Lektion nicht gefunden.</div>;
   }
   
-  // --- KORREKTUR HIER: Wir verwenden jetzt den genauen Typ ---
-  // Wir sagen TypeScript, dass 'type' einer der Schlüssel von ModuleContent sein muss.
   const contentKey = type as keyof ModuleContent;
   const content = moduleData.content[contentKey] || "Inhalt nicht verfügbar.";
-  // --- ENDE DER KORREKTUR ---
   
   const title = `${type.charAt(0).toUpperCase() + type.slice(1)}: ${moduleData.title}`;
 
