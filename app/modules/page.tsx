@@ -1,63 +1,67 @@
 'use client'
-import { useEffect, useState } from 'react'
-import { listModulesWithState, setModuleDone } from '@/utils/modules'
 import Link from 'next/link';
 import { useSubscription } from '@/hooks/useSubscription';
-import { Lock } from 'lucide-react';
+import { Lock, Circle } from 'lucide-react';
+import LoadingSpinner from '@/components/LoadingSpinner';
 
-export default function ModulesPage() {
-  const [items, setItems] = useState<{id:number; title:string; sort_order:number; done:boolean}[]>([])
-  const [loading, setLoading] = useState(true)
+// --- HIER WURDE DIE LISTE ERWEITERT ---
+// Statische Definition deiner Haupt-Module
+const courseModules = [
+  { id: 1, title: 'Statistik von A-Z', description: 'Das Fundament für die empirische Psychologie.' },
+  { id: 2, title: 'Sozialpsychologie', description: 'Der Mensch im Kontext der Gruppe.' },
+  { id: 3, title: 'Klinische Psychologie', description: 'Grundlagen psychischer Störungen.' },
+  { id: 4, title: 'Entwicklungspsychologie', description: 'Die menschliche Entwicklung über die Lebensspanne.' },
+  { id: 5, title: 'Allgemeine Psychologie I: Wahrnehmung & Kognition', description: 'Wie wir Informationen verarbeiten.' },
+  { id: 6, title: 'Allgemeine Psychologie II: Emotion & Motivation', description: 'Was uns antreibt und fühlen lässt.' },
+  { id: 7, title: 'Biologische Psychologie', description: 'Die neurobiologischen Grundlagen des Verhaltens.' },
+  { id: 8, title: 'Persönlichkeitspsychologie', description: 'Warum Menschen so unterschiedlich sind.' },
+  { id: 9, 'title': 'Diagnostik und Testtheorie', 'description': 'Wie psychologische Merkmale gemessen werden.' },
+  { id: 10, 'title': 'Arbeits- & Organisationspsychologie', 'description': 'Der Mensch in der Arbeitswelt.' },
+];
+
+export default function ModulesOverviewPage() {
   const { subscription, isLoading: isSubLoading } = useSubscription();
 
-  useEffect(() => {
-    (async () => {
-      setLoading(true)
-      const data = await listModulesWithState()
-      setItems(data)
-      setLoading(false)
-    })()
-  }, [])
-
-  if (loading || isSubLoading) return <div className="p-6">Lade Module…</div>
+  if (isSubLoading) return <LoadingSpinner />;
 
   const isPremium = subscription?.status === 'active';
 
   return (
-    <div className="max-w-2xl mx-auto p-6 space-y-3">
-      {items.map((m, index) => {
-        const isLocked = index > 0 && !isPremium;
+    <div className="max-w-4xl mx-auto p-6 md:p-8">
+      <h1 className="text-3xl font-bold mb-6 text-slate-900 dark:text-white">Deine Studien-Module</h1>
+      <div className="space-y-4">
+        {courseModules.map((module, index) => {
+          const isLocked = index > 0 && !isPremium;
 
-        if (isLocked) {
+          if (isLocked) {
+            return (
+              <div key={module.id} className="flex items-center gap-4 rounded-lg border bg-slate-50 dark:bg-slate-800/50 p-4 opacity-60">
+                <Lock className="w-6 h-6 text-slate-400 flex-shrink-0" />
+                <div className="flex-grow">
+                  <h2 className="font-semibold text-lg text-slate-500">{module.title}</h2>
+                  <p className="text-sm text-slate-400">{module.description}</p>
+                </div>
+                <Link href="/profile" className="ml-auto text-sm bg-primary text-white px-3 py-1.5 rounded-md hover:bg-primary-dark whitespace-nowrap">
+                  Upgrade
+                </Link>
+              </div>
+            );
+          }
+
           return (
-            <div key={m.id} className="flex items-center gap-3 rounded-lg border p-3 bg-slate-100 dark:bg-slate-800 opacity-50">
-              <Lock className="w-5 h-5 text-slate-400" />
-              <span className="font-medium text-slate-500">{m.title}</span>
-              <Link href="/profile" className="ml-auto text-sm text-primary hover:underline">
-                Upgrade
-              </Link>
-            </div>
+            <Link key={module.id} href={`/modules/${module.id}`} passHref>
+              <div className="flex items-center gap-4 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-neutral-dark p-4 cursor-pointer hover:shadow-lg transition-shadow">
+                {/* Hier könnte man später den Fortschritt anzeigen, z.B. mit einer Checkbox */}
+                <Circle className="w-6 h-6 text-green-500 flex-shrink-0" />
+                <div className="flex-grow">
+                  <h2 className="font-semibold text-lg text-slate-900 dark:text-white">{module.title}</h2>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">{module.description}</p>
+                </div>
+              </div>
+            </Link>
           );
-        }
-
-        return (
-          <Link key={m.id} href={`/modules/${m.id}`} passHref>
-            <div className="flex items-center gap-3 rounded-lg border p-3 cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-700">
-              <input
-                type="checkbox"
-                checked={m.done}
-                onChange={async (e) => {
-                  e.preventDefault();
-                  const next = e.target.checked
-                  await setModuleDone(m.id, next)
-                  setItems(prev => prev.map(x => x.id === m.id ? { ...x, done: next } : x))
-                }}
-              />
-              <span className="font-medium">{m.title}</span>
-            </div>
-          </Link>
-        )
-      })}
+        })}
+      </div>
     </div>
-  )
+  );
 }

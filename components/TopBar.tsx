@@ -5,8 +5,6 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useSubscription } from '@/hooks/useSubscription';
-import { useTrialStatus } from '@/hooks/useTrialStatus';
-// import { BuyMeCoffee } from './BuyMeCoffee'; // --- ENTFERNT ---
 
 export default function TopBar() {
   const { user, signOut } = useAuth();
@@ -17,11 +15,8 @@ export default function TopBar() {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const { subscription, isLoading: isLoadingSubscription } = useSubscription();
-  const { isInTrial } = useTrialStatus();
-
   const [isLoggingOut, setIsLoggingOut] = useState(false);
 
-  // close dropdown on outside click
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -67,25 +62,17 @@ export default function TopBar() {
 
         <div className="flex items-center gap-4">
           {!user ? (
-            <>
-              {/* <BuyMeCoffee /> --- ENTFERNT --- */}
-              <Link
-                href="/login"
-                className="px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-dark rounded-full transition-colors shadow-subtle hover:shadow-hover"
-              >
-                Sign in
-              </Link>
-            </>
+            <Link
+              href="/login"
+              className="px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-dark rounded-full transition-colors shadow-subtle hover:shadow-hover"
+            >
+              Sign in
+            </Link>
           ) : (
             <>
-              {/* show "View Subscription" when not in trial & not effectively active */}
               {!isLoadingSubscription &&
-                !isInTrial &&
-                (
-                  !subscription ||
-                  subscription.status === 'canceled' ||
-                  (subscription.cancel_at_period_end && new Date(subscription.current_period_end) > new Date())
-                ) && (
+                (!subscription ||
+                  (subscription.cancel_at_period_end && new Date(subscription.current_period_end) > new Date())) && (
                   <button
                     onClick={() => router.push('/profile')}
                     className="hidden sm:block px-4 py-2 bg-primary hover:bg-primary-dark text-white rounded-full text-sm font-medium transition-colors shadow-subtle hover:shadow-hover"
@@ -94,19 +81,16 @@ export default function TopBar() {
                   </button>
                 )}
 
-              {/* <BuyMeCoffee /> --- ENTFERNT --- */}
-
-              {/* "Start Free Trial / Start Building" button */}
-              {!isLoadingSubscription && (subscription || isInTrial) && pathname !== '/dashboard' && (
+              {/* --- ÄNDERUNG HIER --- */}
+              {!isLoadingSubscription && subscription && pathname !== '/modules' && (
                 <button
-                  onClick={() => router.push('/dashboard')}
+                  onClick={() => router.push('/modules')}
                   className="hidden sm:block px-4 py-2 bg-primary hover:bg-primary-dark text-white rounded-full text-sm font-medium transition-colors shadow-subtle hover:shadow-hover"
                 >
-                  {isInTrial ? 'Start Free Trial' : 'Start Building'}
+                  Go to Modules
                 </button>
               )}
 
-              {/* Avatar + dropdown */}
               <div className="relative z-[300]" ref={dropdownRef}>
                 <button
                   aria-expanded={isDropdownOpen}

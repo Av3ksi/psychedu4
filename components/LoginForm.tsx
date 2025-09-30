@@ -30,10 +30,12 @@ export function LoginForm({
   return (
     <div className="auth-card">
       <div className="text-center">
+        {/* --- ÄNDERUNGEN HIER --- */}
         <div className="auth-brand">
-          <span className="text-3xl">🎬</span>
-          <h2 className="text-2xl font-medium">NextTemp</h2>
+          <span className="text-3xl">🎓</span>
+          <h2 className="text-2xl font-medium">Psychedu</h2>
         </div>
+        {/* --- ENDE DER ÄNDERUNGEN --- */}
       </div>
 
       {error && <div className="text-red-500 text-center">{error}</div>}
