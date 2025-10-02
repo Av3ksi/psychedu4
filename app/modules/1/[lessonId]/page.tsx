@@ -59,13 +59,13 @@ const UebungenContent: FC<{ data: UebungenData }> = ({ data }) => {
     );
 };
 
-// --- INHALTE FÜR MODUL 1 (Vollständig) ---
+// --- INHALTE FÜR MODUL 1 (Vollständig, KORRIGIERT) ---
 const grundwissenInhalt = (
     <div className="space-y-8">
         <p className="text-lg leading-relaxed bg-slate-50 dark:bg-slate-800 p-4 rounded-md border border-slate-200 dark:border-slate-700">Willkommen in der Welt der Statistik! Statistik ist die Wissenschaft und Kunst, aus Daten zu lernen. Sie gibt uns die Werkzeuge, um Informationen zu sammeln, zu analysieren, zu interpretieren und schliesslich fundierte Entscheidungen zu treffen. Ohne Statistik wäre die moderne Psychologie, Wirtschaft oder Medizin undenkbar.</p>
         <h3 className="text-2xl font-semibold border-b pb-2">Die fünf Grundpfeiler der Statistik</h3>
         <p>Stell dir vor, du möchtest wissen, wie zufrieden die Studierenden in der Schweiz im Durchschnitt mit ihrem Studium sind. Hier kommen die fünf wichtigsten Begriffe ins Spiel:</p>
-        <div className="overflow-x-auto"><table className="w-full text-left border-collapse"><thead><tr className="bg-slate-100 dark:bg-slate-800"><th className="p-3 font-semibold border-b dark:border-slate-700">Begriff</th><th className="p-3 font-semibold border-b dark:border-slate-700">Erklärung</th><th className="p-3 font-semibold border-b dark:border-slate-700">Beispiel: "Studierendenzufriedenheit"</th></tr></thead><tbody><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Population</td><td className="p-3">Die <strong>gesamte</strong> Gruppe, über die du eine Aussage treffen willst.</td><td className="p-3">Alle 200'000 Studierenden in der Schweiz.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Stichprobe (Sample)</td><td className="p-3">Eine <strong>Teilmenge</strong> der Population, die du tatsächlich untersuchst.</td><td className="p-3">Eine zufällig ausgewählte Gruppe von 1'000 Studierenden.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Parameter</td><td className="p-3">Ein numerischer Wert, der die <strong>Population</strong> beschreibt. (oft unbekannt)</td><td className="p-3">Die <strong>tatsächliche</strong> durchschnittliche Zufriedenheit aller 200'000 Studierenden.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Statistik (Statistic)</td><td className="p-3">Ein numerischer Wert, der die <strong>Stichprobe</strong> beschreibt.</td><td className="p-3">Die <strong>berechnete</strong> durchschnittliche Zufriedenheit der 1'000 befragten Studierenden.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Variable</td><td className="p-3">Die Eigenschaft, die du misst (kann variieren).</td><td className="p-3">Die "Zufriedenheit" (z.B. auf einer Skala von 1-10).</td></tr></tbody></table></div>
+        <div className="overflow-x-auto"><table className="w-full text-left border-collapse"><thead><tr className="bg-slate-100 dark:bg-slate-800"><th className="p-3 font-semibold border-b dark:border-slate-700">Begriff</th><th className="p-3 font-semibold border-b dark:border-slate-700">Erklärung</th><th className="p-3 font-semibold border-b dark:border-slate-700">Beispiel: „Studierendenzufriedenheit“</th></tr></thead><tbody><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Population</td><td className="p-3">Die <strong>gesamte</strong> Gruppe, über die du eine Aussage treffen willst.</td><td className="p-3">Alle 200'000 Studierenden in der Schweiz.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Stichprobe (Sample)</td><td className="p-3">Eine <strong>Teilmenge</strong> der Population, die du tatsächlich untersuchst.</td><td className="p-3">Eine zufällig ausgewählte Gruppe von 1'000 Studierenden.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Parameter</td><td className="p-3">Ein numerischer Wert, der die <strong>Population</strong> beschreibt. (oft unbekannt)</td><td className="p-3">Die <strong>tatsächliche</strong> durchschnittliche Zufriedenheit aller 200'000 Studierenden.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Statistik (Statistic)</td><td className="p-3">Ein numerischer Wert, der die <strong>Stichprobe</strong> beschreibt.</td><td className="p-3">Die <strong>berechnete</strong> durchschnittliche Zufriedenheit der 1'000 befragten Studierenden.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Variable</td><td className="p-3">Die Eigenschaft, die du misst (kann variieren).</td><td className="p-3">Die „Zufriedenheit“ (z.B. auf einer Skala von 1–10).</td></tr></tbody></table></div>
         <div className="bg-blue-50 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 p-4 rounded-lg"><p><strong>Merkhilfe:</strong> <strong>P</strong>arameter gehört zur <strong>P</strong>opulation. <strong>S</strong>tatistik gehört zur <strong>S</strong>tichprobe.</p></div>
         <h3 className="text-2xl font-semibold border-b pb-2">Arten von Daten: Was messen wir eigentlich?</h3>
         <p>Nicht alle Daten sind gleich. Wir unterscheiden hauptsächlich zwei Arten:</p>
@@ -74,17 +74,17 @@ const grundwissenInhalt = (
 );
 const anwendbarkeitInhalt = (
     <div className="space-y-8">
-        <p className="text-lg leading-relaxed">Theorie ist gut, aber wie hilft uns das in der echten Welt? Sehen wir uns an, wie eine Firma die Grundbegriffe der Statistik nutzt, um eine wichtige Geschäftsentscheidung zu treffen: **"Sollen wir eine neue Premium-Funktion für unsere App entwickeln?"**</p>
+        <p className="text-lg leading-relaxed">Theorie ist gut, aber wie hilft uns das in der echten Welt? Sehen wir uns an, wie eine Firma die Grundbegriffe der Statistik nutzt, um eine wichtige Geschäftsentscheidung zu treffen: **„Sollen wir eine neue Premium-Funktion für unsere App entwickeln?“**</p>
         <div className="p-6 border-l-4 border-green-500 bg-green-50 dark:bg-green-900/20 rounded-r-lg">
-            <h3 className="text-2xl font-semibold text-green-800 dark:text-green-300">Ansatz 1: Quantitative Forschung (Das "Was?")</h3>
+            <h3 className="text-2xl font-semibold text-green-800 dark:text-green-300">Ansatz 1: Quantitative Forschung (Das „Was?“)</h3>
             <p className="mt-2 mb-4">Hier geht es um Zahlen, Messungen und statistische Signifikanz.</p>
-            <ul className="list-decimal list-inside space-y-3"><li><strong>Population:</strong> Alle 50'000 aktiven Nutzer der App.</li><li><strong>Stichprobe:</strong> Eine E-Mail-Umfrage wird an 2'500 zufällig ausgewählte Nutzer gesendet.</li><li><strong>Statistik:</strong> Aus der Stichprobe berechnen wir: "Der durchschnittliche Preis, den Nutzer zu zahlen bereit sind, beträgt <strong>8.50 CHF</strong>."</li></ul>
+            <ul className="list-decimal list-inside space-y-3"><li><strong>Population:</strong> Alle 50'000 aktiven Nutzer der App.</li><li><strong>Stichprobe:</strong> Eine E-Mail-Umfrage wird an 2'500 zufällig ausgewählte Nutzer gesendet.</li><li><strong>Statistik:</strong> Aus der Stichprobe berechnen wir: „Der durchschnittliche Preis, den Nutzer zu zahlen bereit sind, beträgt <strong>8.50 CHF</strong>.“</li></ul>
             <p className="mt-4 font-semibold">**Entscheidung:** Da der geschätzte Preis über den Entwicklungskosten liegt, startet das Management das Projekt.</p>
         </div>
         <div className="p-6 border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-900/20 rounded-r-lg">
-            <h3 className="text-2xl font-semibold text-blue-800 dark:text-blue-300">Ansatz 2: Qualitative Forschung (Das "Warum?")</h3>
+            <h3 className="text-2xl font-semibold text-blue-800 dark:text-blue-300">Ansatz 2: Qualitative Forschung (Das „Warum?“)</h3>
             <p className="mt-2 mb-4">Hier geht es um das tiefere Verständnis von Motivationen und Meinungen.</p>
-            <ul className="list-decimal list-inside space-y-3"><li><strong>Stichprobe:</strong> 10 sorgfältig ausgewählte "Power-User" werden zu Interviews eingeladen.</li><li><strong>Analyse:</strong> Man identifiziert wiederkehrende Themen, z.B. "Viele Nutzer wünschten sich die Funktion für Team-Kollaboration".</li></ul>
+            <ul className="list-decimal list-inside space-y-3"><li><strong>Stichprobe:</strong> 10 sorgfältig ausgewählte „Power-User“ werden zu Interviews eingeladen.</li><li><strong>Analyse:</strong> Man identifiziert wiederkehrende Themen, z.B. „Viele Nutzer wünschten sich die Funktion für Team-Kollaboration“.</li></ul>
             <p className="mt-4 font-semibold">**Entscheidung:** Das Produktteam optimiert die Funktion für Teams.</p>
         </div>
         <div className="bg-yellow-50 dark:bg-yellow-900/30 p-4 rounded-lg"><p><strong>Fazit für die Arbeitswelt:</strong> Quantitative Forschung sagt dir, **ob** du etwas tun solltest. Qualitative Forschung sagt dir, **wie** du es am besten tun solltest.</p></div>
@@ -101,22 +101,32 @@ const meisterklasseInhalt = (
         <p>Die Fähigkeit, die Qualität einer Stichprobe zu beurteilen, ist eine extrem wertvolle Fähigkeit. Eine falsche Statistik kann Unternehmen Millionen kosten.</p>
     </div>
 );
-const uebungenData1: UebungenData = { quiz: [ { q: "Ein Forscher befragt 500 zufällig ausgewählte CEOs...", a: ["Die Population", "Eine Statistik", "Eine Stichprobe"], correct: 2 }, { q: "Das Durchschnittsalter aller Einwohner von Zürich ist ein...", a: ["Parameter", "Statistik", "Variable"], correct: 0 }, { q: "Die Postleitzahl ist ein Beispiel für welches Datenformat?", a: ["Quantitative, stetige Daten", "Qualitative (kategoriale) Daten", "Quantitative, diskrete Daten"], correct: 1 }, ], open: [ { q: "Du arbeitest für Netflix...", solution: "Population: Alle Netflix-Abonnenten..." }, { q: "Warum ist die 'Anzahl der verkauften Kaffees' diskret...", solution: "Die 'Anzahl' kann man zählen..." } ], kreativ: "Stell dir vor, du könntest eine einzige statistische Frage über die gesamte Menschheit stellen..." };
+const uebungenData1: UebungenData = { 
+  quiz: [ 
+    { q: "Ein Forscher befragt 500 zufällig ausgewählte CEOs...", a: ["Die Population", "Eine Statistik", "Eine Stichprobe"], correct: 2 }, 
+    { q: "Das Durchschnittsalter aller Einwohner von Zürich ist ein...", a: ["Parameter", "Statistik", "Variable"], correct: 0 }, 
+    { q: "Die Postleitzahl ist ein Beispiel für welches Datenformat?", a: ["Quantitative, stetige Daten", "Qualitative (kategoriale) Daten", "Quantitative, diskrete Daten"], correct: 1 }, 
+  ], 
+  open: [ 
+    { q: "Du arbeitest für Netflix...", solution: "Population: Alle Netflix-Abonnenten..." }, 
+    { q: "Warum ist die ‚Anzahl der verkauften Kaffees‘ diskret...", solution: "Die ‚Anzahl‘ kann man zählen..." } 
+  ], 
+  kreativ: "Stell dir vor, du könntest eine einzige statistische Frage über die gesamte Menschheit stellen..." 
+};
 const uebungenInhalt1 = <UebungenContent data={uebungenData1} />;
 
-
-// --- NEUE INHALTE FÜR MODUL 2 ---
+// --- NEUE INHALTE FÜR MODUL 2 (KORRIGIERT) ---
 const grundwissenInhalt2 = (
     <div className="space-y-8">
-        <p className="text-lg leading-relaxed">Nachdem wir wissen, was Daten sind, müssen wir klären, wie wir sie erhalten. Eine schlechte Datenerhebung führt unweigerlich zu falschen Schlussfolgerungen, egal wie gut die Analyse ist. "Garbage in, garbage out" ist das oberste Gebot.</p>
+        <p className="text-lg leading-relaxed">Nachdem wir wissen, was Daten sind, müssen wir klären, wie wir sie erhalten. Eine schlechte Datenerhebung führt unweigerlich zu falschen Schlussfolgerungen, egal wie gut die Analyse ist. „Garbage in, garbage out“ ist das oberste Gebot.</p>
         <h3 className="text-2xl font-semibold border-b pb-2">Die Kunst der richtigen Stichprobe</h3>
         <p>Da wir selten die ganze Population befragen können, müssen wir eine kluge Auswahl treffen. Das Ziel ist immer, eine <strong>repräsentative</strong> Stichprobe zu erhalten.</p>
         <ul className="list-disc list-inside space-y-4 pl-2">
             <li><strong>Zufallsstichprobe (Simple Random):</strong> Jedes Mitglied der Population hat die exakt gleiche Chance, ausgewählt zu werden. Das ist der Goldstandard, aber oft schwer umsetzbar. (Beispiel: Namen aus einem Hut ziehen).</li>
             <li><strong>Geschichtete Stichprobe (Stratified):</strong> Die Population wird zuerst in relevante Gruppen (Schichten/Strata) unterteilt (z.B. nach Altersgruppen). Dann wird aus jeder Gruppe eine Zufallsstichprobe gezogen. Garantiert, dass alle Gruppen vertreten sind.</li>
-            <li><strong>Cluster-Stichprobe:</strong> Die Population wird in natürliche Gruppen (Cluster) unterteilt (z.B. Schulklassen). Man wählt zufällig einige ganze Cluster aus und befragt **alle** Mitglieder dieser ausgewählten Cluster.</li>
+            <li><strong>Cluster-Stichprobe:</strong> Die Population wird in natürliche Gruppen (Cluster) unterteilt (z.B. Schulklassen). Man wählt zufällig einige ganze Cluster aus und befragt <strong>alle</strong> Mitglieder dieser ausgewählten Cluster.</li>
         </ul>
-        <div className="bg-red-50 dark:bg-red-900/30 text-red-800 dark:text-red-300 p-4 rounded-lg"><p><strong>Warnung:</strong> Vermeide die "Gelegenheitsstichprobe" (Convenience Sampling), bei der du einfach Leute befragst, die leicht verfügbar sind (z.B. nur deine Freunde). Diese ist fast immer verzerrt (biased).</p></div>
+        <div className="bg-red-50 dark:bg-red-900/30 text-red-800 dark:text-red-300 p-4 rounded-lg"><p><strong>Warnung:</strong> Vermeide die „Gelegenheitsstichprobe“ (Convenience Sampling), bei der du einfach Leute befragst, die leicht verfügbar sind (z.B. nur deine Freunde). Diese ist fast immer verzerrt (biased).</p></div>
         <h3 className="text-2xl font-semibold border-b pb-2">Experiment vs. Beobachtung</h3>
         <p>Der wichtigste Unterschied im Studiendesign ist, ob du aktiv eingreifst oder nur zuschaust.</p>
         <ul className="list-disc list-inside space-y-2 pl-2">
@@ -127,7 +137,7 @@ const grundwissenInhalt2 = (
 );
 const anwendbarkeitInhalt2 = (
     <div className="space-y-8">
-        <p className="text-lg leading-relaxed">Ein Software-Unternehmen möchte wissen, ob ein neues "Dark Mode"-Feature die tägliche Nutzungsdauer der App erhöht.</p>
+        <p className="text-lg leading-relaxed">Ein Software-Unternehmen möchte wissen, ob ein neues „Dark Mode“-Feature die tägliche Nutzungsdauer der App erhöht.</p>
         <div className="p-6 border-l-4 border-orange-500 bg-orange-50 dark:bg-orange-900/20 rounded-r-lg">
             <h3 className="text-2xl font-semibold text-orange-800 dark:text-orange-300">Ansatz 1: Beobachtungsstudie (Schnell, aber gefährlich)</h3>
             <p className="mt-2 mb-4">Man vergleicht die Nutzungsdauer aller Nutzer in der Woche *vor* dem Update mit der Woche *danach*.</p>
@@ -136,7 +146,7 @@ const anwendbarkeitInhalt2 = (
         <div className="p-6 border-l-4 border-green-500 bg-green-50 dark:bg-green-900/20 rounded-r-lg">
             <h3 className="text-2xl font-semibold text-green-800 dark:text-green-300">Ansatz 2: Experiment (Der Goldstandard)</h3>
             <p className="mt-2 mb-4">Man teilt 10'000 Nutzer per Zufall in zwei Gruppen: 5'000 erhalten den Dark Mode (Treatment-Gruppe), 5'000 nicht (Kontroll-Gruppe).</p>
-            <p><strong>Korrekter Schluss:</strong> Wenn die Nutzungsdauer in der Dark-Mode-Gruppe signifikant höher ist, **verursacht** der Dark Mode die höhere Nutzung, da alle anderen Einflüsse zufällig auf beide Gruppen verteilt waren.</p>
+            <p><strong>Korrekter Schluss:</strong> Wenn die Nutzungsdauer in der Dark-Mode-Gruppe signifikant höher ist, <strong>verursacht</strong> der Dark Mode die höhere Nutzung, da alle anderen Einflüsse zufällig auf beide Gruppen verteilt waren.</p>
         </div>
     </div>
 );
@@ -144,8 +154,8 @@ const meisterklasseInhalt2 = (
     <div className="space-y-8">
         <p className="text-lg leading-relaxed">Der häufigste und teuerste Fehler in der Datenanalyse ist die Verwechslung von <strong>Korrelation und Kausalität</strong>. Deine wichtigste Aufgabe als Lehrer ist es, diesen Unterschied unmissverständlich klarzumachen.</p>
         <h3 className="text-2xl font-semibold border-b pb-2">Das Eiscreme-Beispiel</h3>
-        <p>Nutze diese Geschichte: "Daten zeigen, dass Hai-Angriffe ansteigen, wenn mehr Eiscreme verkauft wird. Sollen wir also den Eisverkauf verbieten?"</p>
-        <p>Die Antwort ist nein. Die "lauernde Variable" (Lurking Variable) ist die **Temperatur**. Im Sommer wird mehr Eis gegessen UND es gehen mehr Menschen schwimmen.</p>
+        <p>Nutze diese Geschichte: „Daten zeigen, dass Hai-Angriffe ansteigen, wenn mehr Eiscreme verkauft wird. Sollen wir also den Eisverkauf verbieten?“</p>
+        <p>Die Antwort ist nein. Die „lauernde Variable“ (Lurking Variable) ist die <strong>Temperatur</strong>. Im Sommer wird mehr Eis gegessen UND es gehen mehr Menschen schwimmen.</p>
         <div className="bg-yellow-50 dark:bg-yellow-900/30 p-4 rounded-lg"><strong>Lehrsatz:</strong> Eine Beobachtungsstudie kann dir niemals sagen, ob A B verursacht. Nur ein Experiment mit <strong>zufälliger Zuweisung</strong> kann Kausalität beweisen.</div>
         <h3 className="text-2xl font-semibold border-b pb-2">Ethische Grenzen</h3>
         <p>Mache klar, warum wir nicht alles experimentell untersuchen können. Man kann z.B. aus ethischen Gründen niemanden zwingen zu rauchen, um die Kausalität von Lungenkrebs zu beweisen. Hier ist man auf sehr gute Beobachtungsstudien angewiesen.</p>
@@ -159,10 +169,9 @@ const uebungenData2: UebungenData = {
     open: [
         { q: "Du möchtest herausfinden, ob eine 4-Tage-Woche die Produktivität in deiner Firma steigert. Skizziere kurz ein Experiment. Was ist deine Kontrollgruppe?", solution: "Population: Alle Mitarbeiter. Stichprobe: Zufällig 2 von 4 Abteilungen auswählen. Treatment-Gruppe: Diese 2 Abteilungen arbeiten 3 Monate lang nur 4 Tage. Kontroll-Gruppe: Die anderen 2 Abteilungen arbeiten normal weiter. Variable: Gemessene Produktivität." },
     ],
-    kreativ: "In den Nachrichten liest du: 'Studie zeigt: Menschen, die Rotwein trinken, leben länger.' Nenne mindestens drei mögliche 'lauernde Variablen', die diesen Zusammenhang erklären könnten."
+    kreativ: "In den Nachrichten liest du: ‚Studie zeigt: Menschen, die Rotwein trinken, leben länger.‘ Nenne mindestens drei mögliche ‚lauernde Variablen‘, die diesen Zusammenhang erklären könnten."
 };
 const uebungenInhalt2 = <UebungenContent data={uebungenData2} />;
-
 
 // --- MODUL-LISTE (ERWEITERT UM MODUL 2) ---
 const statisticsModules: StatisticsModule[] = [
