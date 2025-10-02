@@ -109,7 +109,7 @@ const uebungenData1: UebungenData = {
   ], 
   open: [ 
     { q: "Du arbeitest für Netflix...", solution: "Population: Alle Netflix-Abonnenten..." }, 
-    { q: "Warum ist die ‚Anzahl der verkauften Kaffees‘ diskret...", solution: "Die ‚Anzahl‘ kann man zählen..." } 
+    { q: "Warum ist die {'\'Anzahl der verkauften Kaffees\''} diskret...", solution: "Die {'\'Anzahl\''} kann man zählen..." } 
   ], 
   kreativ: "Stell dir vor, du könntest eine einzige statistische Frage über die gesamte Menschheit stellen..." 
 };
@@ -162,14 +162,14 @@ const meisterklasseInhalt2 = (
     </div>
 );
 const uebungenData2: UebungenData = {
-    quiz: [
-        { q: "Eine Universität befragt alle Studierenden der Psychologie und alle der Informatik, um Meinungen zu vergleichen. Welche Stichprobenart ist das?", a: ["Cluster-Stichprobe", "Zufallsstichprobe", "Geschichtete Stichprobe"], correct: 2 },
-        { q: "Ein Forscher will den Effekt von Kaffee auf die Reaktionszeit messen. Was ist die abhängige Variable?", a: ["Die Kaffeemenge", "Die Reaktionszeit", "Die Tageszeit"], correct: 1 },
-    ],
-    open: [
-        { q: "Du möchtest herausfinden, ob eine 4-Tage-Woche die Produktivität in deiner Firma steigert. Skizziere kurz ein Experiment. Was ist deine Kontrollgruppe?", solution: "Population: Alle Mitarbeiter. Stichprobe: Zufällig 2 von 4 Abteilungen auswählen. Treatment-Gruppe: Diese 2 Abteilungen arbeiten 3 Monate lang nur 4 Tage. Kontroll-Gruppe: Die anderen 2 Abteilungen arbeiten normal weiter. Variable: Gemessene Produktivität." },
-    ],
-    kreativ: "In den Nachrichten liest du: ‚Studie zeigt: Menschen, die Rotwein trinken, leben länger.‘ Nenne mindestens drei mögliche ‚lauernde Variablen‘, die diesen Zusammenhang erklären könnten."
+  quiz: [
+    { q: "Eine Universität befragt alle Studierenden der Psychologie und alle der Informatik, um Meinungen zu vergleichen. Welche Stichprobenart ist das?", a: ["Cluster-Stichprobe", "Zufallsstichprobe", "Geschichtete Stichprobe"], correct: 2 },
+    { q: "Ein Forscher will den Effekt von Kaffee auf die Reaktionszeit messen. Was ist die abhängige Variable?", a: ["Die Kaffeemenge", "Die Reaktionszeit", "Die Tageszeit"], correct: 1 },
+  ],
+  open: [
+    { q: "Du möchtest herausfinden, ob eine 4-Tage-Woche die Produktivität in deiner Firma steigert. Skizziere kurz ein Experiment. Was ist deine Kontrollgruppe?", solution: "Population: Alle Mitarbeiter. Stichprobe: Zufällig 2 von 4 Abteilungen auswählen. Treatment-Gruppe: Diese 2 Abteilungen arbeiten 3 Monate lang nur 4 Tage. Kontroll-Gruppe: Die anderen 2 Abteilungen arbeiten normal weiter. Variable: Gemessene Produktivität." },
+  ],
+  kreativ: "In den Nachrichten liest du: {'\'Studie zeigt: Menschen, die Rotwein trinken, leben länger.\''} Nenne mindestens drei mögliche {'\'lauernde Variablen\''}, die diesen Zusammenhang erklären könnten."
 };
 const uebungenInhalt2 = <UebungenContent data={uebungenData2} />;
 
