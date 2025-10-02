@@ -124,14 +124,13 @@ const grundwissenInhalt2 = (
         <ul className="list-disc list-inside space-y-4 pl-2">
             <li><strong>Zufallsstichprobe (Simple Random):</strong> Jedes Mitglied der Population hat die exakt gleiche Chance, ausgewählt zu werden. Das ist der Goldstandard, aber oft schwer umsetzbar. (Beispiel: Namen aus einem Hut ziehen).</li>
             <li><strong>Geschichtete Stichprobe (Stratified):</strong> Die Population wird zuerst in relevante Gruppen (Schichten/Strata) unterteilt (z.B. nach Altersgruppen). Dann wird aus jeder Gruppe eine Zufallsstichprobe gezogen. Garantiert, dass alle Gruppen vertreten sind.</li>
-            <li><strong>Cluster-Stichprobe:</strong> Die Population wird in natürliche Gruppen (Cluster) unterteilt (z.B. Schulklassen). Man wählt zufällig einige ganze Cluster aus und befragt <strong>alle</strong> Mitglieder dieser ausgewählten Cluster.</li>
+            <li><strong>Cluster-Stichprobe:</strong> Die Population wird in natürliche Gruppen (Cluster) unterteilt (z.B. Schulklassen, Unternehmensabteilungen). Man wählt zufällig einige ganze Cluster aus und befragt <strong>alle</strong> Mitglieder dieser ausgewählten Cluster.</li>
         </ul>
         <div className="bg-red-50 dark:bg-red-900/30 text-red-800 dark:text-red-300 p-4 rounded-lg"><p><strong>Warnung:</strong> Vermeide die &quot;Gelegenheitsstichprobe&quot; (Convenience Sampling), bei der du einfach Leute befragst, die leicht verfügbar sind (z.B. nur deine Freunde). Diese ist fast immer verzerrt (biased).</p></div>
         <h3 className="text-2xl font-semibold border-b pb-2">Experiment vs. Beobachtung</h3>
-        <p>Der wichtigste Unterschied im Studiendesign ist, ob du aktiv eingreifst oder nur zuschaust.</p>
         <ul className="list-disc list-inside space-y-2 pl-2">
-            <li><strong>Beobachtungsstudie:</strong> Du misst Variablen, ohne die Teilnehmer zu beeinflussen. Du kannst Zusammenhänge (Korrelationen) finden, aber <strong>niemals auf Ursache-Wirkung schliessen</strong>.</li>
-            <li><strong>Experiment:</strong> Du greifst aktiv ein, indem du eine Variable manipulierst und ihre Auswirkung auf eine andere misst. Nur ein gut geplantes Experiment erlaubt Kausalschlüsse.</li>
+            <li><strong>Beobachtungsstudie:</strong> Du misst nur. Du findest Korrelationen, aber <strong>niemals Ursache-Wirkung</strong>.</li>
+            <li><strong>Experiment:</strong> Du greifst aktiv ein, um Ursache-Wirkung zu beweisen.</li>
         </ul>
     </div>
 );
@@ -139,37 +138,34 @@ const anwendbarkeitInhalt2 = (
     <div className="space-y-8">
         <p className="text-lg leading-relaxed">Ein Software-Unternehmen möchte wissen, ob ein neues &quot;Dark Mode&quot;-Feature die tägliche Nutzungsdauer der App erhöht.</p>
         <div className="p-6 border-l-4 border-orange-500 bg-orange-50 dark:bg-orange-900/20 rounded-r-lg">
-            <h3 className="text-2xl font-semibold text-orange-800 dark:text-orange-300">Ansatz 1: Beobachtungsstudie (Schnell, aber gefährlich)</h3>
-            <p className="mt-2 mb-4">Man vergleicht die Nutzungsdauer aller Nutzer in der Woche *vor* dem Update mit der Woche *danach*.</p>
-            <p><strong>Problem:</strong> Was ist, wenn in der Woche nach dem Update zufällig Ferien waren? Man findet eine <strong>Korrelation</strong>, aber keine <strong>Kausalität</strong>.</p>
+            <h3 className="text-2xl font-semibold text-orange-800 dark:text-orange-300">Ansatz 1: Beobachtungsstudie (Gefährlich)</h3>
+            <p className="mt-2">Man vergleicht die Nutzung *vor* und *nach* dem Update. Problem: Waren vielleicht Ferien? Man findet eine <strong>Korrelation</strong>, keine <strong>Kausalität</strong>.</p>
         </div>
         <div className="p-6 border-l-4 border-green-500 bg-green-50 dark:bg-green-900/20 rounded-r-lg">
-            <h3 className="text-2xl font-semibold text-green-800 dark:text-green-300">Ansatz 2: Experiment (Der Goldstandard)</h3>
-            <p className="mt-2 mb-4">Man teilt 10'000 Nutzer per Zufall in zwei Gruppen: 5'000 erhalten den Dark Mode (Treatment-Gruppe), 5'000 nicht (Kontroll-Gruppe).</p>
-            <p><strong>Korrekter Schluss:</strong> Wenn die Nutzungsdauer in der Dark-Mode-Gruppe signifikant höher ist, <strong>verursacht</strong> der Dark Mode die höhere Nutzung, da alle anderen Einflüsse zufällig auf beide Gruppen verteilt waren.</p>
+            <h3 className="text-2xl font-semibold text-green-800 dark:text-green-300">Ansatz 2: Experiment (Goldstandard)</h3>
+            <p className="mt-2">10&apos;000 Nutzer werden zufällig aufgeteilt: 5&apos;000 erhalten Dark Mode (Treatment-Gruppe), 5&apos;000 nicht (Kontroll-Gruppe). Ist die Nutzung in der Treatment-Gruppe höher, **verursacht** der Dark Mode die höhere Nutzung.</p>
         </div>
     </div>
 );
 const meisterklasseInhalt2 = (
     <div className="space-y-8">
-        <p className="text-lg leading-relaxed">Der häufigste und teuerste Fehler in der Datenanalyse ist die Verwechslung von <strong>Korrelation und Kausalität</strong>. Deine wichtigste Aufgabe als Lehrer ist es, diesen Unterschied unmissverständlich klarzumachen.</p>
+        <p className="text-lg leading-relaxed">Der teuerste Fehler in der Datenanalyse ist die Verwechslung von <strong>Korrelation und Kausalität</strong>. Deine Aufgabe als Lehrer ist es, das unmissverständlich klarzumachen.</p>
         <h3 className="text-2xl font-semibold border-b pb-2">Das Eiscreme-Beispiel</h3>
-        <p>Nutze diese Geschichte: &quot;Daten zeigen, dass Hai-Angriffe ansteigen, wenn mehr Eiscreme verkauft wird. Sollen wir also den Eisverkauf verbieten?&quot;</p>
-        <p>Die Antwort ist nein. Die &quot;lauernde Variable&quot; (Lurking Variable) ist die <strong>Temperatur</strong>. Im Sommer wird mehr Eis gegessen UND es gehen mehr Menschen schwimmen.</p>
-        <div className="bg-yellow-50 dark:bg-yellow-900/30 p-4 rounded-lg"><strong>Lehrsatz:</strong> Eine Beobachtungsstudie kann dir niemals sagen, ob A B verursacht. Nur ein Experiment mit <strong>zufälliger Zuweisung</strong> kann Kausalität beweisen.</div>
+        <p>Nutze die Geschichte: &quot;Daten zeigen, dass Hai-Angriffe ansteigen, wenn mehr Eiscreme verkauft wird. Sollen wir Eis verbieten?&quot; Nein. Die &quot;lauernde Variable&quot; (Lurking Variable) ist die <strong>Temperatur</strong>. Im Sommer wird mehr Eis gegessen UND mehr geschwommen.</p>
+        <div className="bg-yellow-50 dark:bg-yellow-900/30 p-4 rounded-lg"><strong>Lehrsatz:</strong> Nur ein Experiment mit <strong>zufälliger Zuweisung</strong> kann Kausalität beweisen.</div>
         <h3 className="text-2xl font-semibold border-b pb-2">Ethische Grenzen</h3>
         <p>Mache klar, warum wir nicht alles experimentell untersuchen können. Man kann z.B. aus ethischen Gründen niemanden zwingen zu rauchen, um die Kausalität von Lungenkrebs zu beweisen. Hier ist man auf sehr gute Beobachtungsstudien angewiesen.</p>
     </div>
 );
 const uebungenData2: UebungenData = {
     quiz: [
-        { q: "Eine Universität befragt alle Studierenden der Psychologie und alle der Informatik, um Meinungen zu vergleichen. Welche Stichprobenart ist das?", a: ["Cluster-Stichprobe", "Zufallsstichprobe", "Geschichtete Stichprobe"], correct: 2 },
+        { q: "Eine Uni befragt alle Psychologie- und alle Informatik-Studierenden. Das ist eine...", a: ["Cluster-Stichprobe", "Zufallsstichprobe", "Geschichtete Stichprobe"], correct: 2 },
         { q: "Ein Forscher will den Effekt von Kaffee auf die Reaktionszeit messen. Was ist die abhängige Variable?", a: ["Die Kaffeemenge", "Die Reaktionszeit", "Die Tageszeit"], correct: 1 },
     ],
     open: [
-        { q: "Du möchtest herausfinden, ob eine 4-Tage-Woche die Produktivität in deiner Firma steigert. Skizziere kurz ein Experiment. Was ist deine Kontrollgruppe?", solution: "Population: Alle Mitarbeiter. Stichprobe: Zufällig 2 von 4 Abteilungen auswählen. Treatment-Gruppe: Diese 2 Abteilungen arbeiten 3 Monate lang nur 4 Tage. Kontroll-Gruppe: Die anderen 2 Abteilungen arbeiten normal weiter. Variable: Gemessene Produktivität." },
+        { q: "Skizziere ein Experiment, um zu testen, ob eine 4-Tage-Woche die Produktivität steigert.", solution: "Treatment-Gruppe: Zufällig ausgewählte Abteilungen arbeiten 4 Tage. Kontroll-Gruppe: Die anderen arbeiten normal weiter. Man vergleicht die Produktivität." },
     ],
-    kreativ: "In den Nachrichten liest du: &#39;Studie zeigt: Menschen, die Rotwein trinken, leben länger.&#39; Nenne mindestens drei mögliche &#39;lauernde Variablen&#39;, die diesen Zusammenhang erklären könnten."
+    kreativ: "In den Nachrichten liest du: &apos;Studie zeigt: Menschen, die Rotwein trinken, leben länger.&apos; Nenne mindestens drei mögliche &apos;lauernde Variablen&apos;."
 };
 const uebungenInhalt2 = <UebungenContent data={uebungenData2} />;
 
