@@ -65,7 +65,7 @@ const grundwissenInhalt = (
         <p className="text-lg leading-relaxed bg-slate-50 dark:bg-slate-800 p-4 rounded-md border border-slate-200 dark:border-slate-700">Willkommen in der Welt der Statistik! Statistik ist die Wissenschaft und Kunst, aus Daten zu lernen. Sie gibt uns die Werkzeuge, um Informationen zu sammeln, zu analysieren, zu interpretieren und schliesslich fundierte Entscheidungen zu treffen. Ohne Statistik wäre die moderne Psychologie, Wirtschaft oder Medizin undenkbar.</p>
         <h3 className="text-2xl font-semibold border-b pb-2">Die fünf Grundpfeiler der Statistik</h3>
         <p>Stell dir vor, du möchtest wissen, wie zufrieden die Studierenden in der Schweiz im Durchschnitt mit ihrem Studium sind. Hier kommen die fünf wichtigsten Begriffe ins Spiel:</p>
-        <div className="overflow-x-auto"><table className="w-full text-left border-collapse"><thead><tr className="bg-slate-100 dark:bg-slate-800"><th className="p-3 font-semibold border-b dark:border-slate-700">Begriff</th><th className="p-3 font-semibold border-b dark:border-slate-700">Erklärung</th><th className="p-3 font-semibold border-b dark:border-slate-700">Beispiel: &quot;Studierendenzufriedenheit&quot;</th></tr></thead><tbody><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Population</td><td className="p-3">Die <strong>gesamte</strong> Gruppe, über die du eine Aussage treffen willst.</td><td className="p-3">Alle 200'000 Studierenden in der Schweiz.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Stichprobe (Sample)</td><td className="p-3">Eine <strong>Teilmenge</strong> der Population, die du tatsächlich untersuchst.</td><td className="p-3">Eine zufällig ausgewählte Gruppe von 1'000 Studierenden.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Parameter</td><td className="p-3">Ein numerischer Wert, der die <strong>Population</strong> beschreibt. (oft unbekannt)</td><td className="p-3">Die <strong>tatsächliche</strong> durchschnittliche Zufriedenheit aller 200'000 Studierenden.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Statistik (Statistic)</td><td className="p-3">Ein numerischer Wert, der die <strong>Stichprobe</strong> beschreibt.</td><td className="p-3">Die <strong>berechnete</strong> durchschnittliche Zufriedenheit der 1'000 befragten Studierenden.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Variable</td><td className="p-3">Die Eigenschaft, die du misst (kann variieren).</td><td className="p-3">Die &quot;Zufriedenheit&quot; (z.B. auf einer Skala von 1–10).</td></tr></tbody></table></div>
+        <div className="overflow-x-auto"><table className="w-full text-left border-collapse"><thead><tr className="bg-slate-100 dark:bg-slate-800"><th className="p-3 font-semibold border-b dark:border-slate-700">Begriff</th><th className="p-3 font-semibold border-b dark:border-slate-700">Erklärung</th><th className="p-3 font-semibold border-b dark:border-slate-700">Beispiel: &quot;Studierendenzufriedenheit&quot;</th></tr></thead><tbody><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Population</td><td className="p-3">Die <strong>gesamte</strong> Gruppe, über die du eine Aussage treffen willst.</td><td className="p-3">Alle 200&apos;000 Studierenden in der Schweiz.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Stichprobe (Sample)</td><td className="p-3">Eine <strong>Teilmenge</strong> der Population, die du tatsächlich untersuchst.</td><td className="p-3">Eine zufällig ausgewählte Gruppe von 1&apos;000 Studierenden.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Parameter</td><td className="p-3">Ein numerischer Wert, der die <strong>Population</strong> beschreibt. (oft unbekannt)</td><td className="p-3">Die <strong>tatsächliche</strong> durchschnittliche Zufriedenheit aller 200&apos;000 Studierenden.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Statistik (Statistic)</td><td className="p-3">Ein numerischer Wert, der die <strong>Stichprobe</strong> beschreibt.</td><td className="p-3">Die <strong>berechnete</strong> durchschnittliche Zufriedenheit der 1&apos;000 befragten Studierenden.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Variable</td><td className="p-3">Die Eigenschaft, die du misst (kann variieren).</td><td className="p-3">Die &quot;Zufriedenheit&quot; (z.B. auf einer Skala von 1–10).</td></tr></tbody></table></div>
         <div className="bg-blue-50 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 p-4 rounded-lg"><p><strong>Merkhilfe:</strong> <strong>P</strong>arameter gehört zur <strong>P</strong>opulation. <strong>S</strong>tatistik gehört zur <strong>S</strong>tichprobe.</p></div>
         <h3 className="text-2xl font-semibold border-b pb-2">Arten von Daten: Was messen wir eigentlich?</h3>
         <p>Nicht alle Daten sind gleich. Wir unterscheiden hauptsächlich zwei Arten:</p>
@@ -78,7 +78,7 @@ const anwendbarkeitInhalt = (
         <div className="p-6 border-l-4 border-green-500 bg-green-50 dark:bg-green-900/20 rounded-r-lg">
             <h3 className="text-2xl font-semibold text-green-800 dark:text-green-300">Ansatz 1: Quantitative Forschung (Das &quot;Was?&quot;)</h3>
             <p className="mt-2 mb-4">Hier geht es um Zahlen, Messungen und statistische Signifikanz.</p>
-            <ul className="list-decimal list-inside space-y-3"><li><strong>Population:</strong> Alle 50'000 aktiven Nutzer der App.</li><li><strong>Stichprobe:</strong> Eine E-Mail-Umfrage wird an 2'500 zufällig ausgewählte Nutzer gesendet.</li><li><strong>Statistik:</strong> Aus der Stichprobe berechnen wir: &quot;Der durchschnittliche Preis, den Nutzer zu zahlen bereit sind, beträgt <strong>8.50 CHF</strong>.&quot;</li></ul>
+            <ul className="list-decimal list-inside space-y-3"><li><strong>Population:</strong> Alle 50&apos;000 aktiven Nutzer der App.</li><li><strong>Stichprobe:</strong> Eine E-Mail-Umfrage wird an 2&apos;500 zufällig ausgewählte Nutzer gesendet.</li><li><strong>Statistik:</strong> Aus der Stichprobe berechnen wir: &quot;Der durchschnittliche Preis, den Nutzer zu zahlen bereit sind, beträgt <strong>8.50 CHF</strong>.&quot;</li></ul>
             <p className="mt-4 font-semibold">**Entscheidung:** Da der geschätzte Preis über den Entwicklungskosten liegt, startet das Management das Projekt.</p>
         </div>
         <div className="p-6 border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-900/20 rounded-r-lg">
@@ -101,17 +101,17 @@ const meisterklasseInhalt = (
         <p>Die Fähigkeit, die Qualität einer Stichprobe zu beurteilen, ist eine extrem wertvolle Fähigkeit. Eine falsche Statistik kann Unternehmen Millionen kosten.</p>
     </div>
 );
-const uebungenData1: UebungenData = { 
-  quiz: [ 
-    { q: "Ein Forscher befragt 500 zufällig ausgewählte CEOs...", a: ["Die Population", "Eine Statistik", "Eine Stichprobe"], correct: 2 }, 
-    { q: "Das Durchschnittsalter aller Einwohner von Zürich ist ein...", a: ["Parameter", "Statistik", "Variable"], correct: 0 }, 
-    { q: "Die Postleitzahl ist ein Beispiel für welches Datenformat?", a: ["Quantitative, stetige Daten", "Qualitative (kategoriale) Daten", "Quantitative, diskrete Daten"], correct: 1 }, 
-  ], 
-  open: [ 
-    { q: "Du arbeitest für Netflix...", solution: "Population: Alle Netflix-Abonnenten..." }, 
-    { q: "Warum ist die &#39;Anzahl der verkauften Kaffees&#39; diskret...", solution: "Die &#39;Anzahl&#39; kann man zählen..." } 
-  ], 
-  kreativ: "Stell dir vor, du könntest eine einzige statistische Frage über die gesamte Menschheit stellen..." 
+const uebungenData1: UebungenData = {
+  quiz: [
+    { q: "Ein Forscher befragt 500 zufällig ausgewählte CEOs...", a: ["Die Population", "Eine Statistik", "Eine Stichprobe"], correct: 2 },
+    { q: "Das Durchschnittsalter aller Einwohner von Zürich ist ein...", a: ["Parameter", "Statistik", "Variable"], correct: 0 },
+    { q: "Die Postleitzahl ist ein Beispiel für welches Datenformat?", a: ["Quantitative, stetige Daten", "Qualitative (kategoriale) Daten", "Quantitative, diskrete Daten"], correct: 1 },
+  ],
+  open: [
+    { q: "Du arbeitest für Netflix...", solution: "Population: Alle Netflix-Abonnenten..." },
+    { q: "Warum ist die 'Anzahl der verkauften Kaffees' diskret...", solution: "Die 'Anzahl' kann man zählen..." }
+  ],
+  kreativ: "Stell dir vor, du könntest eine einzige statistische Frage über die gesamte Menschheit stellen..."
 };
 const uebungenInhalt1 = <UebungenContent data={uebungenData1} />;
 
@@ -165,30 +165,30 @@ const uebungenData2: UebungenData = {
     open: [
         { q: "Skizziere ein Experiment, um zu testen, ob eine 4-Tage-Woche die Produktivität steigert.", solution: "Treatment-Gruppe: Zufällig ausgewählte Abteilungen arbeiten 4 Tage. Kontroll-Gruppe: Die anderen arbeiten normal weiter. Man vergleicht die Produktivität." },
     ],
-    kreativ: "In den Nachrichten liest du: &apos;Studie zeigt: Menschen, die Rotwein trinken, leben länger.&apos; Nenne mindestens drei mögliche &apos;lauernde Variablen&apos;."
+    kreativ: "In den Nachrichten liest du: 'Studie zeigt: Menschen, die Rotwein trinken, leben länger.' Nenne mindestens drei mögliche 'lauernde Variablen'."
 };
 const uebungenInhalt2 = <UebungenContent data={uebungenData2} />;
 
 // --- MODUL-LISTE ---
 const statisticsModules: StatisticsModule[] = [
-    { 
-        id: 1, 
-        title: "Einführung & Grundbegriffe", 
-        relevance: "green", 
-        content: { 
-            grundwissen: grundwissenInhalt, 
-            anwendbarkeit: anwendbarkeitInhalt, 
+    {
+        id: 1,
+        title: "Einführung & Grundbegriffe",
+        relevance: "green",
+        content: {
+            grundwissen: grundwissenInhalt,
+            anwendbarkeit: anwendbarkeitInhalt,
             meisterklasse: meisterklasseInhalt,
             uebungen: uebungenInhalt1
         }
     },
-    { 
-        id: 2, 
-        title: "Datenerhebung & Studiendesign", 
-        relevance: "orange", 
-        content: { 
-            grundwissen: grundwissenInhalt2, 
-            anwendbarkeit: anwendbarkeitInhalt2, 
+    {
+        id: 2,
+        title: "Datenerhebung & Studiendesign",
+        relevance: "orange",
+        content: {
+            grundwissen: grundwissenInhalt2,
+            anwendbarkeit: anwendbarkeitInhalt2,
             meisterklasse: meisterklasseInhalt2,
             uebungen: uebungenInhalt2
         }
@@ -205,7 +205,7 @@ export default function LessonDetailPage() {
   if (!moduleData) {
     return <div>Lektion nicht gefunden.</div>;
   }
-  
+
   const contentKey = type as keyof typeof moduleData.content;
   const content = moduleData.content[contentKey] || "Inhalt nicht verfügbar.";
   const title = `${type.charAt(0).toUpperCase() + type.slice(1)}: ${moduleData.title}`;
