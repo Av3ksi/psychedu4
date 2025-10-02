@@ -4,11 +4,11 @@ import { useParams } from 'next/navigation';
 import { useSubscription } from '@/hooks/useSubscription';
 import LoadingSpinner from '@/components/LoadingSpinner';
 import Link from 'next/link';
-import { FC, ReactNode, useState } from 'react';
+import { FC, ReactNode } from 'react'; // ✅ useState entfernt
 import { BookOpen, Target, BrainCircuit, Lightbulb } from 'lucide-react';
 import { Link as ScrollLink, Element } from 'react-scroll';
 
-// --- DATEN FÜR ALLE 16 STATISTIK-LEKTIONEN (Relevanz für Modul 5 korrigiert) ---
+// --- DATEN FÜR ALLE 16 STATISTIK-LEKTIONEN ---
 const statisticsModules = [
   { id: 1, title: "Einführung & Grundbegriffe", relevance: "green", descriptions: { grundwissen: "Definiere, was Daten sind und lerne die wichtigsten Grundbegriffe wie Population und Stichprobe.", anwendbarkeit: "Verstehe, wie Umfragen in der Marktforschung korrekt geplant und interpretiert werden.", meisterklasse: "Lerne, die Qualität von Daten zu beurteilen und typische Fehlschlüsse zu vermeiden.", uebungen: "Teste dein Wissen mit interaktiven Fragen zu den Kernkonzepten." }},
   { id: 2, title: "Datenerhebung & Studiendesign", relevance: "orange", descriptions: { grundwissen: "Unterscheide verschiedene Stichprobenarten und die Grundlagen des experimentellen Designs.", anwendbarkeit: "Plane eine eigene (fiktive) Studie und erkenne potenzielle Störfaktoren und ethische Hürden.", meisterklasse: "Analysiere komplexe Studiendesigns und beurteile ihre Aussagekraft für die Praxis.", uebungen: "Wende dein Wissen in Szenarien an, um das beste Studiendesign auszuwählen." }},
@@ -20,7 +20,7 @@ const statisticsModules = [
   { id: 8, title: "Hypothesentests", relevance: "green", descriptions: { grundwissen: "Formuliere Null- und Alternativhypothesen und verstehe die Logik des p-Wertes.", anwendbarkeit: "Führe einen A/B-Test aus, um zu entscheiden, welche Version einer Webseite besser funktioniert.", meisterklasse: "Verstehe das Konzept der statistischen Power und wie man Typ-I- und Typ-II-Fehler kontrolliert.", uebungen: "Wende den t-Test in verschiedenen Szenarien korrekt an." }},
   { id: 9, title: "Chi-Quadrat-Tests", relevance: "orange", descriptions: { grundwissen: "Analysiere Zusammenhänge zwischen kategorialen Variablen (z.B. Geschlecht und Produktwahl).", anwendbarkeit: "Werte Umfragedaten aus, um zu sehen, ob bestimmte Meinungen von der Altersgruppe abhängen.", meisterklasse: "Prüfe die Voraussetzungen des Chi-Quadrat-Tests und interpretiere die Ergebnisse im Detail.", uebungen: "Führe Tests auf Unabhängigkeit mit vorgegebenen Tabellen durch." }},
   { id: 10, title: "Lineare Regression & Korrelation", relevance: "green", descriptions: { grundwissen: "Modelliere und quantifiziere den linearen Zusammenhang zwischen zwei Variablen.", anwendbarkeit: "Erstelle ein einfaches Vorhersagemodell, z.B. für den Umsatz basierend auf Werbeausgaben.", meisterklasse: "Interpretiere das Bestimmtheitsmass (R-Quadrat) und die Residuenanalyse zur Modellgüte.", uebungen: "Berechne und interpretiere Korrelationskoeffizienten und Regressionsgeraden." }},
-  { id: 11, title: "ANOVA (Varianzanalyse)", relevance: "orange", descriptions: { grundwissen: "Vergleiche die Mittelwerte von drei oder mehr Gruppen miteinander.", anwendbarkeit: "Finde heraus, welche von mehreren Lehrmethoden den grössten Lernerfolg bringt.", meisterklasse: "Führe Post-Hoc-Tests durch, um herauszufinden, welche Gruppen sich spezifisch unterscheiden.", uebungen: "Entscheide anhand von Fallstudien, wann eine ANOVA angebracht ist." }},
+  { id: 11, title: "ANOVA (Varianzanalyse", relevance: "orange", descriptions: { grundwissen: "Vergleiche die Mittelwerte von drei oder mehr Gruppen miteinander.", anwendbarkeit: "Finde heraus, welche von mehreren Lehrmethoden den grössten Lernerfolg bringt.", meisterklasse: "Führe Post-Hoc-Tests durch, um herauszufinden, welche Gruppen sich spezifisch unterscheiden.", uebungen: "Entscheide anhand von Fallstudien, wann eine ANOVA angebracht ist." }},
   { id: 12, title: "Multiple Lineare Regression", relevance: "green", descriptions: { grundwissen: "Erweitere das Regressionsmodell, um den Einfluss mehrerer Variablen gleichzeitig zu untersuchen.", anwendbarkeit: "Baue ein Modell zur Vorhersage von Immobilienpreisen basierend auf Grösse, Lage und Alter.", meisterklasse: "Identifiziere und behandle Probleme wie Multikollinearität in deinem Modell.", uebungen: "Interpretiere die Koeffizienten eines multiplen Regressionsmodells." }},
   { id: 13, title: "Logistische Regression", relevance: "green", descriptions: { grundwissen: "Lerne, wie man kategoriale Ergebnisse (Ja/Nein) vorhersagt.", anwendbarkeit: "Entwickle ein Modell zur Vorhersage der Kundenabwanderung (Churn Prediction).", meisterklasse: "Interpretiere Odds Ratios und beurteile die Güte deines Klassifikationsmodells (z.B. mit ROC-Kurven).", uebungen: "Wende das Modell auf reale Datensätze an, um Vorhersagen zu treffen." }},
   { id: 14, title: "Nicht-parametrische Tests", relevance: "orange", descriptions: { grundwissen: "Lerne robuste Testverfahren kennen, die keine Normalverteilung voraussetzen.", anwendbarkeit: "Analysiere Daten aus Ranglisten oder Bewertungen, die nicht metrisch sind.", meisterklasse: "Verstehe die Vor- und Nachteile (insb. die 'Power') im Vergleich zu parametrischen Tests.", uebungen: "Wähle in verschiedenen Szenarien den passenden statistischen Test aus." }},
@@ -111,7 +111,7 @@ const StatisticsPage: FC = () => {
     );
 };
 
-// --- HAUPTKOMPONENTE (ROUTER) ---
+// --- HAUPTKOMPONENTE ---
 export default function ModuleDetailPage() {
   const { moduleId } = useParams();
   const { subscription, isLoading: isSubLoading } = useSubscription();

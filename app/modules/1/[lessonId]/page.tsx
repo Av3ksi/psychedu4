@@ -33,7 +33,7 @@ interface StatisticsModule {
   content: ModuleContent;
 }
 
-// --- HILFS-KOMPONENTEN (unverändert) ---
+// --- HILFS-KOMPONENTEN ---
 const ToggleSolution: FC<{ question: OpenQuestion }> = ({ question }) => {
     const [isOpen, setIsOpen] = useState(false);
     return (
@@ -59,7 +59,7 @@ const UebungenContent: FC<{ data: UebungenData }> = ({ data }) => {
     );
 };
 
-// --- INHALTE FÜR MODUL 1 (Vollständig, KORRIGIERT) ---
+// --- INHALTE FÜR MODUL 1 (KORRIGIERT) ---
 const grundwissenInhalt = (
     <div className="space-y-8">
         <p className="text-lg leading-relaxed bg-slate-50 dark:bg-slate-800 p-4 rounded-md border border-slate-200 dark:border-slate-700">Willkommen in der Welt der Statistik! Statistik ist die Wissenschaft und Kunst, aus Daten zu lernen. Sie gibt uns die Werkzeuge, um Informationen zu sammeln, zu analysieren, zu interpretieren und schliesslich fundierte Entscheidungen zu treffen. Ohne Statistik wäre die moderne Psychologie, Wirtschaft oder Medizin undenkbar.</p>
@@ -115,7 +115,7 @@ const uebungenData1: UebungenData = {
 };
 const uebungenInhalt1 = <UebungenContent data={uebungenData1} />;
 
-// --- NEUE INHALTE FÜR MODUL 2 (KORRIGIERT) ---
+// --- INHALTE FÜR MODUL 2 (KORRIGIERT) ---
 const grundwissenInhalt2 = (
     <div className="space-y-8">
         <p className="text-lg leading-relaxed">Nachdem wir wissen, was Daten sind, müssen wir klären, wie wir sie erhalten. Eine schlechte Datenerhebung führt unweigerlich zu falschen Schlussfolgerungen, egal wie gut die Analyse ist. „Garbage in, garbage out“ ist das oberste Gebot.</p>
@@ -173,7 +173,7 @@ const uebungenData2: UebungenData = {
 };
 const uebungenInhalt2 = <UebungenContent data={uebungenData2} />;
 
-// --- MODUL-LISTE (ERWEITERT UM MODUL 2) ---
+// --- MODUL-LISTE ---
 const statisticsModules: StatisticsModule[] = [
     { 
         id: 1, 
@@ -197,10 +197,9 @@ const statisticsModules: StatisticsModule[] = [
             uebungen: uebungenInhalt2
         }
     },
-    // ... füge hier die restlichen Module ein
 ];
 
-// --- HAUPTKOMPONENTE (unverändert) ---
+// --- HAUPTKOMPONENTE ---
 export default function LessonDetailPage() {
   const { lessonId } = useParams<{ lessonId: string }>();
   const [type, moduleIdStr] = lessonId.split('-');
