@@ -1,4 +1,4 @@
-// app/profile/page.tsx (Stabile Version)
+// app/profile/page.tsx
 'use client';
 
 import { useEffect, useState, Suspense } from 'react';
@@ -11,11 +11,11 @@ import LoadingSpinner from '@/components/LoadingSpinner';
 import { ErrorBoundary } from 'react-error-boundary';
 import { fetchProfileProgress } from '@/utils/modules';
 
-// Die Preis-IDs werden hier als Konstanten definiert.
+// Die Preis-IDs bleiben wie gehabt.
 const monthlyPriceId = process.env.NEXT_PUBLIC_STRIPE_MONTHLY_PRICE_ID || '';
 const yearlyPriceId = process.env.NEXT_PUBLIC_STRIPE_YEARLY_PRICE_ID || '';
 
-// CustomStripeButton Komponente
+// CustomStripeButton Komponente bleibt unverändert...
 interface CustomStripeButtonProps {
   priceId: string;
   label: string;
@@ -83,6 +83,12 @@ function ProfileContent() {
   const { subscription, isLoading: isLoadingSubscription, syncWithStripe, fetchSubscription } = useSubscription();
   const paymentStatus = searchParams.get('payment');
   const [prog, setProg] = useState({ percent: 0, completed_modules: 0, total_modules: 10 });
+  
+  // NEU: States für den Kündigungs-Modal
+  const [isCancelModalOpen, setIsCancelModalOpen] = useState(false);
+  const [isCancelling, setIsCancelling] = useState(false);
+  const [cancelError, setCancelError] = useState('');
+
 
   useEffect(() => {
     if (!user?.id) return;
@@ -122,11 +128,43 @@ function ProfileContent() {
         body: JSON.stringify({ subscriptionId: subscription.stripe_subscription_id }),
       });
       if (!response.ok) throw new Error('Failed to reactivate subscription');
-      router.refresh();
+      await fetchSubscription(); // Zustand neu laden
     } catch (error) {
       console.error('Error reactivating subscription:', error);
     }
   };
+  
+  // NEU: Funktion zur Kündigung des Abonnements
+  const handleCancelSubscription = async () => {
+    if (!subscription?.stripe_subscription_id) return;
+
+    setIsCancelling(true);
+    setCancelError('');
+
+    try {
+      const response = await fetch('/api/stripe/cancel', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ subscriptionId: subscription.stripe_subscription_id }),
+      });
+
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.error || 'Kündigung fehlgeschlagen.');
+      }
+      
+      // Wichtig: Den Abo-Status neu laden, um die Änderungen anzuzeigen
+      await fetchSubscription(); 
+      setIsCancelModalOpen(false);
+
+    } catch (error) {
+      console.error('Error cancelling subscription:', error);
+      setCancelError(error instanceof Error ? error.message : 'Ein unbekannter Fehler ist aufgetreten.');
+    } finally {
+      setIsCancelling(false);
+    }
+  };
+
 
   if (!user) {
     return <LoadingSpinner />;
@@ -136,7 +174,8 @@ function ProfileContent() {
     <ErrorBoundary fallback={<div className="p-4 text-red-600 dark:text-red-400">Failed to load subscription details.</div>}>
       <div className="min-h-screen bg-slate-50 dark:bg-[#0B1120] px-4 py-8">
         <div className="max-w-4xl mx-auto">
-          {paymentStatus === 'success' && (
+          {/* ... (Code für Erfolgsmeldung, Titel, AccountManagement, Studienfortschritt bleibt gleich) ... */}
+           {paymentStatus === 'success' && (
             <div className="mb-8 p-4 bg-green-50 dark:bg-green-900/30 rounded-lg">
               <p className="text-green-700 dark:text-green-400">🎉 Danke für dein Abonnement! Deine Zahlung war erfolgreich.</p>
             </div>
@@ -162,18 +201,20 @@ function ProfileContent() {
                 Module ansehen/abhaken
               </Link>
               <Link
-                href={prog.percent >= 100 ? '/exam' : '/modules'}
+                href={prog.percent >= 100 ? '/exam' : '#'}
                 className={`px-4 py-2 rounded-lg ${
                   prog.percent >= 100
                     ? 'bg-black text-white hover:opacity-90'
                     : 'bg-slate-300 dark:bg-slate-600 text-slate-700 dark:text-slate-200 cursor-not-allowed'
                 }`}
                 aria-disabled={prog.percent < 100}
+                onClick={(e) => { if (prog.percent < 100) e.preventDefault(); }}
               >
                 Grosse Prüfung starten
               </Link>
             </div>
           </div>
+
 
           <div className="bg-white dark:bg-neutral-dark border border-slate-200 dark:border-slate-700 rounded-lg shadow p-6 mb-8">
             <h2 className="text-xl font-semibold mb-4 text-slate-900 dark:text-white">Abonnement-Status</h2>
@@ -184,6 +225,7 @@ function ProfileContent() {
               </div>
             ) : subscription ? (
               <div className="space-y-3 text-slate-800 dark:text-slate-200">
+                {/* ... (Anzeige von Status, Plan, nächste Zahlung bleibt gleich) ... */}
                 <div className="flex justify-between">
                     <span className="font-medium">Status:</span>
                     <span className="font-bold text-green-500">
@@ -215,12 +257,21 @@ function ProfileContent() {
                     </button>
                   </div>
                 ) : (
-                  <p className="text-xs text-slate-500 dark:text-slate-400 pt-4">Du kannst dein Abo in den Stripe-Einstellungen verwalten.</p>
+                  // NEU: Button zum Kündigen des Abos
+                  <div className="mt-6">
+                    <button
+                      onClick={() => setIsCancelModalOpen(true)}
+                      className="w-full px-4 py-2 text-sm text-center text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 rounded-lg hover:bg-red-100 dark:hover:bg-red-900/40 transition-colors"
+                    >
+                      Abonnement kündigen
+                    </button>
+                  </div>
                 )}
               </div>
             ) : (
               <div className="mt-4 space-y-4 text-slate-800 dark:text-slate-200">
-                 <div className="flex justify-between text-slate-800 dark:text-slate-200">
+                 {/* ... (Anzeige für "Kein Premium" und Kauf-Buttons bleibt gleich) ... */}
+                  <div className="flex justify-between text-slate-800 dark:text-slate-200">
                     <span className="font-medium">Status:</span>
                     <span className="font-bold text-yellow-500">
                         Kein Premium
@@ -247,6 +298,36 @@ function ProfileContent() {
           </div>
         </div>
       </div>
+       
+      {/* NEU: Modal zur Bestätigung der Kündigung */}
+      {isCancelModalOpen && subscription && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 max-w-md w-full shadow-xl">
+                <h3 className="text-xl font-semibold mb-4 text-slate-900 dark:text-white">Abonnement kündigen?</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-6">
+                    Bist du sicher? Dein Abonnement bleibt bis zum Ende des aktuellen Abrechnungszeitraums am {new Date(subscription.current_period_end).toLocaleDateString()} aktiv.
+                </p>
+                {cancelError && (
+                    <p className="text-red-500 mb-4">{cancelError}</p>
+                )}
+                <div className="flex justify-end gap-4">
+                    <button
+                        onClick={() => setIsCancelModalOpen(false)}
+                        className="px-4 py-2 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700"
+                    >
+                        Abbrechen
+                    </button>
+                    <button
+                        onClick={handleCancelSubscription}
+                        disabled={isCancelling}
+                        className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 disabled:opacity-50"
+                    >
+                        {isCancelling ? 'Wird gekündigt...' : 'Ja, kündigen'}
+                    </button>
+                </div>
+            </div>
+        </div>
+      )}
     </ErrorBoundary>
   );
 }

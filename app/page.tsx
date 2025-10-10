@@ -10,61 +10,61 @@ import { VideoModal } from "@/components/VideoModal";
 const workflowSections = [
   {
     id: "overview",
-    title: "Psychedu Overview",
+    title: "Psychedu Überblick",
     description:
-      "Get your Psychology Bachelor online — faster. Multilingual learning, guided study plans, and pro support.",
+      "Mach deinen Psychologie-Abschluss online – schneller. Mehrsprachiges Lernen, geführte Lernpläne und professionelle Unterstützung.",
     bgColor: "bg-white dark:bg-[#0B1120]",
   },
   {
     id: "authentication",
-    title: "Enrollment & Access",
-    description: "Secure sign-in and student dashboard to track progress.",
+    title: "Anmeldung & Zugang",
+    description: "Sicheres Anmelden und Studenten-Dashboard zur Fortschrittsverfolgung.",
     bgColor: "bg-slate-50 dark:bg-[#0B1120]",
     metrics: [
-      { label: "Languages", value: "All" },
-      { label: "Study Duration", value: "~12 mo" },
-      { label: "Progress Tracking", value: "Real-time" },
+      { label: "Sprachen", value: "Alle" },
+      { label: "Studiendauer", value: "~12 Monate" },
+      { label: "Fortschrittsverfolgung", value: "Echtzeit" },
     ],
   },
   {
     id: "payments",
-    title: "Pricing & Billing",
-    description: "Simple plans: 20/month or 200/year. Cancel anytime.",
+    title: "Preise & Abrechnung",
+    description: "Einfache Pläne: 20/Monat oder 200/Jahr. Jederzeit kündbar.",
     bgColor: "bg-white dark:bg-[#0B1120]",
     metrics: [
-      { label: "Monthly", value: "20" },
-      { label: "Yearly", value: "200" },
-      { label: "Trial", value: "Yes" },
+      { label: "Monatlich", value: "20" },
+      { label: "Jährlich", value: "200" },
+      { label: "Probezeit", value: "Ja" },
     ],
   },
   {
     id: "database",
-    title: "Learning Platform",
+    title: "Lernplattform",
     description:
-      "Structured modules, quizzes, and resources aligned to bachelor-level psychology.",
+      "Strukturierte Module, Quizze und Ressourcen, die auf einen Psychologie-Abschluss ausgerichtet sind.",
     bgColor: "bg-slate-50 dark:bg-[#0B1120]",
     metrics: [
-      { label: "Modules", value: "50+" },
-      { label: "Assessments", value: "Weekly" },
-      { label: "Resources", value: "Library" },
+      { label: "Themen", value: "50+" },
+      { label: "Bewertungen", value: "Wöchentlich" },
+      { label: "Reddit", value: "Psychedu" },
     ],
   },
   {
     id: "features",
-    title: "Multilingual & Support",
+    title: "Warum Psychedu?",
     description:
-      "Learn in every language with live tutoring, office hours, and community.",
+      "Traditionelle Bildung ist teuer und oft nicht auf das Wesentliche fokussiert. Wir bieten dir alles, was du für deinen Abschluss brauchst – kompakt, praxisnah und zu einem fairen Preis.",
     bgColor: "bg-white dark:bg-[#0B1120]",
     metrics: [
-      { label: "Languages", value: "Global" },
-      { label: "Tutors", value: "Experts" },
-      { label: "Office Hours", value: "Weekly" },
+      { label: "Faire Preise", value: "Günstig" },
+      { label: "Praxisrelevanz", value: "Fokussiert" },
+      { label: "Bachelor-Wissen", value: "Kompakt" },
     ],
   },
   {
     id: "pricing",
-    title: "Plans",
-    description: "20/month or 200/year — pick what fits",
+    title: "Pläne",
+    description: "20/Monat oder 200/Jahr – wähle, was zu dir passt.",
     bgColor: "bg-slate-50 dark:bg-[#0B1120]",
   },
 ];
@@ -123,13 +123,13 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative pt-20 pb-16 sm:pb-24 text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white">
-              <span className="block">Psychedu — Psychology Bachelor</span>
+              <span className="block">Psychedu – Dein Psychologie-Abschluss</span>
               <span className="block text-primary dark:text-primary-light">
-                Get your degree online in ~1 year
+                Erhalte deinen Abschluss online in ~1 Jahr
               </span>
             </h1>
             <p className="mt-6 max-w-2xl mx-auto text-lg text-slate-600 dark:text-slate-300">
-              Study faster with a guided, multilingual program. Learn anywhere, stay on track, and graduate sooner.
+              Studiere schneller mit einem geführten, mehrsprachigen Programm. Lerne überall, bleibe auf Kurs und schließe dein Studium früher ab.
             </p>
             <div className="mt-10 flex gap-4 justify-center">
               <motion.button
@@ -138,13 +138,13 @@ export default function LandingPage() {
                 onClick={() => setIsVideoModalOpen(true)}
                 className="px-8 py-3 bg-primary hover:bg-primary-dark text-white rounded-lg shadow-lg"
               >
-                Watch Overview
+                Video ansehen
               </motion.button>
               <button
                 onClick={() => router.push("/dashboard")}
                 className="px-8 py-3 bg-white dark:bg-neutral-dark text-primary dark:text-primary-light border-2 border-primary rounded-lg shadow-lg"
               >
-                Start Free Trial
+                Kostenlose Testversion starten
               </button>
             </div>
           </div>
@@ -194,10 +194,10 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="bg-white dark:bg-neutral-dark rounded-xl shadow-xl p-12 border border-slate-200 dark:border-slate-700 text-center">
             <motion.h2 initial={{ y: 20 }} whileInView={{ y: 0 }} className="text-3xl font-bold text-slate-900 dark:text-white">
-              Ready to earn your Psychology Bachelor faster?
+              Bereit, deinen Psychologie-Abschluss schneller zu machen?
             </motion.h2>
             <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">
-              Learn in your language, follow a 12-month plan, and stay accountable with mentors.
+              Lerne in deiner Sprache, folge einem 12-Monats-Plan und bleibe mit Mentoren auf Kurs.
             </p>
             <div className="mt-10 flex gap-4 justify-center">
               <motion.button
@@ -206,7 +206,7 @@ export default function LandingPage() {
                 onClick={() => setIsVideoModalOpen(true)}
                 className="px-8 py-3 bg-primary hover:bg-primary-dark text-white rounded-lg shadow-lg"
               >
-                Watch Overview
+                Video ansehen
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.02 }}
@@ -214,7 +214,7 @@ export default function LandingPage() {
                 onClick={() => router.push("/dashboard")}
                 className="px-8 py-3 bg-white dark:bg-neutral-dark text-primary dark:text-primary-light border-2 border-primary rounded-lg shadow-lg"
               >
-                Start Free Trial
+                Kostenlose Testversion starten
               </motion.button>
             </div>
           </div>
