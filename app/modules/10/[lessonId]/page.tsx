@@ -2,7 +2,8 @@
 
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, Check, X, Eye, EyeOff } from 'lucide-react';
+// NEU: ArrowRight importiert
+import { ArrowLeft, ArrowRight, Check, X, Eye, EyeOff } from 'lucide-react';
 import { ReactNode, useState, FC } from 'react';
 
 // --- TYP-DEFINITIONEN ---
@@ -59,306 +60,38 @@ const UebungenContent: FC<{ data: UebungenData }> = ({ data }) => {
 };
 
 // --- INHALTE FÜR ALLE MODULE ---
+// (Alle Inhalts-Konstanten wie grundwissenInhalt1, anwendbarkeitInhalt1 etc. bleiben unverändert hier)
 
 // Modul 1: Einführung in die A&O-Psychologie
-const grundwissenInhalt1 = (
-    <div className="space-y-8">
-        <p className="text-lg leading-relaxed">Die Arbeits- und Organisationspsychologie (A&O-Psychologie) wendet psychologische Theorien, Prinzipien und Forschungsergebnisse auf den Arbeitsplatz und Organisationen an. Sie gliedert sich in drei Hauptbereiche:</p>
-        <ul className="list-disc list-inside space-y-3 pl-2">
-            <li><strong>Arbeitspsychologie (Industrial Psychology):</strong> Konzentriert sich auf die Analyse von Arbeitsplätzen und die Auswahl, Beurteilung und Schulung von Mitarbeitern. (Auch Personalpsychologie genannt).</li>
-            <li><strong>Organisationspsychologie (Organizational Psychology):</strong> Untersucht, wie sich soziale Strukturen und Beziehungen am Arbeitsplatz auf die Mitarbeiter und die Unternehmensleistung auswirken. Themen sind Arbeitszufriedenheit, Führung und Organisationskultur.</li>
-            <li><strong>Ingenieurpsychologie (Human Factors / Ergonomie):</strong> Befasst sich mit der Gestaltung von Maschinen, Werkzeugen und Arbeitsumgebungen, um sie an die menschlichen Fähigkeiten anzupassen und so Produktivität, Sicherheit und Komfort zu maximieren.</li>
-        </ul>
-    </div>
-);
-const anwendbarkeitInhalt1 = (
-    <div className="space-y-8">
-        <h3 className="text-2xl font-semibold border-b pb-2">Der Hawthorne-Effekt: Warum Beobachtung alles ändert</h3>
-        <p className="text-lg leading-relaxed">Eines der berühmtesten Ergebnisse der A&O-Psychologie ist der Hawthorne-Effekt. In den 1920er Jahren untersuchten Forscher in den Hawthorne-Werken den Einfluss der Beleuchtungsstärke auf die Produktivität von Arbeiterinnen.</p>
-        <p><strong>Das Experiment:</strong> Sie erhöhten und verringerten die Beleuchtung und stellten fest, dass die Produktivität in **beiden** Fällen anstieg. Sogar als sie die Beleuchtung auf das Niveau einer Mondnacht senkten, stieg die Produktivität weiter.</p>
-        <p><strong>Die revolutionäre Erkenntnis:</strong> Nicht die Beleuchtung war der entscheidende Faktor, sondern die **Aufmerksamkeit**, die den Arbeiterinnen durch die Forscher zuteilwurde. Die Mitarbeiter fühlten sich beobachtet, wertgeschätzt und als Teil eines wichtigen Experiments, was ihre Motivation und Leistung steigerte.</p>
-        <p><strong>Heutige Anwendung:</strong> Der Hawthorne-Effekt lehrt uns, dass soziale und psychologische Faktoren am Arbeitsplatz (wie Wertschätzung, Aufmerksamkeit, das Gefühl der Wichtigkeit) oft einen grösseren Einfluss auf die Leistung haben als rein physische Arbeitsbedingungen.</p>
-    </div>
-);
-const meisterklasseInhalt1 = (
-    <div className="space-y-8">
-        <h3 className="text-2xl font-semibold border-b pb-2">Wissenschaftler-Praktiker-Modell</h3>
-        <p>Ein Kernprinzip der A&O-Psychologie ist das Wissenschaftler-Praktiker-Modell. Es besagt, dass A&O-Psychologen in einer Doppelrolle agieren:</p>
-        <ul className="list-disc list-inside space-y-3 pl-2">
-            <li><strong>Als Wissenschaftler (Scientist):</strong> Sie nutzen wissenschaftliche Methoden (z.B. Experimente, Korrelationsstudien), um Hypothesen über das Verhalten am Arbeitsplatz zu testen und evidenzbasierte Erkenntnisse zu gewinnen.</li>
-            <li><strong>Als Praktiker (Practitioner):</strong> Sie wenden diese wissenschaftlich fundierten Erkenntnisse an, um reale Probleme in Organisationen zu lösen – sei es durch die Gestaltung fairer Auswahlverfahren, die Entwicklung effektiver Trainingsprogramme oder die Verbesserung der Teamkommunikation.</li>
-        </ul>
-        <p>Dieser Ansatz stellt sicher, dass Entscheidungen im Personalwesen nicht auf Bauchgefühl oder veralteten Annahmen basieren, sondern auf soliden, empirischen Daten. Er unterscheidet die A&O-Psychologie von vielen anderen Bereichen der Unternehmensberatung.</p>
-    </div>
-);
-const uebungenData1: UebungenData = {
-    quiz: [
-        { q: "Welcher Bereich der A&O-Psychologie befasst sich mit der Gestaltung von Benutzeroberflächen?", a: ["Arbeitspsychologie", "Organisationspsychologie", "Ingenieurpsychologie"], correct: 2 },
-        { q: "Der Hawthorne-Effekt besagt, dass Mitarbeiter ihre Leistung steigern, weil...", a: ["sie mehr Lohn erhalten.", "die Beleuchtung besser ist.", "sie Aufmerksamkeit erhalten und sich wertgeschätzt fühlen."], correct: 2 },
-    ],
-    open: [
-        { q: "Ein Unternehmen möchte ein neues Software-Tool einführen. Welche Fragen würde ein A&O-Psychologe aus den drei verschiedenen Perspektiven (Arbeit, Organisation, Ingenieur) stellen?", solution: "Arbeitspsychologie: &apos;Welche Schulungen benötigen die Mitarbeiter, um das Tool effektiv zu nutzen?&apos;. Organisationspsychologie: &apos;Wie wird das Tool die Teamkommunikation und die Arbeitszufriedenheit beeinflussen?&apos;. Ingenieurpsychologie: &apos;Ist die Benutzeroberfläche des Tools intuitiv und an die kognitiven Fähigkeiten der Nutzer angepasst?&apos;" },
-    ],
-    kreativ: "Beschreiben Sie eine persönliche Erfahrung, bei der Sie den Hawthorne-Effekt erlebt haben – eine Situation, in der Sie Ihre Leistung gesteigert haben, nur weil Sie wussten, dass Sie beobachtet werden."
-};
+const grundwissenInhalt1 = ( <div className="space-y-8"> <p className="text-lg leading-relaxed">Die Arbeits- und Organisationspsychologie (A&O-Psychologie) wendet psychologische Theorien, Prinzipien und Forschungsergebnisse auf den Arbeitsplatz und Organisationen an. Sie gliedert sich in drei Hauptbereiche:</p> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Arbeitspsychologie (Industrial Psychology):</strong> Konzentriert sich auf die Analyse von Arbeitsplätzen und die Auswahl, Beurteilung und Schulung von Mitarbeitern. (Auch Personalpsychologie genannt).</li> <li><strong>Organisationspsychologie (Organizational Psychology):</strong> Untersucht, wie sich soziale Strukturen und Beziehungen am Arbeitsplatz auf die Mitarbeiter und die Unternehmensleistung auswirken. Themen sind Arbeitszufriedenheit, Führung und Organisationskultur.</li> <li><strong>Ingenieurpsychologie (Human Factors / Ergonomie):</strong> Befasst sich mit der Gestaltung von Maschinen, Werkzeugen und Arbeitsumgebungen, um sie an die menschlichen Fähigkeiten anzupassen und so Produktivität, Sicherheit und Komfort zu maximieren.</li> </ul> </div> );
+const anwendbarkeitInhalt1 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Der Hawthorne-Effekt: Warum Beobachtung alles ändert</h3> <p className="text-lg leading-relaxed">Eines der berühmtesten Ergebnisse der A&O-Psychologie ist der Hawthorne-Effekt. In den 1920er Jahren untersuchten Forscher in den Hawthorne-Werken den Einfluss der Beleuchtungsstärke auf die Produktivität von Arbeiterinnen.</p> <p><strong>Das Experiment:</strong> Sie erhöhten und verringerten die Beleuchtung und stellten fest, dass die Produktivität in **beiden** Fällen anstieg. Sogar als sie die Beleuchtung auf das Niveau einer Mondnacht senkten, stieg die Produktivität weiter.</p> <p><strong>Die revolutionäre Erkenntnis:</strong> Nicht die Beleuchtung war der entscheidende Faktor, sondern die **Aufmerksamkeit**, die den Arbeiterinnen durch die Forscher zuteilwurde. Die Mitarbeiter fühlten sich beobachtet, wertgeschätzt und als Teil eines wichtigen Experiments, was ihre Motivation und Leistung steigerte.</p> <p><strong>Heutige Anwendung:</strong> Der Hawthorne-Effekt lehrt uns, dass soziale und psychologische Faktoren am Arbeitsplatz (wie Wertschätzung, Aufmerksamkeit, das Gefühl der Wichtigkeit) oft einen grösseren Einfluss auf die Leistung haben als rein physische Arbeitsbedingungen.</p> </div> );
+const meisterklasseInhalt1 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Wissenschaftler-Praktiker-Modell</h3> <p>Ein Kernprinzip der A&O-Psychologie ist das Wissenschaftler-Praktiker-Modell. Es besagt, dass A&O-Psychologen in einer Doppelrolle agieren:</p> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Als Wissenschaftler (Scientist):</strong> Sie nutzen wissenschaftliche Methoden (z.B. Experimente, Korrelationsstudien), um Hypothesen über das Verhalten am Arbeitsplatz zu testen und evidenzbasierte Erkenntnisse zu gewinnen.</li> <li><strong>Als Praktiker (Practitioner):</strong> Sie wenden diese wissenschaftlich fundierten Erkenntnisse an, um reale Probleme in Organisationen zu lösen – sei es durch die Gestaltung fairer Auswahlverfahren, die Entwicklung effektiver Trainingsprogramme oder die Verbesserung der Teamkommunikation.</li> </ul> <p>Dieser Ansatz stellt sicher, dass Entscheidungen im Personalwesen nicht auf Bauchgefühl oder veralteten Annahmen basieren, sondern auf soliden, empirischen Daten. Er unterscheidet die A&O-Psychologie von vielen anderen Bereichen der Unternehmensberatung.</p> </div> );
+const uebungenData1: UebungenData = { quiz: [ { q: "Welcher Bereich der A&O-Psychologie befasst sich mit der Gestaltung von Benutzeroberflächen?", a: ["Arbeitspsychologie", "Organisationspsychologie", "Ingenieurpsychologie"], correct: 2 }, { q: "Der Hawthorne-Effekt besagt, dass Mitarbeiter ihre Leistung steigern, weil...", a: ["sie mehr Lohn erhalten.", "die Beleuchtung besser ist.", "sie Aufmerksamkeit erhalten und sich wertgeschätzt fühlen."], correct: 2 }, ], open: [ { q: "Ein Unternehmen möchte ein neues Software-Tool einführen. Welche Fragen würde ein A&O-Psychologe aus den drei verschiedenen Perspektiven (Arbeit, Organisation, Ingenieur) stellen?", solution: "Arbeitspsychologie: &apos;Welche Schulungen benötigen die Mitarbeiter, um das Tool effektiv zu nutzen?&apos;. Organisationspsychologie: &apos;Wie wird das Tool die Teamkommunikation und die Arbeitszufriedenheit beeinflussen?&apos;. Ingenieurpsychologie: &apos;Ist die Benutzeroberfläche des Tools intuitiv und an die kognitiven Fähigkeiten der Nutzer angepasst?&apos;" }, ], kreativ: "Beschreiben Sie eine persönliche Erfahrung, bei der Sie den Hawthorne-Effekt erlebt haben – eine Situation, in der Sie Ihre Leistung gesteigert haben, nur weil Sie wussten, dass Sie beobachtet werden." };
 const uebungenInhalt1 = <UebungenContent data={uebungenData1} />;
-
-// Modul 2: Personalauswahl
-const grundwissenInhalt2 = (
-    <div className="space-y-8">
-        <p className="text-lg leading-relaxed">Die Personalauswahl ist ein zentraler Prozess der Arbeitspsychologie. Ziel ist es, die Person zu finden, deren Qualifikationen (Wissen, Fähigkeiten, Fertigkeiten) am besten zu den Anforderungen der Stelle passen.</p>
-        <h3 className="text-2xl font-semibold border-b pb-2">Der Auswahlprozess</h3>
-        <ol className="list-decimal list-inside space-y-3 pl-2">
-            <li><strong>Anforderungsanalyse (Job Analysis):</strong> Genaue Beschreibung der Aufgaben, Verantwortlichkeiten und der benötigten Qualifikationen für eine Stelle.</li>
-            <li><strong>Bewerber-Screening:</strong> Sichtung von Lebensläufen und Bewerbungsschreiben.</li>
-            <li><strong>Auswahlverfahren:</strong> Einsatz verschiedener Methoden, um die Eignung der Kandidaten zu prüfen. Gängige Methoden sind Interviews, psychometrische Tests (z.B. Intelligenz-, Persönlichkeitstests) und Arbeitsproben.</li>
-        </ol>
-        <h3 className="text-2xl font-semibold border-b pb-2">Arten von Interviews</h3>
-        <ul className="list-disc list-inside space-y-3 pl-2">
-            <li><strong>Unstrukturiertes Interview:</strong> Der Interviewer stellt spontane, unterschiedliche Fragen. Es gleicht eher einem zwanglosen Gespräch.</li>
-            <li><strong>Strukturiertes Interview:</strong> Allen Kandidaten werden dieselben, vorher festgelegten Fragen in derselben Reihenfolge gestellt. Die Antworten werden anhand einer standardisierten Skala bewertet.</li>
-        </ul>
-    </div>
-);
-const anwendbarkeitInhalt2 = (
-    <div className="space-y-8">
-        <h3 className="text-2xl font-semibold border-b pb-2">Warum unstrukturierte Interviews trügerisch sind</h3>
-        <p className="text-lg leading-relaxed">Die meisten Menschen glauben, sie hätten eine gute Menschenkenntnis und könnten im Gespräch schnell einschätzen, wer für einen Job geeignet ist. Die Forschung zeigt jedoch ein klares Bild: **Unstrukturierte Interviews sind schlechte Prädiktoren für den späteren Berufserfolg.**</p>
-        <p>Sie sind extrem anfällig für Verzerrungen (Bias):</p>
-        <ul className="list-disc list-inside space-y-3 pl-2">
-            <li><strong>Sympathie-Effekt:</strong> Wir bevorzugen Kandidaten, die uns ähnlich sind oder die wir sympathisch finden, unabhängig von ihrer Qualifikation.</li>
-            <li><strong>Halo-Effekt:</strong> Ein einzelnes positives Merkmal (z.B. attraktives Aussehen, prestigeträchtige Universität) überstrahlt alle anderen Informationen.</li>
-            <li><strong>Anker-Effekt:</strong> Die erste Information, die wir erhalten, beeinflusst unsere weitere Wahrnehmung überproportional stark.</li>
-        </ul>
-        <p>Strukturierte Interviews hingegen, insbesondere wenn sie verhaltensbasiert sind (&quot;Erzählen Sie mir von einer Situation, in der Sie...&quot;), sind deutlich fairer und haben eine viel höhere Vorhersagevalidität. Sie zwingen den Interviewer, sich auf jobrelevante Kompetenzen zu konzentrieren, anstatt auf sein Bauchgefühl.</p>
-    </div>
-);
-const meisterklasseInhalt2 = (
-    <div className="space-y-8">
-        <h3 className="text-2xl font-semibold border-b pb-2">Assessment Center: Die Königsklasse der Auswahl</h3>
-        <p>Ein Assessment Center (AC) ist ein intensives Auswahlverfahren, bei dem mehrere Kandidaten über einen oder mehrere Tage von mehreren geschulten Beobachtern (Assessoren) in verschiedenen simulierten Arbeitssituationen bewertet werden.</p>
-        <p>Typische Übungen in einem AC sind:</p>
-        <ul className="list-disc list-inside space-y-3 pl-2">
-            <li><strong>Postkorb-Übung:</strong> Simulation einer Stresssituation, in der viele Aufgaben priorisiert und delegiert werden müssen.</li>
-            <li><strong>Gruppendiskussion:</strong> Beobachtung von Teamfähigkeit, Durchsetzungsvermögen und Kommunikationsstil.</li>
-            <li><strong>Rollenspiel:</strong> Simulation eines schwierigen Mitarbeiter- oder Kundengesprächs.</li>
-            <li><strong>Präsentation:</strong> Test der Fähigkeit, komplexe Sachverhalte verständlich darzustellen.</li>
-        </ul>
-        <p>Obwohl sehr aufwendig und teuer, bieten ACs eine hohe Validität, da sie das tatsächliche Verhalten der Kandidaten in jobähnlichen Situationen beobachten, anstatt sich nur auf deren Selbstauskünfte zu verlassen.</p>
-    </div>
-);
-const uebungenData2: UebungenData = {
-    quiz: [
-        { q: "Welche Interviewform hat die höchste Vorhersagekraft für Berufserfolg?", a: ["Das unstrukturierte Interview", "Das strukturierte Interview", "Das telefonische Interview"], correct: 1 },
-        { q: "Wenn ein positives Merkmal eines Bewerbers (z.B. Aussehen) Ihre gesamte Bewertung beeinflusst, unterliegen Sie dem...", a: ["Anker-Effekt", "Sympathie-Effekt", "Halo-Effekt"], correct: 2 },
-    ],
-    open: [
-        { q: "Was ist der Unterschied zwischen einer &apos;normalen&apos; Frage und einer verhaltensbasierten Interviewfrage (STAR-Methode)?", solution: "Eine normale Frage ist oft hypothetisch (&apos;Wie würden Sie mit Stress umgehen?&apos;). Eine verhaltensbasierte Frage zielt auf vergangenes, konkretes Verhalten ab (&apos;Erzählen Sie mir von einer spezifischen Situation, in der Sie unter grossem Stress standen. Was war die Aufgabe, welche Aktion haben Sie ergriffen und was war das Resultat?&apos;). Die STAR-Methode (Situation, Task, Action, Result) strukturiert diese Art von Fragen und Antworten." },
-    ],
-    kreativ: "Entwickeln Sie eine verhaltensbasierte Interviewfrage (nach der STAR-Logik), um die &apos;Teamfähigkeit&apos; eines Bewerbers für ein Software-Entwickler-Team zu prüfen."
-};
+const grundwissenInhalt2 = ( <div className="space-y-8"> <p className="text-lg leading-relaxed">Die Personalauswahl ist ein zentraler Prozess der Arbeitspsychologie. Ziel ist es, die Person zu finden, deren Qualifikationen (Wissen, Fähigkeiten, Fertigkeiten) am besten zu den Anforderungen der Stelle passen.</p> <h3 className="text-2xl font-semibold border-b pb-2">Der Auswahlprozess</h3> <ol className="list-decimal list-inside space-y-3 pl-2"> <li><strong>Anforderungsanalyse (Job Analysis):</strong> Genaue Beschreibung der Aufgaben, Verantwortlichkeiten und der benötigten Qualifikationen für eine Stelle.</li> <li><strong>Bewerber-Screening:</strong> Sichtung von Lebensläufen und Bewerbungsschreiben.</li> <li><strong>Auswahlverfahren:</strong> Einsatz verschiedener Methoden, um die Eignung der Kandidaten zu prüfen. Gängige Methoden sind Interviews, psychometrische Tests (z.B. Intelligenz-, Persönlichkeitstests) und Arbeitsproben.</li> </ol> <h3 className="text-2xl font-semibold border-b pb-2">Arten von Interviews</h3> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Unstrukturiertes Interview:</strong> Der Interviewer stellt spontane, unterschiedliche Fragen. Es gleicht eher einem zwanglosen Gespräch.</li> <li><strong>Strukturiertes Interview:</strong> Allen Kandidaten werden dieselben, vorher festgelegten Fragen in derselben Reihenfolge gestellt. Die Antworten werden anhand einer standardisierten Skala bewertet.</li> </ul> </div> );
+const anwendbarkeitInhalt2 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Warum unstrukturierte Interviews trügerisch sind</h3> <p className="text-lg leading-relaxed">Die meisten Menschen glauben, sie hätten eine gute Menschenkenntnis und könnten im Gespräch schnell einschätzen, wer für einen Job geeignet ist. Die Forschung zeigt jedoch ein klares Bild: **Unstrukturierte Interviews sind schlechte Prädiktoren für den späteren Berufserfolg.**</p> <p>Sie sind extrem anfällig für Verzerrungen (Bias):</p> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Sympathie-Effekt:</strong> Wir bevorzugen Kandidaten, die uns ähnlich sind oder die wir sympathisch finden, unabhängig von ihrer Qualifikation.</li> <li><strong>Halo-Effekt:</strong> Ein einzelnes positives Merkmal (z.B. attraktives Aussehen, prestigeträchtige Universität) überstrahlt alle anderen Informationen.</li> <li><strong>Anker-Effekt:</strong> Die erste Information, die wir erhalten, beeinflusst unsere weitere Wahrnehmung überproportional stark.</li> </ul> <p>Strukturierte Interviews hingegen, insbesondere wenn sie verhaltensbasiert sind (&quot;Erzählen Sie mir von einer Situation, in der Sie...&quot;), sind deutlich fairer und haben eine viel höhere Vorhersagevalidität. Sie zwingen den Interviewer, sich auf jobrelevante Kompetenzen zu konzentrieren, anstatt auf sein Bauchgefühl.</p> </div> );
+const meisterklasseInhalt2 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Assessment Center: Die Königsklasse der Auswahl</h3> <p>Ein Assessment Center (AC) ist ein intensives Auswahlverfahren, bei dem mehrere Kandidaten über einen oder mehrere Tage von mehreren geschulten Beobachtern (Assessoren) in verschiedenen simulierten Arbeitssituationen bewertet werden.</p> <p>Typische Übungen in einem AC sind:</p> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Postkorb-Übung:</strong> Simulation einer Stresssituation, in der viele Aufgaben priorisiert und delegiert werden müssen.</li> <li><strong>Gruppendiskussion:</strong> Beobachtung von Teamfähigkeit, Durchsetzungsvermögen und Kommunikationsstil.</li> <li><strong>Rollenspiel:</strong> Simulation eines schwierigen Mitarbeiter- oder Kundengesprächs.</li> <li><strong>Präsentation:</strong> Test der Fähigkeit, komplexe Sachverhalte verständlich darzustellen.</li> </ul> <p>Obwohl sehr aufwendig und teuer, bieten ACs eine hohe Validität, da sie das tatsächliche Verhalten der Kandidaten in jobähnlichen Situationen beobachten, anstatt sich nur auf deren Selbstauskünfte zu verlassen.</p> </div> );
+const uebungenData2: UebungenData = { quiz: [ { q: "Welche Interviewform hat die höchste Vorhersagekraft für Berufserfolg?", a: ["Das unstrukturierte Interview", "Das strukturierte Interview", "Das telefonische Interview"], correct: 1 }, { q: "Wenn ein positives Merkmal eines Bewerbers (z.B. Aussehen) Ihre gesamte Bewertung beeinflusst, unterliegen Sie dem...", a: ["Anker-Effekt", "Sympathie-Effekt", "Halo-Effekt"], correct: 2 }, ], open: [ { q: "Was ist der Unterschied zwischen einer &apos;normalen&apos; Frage und einer verhaltensbasierten Interviewfrage (STAR-Methode)?", solution: "Eine normale Frage ist oft hypothetisch (&apos;Wie würden Sie mit Stress umgehen?&apos;). Eine verhaltensbasierte Frage zielt auf vergangenes, konkretes Verhalten ab (&apos;Erzählen Sie mir von einer spezifischen Situation, in der Sie unter grossem Stress standen. Was war die Aufgabe, welche Aktion haben Sie ergriffen und was war das Resultat?&apos;). Die STAR-Methode (Situation, Task, Action, Result) strukturiert diese Art von Fragen und Antworten." }, ], kreativ: "Entwickeln Sie eine verhaltensbasierte Interviewfrage (nach der STAR-Logik), um die &apos;Teamfähigkeit&apos; eines Bewerbers für ein Software-Entwickler-Team zu prüfen." };
 const uebungenInhalt2 = <UebungenContent data={uebungenData2} />;
-
-// Modul 3: Mitarbeiterbeurteilung & -entwicklung
-const grundwissenInhalt3 = (
-    <div className="space-y-8">
-        <p className="text-lg leading-relaxed">Die Leistungsbeurteilung ist ein formaler Prozess, bei dem die Arbeitsleistung eines Mitarbeiters über einen bestimmten Zeitraum bewertet und dokumentiert wird. Sie dient administrativen Zwecken (z.B. Gehaltsentscheidungen) und der Mitarbeiterentwicklung.</p>
-        <h3 className="text-2xl font-semibold border-b pb-2">Methoden der Leistungsbeurteilung</h3>
-        <ul className="list-disc list-inside space-y-3 pl-2">
-            <li><strong>Grafische Ratingskalen:</strong> Die häufigste Methode, bei der Merkmale (z.B. &quot;Kommunikationsfähigkeit&quot;, &quot;Zuverlässigkeit&quot;) auf einer Skala (z.B. von 1-5) bewertet werden.</li>
-            <li><strong>Verhaltensverankerte Ratingskalen (BARS):</strong> Eine Weiterentwicklung, bei der die Skalenpunkte mit konkreten Verhaltensbeispielen &quot;verankert&quot; sind, was die Objektivität erhöht.</li>
-            <li><strong>360-Grad-Feedback:</strong> Die Leistung wird nicht nur vom Vorgesetzten bewertet, sondern auch von Kollegen, unterstellten Mitarbeitern, Kunden und dem Mitarbeiter selbst. Dies liefert eine umfassendere, aber auch komplexere Perspektive.</li>
-        </ul>
-    </div>
-);
-const anwendbarkeitInhalt3 = (
-    <div className="space-y-8">
-        <h3 className="text-2xl font-semibold border-b pb-2">Häufige Beurteilungsfehler</h3>
-        <p className="text-lg leading-relaxed">Leistungsbeurteilungen sind anfällig für dieselben kognitiven Verzerrungen wie Interviews. Das Wissen darum ist der erste Schritt zur Vermeidung.</p>
-        <ul className="list-disc list-inside space-y-4 pl-2">
-            <li><strong>Halo-Effekt:</strong> Ein Vorgesetzter, der einen Mitarbeiter sehr mag, bewertet ihn in allen Dimensionen positiv, auch in denen, in denen er schwach ist.</li>
-            <li><strong>Milde- oder Härte-Fehler:</strong> Einige Beurteiler neigen dazu, alle Mitarbeiter systematisch zu gut (Milde) oder zu streng (Härte) zu bewerten.</li>
-            <li><strong>Tendenz zur Mitte:</strong> Aus Angst vor Konflikten oder Unsicherheit bewerten einige Vorgesetzte alle Mitarbeiter im mittleren Bereich der Skala, was die Leistungsunterschiede nivelliert.</li>
-            <li><strong>Primacy/Recency-Effekt:</strong> Ereignisse am Anfang (Primacy) oder ganz am Ende (Recency) des Beurteilungszeitraums werden überbewertet, während die Leistung in der Mitte vergessen wird.</li>
-        </ul>
-        <p><strong>Gegenmassnahmen:</strong> Schulungen für Führungskräfte (Beobachtertraining) und die Verwendung von verhaltensverankerten Skalen können helfen, diese Fehler zu reduzieren.</p>
-    </div>
-);
-const meisterklasseInhalt3 = (
-    <div className="space-y-8">
-        <h3 className="text-2xl font-semibold border-b pb-2">Feedback geben, das wirkt</h3>
-        <p>Ein schlechtes Feedbackgespräch kann demotivieren und die Beziehung zwischen Mitarbeiter und Führungskraft nachhaltig schädigen. Gutes Feedback hingegen ist eines der stärksten Instrumente zur Leistungssteigerung. Die A&O-Psychologie empfiehlt folgende Prinzipien:</p>
-        <ul className="list-disc list-inside space-y-3 pl-2">
-            <li><strong>Spezifisch und verhaltensbasiert:</strong> Sagen Sie nicht &quot;Ihre Präsentationen sind unstrukturiert&quot;, sondern &quot;In der Präsentation am Dienstag haben Sie mit dem Fazit begonnen, was es für mich schwierig machte, Ihren Argumenten zu folgen&quot;.</li>
-            <li><strong>Zeitnah:</strong> Feedback sollte so nah wie möglich am Ereignis erfolgen, nicht erst Monate später im Jahresgespräch.</li>
-            <li><strong>Fokus auf die Zukunft:</strong> Anstatt nur die Vergangenheit zu kritisieren, sollte das Gespräch darauf abzielen, gemeinsam Lösungen für die Zukunft zu entwickeln (&quot;Was können wir tun, damit Sie sich bei der nächsten Präsentation sicherer fühlen?&quot;).</li>
-            <li><strong>Dialog, kein Monolog:</strong> Bitten Sie den Mitarbeiter um seine Selbsteinschätzung, bevor Sie Ihr Feedback geben.</li>
-        </ul>
-    </div>
-);
-const uebungenData3: UebungenData = {
-    quiz: [
-        { q: "Wenn Feedback von Vorgesetzten, Kollegen und Mitarbeitern eingeholt wird, nennt man das...", a: ["360-Grad-Feedback", "Halo-Effekt", "BARS"], correct: 0 },
-        { q: "Ein Beurteiler, der alle Mitarbeiter systematisch zu gut bewertet, unterliegt dem...", a: ["Härte-Fehler", "Halo-Effekt", "Milde-Fehler"], correct: 2 },
-    ],
-    open: [
-        { q: "Was ist der Hauptvorteil einer verhaltensverankerten Ratingskala (BARS) gegenüber einer einfachen grafischen Skala?", solution: "Eine BARS gibt dem Beurteiler für jeden Skalenpunkt (z.B. &apos;3&apos;, &apos;4&apos;, &apos;5&apos;) ein konkretes Verhaltensbeispiel. Dies reduziert den Interpretationsspielraum und die Subjektivität. Alle Beurteiler haben ein gemeinsames Verständnis davon, was z.B. eine &apos;4&apos; in &apos;Teamfähigkeit&apos; bedeutet, was die Objektivität und Vergleichbarkeit der Beurteilung erhöht." },
-    ],
-    kreativ: "Formulieren Sie ein negatives Feedback (&quot;Du kommst oft zu spät zu Meetings&quot;) so um, dass es den Prinzipien von gutem, konstruktivem Feedback entspricht."
-};
+const grundwissenInhalt3 = ( <div className="space-y-8"> <p className="text-lg leading-relaxed">Die Leistungsbeurteilung ist ein formaler Prozess, bei dem die Arbeitsleistung eines Mitarbeiters über einen bestimmten Zeitraum bewertet und dokumentiert wird. Sie dient administrativen Zwecken (z.B. Gehaltsentscheidungen) und der Mitarbeiterentwicklung.</p> <h3 className="text-2xl font-semibold border-b pb-2">Methoden der Leistungsbeurteilung</h3> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Grafische Ratingskalen:</strong> Die häufigste Methode, bei der Merkmale (z.B. &quot;Kommunikationsfähigkeit&quot;, &quot;Zuverlässigkeit&quot;) auf einer Skala (z.B. von 1-5) bewertet werden.</li> <li><strong>Verhaltensverankerte Ratingskalen (BARS):</strong> Eine Weiterentwicklung, bei der die Skalenpunkte mit konkreten Verhaltensbeispielen &quot;verankert&quot; sind, was die Objektivität erhöht.</li> <li><strong>360-Grad-Feedback:</strong> Die Leistung wird nicht nur vom Vorgesetzten bewertet, sondern auch von Kollegen, unterstellten Mitarbeitern, Kunden und dem Mitarbeiter selbst. Dies liefert eine umfassendere, aber auch komplexere Perspektive.</li> </ul> </div> );
+const anwendbarkeitInhalt3 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Häufige Beurteilungsfehler</h3> <p className="text-lg leading-relaxed">Leistungsbeurteilungen sind anfällig für dieselben kognitiven Verzerrungen wie Interviews. Das Wissen darum ist der erste Schritt zur Vermeidung.</p> <ul className="list-disc list-inside space-y-4 pl-2"> <li><strong>Halo-Effekt:</strong> Ein Vorgesetzter, der einen Mitarbeiter sehr mag, bewertet ihn in allen Dimensionen positiv, auch in denen, in denen er schwach ist.</li> <li><strong>Milde- oder Härte-Fehler:</strong> Einige Beurteiler neigen dazu, alle Mitarbeiter systematisch zu gut (Milde) oder zu streng (Härte) zu bewerten.</li> <li><strong>Tendenz zur Mitte:</strong> Aus Angst vor Konflikten oder Unsicherheit bewerten einige Vorgesetzte alle Mitarbeiter im mittleren Bereich der Skala, was die Leistungsunterschiede nivelliert.</li> <li><strong>Primacy/Recency-Effekt:</strong> Ereignisse am Anfang (Primacy) oder ganz am Ende (Recency) des Beurteilungszeitraums werden überbewertet, während die Leistung in der Mitte vergessen wird.</li> </ul> <p><strong>Gegenmassnahmen:</strong> Schulungen für Führungskräfte (Beobachtertraining) und die Verwendung von verhaltensverankerten Skalen können helfen, diese Fehler zu reduzieren.</p> </div> );
+const meisterklasseInhalt3 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Feedback geben, das wirkt</h3> <p>Ein schlechtes Feedbackgespräch kann demotivieren und die Beziehung zwischen Mitarbeiter und Führungskraft nachhaltig schädigen. Gutes Feedback hingegen ist eines der stärksten Instrumente zur Leistungssteigerung. Die A&O-Psychologie empfiehlt folgende Prinzipien:</p> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Spezifisch und verhaltensbasiert:</strong> Sagen Sie nicht &quot;Ihre Präsentationen sind unstrukturiert&quot;, sondern &quot;In der Präsentation am Dienstag haben Sie mit dem Fazit begonnen, was es für mich schwierig machte, Ihren Argumenten zu folgen&quot;.</li> <li><strong>Zeitnah:</strong> Feedback sollte so nah wie möglich am Ereignis erfolgen, nicht erst Monate später im Jahresgespräch.</li> <li><strong>Fokus auf die Zukunft:</strong> Anstatt nur die Vergangenheit zu kritisieren, sollte das Gespräch darauf abzielen, gemeinsam Lösungen für die Zukunft zu entwickeln (&quot;Was können wir tun, damit Sie sich bei der nächsten Präsentation sicherer fühlen?&quot;).</li> <li><strong>Dialog, kein Monolog:</strong> Bitten Sie den Mitarbeiter um seine Selbsteinschätzung, bevor Sie Ihr Feedback geben.</li> </ul> </div> );
+const uebungenData3: UebungenData = { quiz: [ { q: "Wenn Feedback von Vorgesetzten, Kollegen und Mitarbeitern eingeholt wird, nennt man das...", a: ["360-Grad-Feedback", "Halo-Effekt", "BARS"], correct: 0 }, { q: "Ein Beurteiler, der alle Mitarbeiter systematisch zu gut bewertet, unterliegt dem...", a: ["Härte-Fehler", "Halo-Effekt", "Milde-Fehler"], correct: 2 }, ], open: [ { q: "Was ist der Hauptvorteil einer verhaltensverankerten Ratingskala (BARS) gegenüber einer einfachen grafischen Skala?", solution: "Eine BARS gibt dem Beurteiler für jeden Skalenpunkt (z.B. &apos;3&apos;, &apos;4&apos;, &apos;5&apos;) ein konkretes Verhaltensbeispiel. Dies reduziert den Interpretationsspielraum und die Subjektivität. Alle Beurteiler haben ein gemeinsames Verständnis davon, was z.B. eine &apos;4&apos; in &apos;Teamfähigkeit&apos; bedeutet, was die Objektivität und Vergleichbarkeit der Beurteilung erhöht." }, ], kreativ: "Formulieren Sie ein negatives Feedback (&quot;Du kommst oft zu spät zu Meetings&quot;) so um, dass es den Prinzipien von gutem, konstruktivem Feedback entspricht." };
 const uebungenInhalt3 = <UebungenContent data={uebungenData3} />;
-
-// Modul 4: Arbeitsmotivation & -zufriedenheit
-const grundwissenInhalt4 = (
-    <div className="space-y-8">
-        <p className="text-lg leading-relaxed">Arbeitszufriedenheit ist das Ausmass, in dem eine Person Erfüllung in ihrer Arbeit findet. Sie ist ein wichtiger Prädiktor für Arbeitsleistung, Mitarbeiterbindung und allgemeines Wohlbefinden.</p>
-        <h3 className="text-2xl font-semibold border-b pb-2">Herzbergs Zwei-Faktoren-Theorie</h3>
-        <p>Frederick Herzberg unterschied zwischen zwei Arten von Faktoren am Arbeitsplatz:</p>
-        <ul className="list-disc list-inside space-y-3 pl-2">
-            <li><strong>Hygienefaktoren (Dissatisfiers):</strong> Faktoren, deren Fehlen zu Unzufriedenheit führt, deren Vorhandensein aber nicht notwendigerweise zu Zufriedenheit führt. Sie sind die &quot;Grundausstattung&quot;. Dazu gehören z.B. das Gehalt, Arbeitsbedingungen, Unternehmensrichtlinien und die Beziehung zum Vorgesetzten.</li>
-            <li><strong>Motivatoren (Satisfiers):</strong> Faktoren, die aktiv zur Zufriedenheit und Motivation beitragen. Dazu gehören z.B. Anerkennung, Verantwortung, die Arbeit selbst, Aufstiegschancen und persönliches Wachstum.</li>
-        </ul>
-        <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg"><p><strong>Die Kernaussage:</strong> Die Vermeidung von Unzufriedenheit ist nicht dasselbe wie die Schaffung von Zufriedenheit. Ein faires Gehalt verhindert, dass Sie unzufrieden sind, aber es motiviert Sie nicht intrinsisch zu Höchstleistungen.</p></div>
-    </div>
-);
-const anwendbarkeitInhalt4 = (
-    <div className="space-y-8">
-        <h3 className="text-2xl font-semibold border-b pb-2">Theorie X und Theorie Y (Douglas McGregor)</h3>
-        <p className="text-lg leading-relaxed">McGregor argumentierte, dass das Verhalten von Führungskräften stark von ihren grundlegenden Annahmen über die Mitarbeiter geprägt ist. Er formulierte zwei gegensätzliche Menschenbilder:</p>
-        <ul className="list-disc list-inside space-y-4 pl-2">
-            <li>
-                <strong>Theorie X:</strong> Der Manager geht davon aus, dass Mitarbeiter von Natur aus faul sind, Arbeit meiden und nur durch Kontrolle, Anweisungen und Bestrafung zur Leistung bewegt werden können. Dieser Führungsstil ist autoritär.
-            </li>
-            <li>
-                <strong>Theorie Y:</strong> Der Manager geht davon aus, dass Mitarbeiter von Natur aus motiviert sind, Freude an der Arbeit haben und nach Verantwortung streben. Diese Führungskraft schafft Freiräume, delegiert Verantwortung und beteiligt die Mitarbeiter an Entscheidungen. Dieser Führungsstil ist partizipativ.
-            </li>
-        </ul>
-        <p>McGregor argumentierte, dass Theorie Y das realistischere Menschenbild ist und dass ein entsprechender Führungsstil zu höherer Motivation und besseren Ergebnissen führt. Das Verhalten der Führungskraft wird zur sich selbst erfüllenden Prophezeiung: Behandelt man Mitarbeiter wie faule Drohnen (Theorie X), werden sie sich auch so verhalten.</p>
-    </div>
-);
-const meisterklasseInhalt4 = (
-    <div className="space-y-8">
-        <h3 className="text-2xl font-semibold border-b pb-2">Job Crafting: Die Arbeit selbst gestalten</h3>
-        <p>Traditionell werden Arbeitsplätze von oben nach unten gestaltet (Top-Down). Job Crafting ist ein proaktiver Bottom-Up-Ansatz, bei dem Mitarbeiter ihre eigene Arbeit aktiv umgestalten, um sie sinnvoller und motivierender zu machen.</p>
-        <p>Es gibt drei Hauptarten von Job Crafting:</p>
-        <ul className="list-disc list-inside space-y-3 pl-2">
-            <li><strong>Task Crafting (Aufgabengestaltung):</strong> Die Art, Anzahl oder den Fokus der eigenen Aufgaben verändern. (z.B. ein Programmierer, der sich freiwillig meldet, neue Auszubildende zu betreuen, weil er gerne Wissen weitergibt).</li>
-            <li><strong>Relational Crafting (Beziehungsgestaltung):</strong> Die Art oder das Ausmass der Interaktionen mit anderen verändern. (z.B. ein Berater, der mehr Zeit mit Kunden verbringt, die ihm Energie geben).</li>
-            <li><strong>Cognitive Crafting (Kognitive Umdeutung):</strong> Die Art und Weise verändern, wie man über seine Arbeit denkt und ihren Sinn wahrnimmt. (z.B. ein Krankenhausreiniger, der seine Arbeit nicht als &quot;Böden wischen&quot; sieht, sondern als &quot;zur Heilung von Patienten beitragen&quot;).</li>
-        </ul>
-        <p>Organisationen, die Job Crafting fördern, haben oft motiviertere und zufriedenere Mitarbeiter.</p>
-    </div>
-);
-const uebungenData4: UebungenData = {
-    quiz: [
-        { q: "Welcher Faktor ist laut Herzbergs Theorie ein Hygienefaktor?", a: ["Anerkennung", "Gehalt", "Verantwortung"], correct: 1 },
-        { q: "Ein Manager, der davon ausgeht, dass seine Mitarbeiter faul sind und kontrolliert werden müssen, folgt...", a: ["Theorie X", "Theorie Y", "dem Hawthorne-Effekt"], correct: 0 },
-    ],
-    open: [
-        { q: "Ein Unternehmen erhöht alle Gehälter um 10%, aber die Arbeitszufriedenheit steigt nur kurzfristig an. Erklären Sie dies mit der Zwei-Faktoren-Theorie.", solution: "Gehalt ist ein Hygienefaktor. Die Erhöhung beseitigt oder reduziert die Unzufriedenheit über ein zu niedriges Gehalt. Sie schafft aber keine echte, langanhaltende Zufriedenheit oder Motivation. Dafür wären Motivatoren wie mehr Anerkennung, spannendere Aufgaben oder mehr Verantwortung notwendig." },
-    ],
-    kreativ: "Beschreiben Sie ein konkretes Beispiel für jede der drei Arten von Job Crafting für den Beruf eines Lehrers."
-};
+const grundwissenInhalt4 = ( <div className="space-y-8"> <p className="text-lg leading-relaxed">Arbeitszufriedenheit ist das Ausmass, in dem eine Person Erfüllung in ihrer Arbeit findet. Sie ist ein wichtiger Prädiktor für Arbeitsleistung, Mitarbeiterbindung und allgemeines Wohlbefinden.</p> <h3 className="text-2xl font-semibold border-b pb-2">Herzbergs Zwei-Faktoren-Theorie</h3> <p>Frederick Herzberg unterschied zwischen zwei Arten von Faktoren am Arbeitsplatz:</p> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Hygienefaktoren (Dissatisfiers):</strong> Faktoren, deren Fehlen zu Unzufriedenheit führt, deren Vorhandensein aber nicht notwendigerweise zu Zufriedenheit führt. Sie sind die &quot;Grundausstattung&quot;. Dazu gehören z.B. das Gehalt, Arbeitsbedingungen, Unternehmensrichtlinien und die Beziehung zum Vorgesetzten.</li> <li><strong>Motivatoren (Satisfiers):</strong> Faktoren, die aktiv zur Zufriedenheit und Motivation beitragen. Dazu gehören z.B. Anerkennung, Verantwortung, die Arbeit selbst, Aufstiegschancen und persönliches Wachstum.</li> </ul> <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg"><p><strong>Die Kernaussage:</strong> Die Vermeidung von Unzufriedenheit ist nicht dasselbe wie die Schaffung von Zufriedenheit. Ein faires Gehalt verhindert, dass Sie unzufrieden sind, aber es motiviert Sie nicht intrinsisch zu Höchstleistungen.</p></div> </div> );
+const anwendbarkeitInhalt4 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Theorie X und Theorie Y (Douglas McGregor)</h3> <p className="text-lg leading-relaxed">McGregor argumentierte, dass das Verhalten von Führungskräften stark von ihren grundlegenden Annahmen über die Mitarbeiter geprägt ist. Er formulierte zwei gegensätzliche Menschenbilder:</p> <ul className="list-disc list-inside space-y-4 pl-2"> <li> <strong>Theorie X:</strong> Der Manager geht davon aus, dass Mitarbeiter von Natur aus faul sind, Arbeit meiden und nur durch Kontrolle, Anweisungen und Bestrafung zur Leistung bewegt werden können. Dieser Führungsstil ist autoritär. </li> <li> <strong>Theorie Y:</strong> Der Manager geht davon aus, dass Mitarbeiter von Natur aus motiviert sind, Freude an der Arbeit haben und nach Verantwortung streben. Diese Führungskraft schafft Freiräume, delegiert Verantwortung und beteiligt die Mitarbeiter an Entscheidungen. Dieser Führungsstil ist partizipativ. </li> </ul> <p>McGregor argumentierte, dass Theorie Y das realistischere Menschenbild ist und dass ein entsprechender Führungsstil zu höherer Motivation und besseren Ergebnissen führt. Das Verhalten der Führungskraft wird zur sich selbst erfüllenden Prophezeiung: Behandelt man Mitarbeiter wie faule Drohnen (Theorie X), werden sie sich auch so verhalten.</p> </div> );
+const meisterklasseInhalt4 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Job Crafting: Die Arbeit selbst gestalten</h3> <p>Traditionell werden Arbeitsplätze von oben nach unten gestaltet (Top-Down). Job Crafting ist ein proaktiver Bottom-Up-Ansatz, bei dem Mitarbeiter ihre eigene Arbeit aktiv umgestalten, um sie sinnvoller und motivierender zu machen.</p> <p>Es gibt drei Hauptarten von Job Crafting:</p> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Task Crafting (Aufgabengestaltung):</strong> Die Art, Anzahl oder den Fokus der eigenen Aufgaben verändern. (z.B. ein Programmierer, der sich freiwillig meldet, neue Auszubildende zu betreuen, weil er gerne Wissen weitergibt).</li> <li><strong>Relational Crafting (Beziehungsgestaltung):</strong> Die Art oder das Ausmass der Interaktionen mit anderen verändern. (z.B. ein Berater, der mehr Zeit mit Kunden verbringt, die ihm Energie geben).</li> <li><strong>Cognitive Crafting (Kognitive Umdeutung):</strong> Die Art und Weise verändern, wie man über seine Arbeit denkt und ihren Sinn wahrnimmt. (z.B. ein Krankenhausreiniger, der seine Arbeit nicht als &quot;Böden wischen&quot; sieht, sondern als &quot;zur Heilung von Patienten beitragen&quot;).</li> </ul> <p>Organisationen, die Job Crafting fördern, haben oft motiviertere und zufriedenere Mitarbeiter.</p> </div> );
+const uebungenData4: UebungenData = { quiz: [ { q: "Welcher Faktor ist laut Herzbergs Theorie ein Hygienefaktor?", a: ["Anerkennung", "Gehalt", "Verantwortung"], correct: 1 }, { q: "Ein Manager, der davon ausgeht, dass seine Mitarbeiter faul sind und kontrolliert werden müssen, folgt...", a: ["Theorie X", "Theorie Y", "dem Hawthorne-Effekt"], correct: 0 }, ], open: [ { q: "Ein Unternehmen erhöht alle Gehälter um 10%, aber die Arbeitszufriedenheit steigt nur kurzfristig an. Erklären Sie dies mit der Zwei-Faktoren-Theorie.", solution: "Gehalt ist ein Hygienefaktor. Die Erhöhung beseitigt oder reduziert die Unzufriedenheit über ein zu niedriges Gehalt. Sie schafft aber keine echte, langanhaltende Zufriedenheit oder Motivation. Dafür wären Motivatoren wie mehr Anerkennung, spannendere Aufgaben oder mehr Verantwortung notwendig." }, ], kreativ: "Beschreiben Sie ein konkretes Beispiel für jede der drei Arten von Job Crafting für den Beruf eines Lehrers." };
 const uebungenInhalt4 = <UebungenContent data={uebungenData4} />;
-
-// Modul 5: Führung & Teamarbeit
-const grundwissenInhalt5 = (
-    <div className="space-y-8">
-        <p className="text-lg leading-relaxed">Führung ist der Prozess, bei dem eine Person das Verhalten und die Einstellungen anderer beeinflusst, um gemeinsame Ziele zu erreichen.</p>
-        <h3 className="text-2xl font-semibold border-b pb-2">Führungsstile</h3>
-        <p>Zwei der am meisten untersuchten Führungsstile sind:</p>
-        <ul className="list-disc list-inside space-y-4 pl-2">
-            <li>
-                <strong>Transaktionale Führung:</strong> Basiert auf einem Austauschverhältnis (&quot;Transaktion&quot;). Die Führungskraft legt klare Ziele fest und belohnt Mitarbeiter für das Erreichen dieser Ziele (oder bestraft sie für das Nichterreichen). Der Fokus liegt auf Überwachung und Effizienz.
-            </li>
-            <li>
-                <strong>Transformationale Führung:</strong> Geht über den reinen Austausch hinaus. Transformationale Führungskräfte sind charismatisch, inspirieren ihre Mitarbeiter mit einer Vision, fördern deren intellektuelle Entwicklung und gehen auf ihre individuellen Bedürfnisse ein. Sie &quot;transformieren&quot; ihre Mitarbeiter zu mehr als nur Pflichterfüllern.
-            </li>
-        </ul>
-        <p>Forschungsergebnisse zeigen konsistent, dass transformationale Führung stärker mit Mitarbeiterzufriedenheit und -leistung korreliert.</p>
-    </div>
-);
-const anwendbarkeitInhalt5 = (
-    <div className="space-y-8">
-        <h3 className="text-2xl font-semibold border-b pb-2">Groupthink (Gruppendenken): Wenn Teams falsch abbiegen</h3>
-        <p className="text-lg leading-relaxed">Groupthink ist ein Denkmodus, der in hoch kohäsiven Gruppen auftritt, in denen das Streben nach Einigkeit und Konformität die Motivation, alternative Vorgehensweisen realistisch zu bewerten, übersteigt.</p>
-        <p><strong>Symptome von Groupthink:</strong></p>
-        <ul className="list-disc list-inside space-y-3 pl-2">
-            <li><strong>Illusion der Unverwundbarkeit:</strong> Das Team glaubt, unfehlbar zu sein.</li>
-            <li><strong>Selbstzensur:</strong> Teammitglieder unterdrücken ihre eigenen Zweifel, um die Gruppenharmonie nicht zu stören.</li>
-            <li><strong>Druck auf Abweichler:</strong> Mitglieder, die Bedenken äussern, werden unter Druck gesetzt, ihre Meinung zu ändern.</li>
-            <li><strong>Stereotypisierung von Aussenstehenden:</strong> Gegner oder Kritiker werden als dumm oder böse abgetan.</li>
-        </ul>
-        <p><strong>Historisches Beispiel:</strong> Die Entscheidung der NASA, die Challenger-Raumfähre trotz der Bedenken von Ingenieuren wegen kalter Temperaturen zu starten, wird oft als klassisches Beispiel für Groupthink angeführt, das in einer Katastrophe endete.</p>
-    </div>
-);
-const meisterklasseInhalt5 = (
-    <div className="space-y-8">
-        <h3 className="text-2xl font-semibold border-b pb-2">Wie man Groupthink verhindert</h3>
-        <p>Kluge Führungskräfte ergreifen aktive Massnahmen, um Groupthink zu vermeiden und eine Kultur der kritischen Auseinandersetzung zu fördern:</p>
-        <ul className="list-disc list-inside space-y-3 pl-2">
-            <li><strong>Eine kritische Rolle zuweisen:</strong> Ein Teammitglied wird explizit zum &quot;Advocatus Diaboli&quot; ernannt, dessen Aufgabe es ist, jede Annahme und Entscheidung kritisch zu hinterfragen.</li>
-            <li><strong>Externe Experten einladen:</strong> Aussenstehende bringen neue Perspektiven ein und sind nicht dem gleichen Konformitätsdruck ausgesetzt.</li>
-            <li><strong>Anonyme Feedback-Kanäle:</strong> Ermöglichen es Teammitgliedern, Bedenken zu äussern, ohne soziale Konsequenzen fürchten zu müssen.</li>
-            <li><strong>Der Führer hält sich zurück:</strong> Die Führungskraft sollte ihre eigene Meinung zunächst zurückhalten, um die Diskussion nicht von Anfang an in eine bestimmte Richtung zu lenken.</li>
-        </ul>
-    </div>
-);
-const uebungenData5: UebungenData = {
-    quiz: [
-        { q: "Eine Führungskraft, die Mitarbeiter mit einer inspirierenden Vision motiviert, zeigt primär Merkmale einer...", a: ["Transaktionalen Führung", "Transformationalen Führung", "Laissez-faire-Führung"], correct: 1 },
-        { q: "Wenn ein Team aus Angst vor Konflikten kritische Informationen ignoriert, ist das ein Zeichen für...", a: ["Groupthink", "Soziales Faulenzen", "Hohe Teamkohäsion"], correct: 0 },
-    ],
-    open: [
-        { q: "Was ist der Hauptunterschied zwischen transaktionaler und transformationaler Führung?", solution: "Transaktionale Führung basiert auf einem Austausch (&apos;Wenn du X tust, bekommst du Y&apos;). Der Fokus liegt auf Belohnung und Bestrafung. Transformationale Führung basiert auf Inspiration und intrinsischer Motivation. Der Fokus liegt darauf, die Mitarbeiter zu entwickeln und sie für eine gemeinsame Vision zu begeistern." },
-    ],
-    kreativ: "Beschreiben Sie eine Situation aus einem Film, in der ein &apos;Advocatus Diaboli&apos; eine Gruppe vor einer schlechten Entscheidung bewahrt hat (oder hätte bewahren können)."
-};
+const grundwissenInhalt5 = ( <div className="space-y-8"> <p className="text-lg leading-relaxed">Führung ist der Prozess, bei dem eine Person das Verhalten und die Einstellungen anderer beeinflusst, um gemeinsame Ziele zu erreichen.</p> <h3 className="text-2xl font-semibold border-b pb-2">Führungsstile</h3> <p>Zwei der am meisten untersuchten Führungsstile sind:</p> <ul className="list-disc list-inside space-y-4 pl-2"> <li> <strong>Transaktionale Führung:</strong> Basiert auf einem Austauschverhältnis (&quot;Transaktion&quot;). Die Führungskraft legt klare Ziele fest und belohnt Mitarbeiter für das Erreichen dieser Ziele (oder bestraft sie für das Nichterreichen). Der Fokus liegt auf Überwachung und Effizienz. </li> <li> <strong>Transformationale Führung:</strong> Geht über den reinen Austausch hinaus. Transformationale Führungskräfte sind charismatisch, inspirieren ihre Mitarbeiter mit einer Vision, fördern deren intellektuelle Entwicklung und gehen auf ihre individuellen Bedürfnisse ein. Sie &quot;transformieren&quot; ihre Mitarbeiter zu mehr als nur Pflichterfüllern. </li> </ul> <p>Forschungsergebnisse zeigen konsistent, dass transformationale Führung stärker mit Mitarbeiterzufriedenheit und -leistung korreliert.</p> </div> );
+const anwendbarkeitInhalt5 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Groupthink (Gruppendenken): Wenn Teams falsch abbiegen</h3> <p className="text-lg leading-relaxed">Groupthink ist ein Denkmodus, der in hoch kohäsiven Gruppen auftritt, in denen das Streben nach Einigkeit und Konformität die Motivation, alternative Vorgehensweisen realistisch zu bewerten, übersteigt.</p> <p><strong>Symptome von Groupthink:</strong></p> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Illusion der Unverwundbarkeit:</strong> Das Team glaubt, unfehlbar zu sein.</li> <li><strong>Selbstzensur:</strong> Teammitglieder unterdrücken ihre eigenen Zweifel, um die Gruppenharmonie nicht zu stören.</li> <li><strong>Druck auf Abweichler:</strong> Mitglieder, die Bedenken äussern, werden unter Druck gesetzt, ihre Meinung zu ändern.</li> <li><strong>Stereotypisierung von Aussenstehenden:</strong> Gegner oder Kritiker werden als dumm oder böse abgetan.</li> </ul> <p><strong>Historisches Beispiel:</strong> Die Entscheidung der NASA, die Challenger-Raumfähre trotz der Bedenken von Ingenieuren wegen kalter Temperaturen zu starten, wird oft als klassisches Beispiel für Groupthink angeführt, das in einer Katastrophe endete.</p> </div> );
+const meisterklasseInhalt5 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Wie man Groupthink verhindert</h3> <p>Kluge Führungskräfte ergreifen aktive Massnahmen, um Groupthink zu vermeiden und eine Kultur der kritischen Auseinandersetzung zu fördern:</p> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Eine kritische Rolle zuweisen:</strong> Ein Teammitglied wird explizit zum &quot;Advocatus Diaboli&quot; ernannt, dessen Aufgabe es ist, jede Annahme und Entscheidung kritisch zu hinterfragen.</li> <li><strong>Externe Experten einladen:</strong> Aussenstehende bringen neue Perspektiven ein und sind nicht dem gleichen Konformitätsdruck ausgesetzt.</li> <li><strong>Anonyme Feedback-Kanäle:</strong> Ermöglichen es Teammitgliedern, Bedenken zu äussern, ohne soziale Konsequenzen fürchten zu müssen.</li> <li><strong>Der Führer hält sich zurück:</strong> Die Führungskraft sollte ihre eigene Meinung zunächst zurückhalten, um die Diskussion nicht von Anfang an in eine bestimmte Richtung zu lenken.</li> </ul> </div> );
+const uebungenData5: UebungenData = { quiz: [ { q: "Eine Führungskraft, die Mitarbeiter mit einer inspirierenden Vision motiviert, zeigt primär Merkmale einer...", a: ["Transaktionalen Führung", "Transformationalen Führung", "Laissez-faire-Führung"], correct: 1 }, { q: "Wenn ein Team aus Angst vor Konflikten kritische Informationen ignoriert, ist das ein Zeichen für...", a: ["Groupthink", "Soziales Faulenzen", "Hohe Teamkohäsion"], correct: 0 }, ], open: [ { q: "Was ist der Hauptunterschied zwischen transaktionaler und transformationaler Führung?", solution: "Transaktionale Führung basiert auf einem Austausch (&apos;Wenn du X tust, bekommst du Y&apos;). Der Fokus liegt auf Belohnung und Bestrafung. Transformationale Führung basiert auf Inspiration und intrinsischer Motivation. Der Fokus liegt darauf, die Mitarbeiter zu entwickeln und sie für eine gemeinsame Vision zu begeistern." }, ], kreativ: "Beschreiben Sie eine Situation aus einem Film, in der ein &apos;Advocatus Diaboli&apos; eine Gruppe vor einer schlechten Entscheidung bewahrt hat (oder hätte bewahren können)." };
 const uebungenInhalt5 = <UebungenContent data={uebungenData5} />;
-
-// Modul 6: Organisationskultur & Ergonomie
-const grundwissenInhalt6 = (
-    <div className="space-y-8">
-        <p className="text-lg leading-relaxed">Die **Organisationskultur** ist das System gemeinsamer Annahmen, Werte und Überzeugungen, das das Verhalten der Mitglieder einer Organisation bestimmt. Es ist &quot;die Art, wie wir hier die Dinge tun&quot;.</p>
-        <h3 className="text-2xl font-semibold border-b pb-2">Drei Ebenen der Kultur (Schein)</h3>
-        <p>Edgar Schein beschrieb Kultur auf drei Ebenen, von sichtbar bis unsichtbar:</p>
-        <ol className="list-decimal list-inside space-y-3 pl-2">
-            <li><strong>Artefakte:</strong> Die sichtbaren und beobachtbaren Aspekte der Kultur (z.B. Kleiderordnung, Bürogestaltung, Rituale, Sprache).</li>
-            <li><strong>Bekundete Werte (Espoused Values):</strong> Die offiziell formulierten Ziele, Werte und Strategien des Unternehmens (z.B. das Unternehmensleitbild).</li>
-            <li><strong>Grundlegende Annahmen (Basic Assumptions):</strong> Die tiefsten, unbewussten und als selbstverständlich angesehenen Überzeugungen, die das Verhalten tatsächlich leiten. (z.B. die Annahme, dass Menschen von Natur aus faul sind (Theorie X) oder dass Konflikte immer vermieden werden müssen).</li>
-        </ol>
-        <p>Oft gibt es eine Diskrepanz zwischen den bekundeten Werten und den grundlegenden Annahmen, die sich im Verhalten zeigen.</p>
-    </div>
-);
-const anwendbarkeitInhalt6 = (
-    <div className="space-y-8">
-        <h3 className="text-2xl font-semibold border-b pb-2">Kulturanalyse am Beispiel von Google vs. einer traditionellen Bank</h3>
-        <p className="text-lg leading-relaxed">Wir können die drei Ebenen nutzen, um Kulturen zu vergleichen:</p>
-        <div className="overflow-x-auto"><table className="w-full text-left border-collapse"><thead><tr className="bg-slate-100 dark:bg-slate-800"><th className="p-3 font-semibold border-b dark:border-slate-700">Ebene</th><th className="p-3 font-semibold border-b dark:border-slate-700">Google (Beispielhaft)</th><th className="p-3 font-semibold border-b dark:border-slate-700">Traditionelle Bank (Beispielhaft)</th></tr></thead><tbody><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Artefakte</td><td className="p-3">Offene Büros, bunte Sitzsäcke, kostenloses Essen, legere Kleidung.</td><td className="p-3">Einzelbüros, Anzug und Krawatte, formale Sprache.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Bekundete Werte</td><td className="p-3">&quot;Fokus auf den Nutzer&quot;, &quot;Innovation&quot;, &quot;Schnelligkeit ist besser als Langsamkeit&quot;.</td><td className="p-3">&quot;Sicherheit&quot;, &quot;Diskretion&quot;, &quot;Stabilität&quot;, &quot;Vertrauen&quot;.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Grundlegende Annahmen</td><td className="p-3">Gute Ideen können von überall kommen. Fehler sind Lernchancen. Autonomie führt zu Kreativität.</td><td className="p-3">Hierarchien sind notwendig, um Risiken zu kontrollieren. Fehler müssen vermieden werden. Tradition ist wertvoll.</td></tr></tbody></table></div>
-    </div>
-);
-const meisterklasseInhalt6 = (
-    <div className="space-y-8">
-        <h3 className="text-2xl font-semibold border-b pb-2">Ingenieurpsychologie (Ergonomie) und Cognitive Engineering</h3>
-        <p>Dieser Bereich der A&O-Psychologie konzentriert sich auf die Schnittstelle zwischen Mensch und Maschine/System. Das Ziel ist es, die Arbeitsumgebung an die menschlichen Stärken und Schwächen anzupassen, nicht umgekehrt.</p>
-        <p><strong>Beispiele:</strong></p>
-        <ul className="list-disc list-inside space-y-3 pl-2">
-            <li><strong>Checklisten im Cockpit:</strong> Die Erkenntnis, dass selbst hochqualifizierte Piloten unter Stress einfache Schritte vergessen können, führte zur Entwicklung von Checklisten, die menschliche Gedächtnisfehler kompensieren und die Flugsicherheit dramatisch erhöht haben.</li>
-            <li><strong>Design von Benutzeroberflächen:</strong> Ingenieurpsychologen analysieren die Wahrnehmung, Aufmerksamkeit und kognitive Belastung von Nutzern, um Software so zu gestalten, dass sie intuitiv bedienbar ist und die Wahrscheinlichkeit von Bedienfehlern minimiert wird.</li>
-        </ul>
-        <p>Dieser Bereich ist entscheidend für die Sicherheit in kritischen Systemen (z.B. in Kraftwerken, im Flugverkehr) und für die Benutzerfreundlichkeit von Alltagstechnologie.</p>
-    </div>
-);
-const uebungenData6: UebungenData = {
-    quiz: [
-        { q: "Die Kleiderordnung in einem Unternehmen ist ein Beispiel für welche Kulturebene nach Schein?", a: ["Artefakte", "Bekundete Werte", "Grundlegende Annahmen"], correct: 0 },
-        { q: "Die Gestaltung einer sicheren und effizienten Mensch-Maschine-Schnittstelle ist die Hauptaufgabe der...", a: ["Organisationspsychologie", "Personalpsychologie", "Ingenieurpsychologie"], correct: 2 },
-    ],
-    open: [
-        { q: "Ein Unternehmen hat den Wert &apos;Work-Life-Balance&apos; in seinem Leitbild stehen (bekundeter Wert), erwartet aber von allen Mitarbeitern, dass sie regelmässig bis spät in die Nacht arbeiten und am Wochenende erreichbar sind. Was sagt dies über die Kultur aus?", solution: "Dies zeigt eine klare Diskrepanz zwischen den bekundeten Werten und den grundlegenden Annahmen. Die tatsächliche, gelebte Kultur (basierend auf der Annahme &apos;Nur wer ständig arbeitet, ist ein guter Mitarbeiter&apos;) ist wichtiger als das, was auf dem Papier steht. Solche Diskrepanzen führen oft zu Zynismus und Unzufriedenheit bei den Mitarbeitern." },
-    ],
-    kreativ: "Wählen Sie einen Alltagsgegenstand (z.B. eine Fernbedienung, eine Mikrowelle) und analysieren Sie dessen Design aus der Perspektive der Ingenieurpsychologie. Was ist gut gestaltet, was ist schlecht (z.B. unverständliche Symbole, unlogische Anordnung)?"
-};
+const grundwissenInhalt6 = ( <div className="space-y-8"> <p className="text-lg leading-relaxed">Die **Organisationskultur** ist das System gemeinsamer Annahmen, Werte und Überzeugungen, das das Verhalten der Mitglieder einer Organisation bestimmt. Es ist &quot;die Art, wie wir hier die Dinge tun&quot;.</p> <h3 className="text-2xl font-semibold border-b pb-2">Drei Ebenen der Kultur (Schein)</h3> <p>Edgar Schein beschrieb Kultur auf drei Ebenen, von sichtbar bis unsichtbar:</p> <ol className="list-decimal list-inside space-y-3 pl-2"> <li><strong>Artefakte:</strong> Die sichtbaren und beobachtbaren Aspekte der Kultur (z.B. Kleiderordnung, Bürogestaltung, Rituale, Sprache).</li> <li><strong>Bekundete Werte (Espoused Values):</strong> Die offiziell formulierten Ziele, Werte und Strategien des Unternehmens (z.B. das Unternehmensleitbild).</li> <li><strong>Grundlegende Annahmen (Basic Assumptions):</strong> Die tiefsten, unbewussten und als selbstverständlich angesehenen Überzeugungen, die das Verhalten tatsächlich leiten. (z.B. die Annahme, dass Menschen von Natur aus faul sind (Theorie X) oder dass Konflikte immer vermieden werden müssen).</li> </ol> <p>Oft gibt es eine Diskrepanz zwischen den bekundeten Werten und den grundlegenden Annahmen, die sich im Verhalten zeigen.</p> </div> );
+const anwendbarkeitInhalt6 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Kulturanalyse am Beispiel von Google vs. einer traditionellen Bank</h3> <p className="text-lg leading-relaxed">Wir können die drei Ebenen nutzen, um Kulturen zu vergleichen:</p> <div className="overflow-x-auto"><table className="w-full text-left border-collapse"><thead><tr className="bg-slate-100 dark:bg-slate-800"><th className="p-3 font-semibold border-b dark:border-slate-700">Ebene</th><th className="p-3 font-semibold border-b dark:border-slate-700">Google (Beispielhaft)</th><th className="p-3 font-semibold border-b dark:border-slate-700">Traditionelle Bank (Beispielhaft)</th></tr></thead><tbody><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Artefakte</td><td className="p-3">Offene Büros, bunte Sitzsäcke, kostenloses Essen, legere Kleidung.</td><td className="p-3">Einzelbüros, Anzug und Krawatte, formale Sprache.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Bekundete Werte</td><td className="p-3">&quot;Fokus auf den Nutzer&quot;, &quot;Innovation&quot;, &quot;Schnelligkeit ist besser als Langsamkeit&quot;.</td><td className="p-3">&quot;Sicherheit&quot;, &quot;Diskretion&quot;, &quot;Stabilität&quot;, &quot;Vertrauen&quot;.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Grundlegende Annahmen</td><td className="p-3">Gute Ideen können von überall kommen. Fehler sind Lernchancen. Autonomie führt zu Kreativität.</td><td className="p-3">Hierarchien sind notwendig, um Risiken zu kontrollieren. Fehler müssen vermieden werden. Tradition ist wertvoll.</td></tr></tbody></table></div> </div> );
+const meisterklasseInhalt6 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Ingenieurpsychologie (Ergonomie) und Cognitive Engineering</h3> <p>Dieser Bereich der A&O-Psychologie konzentriert sich auf die Schnittstelle zwischen Mensch und Maschine/System. Das Ziel ist es, die Arbeitsumgebung an die menschlichen Stärken und Schwächen anzupassen, nicht umgekehrt.</p> <p><strong>Beispiele:</strong></p> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Checklisten im Cockpit:</strong> Die Erkenntnis, dass selbst hochqualifizierte Piloten unter Stress einfache Schritte vergessen können, führte zur Entwicklung von Checklisten, die menschliche Gedächtnisfehler kompensieren und die Flugsicherheit dramatisch erhöht haben.</li> <li><strong>Design von Benutzeroberflächen:</strong> Ingenieurpsychologen analysieren die Wahrnehmung, Aufmerksamkeit und kognitive Belastung von Nutzern, um Software so zu gestalten, dass sie intuitiv bedienbar ist und die Wahrscheinlichkeit von Bedienfehlern minimiert wird.</li> </ul> <p>Dieser Bereich ist entscheidend für die Sicherheit in kritischen Systemen (z.B. in Kraftwerken, im Flugverkehr) und für die Benutzerfreundlichkeit von Alltagstechnologie.</p> </div> );
+const uebungenData6: UebungenData = { quiz: [ { q: "Die Kleiderordnung in einem Unternehmen ist ein Beispiel für welche Kulturebene nach Schein?", a: ["Artefakte", "Bekundete Werte", "Grundlegende Annahmen"], correct: 0 }, { q: "Die Gestaltung einer sicheren und effizienten Mensch-Maschine-Schnittstelle ist die Hauptaufgabe der...", a: ["Organisationspsychologie", "Personalpsychologie", "Ingenieurpsychologie"], correct: 2 }, ], open: [ { q: "Ein Unternehmen hat den Wert &apos;Work-Life-Balance&apos; in seinem Leitbild stehen (bekundeter Wert), erwartet aber von allen Mitarbeitern, dass sie regelmässig bis spät in die Nacht arbeiten und am Wochenende erreichbar sind. Was sagt dies über die Kultur aus?", solution: "Dies zeigt eine klare Diskrepanz zwischen den bekundeten Werten und den grundlegenden Annahmen. Die tatsächliche, gelebte Kultur (basierend auf der Annahme &apos;Nur wer ständig arbeitet, ist ein guter Mitarbeiter&apos;) ist wichtiger als das, was auf dem Papier steht. Solche Diskrepanzen führen oft zu Zynismus und Unzufriedenheit bei den Mitarbeitern." }, ], kreativ: "Wählen Sie einen Alltagsgegenstand (z.B. eine Fernbedienung, eine Mikrowelle) und analysieren Sie dessen Design aus der Perspektive der Ingenieurpsychologie. Was ist gut gestaltet, was ist schlecht (z.B. unverständliche Symbole, unlogische Anordnung)?" };
 const uebungenInhalt6 = <UebungenContent data={uebungenData6} />;
 
 
@@ -378,6 +111,17 @@ export default function LessonDetailPage() {
   const [type, moduleIdStr] = lessonId.split('-');
   const moduleId = parseInt(moduleIdStr, 10);
   const moduleData = aoPsychologyModules.find(m => m.id === moduleId);
+
+  // --- NEU: LOGIK FÜR DIE BLÄTTERFUNKTION ---
+  const lessonParts = ['grundwissen', 'anwendbarkeit', 'meisterklasse', 'uebungen'];
+  const currentIndex = lessonParts.indexOf(type);
+
+  const prevPart = currentIndex > 0 ? lessonParts[currentIndex - 1] : null;
+  const nextPart = currentIndex < lessonParts.length - 1 ? lessonParts[currentIndex + 1] : null;
+
+  const prevLink = prevPart ? `/modules/10/${prevPart}-${moduleId}` : null;
+  const nextLink = nextPart ? `/modules/10/${nextPart}-${moduleId}` : null;
+  // --- ENDE DER NEUEN LOGIK ---
 
   if (!moduleData) {
     return (
@@ -409,6 +153,30 @@ export default function LessonDetailPage() {
         <div className="prose prose-lg dark:prose-invert max-w-none">
             {content}
         </div>
+        
+        {/* --- NEU: UI FÜR DIE BLÄTTERFUNKTION --- */}
+        <div className="mt-12 flex justify-between items-center border-t dark:border-slate-700 pt-6">
+          {prevLink ? (
+            <Link href={prevLink} className="flex items-center gap-2 text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-light transition-colors rounded-md p-2 -m-2">
+              <ArrowLeft className="w-4 h-4" />
+              <span className="font-semibold">Vorheriger Abschnitt</span>
+            </Link>
+          ) : (
+            <div /> // Leeres div, damit der "Weiter"-Button rechts bleibt
+          )}
+          {nextLink ? (
+            <Link href={nextLink} className="flex items-center gap-2 text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-light transition-colors rounded-md p-2 -m-2">
+              <span className="font-semibold">Nächster Abschnitt</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          ) : (
+             <Link href="/modules/10" className="flex items-center gap-2 bg-primary text-white font-semibold px-4 py-2 rounded-lg hover:bg-primary-dark transition-colors">
+              <span>Zurück zur Übersicht</span>
+            </Link>
+          )}
+        </div>
+        {/* --- ENDE DER NEUEN UI --- */}
+
       </div>
     </div>
   );

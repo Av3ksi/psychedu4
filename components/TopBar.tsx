@@ -66,7 +66,8 @@ export default function TopBar() {
               href="/login"
               className="px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-dark rounded-full transition-colors shadow-subtle hover:shadow-hover"
             >
-              Sign in
+              {/* ÜBERSETZUNG 1 */}
+              Anmelden
             </Link>
           ) : (
             <>
@@ -77,17 +78,19 @@ export default function TopBar() {
                     onClick={() => router.push('/profile')}
                     className="hidden sm:block px-4 py-2 bg-primary hover:bg-primary-dark text-white rounded-full text-sm font-medium transition-colors shadow-subtle hover:shadow-hover"
                   >
-                    View Subscription
+                    {/* ÜBERSETZUNG 2 */}
+                    Abonnement ansehen
                   </button>
                 )}
 
-              {/* --- ÄNDERUNG HIER --- */}
+              
               {!isLoadingSubscription && subscription && pathname !== '/modules' && (
                 <button
                   onClick={() => router.push('/modules')}
                   className="hidden sm:block px-4 py-2 bg-primary hover:bg-primary-dark text-white rounded-full text-sm font-medium transition-colors shadow-subtle hover:shadow-hover"
                 >
-                  Go to Modules
+                  {/* ÜBERSETZUNG 3 */}
+                  Zu den Modulen
                 </button>
               )}
 
@@ -122,7 +125,8 @@ export default function TopBar() {
                         window.location.href = '/profile';
                       }}
                     >
-                      Profile &amp; Subscription
+                      {/* ÜBERSETZUNG 4 */}
+                      Profil & Abonnement
                     </Link>
 
                     <button
@@ -130,7 +134,8 @@ export default function TopBar() {
                       disabled={isLoggingOut}
                       className="block w-full text-left px-3 py-2 text-sm rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-red-600 dark:text-red-400 disabled:opacity-50"
                     >
-                      {isLoggingOut ? 'Signing Out...' : 'Sign Out'}
+                      {/* ÜBERSETZUNG 5 */}
+                      {isLoggingOut ? 'Abmelden...' : 'Abmelden'}
                     </button>
                   </div>
                 )}

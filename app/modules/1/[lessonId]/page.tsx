@@ -178,14 +178,37 @@ const uebungenInhalt1 = <UebungenContent data={uebungenData1} />;
 const grundwissenInhalt2 = (
     <div className="space-y-8">
         <p className="text-lg leading-relaxed">Nachdem wir wissen, was Daten sind, müssen wir klären, wie wir sie erhalten. Eine schlechte Datenerhebung führt unweigerlich zu falschen Schlussfolgerungen, egal wie gut die Analyse ist. &quot;Garbage in, garbage out&quot; ist das oberste Gebot.</p>
+
         <h3 className="text-2xl font-semibold border-b pb-2">Die Kunst der richtigen Stichprobe</h3>
         <p>Da wir selten die ganze Population befragen können, müssen wir eine kluge Auswahl treffen. Das Ziel ist immer, eine <strong>repräsentative</strong> Stichprobe zu erhalten.</p>
+
         <ul className="list-disc list-inside space-y-4 pl-2">
             <li><strong>Zufallsstichprobe (Simple Random):</strong> Jedes Mitglied der Population hat die exakt gleiche Chance, ausgewählt zu werden. Das ist der Goldstandard, aber oft schwer umsetzbar. (Beispiel: Namen aus einem Hut ziehen).</li>
             <li><strong>Geschichtete Stichprobe (Stratified):</strong> Die Population wird zuerst in relevante Gruppen (Schichten/Strata) unterteilt (z.B. nach Altersgruppen). Dann wird aus jeder Gruppe eine Zufallsstichprobe gezogen. Garantiert, dass alle Gruppen vertreten sind.</li>
             <li><strong>Cluster-Stichprobe:</strong> Die Population wird in natürliche Gruppen (Cluster) unterteilt (z.B. Schulklassen, Unternehmensabteilungen). Man wählt zufällig einige ganze Cluster aus und befragt <strong>alle</strong> Mitglieder dieser ausgewählten Cluster.</li>
         </ul>
+
+        {/* --- HIER WIRD DEIN BILD EINGEFÜGT --- */}
+        <div className="my-6 p-4 bg-slate-50 dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700">
+            <Image 
+                // Der Pfad beginnt mit "/" und verweist auf dein Bild im "public"-Ordner
+                src="/stich.png" 
+
+                // Ein beschreibender Text für Barrierefreiheit
+                alt="Diagramm der verschiedenen Stichprobenarten: Zufall, Geschichtet und Cluster" 
+
+                // WICHTIG: Ersetze diese Werte durch die ECHTEN Pixel-Dimensionen deines Bildes!
+               width={448} // max-w-md entspricht 448px
+                height={250}
+
+                // Klassen für das Styling
+                className="w-full h-auto rounded-md shadow-md" 
+            />
+        </div>
+        {/* --- ENDE DES BILD-BLOCKS --- */}
+
         <div className="bg-red-50 dark:bg-red-900/30 text-red-800 dark:text-red-300 p-4 rounded-lg"><p><strong>Warnung:</strong> Vermeide die &quot;Gelegenheitsstichprobe&quot; (Convenience Sampling), bei der du einfach Leute befragst, die leicht verfügbar sind (z.B. nur deine Freunde). Diese ist fast immer verzerrt (biased).</p></div>
+
         <h3 className="text-2xl font-semibold border-b pb-2">Experiment vs. Beobachtung</h3>
         <ul className="list-disc list-inside space-y-2 pl-2">
             <li><strong>Beobachtungsstudie:</strong> Du misst nur. Du findest Korrelationen, aber <strong>niemals Ursache-Wirkung</strong>.</li>
@@ -232,18 +255,69 @@ const uebungenInhalt2 = <UebungenContent data={uebungenData2} />;
 const grundwissenInhalt3 = (
     <div className="space-y-8">
         <p className="text-lg leading-relaxed">Die beschreibende (oder deskriptive) Statistik hilft uns, grosse Datenmengen übersichtlich zusammenzufassen und zu visualisieren. Sie beschreibt, was in den Daten vorhanden ist, ohne Verallgemeinerungen über die Stichprobe hinaus zu treffen.</p>
+        
+        {/* Gemeinsame Datenreihe für die Beispiele */}
+        <div className="p-4 bg-slate-50 dark:bg-slate-800 rounded-lg">
+            <p className="font-semibold text-center">Für die folgenden Beispiele nutzen wir eine simple Datenreihe: Die Quiz-Punkte von 5 Studierenden.</p>
+            <p className="text-2xl font-mono text-center my-2 tracking-wider">[4, 5, 2, 5, 3]</p>
+        </div>
+
         <h3 className="text-2xl font-semibold border-b pb-2">Zentrale Lagemaße: Wo ist das Zentrum?</h3>
-        <ul className="list-disc list-inside space-y-3 pl-2">
-            <li><strong>Mittelwert (Mean):</strong> Der Durchschnitt aller Werte. Sehr anfällig für Ausreisser.</li>
-            <li><strong>Median:</strong> Der mittlere Wert in einer sortierten Datenreihe. Robust gegenüber Ausreissern.</li>
-            <li><strong>Modus (Mode):</strong> Der häufigste Wert in den Daten.</li>
+        <ul className="list-disc list-inside space-y-4 pl-2">
+            <li>
+                <strong>Mittelwert (Mean):</strong> Der Durchschnitt aller Werte. Sehr anfällig für Ausreisser.
+                <br/><em className="text-slate-600 dark:text-slate-400">Beispiel: (4 + 5 + 2 + 5 + 3) / 5 = <strong>3.8</strong>. Kommt ein Ausreisser dazu (z.B. ein Schüler mit 20 Punkten), verzerrt das den Mittelwert stark.</em>
+            </li>
+            <li>
+                <strong>Median:</strong> Der mittlere Wert in einer sortierten Datenreihe. Robust gegenüber Ausreissern.
+                <br/><em className="text-slate-600 dark:text-slate-400">Beispiel: Zuerst sortieren wir die Punkte: [2, 3, <strong>4</strong>, 5, 5]. Der Wert genau in der Mitte ist die 4. Der Median ist also <strong>4</strong>.</em>
+            </li>
+            <li>
+                <strong>Modus (Mode):</strong> Der häufigste Wert in den Daten.
+                <br/><em className="text-slate-600 dark:text-slate-400">Beispiel: In der Reihe [2, 3, 4, <strong>5, 5</strong>] kommt die 5 am häufigsten vor. Der Modus ist also <strong>5</strong>.</em>
+            </li>
         </ul>
+
+        {/* --- PLATZHALTER 1: ZENTRALE LAGEMASSE --- */}
+        <div className="my-4 p-4 bg-slate-50 dark:bg-slate-800 rounded-lg text-center border border-slate-200 dark:border-slate-700">
+            <Image 
+                src="" 
+                alt="Platzhalter-Grafik, die Mittelwert, Median und Modus in einer Verteilung zeigt" 
+                width={600}
+                height={300}
+                className="mx-auto w-full max-w-lg rounded-lg" 
+            />
+            <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">Eine visuelle Darstellung der zentralen Lagemaße.</p>
+        </div>
+
         <h3 className="text-2xl font-semibold border-b pb-2">Streuungsmaße: Wie verteilt sind die Daten?</h3>
-        <ul className="list-disc list-inside space-y-3 pl-2">
-            <li><strong>Spannweite (Range):</strong> Differenz zwischen dem höchsten und niedrigsten Wert.</li>
-            <li><strong>Interquartilsabstand (IQR):</strong> Die &quot;mittleren 50%&quot; der Daten. Misst die Streuung um den Median.</li>
-            <li><strong>Varianz & Standardabweichung:</strong> Messen die durchschnittliche quadratische bzw. durchschnittliche Abweichung vom Mittelwert. Sie sind die wichtigsten Streuungsmaße.</li>
+        <ul className="list-disc list-inside space-y-4 pl-2">
+            <li>
+                <strong>Spannweite (Range):</strong> Differenz zwischen dem höchsten und niedrigsten Wert.
+                <br/><em className="text-slate-600 dark:text-slate-400">Beispiel: Höchster Wert (5) - niedrigster Wert (2) = <strong>3</strong>.</em>
+            </li>
+            <li>
+                <strong>Interquartilsabstand (IQR):</strong> Die &quotmittleren 50%quot der Daten. Misst die Streuung um den Median und ignoriert Ausreisser.
+                <br/><em className="text-slate-600 dark:text-slate-400">Beispiel: Gibt den Bereich an, in dem die mittleren 50% der Punkte liegen.</em>
+            </li>
+            <li>
+                <strong>Varianz & Standardabweichung:</strong> Messen die durchschnittliche Abweichung jedes einzelnen Datenpunktes vom Mittelwert.
+                <br/><em className="text-slate-600 dark:text-slate-400">Beispiel: Eine kleine Standardabweichung bedeutet, die Punkte liegen alle nah am Durchschnitt (3.8). Eine grosse bedeutet, sie sind weit verstreut.</em>
+            </li>
         </ul>
+        
+        {/* --- PLATZHALTER 2: STREUUNGSMASSE --- */}
+        <div className="my-4 p-4 bg-slate-50 dark:bg-slate-800 rounded-lg text-center border border-slate-200 dark:border-slate-700">
+            <Image 
+                src="" 
+                alt="Platzhalter-Grafik, die die Streuung von Daten um den Mittelwert zeigt" 
+                width={600}
+                height={300}
+                className="mx-auto w-full max-w-lg rounded-lg" 
+            />
+            <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">Visualisierung der Datenverteilung und Streuung.</p>
+        </div>
+
         <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg"><p><strong>Visualisierung:</strong> Ein <strong>Boxplot</strong> ist eine geniale Methode, um Median, IQR und mögliche Ausreisser auf einen Blick zu sehen. Ein <strong>Histogramm</strong> zeigt die Verteilung und Häufigkeit der Daten.</p></div>
     </div>
 );

@@ -7,6 +7,7 @@ import { Link as ScrollLink } from "react-scroll";
 import { motion } from "framer-motion";
 import { VideoModal } from "@/components/VideoModal";
 
+// --- ÜBERSETZUNGEN HIER ---
 const workflowSections = [
   {
     id: "overview",
@@ -44,9 +45,9 @@ const workflowSections = [
       "Strukturierte Module, Quizze und Ressourcen, die auf einen Psychologie-Abschluss ausgerichtet sind.",
     bgColor: "bg-slate-50 dark:bg-[#0B1120]",
     metrics: [
-      { label: "Themen", value: "50+" },
+      { label: "Module", value: "50+" },
       { label: "Bewertungen", value: "Wöchentlich" },
-      { label: "Reddit", value: "Psychedu" },
+      { label: "Ressourcen", value: "Bibliothek" },
     ],
   },
   {
@@ -199,7 +200,7 @@ export default function LandingPage() {
             <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">
               Lerne in deiner Sprache, folge einem 12-Monats-Plan und bleibe mit Mentoren auf Kurs.
             </p>
-            <div className="mt-10 flex gap-4 justify-center">
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -216,6 +217,24 @@ export default function LandingPage() {
               >
                 Kostenlose Testversion starten
               </motion.button>
+              {/* --- NEUE BUTTONS HIER --- */}
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => router.push("/about")} // Du musst eventuell eine "/about" Seite erstellen
+                className="px-8 py-3 bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200 rounded-lg shadow-lg"
+              >
+                Über uns
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => router.push("/sources")} // Du musst eventuell eine "/sources" Seite erstellen
+                className="px-8 py-3 bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200 rounded-lg shadow-lg"
+              >
+                Quellenangabe
+              </motion.button>
+              {/* --- ENDE DER NEUEN BUTTONS --- */}
             </div>
           </div>
         </div>
