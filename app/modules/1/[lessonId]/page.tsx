@@ -1124,7 +1124,7 @@ export default function LessonDetailPage() {
         <Link href="/modules/1" className="flex items-center gap-2 text-primary hover:underline">
           <ArrowLeft className="w-5 h-5" />
           {/* Text an Modul 1 angepasst */}
-          <span>Zurück zur Übersicht "Einführung & Forschung"</span>
+          <span>Zurück zur Übersicht Einführung & Forschung</span>
         </Link>
       </div>
       <div>

@@ -472,7 +472,7 @@ export default function LessonDetailPage() {
         <Link href="/modules/2" className="flex items-center gap-2 text-primary hover:underline">
           <ArrowLeft className="w-5 h-5" />
           {/* Text korrigiert, um zum richtigen Modul zu passen */}
-          <span>Zurück zur Übersicht "Lernen & Gedächtnis"</span>
+          <span>Zurück zur Übersicht Lernen & Gedächtnis</span>
         </Link>
       </div>
       <div>
