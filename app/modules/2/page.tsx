@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { FC, ReactNode } from 'react';
-import { BookOpen, Target, BrainCircuit, Lightbulb, ArrowLeft } from 'lucide-react';
+import { BookOpen, Target, BrainCircuit, Lightbulb, ArrowLeft} from 'lucide-react';
 import { Link as ScrollLink, Element } from 'react-scroll';
 
 // --- DATEN FÜR DIE SOZIALPSYCHOLOGIE-LEKTIONEN ---

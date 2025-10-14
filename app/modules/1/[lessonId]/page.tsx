@@ -3,7 +3,7 @@
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, Check, X, Eye, EyeOff } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Check, X, Eye, EyeOff } from 'lucide-react';
 import { ReactNode, useState, FC } from 'react';
 
 // --- TYP-DEFINITIONEN ---
@@ -281,7 +281,7 @@ const grundwissenInhalt3 = (
         {/* --- PLATZHALTER 1: ZENTRALE LAGEMASSE --- */}
         <div className="my-4 p-4 bg-slate-50 dark:bg-slate-800 rounded-lg text-center border border-slate-200 dark:border-slate-700">
             <Image 
-                src="" 
+                src="/Average.png" 
                 alt="Platzhalter-Grafik, die Mittelwert, Median und Modus in einer Verteilung zeigt" 
                 width={600}
                 height={300}
@@ -297,7 +297,7 @@ const grundwissenInhalt3 = (
                 <br/><em className="text-slate-600 dark:text-slate-400">Beispiel: Höchster Wert (5) - niedrigster Wert (2) = <strong>3</strong>.</em>
             </li>
             <li>
-                <strong>Interquartilsabstand (IQR):</strong> Die &quotmittleren 50%quot der Daten. Misst die Streuung um den Median und ignoriert Ausreisser.
+                <strong>Interquartilsabstand (IQR):</strong> Die mittleren 50% der Daten. Misst die Streuung um den Median und ignoriert Ausreisser.
                 <br/><em className="text-slate-600 dark:text-slate-400">Beispiel: Gibt den Bereich an, in dem die mittleren 50% der Punkte liegen.</em>
             </li>
             <li>
@@ -306,18 +306,6 @@ const grundwissenInhalt3 = (
             </li>
         </ul>
         
-        {/* --- PLATZHALTER 2: STREUUNGSMASSE --- */}
-        <div className="my-4 p-4 bg-slate-50 dark:bg-slate-800 rounded-lg text-center border border-slate-200 dark:border-slate-700">
-            <Image 
-                src="" 
-                alt="Platzhalter-Grafik, die die Streuung von Daten um den Mittelwert zeigt" 
-                width={600}
-                height={300}
-                className="mx-auto w-full max-w-lg rounded-lg" 
-            />
-            <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">Visualisierung der Datenverteilung und Streuung.</p>
-        </div>
-
         <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg"><p><strong>Visualisierung:</strong> Ein <strong>Boxplot</strong> ist eine geniale Methode, um Median, IQR und mögliche Ausreisser auf einen Blick zu sehen. Ein <strong>Histogramm</strong> zeigt die Verteilung und Häufigkeit der Daten.</p></div>
     </div>
 );
@@ -455,6 +443,19 @@ const grundwissenInhalt6 = (
             <li>Sie wird vollständig durch ihren Mittelwert (μ) und ihre Standardabweichung (σ) definiert.</li>
             <li>Die Gesamtfläche unter der Kurve beträgt 1 (oder 100%).</li>
         </ul>
+
+
+        <div className="my-4 p-4 bg-slate-50 dark:bg-slate-800 rounded-lg text-center border border-slate-200 dark:border-slate-700">
+            <Image 
+                src="/Average.png" 
+                alt="Platzhalter-Grafik, die Mittelwert, Median und Modus in einer Verteilung zeigt" 
+                width={600}
+                height={300}
+                className="mx-auto w-full max-w-lg rounded-lg" 
+            />
+            <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">Eine visuelle Darstellung der zentralen Lagemaße.</p>
+        </div>
+        
         <h3 className="text-2xl font-semibold border-b pb-2">Die Empirische Regel (68-95-99.7-Regel)</h3>
         <p>Für jede Normalverteilung gilt:</p>
         <ul className="list-disc list-inside space-y-3 pl-2">
@@ -462,8 +463,25 @@ const grundwissenInhalt6 = (
             <li>Ca. <strong>95%</strong> aller Werte liegen innerhalb von zwei Standardabweichungen (2σ) vom Mittelwert.</li>
             <li>Ca. <strong>99.7%</strong> aller Werte liegen innerhalb von drei Standardabweichungen (3σ) vom Mittelwert.</li>
         </ul>
-        <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg"><p><strong>Der Z-Wert (Standard-Score):</strong> Um verschiedene Normalverteilungen vergleichbar zu machen, standardisieren wir sie. Ein Z-Wert gibt an, wie viele Standardabweichungen ein Wert vom Mittelwert entfernt ist. Formel: <strong>Z = (X - μ) / σ</strong>.</p></div>
-    </div>
+        <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg"><p>
+    <strong>Der Z-Wert (Standard-Score):</strong><br />
+    Um verschiedene Normalverteilungen miteinander zu <strong>vergleichen</strong>, 
+    standardisieren wir die Werte. Der Z-Wert zeigt an, 
+    <strong>wie viele Standardabweichungen (σ)</strong> ein bestimmter Wert 
+    <strong> X </strong> vom <strong>Mittelwert (μ)</strong> entfernt liegt.
+  </p>
+  <p className="mt-2">
+    <strong>Formel:</strong><br />
+    <code>Z = (X − μ) / σ</code>
+  </p>
+  <p className="mt-2">
+    <strong>Bedeutung:</strong><br />
+    – Wenn <code>Z = 0</code>, liegt der Wert <strong>genau im Mittelwert</strong>.<br />
+    – Wenn <code>Z = +1</code>, liegt der Wert <strong>eine Standardabweichung über dem Mittelwert</strong>.<br />
+    – Wenn <code>Z = −1</code>, liegt der Wert <strong>eine Standardabweichung darunter</strong>.
+  </p>
+        </div>
+        </div>
 );
 const anwendbarkeitInhalt6 = (
     <div className="space-y-8">
@@ -496,24 +514,86 @@ const uebungenInhalt6 = <UebungenContent data={uebungenData6} />;
 
 // --- INHALTE FÜR MODUL 7 ---
 const grundwissenInhalt7 = (
-    <div className="space-y-8">
-        <p className="text-lg leading-relaxed">Eine einzelne Punktschätzung (z.B. ein Stichprobenmittelwert) ist fast nie genau der wahre Wert der Population. Ein Konfidenzintervall gibt uns einen Bereich an, von dem wir mit einer gewissen Sicherheit (Konfidenz) sagen können, dass er den wahren Populationsparameter enthält.</p>
-        <h3 className="text-2xl font-semibold border-b pb-2">Aufbau eines Konfidenzintervalls</h3>
-        <p>Die allgemeine Formel lautet:</p>
-        <div className="p-4 bg-slate-100 dark:bg-slate-800 rounded-md text-center font-mono">
-            Punktschätzung ± Fehlermarge (Margin of Error)
-        </div>
-        <p>Die Fehlermarge wiederum besteht aus:</p>
-        <div className="p-4 bg-slate-100 dark:bg-slate-800 rounded-md text-center font-mono">
-            (Kritischer Wert) * (Standardfehler der Schätzung)
-        </div>
-        <ul className="list-disc list-inside space-y-3 pl-2">
-            <li><strong>Punktschätzung:</strong> Unser bester Tipp aus der Stichprobe (z.B. der Stichprobenmittelwert x̄).</li>
-            <li><strong>Kritischer Wert:</strong> Ein Z-Wert oder t-Wert, der vom gewählten Konfidenzniveau (z.B. 95%) abhängt.</li>
-            <li><strong>Standardfehler:</strong> Die Standardabweichung der Stichprobenverteilung. Er misst, wie stark unsere Punktschätzung von Stichprobe zu Stichprobe variieren würde.</li>
-        </ul>
+  <div className="space-y-8">
+    <p className="text-lg leading-relaxed">
+      Eine einzelne Punktschätzung wie der Mittelwert einer Stichprobe trifft selten genau den wahren Mittelwert der
+      gesamten Population. Statt nur einen Schätzwert anzugeben, verwenden wir ein
+      <strong> Konfidenzintervall</strong>, um einen Bereich anzugeben, in dem der wahre Populationsparameter mit
+      einer bestimmten Wahrscheinlichkeit liegt.
+    </p>
+
+    <h3 className="text-2xl font-semibold border-b pb-2">1. Aufbau eines Konfidenzintervalls</h3>
+    <p>Die Grundformel lautet:</p>
+    <div className="p-4 bg-slate-100 dark:bg-slate-800 rounded-md text-center font-mono">
+      Punktschätzung ± Fehlermarge (Margin of Error)
     </div>
+
+    <p>Die Fehlermarge setzt sich aus zwei Teilen zusammen:</p>
+    <div className="p-4 bg-slate-100 dark:bg-slate-800 rounded-md text-center font-mono">
+      (Kritischer Wert) × (Standardfehler der Schätzung)
+    </div>
+
+    <ul className="list-disc list-inside space-y-3 pl-2">
+      <li>
+        <strong>Punktschätzung:</strong> Der beste Schätzwert aus der Stichprobe, z.B. der Stichprobenmittelwert x̄.
+      </li>
+      <li>
+        <strong>Kritischer Wert:</strong> Gibt an, wie weit wir in einer Standardverteilung gehen müssen, um das
+        gewünschte Konfidenzniveau zu erreichen. Für 95% wird meist <strong>z = 1.96</strong> verwendet.
+      </li>
+      <li>
+        <strong>Standardfehler (SE):</strong> Misst, wie stark der Stichprobenmittelwert von Stichprobe zu Stichprobe
+        schwankt. Formel:
+        <div className="mt-2 p-3 bg-slate-50 dark:bg-slate-900 rounded-md font-mono text-center">
+          SE = σ / √n
+        </div>
+        Dabei ist σ die Standardabweichung der Population und n die Stichprobengröße.
+      </li>
+    </ul>
+
+    <h3 className="text-2xl font-semibold border-b pb-2">2. Beispiel</h3>
+    <p>
+      Angenommen, du ziehst eine Stichprobe von 100 Personen und misst deren Körpergröße. Der Mittelwert beträgt
+      175 cm, die bekannte Populationsstandardabweichung ist 10 cm.
+    </p>
+
+    <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg space-y-2 font-mono">
+      <p>x̄ = 175</p>
+      <p>σ = 10</p>
+      <p>n = 100</p>
+      <p>Konfidenzniveau = 95% → z = 1.96</p>
+    </div>
+
+    <p>Berechnung des Standardfehlers:</p>
+    <div className="p-4 bg-slate-100 dark:bg-slate-800 rounded-md font-mono text-center">
+      SE = 10 / √100 = 10 / 10 = 1
+    </div>
+
+    <p>Berechnung der Fehlermarge:</p>
+    <div className="p-4 bg-slate-100 dark:bg-slate-800 rounded-md font-mono text-center">
+      Margin of Error = 1.96 × 1 = 1.96
+    </div>
+
+    <p>Konfidenzintervall:</p>
+    <div className="p-4 bg-slate-100 dark:bg-slate-800 rounded-md font-mono text-center">
+      175 ± 1.96 → (173.04, 176.96)
+    </div>
+
+    <p>
+      Wir sind also zu 95% sicher, dass der wahre Durchschnitt der Körpergröße in der Population zwischen 173.04 cm
+      und 176.96 cm liegt.
+    </p>
+
+    <h3 className="text-2xl font-semibold border-b pb-2">3. Wichtige Hinweise</h3>
+    <ul className="list-disc list-inside space-y-3 pl-2">
+      <li>Je größer die Stichprobe, desto kleiner der Standardfehler und desto enger das Intervall.</li>
+      <li>Ein höheres Konfidenzniveau (z.B. 99%) führt zu einem breiteren Intervall.</li>
+      <li>Bei kleinen Stichproben (n &lt; 30) wird der t-Wert statt des z-Werts verwendet.</li>
+    </ul>
+  </div>
 );
+
+
 const anwendbarkeitInhalt7 = (
     <div className="space-y-8">
         <p className="text-lg leading-relaxed">In einer Wahlumfrage gibt Kandidat A an, 52% der Stimmen zu erhalten. In den Fussnoten steht: &quot;Fehlermarge ±3%, Konfidenzniveau 95%&quot;.</p>
@@ -1021,6 +1101,18 @@ export default function LessonDetailPage() {
   if (!moduleData) {
     return <div>Lektion nicht gefunden.</div>;
   }
+
+  // --- NEU: LOGIK FÜR DIE BLÄTTERFUNKTION ---
+    const lessonParts = ['grundwissen', 'anwendbarkeit', 'meisterklasse', 'uebungen'];
+    const currentIndex = lessonParts.indexOf(type);
+
+    const prevPart = currentIndex > 0 ? lessonParts[currentIndex - 1] : null;
+    const nextPart = currentIndex < lessonParts.length - 1 ? lessonParts[currentIndex + 1] : null;
+
+    // Achte auf die korrekte Modulnummer /modules/1/
+    const prevLink = prevPart ? `/modules/1/${prevPart}-${moduleId}` : null;
+    const nextLink = nextPart ? `/modules/1/${nextPart}-${moduleId}` : null;
+// --- ENDE DER NEUEN LOGIK ---
   
   const contentKey = type as keyof typeof moduleData.content;
   const content = moduleData.content[contentKey] || "Inhalt nicht verfügbar.";
@@ -1031,7 +1123,8 @@ export default function LessonDetailPage() {
       <div className="mb-8">
         <Link href="/modules/1" className="flex items-center gap-2 text-primary hover:underline">
           <ArrowLeft className="w-5 h-5" />
-          <span>Zurück zur Statistik-Übersicht</span>
+          {/* Text an Modul 1 angepasst */}
+          <span>Zurück zur Übersicht "Einführung & Forschung"</span>
         </Link>
       </div>
       <div>
@@ -1039,6 +1132,30 @@ export default function LessonDetailPage() {
         <div className="prose prose-lg dark:prose-invert max-w-none">
             {content}
         </div>
+        
+        {/* --- NEU: UI FÜR DIE BLÄTTERFUNKTION --- */}
+        <div className="mt-12 flex justify-between items-center border-t dark:border-slate-700 pt-6">
+          {prevLink ? (
+            <Link href={prevLink} className="flex items-center gap-2 text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-light transition-colors rounded-md p-2 -m-2">
+              <ArrowLeft className="w-4 h-4" />
+              <span className="font-semibold">Vorheriger Abschnitt</span>
+            </Link>
+          ) : (
+            <div /> // Leeres div, damit der "Weiter"-Button rechts bleibt
+          )}
+          {nextLink ? (
+            <Link href={nextLink} className="flex items-center gap-2 text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-light transition-colors rounded-md p-2 -m-2">
+              <span className="font-semibold">Nächster Abschnitt</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          ) : (
+             <Link href="/modules/1" className="flex items-center gap-2 bg-primary text-white font-semibold px-4 py-2 rounded-lg hover:bg-primary-dark transition-colors">
+              <span>Zurück zur Übersicht</span>
+            </Link>
+          )}
+        </div>
+        {/* --- ENDE DER NEUEN UI --- */}
+
       </div>
     </div>
   );

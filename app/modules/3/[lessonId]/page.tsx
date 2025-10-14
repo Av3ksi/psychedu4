@@ -2,7 +2,7 @@
 
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, Check, X, Eye, EyeOff } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Check, X, Eye, EyeOff } from 'lucide-react';
 import { ReactNode, useState, FC } from 'react';
 
 // --- TYP-DEFINITIONEN ---
@@ -560,6 +560,18 @@ export default function LessonDetailPage() {
         </div>
     );
   }
+
+  // --- NEU: LOGIK FÜR DIE BLÄTTERFUNKTION ---
+const lessonParts = ['grundwissen', 'anwendbarkeit', 'meisterklasse', 'uebungen'];
+const currentIndex = lessonParts.indexOf(type);
+
+const prevPart = currentIndex > 0 ? lessonParts[currentIndex - 1] : null;
+const nextPart = currentIndex < lessonParts.length - 1 ? lessonParts[currentIndex + 1] : null;
+
+// Achte darauf, dass hier die korrekte Modulnummer (z.B. /modules/3/) steht
+const prevLink = prevPart ? `/modules/3/${prevPart}-${moduleId}` : null;
+const nextLink = nextPart ? `/modules/3/${nextPart}-${moduleId}` : null;
+// --- ENDE DER NEUEN LOGIK ---
   
   const contentKey = type as keyof typeof moduleData.content;
   const content = moduleData.content[contentKey] || "Inhalt nicht verfügbar.";
@@ -568,16 +580,42 @@ export default function LessonDetailPage() {
   return (
     <div className="max-w-4xl mx-auto p-6 md:p-8">
       <div className="mb-8">
+        {/* Dies ist der Link zurück zur Modulübersicht */}
         <Link href="/modules/3" className="flex items-center gap-2 text-primary hover:underline">
           <ArrowLeft className="w-5 h-5" />
           <span>Zurück zur Übersicht der Klinischen Psychologie</span>
         </Link>
       </div>
       <div>
+        {/* Dies ist der Container für den Lektionsinhalt */}
         <h1 className="text-3xl font-bold mb-6">{title}</h1>
         <div className="prose prose-lg dark:prose-invert max-w-none">
             {content}
         </div>
+
+        {/* --- HIER DEN BLOCK EINFÜGEN --- */}
+        <div className="mt-12 flex justify-between items-center border-t dark:border-slate-700 pt-6">
+          {prevLink ? (
+            <Link href={prevLink} className="flex items-center gap-2 text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-light transition-colors rounded-md p-2 -m-2">
+              <ArrowLeft className="w-4 h-4" />
+              <span className="font-semibold">Vorheriger Abschnitt</span>
+            </Link>
+          ) : (
+            <div /> // Leeres div, damit der "Weiter"-Button rechts bleibt
+          )}
+          {nextLink ? (
+            <Link href={nextLink} className="flex items-center gap-2 text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-light transition-colors rounded-md p-2 -m-2">
+              <span className="font-semibold">Nächster Abschnitt</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          ) : (
+             <Link href="/modules/3" className="flex items-center gap-2 bg-primary text-white font-semibold px-4 py-2 rounded-lg hover:bg-primary-dark transition-colors">
+              <span>Zurück zur Übersicht</span>
+            </Link>
+          )}
+        </div>
+        {/* --- ENDE DES NEUEN BLOCKS --- */}
+
       </div>
     </div>
   );
