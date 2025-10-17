@@ -1,7 +1,7 @@
 'use client';
 
 import { useParams } from 'next/navigation';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { ArrowLeft, ArrowRight, Check, X, Eye, EyeOff } from 'lucide-react';
 import { ReactNode, useState, FC } from 'react';
 

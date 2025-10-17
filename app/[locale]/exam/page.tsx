@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { canTakeExam } from '@/utils/modules'
 import { useRouter } from 'next/navigation'
 import { ArrowLeft } from 'lucide-react'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation';
 
 // Eine kleine Hilfskomponente für die Tabellenzeilen, um Code zu sparen
 const CriteriaRow = ({ criterion, description }: { criterion: string, description: string }) => (

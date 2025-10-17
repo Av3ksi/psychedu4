@@ -1,5 +1,5 @@
 'use client'
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { useSubscription } from '@/hooks/useSubscription';
 import { Lock, Circle, CheckCircle } from 'lucide-react';
 import LoadingSpinner from '@/components/LoadingSpinner';

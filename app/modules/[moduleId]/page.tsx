@@ -3,7 +3,7 @@
 import { useParams } from 'next/navigation';
 import { useSubscription } from '@/hooks/useSubscription';
 import LoadingSpinner from '@/components/LoadingSpinner';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { FC, ReactNode } from 'react'; // ✅ useState entfernt
 import { BookOpen, Target, BrainCircuit, Lightbulb } from 'lucide-react';
 import { Link as ScrollLink, Element } from 'react-scroll';
