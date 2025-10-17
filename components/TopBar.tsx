@@ -5,6 +5,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useSubscription } from '@/hooks/useSubscription';
+import LocaleSwitcher from './LocaleSwitcher';
 
 export default function TopBar() {
   const { user, signOut } = useAuth();
@@ -61,6 +62,7 @@ export default function TopBar() {
         </Link>
 
         <div className="flex items-center gap-4">
+          <LocaleSwitcher/>
           {!user ? (
             <Link
               href="/login"

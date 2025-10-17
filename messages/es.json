@@ -1,0 +1,21 @@
+{
+    "landingPage": {
+    "Psychedu Überblick": "Vista general de Psychedu",
+    "Preise & Abrechnung": "Precios y facturación",
+    "Anmeldung & Zugang": "Registro y acceso",
+    "Lernplattform": "Plataforma de aprendizaje",
+    "Warum Psychedu?": "¿Por qué Psychedu?",
+    "Pläne": "Planes",
+    "heroSection": {
+        "title": "Psychedu – Tu Título de Psicología",
+        "subtitle": "Obtén tu título online en ~1 Año",
+        "description": "Estudia más rápido con un programa guiado y multilingüe. Aprende en cualquier lugar, mantente al día y finaliza tus estudios antes.",
+        "watchVideoButton": "Ver video",
+        "startButton": "Comenzar prueba gratuita"
+    }
+},
+"LocaleSwitcher": {
+    "label": "Cambiar idioma",
+    "locale": "{locale, select, de {🇩🇪 Alemán} en {🇺🇸 Inglés} es {🇪🇸 Español} fr {🇫🇷 Francés} other {Desconocido}}"
+  }
+}

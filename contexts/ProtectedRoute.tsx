@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
-import {usePathname } from 'next/navigation';
+import { usePathname } from '@/i18n/navigation';
 // import { useRouter, usePathname } from 'next/navigation';
 
 // List of public routes that don't require authentication
@@ -18,6 +18,7 @@ const PUBLIC_ROUTES = [
 export default function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { user, isLoading } = useAuth();
   // const router = useRouter();
+  // const pathname = usePathname();
   const pathname = usePathname();
 
   useEffect(() => {

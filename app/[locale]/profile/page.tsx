@@ -2,7 +2,7 @@
 'use client';
 
 import { useEffect, useState, Suspense } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useAuth } from '@/contexts/AuthContext';
 import { useSubscription } from '@/hooks/useSubscription';
@@ -77,7 +77,6 @@ function CustomStripeButton({ priceId, label, planName, price }: CustomStripeBut
 
 
 function ProfileContent() {
-  const router = useRouter();
   const searchParams = useSearchParams();
   const { user } = useAuth();
   const { subscription, isLoading: isLoadingSubscription, syncWithStripe, fetchSubscription } = useSubscription();
@@ -111,9 +110,9 @@ function ProfileContent() {
     }
   }, [syncWithStripe, subscription?.stripe_subscription_id]);
 
-  useEffect(() => {
-    if (!user) router.push('/login');
-  }, [user, router]);
+  // useEffect(() => {
+  //   if (!user) router.push('/login');
+  // }, [user, router]);
 
   useEffect(() => {
     if (user?.id) fetchSubscription();

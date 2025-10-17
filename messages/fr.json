@@ -1,0 +1,21 @@
+{
+    "landingPage": {
+    "Psychedu Überblick": "Aperçu de Psychedu",
+    "Preise & Abrechnung": "Prix et facturation",
+    "Anmeldung & Zugang": "Inscription et accès",
+    "Lernplattform": "Plateforme d'apprentissage",
+    "Warum Psychedu?": "Pourquoi Psychedu ?",
+    "Pläne": "Forfaits",
+    "heroSection": {
+        "title": "Psychedu – Votre Diplôme de Psychologie",
+        "subtitle": "Obtenez votre diplôme en ligne en ~1 an",
+        "description": "Étudiez plus rapidement grâce à un programme guidé et multilingue. Apprenez n'importe où, restez sur la bonne voie et terminez vos études plus tôt.",
+        "watchVideoButton": "Regarder la vidéo",
+        "startButton": "Démarrer l'essai gratuit"
+    }
+},
+"LocaleSwitcher": {
+    "label": "Changer de langue",
+    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} es {🇪🇸 Spanish} fr {🇫🇷 Français} other {Inconnu}}"
+  }
+}
