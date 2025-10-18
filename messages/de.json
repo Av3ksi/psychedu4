@@ -1,21 +1,33 @@
 {
-    "landingPage":{
-    "Psychedu Überblick": "Psychedu Überblick",
-    "Preise & Abrechnung": "Preise & Abrechnung",
-    "Anmeldung & Zugang": "Anmeldung & Zugang",
-    "Lernplattform": "Lernplattform",
-    "Warum Psychedu?": "Warum Psychedu?",
-    "Pläne": "Pläne",
-    "heroSection":{
-        "title": "Psychedu – Dein Psychologie-Abschluss",
-        "subtitle": "Erhalte deinen Abschluss online in ~1 Jahr",
-        "description": "Studiere schneller mit einem geführten, mehrsprachigen Programm. Lerne überall, bleibe auf Kurs und schließe dein Studium früher ab.",
-        "watchVideoButton": "Video ansehen",
-        "startButton": "Kostenlose Testversion starten"
+    "landingPage": {
+        "Psychedu Überblick": "Psychedu Überblick",
+        "Preise & Abrechnung": "Preise & Abrechnung",
+        "Anmeldung & Zugang": "Anmeldung & Zugang",
+        "Lernplattform": "Lernplattform",
+        "Warum Psychedu?": "Warum Psychedu?",
+        "Pläne": "Pläne",
+        "heroSection": {
+            "title": "Psychedu – Dein Psychologie-Abschluss",
+            "subtitle": "Erhalte deinen Abschluss online in ~1 Jahr",
+            "description": "Studiere schneller mit einem geführten, mehrsprachigen Programm. Lerne überall, bleibe auf Kurs und schließe dein Studium früher ab.",
+            "watchVideoButton": "Video ansehen",
+            "startButton": "Kostenlose Testversion starten"
+        }
+    },
+    "LocaleSwitcher": {
+        "label": "Sprache ändern",
+        "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} es {🇪🇸 Spanish} fr {🇫🇷 French} other {Unknown}}"
+    },
+    "moduleDescriptions": {
+        "1": "Das Fundament für die empirische Psychologie.",
+        "2": "Der Mensch im Kontext der Gruppe.",
+        "3": "Grundlagen psychischer Störungen.",
+        "4": "Die menschliche Entwicklung über die Lebensspanne.",
+        "5": "Wie wir Informationen verarbeiten.",
+        "6": "Was uns antreibt und fühlen lässt.",
+        "7": "Die neurobiologischen Grundlagen des Verhaltens.",
+        "8": "Warum Menschen so unterschiedlich sind.",
+        "9": "Wie psychologische Merkmale gemessen werden.",
+        "10": "Der Mensch in der Arbeitswelt."
     }
-},
-"LocaleSwitcher": {
-    "label": "Change language",
-    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} es {🇪🇸 Spanish} fr {🇫🇷 French} other {Unknown}}"
-  }
 }
