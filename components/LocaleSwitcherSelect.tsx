@@ -3,7 +3,7 @@
 import clsx from 'clsx';
 import {useParams} from 'next/navigation';
 import {Locale} from 'next-intl';
-import React, {ReactNode, useTransition, useState} from 'react'; // Import React for safer Children handling
+import React, {ReactNode, useTransition, useState} from 'react';
 import {usePathname, useRouter} from '@/i18n/navigation';
 import {motion, AnimatePresence} from 'framer-motion';
 import { FiChevronDown } from "react-icons/fi";
@@ -41,8 +41,6 @@ export default function LocaleSwitcherSelect({
     });
   }
 
-  // --- Start of Fix ---
-  // Safely convert children to an array of valid elements, then filter and map
   const options = React.Children.toArray(children)
     .filter(
       (child): child is React.ReactElement<{ value: Locale; children: string }> => 
@@ -52,7 +50,6 @@ export default function LocaleSwitcherSelect({
       value: child.props.value,
       label: child.props.children,
     }));
-  // --- End of Fix ---
 
   const currentOption = options.find(opt => opt.value === defaultValue) || options[0];
 
@@ -78,7 +75,8 @@ export default function LocaleSwitcherSelect({
 
 
   return (
-    <div className="relative z-50">
+    // Keep the main wrapper z-index high
+    <div className="relative z-50"> 
       <p className="sr-only">{label}</p>
       
       <motion.button
@@ -93,10 +91,9 @@ export default function LocaleSwitcherSelect({
       >
         {currentOption?.label || defaultValue} 
         <motion.span 
-            className="ml-1 text-xl" // Increased size and reduced margin for better alignment
+            className="ml-1 text-xl"
             animate={{ 
                 rotate: isOpen ? 180 : 0,
-                // Add a subtle bounce/spring effect to the rotation
                 transition: { type: 'spring', stiffness: 300, damping: 20 }
             }} 
         >
@@ -107,7 +104,8 @@ export default function LocaleSwitcherSelect({
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className={`absolute right-0 mt-2 rounded-lg shadow-xl overflow-hidden`}
+            // 👇 Crucial Fix: Ensure the dropdown has a higher z-index than the fixed backdrop (z-40)
+            className={`absolute right-0 mt-2 rounded-lg shadow-xl overflow-hidden z-[41]`} 
             initial="closed"
             animate="open"
             exit="closed"
@@ -137,6 +135,7 @@ export default function LocaleSwitcherSelect({
         )}
       </AnimatePresence>
       
+      {/* The fixed backdrop remains at z-40 */}
       {isOpen && <div 
         className="fixed inset-0 z-40" 
         onClick={() => setIsOpen(false)} 
