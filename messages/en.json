@@ -1,21 +1,33 @@
 {
     "landingPage": {
-    "Psychedu Überblick": "Psychedu Overview",
-    "Preise & Abrechnung": "Prices & Billing",
-    "Anmeldung & Zugang": "Registration & Access",
-    "Lernplattform": "Learning Platform",
-    "Warum Psychedu?": "Why Psychedu?",
-    "Pläne": "Plans",
-    "heroSection": {
-        "title": "Psychedu – Your Psychology Degree",
-        "subtitle": "Get your degree online in ~1 Year",
-        "description": "Study faster with a guided, multilingual program. Learn anywhere, stay on track, and finish your studies sooner.",
-        "watchVideoButton": "Watch Video",
-        "startButton": "Start Free Trial"
+        "Psychedu Überblick": "Psychedu Overview",
+        "Preise & Abrechnung": "Prices & Billing",
+        "Anmeldung & Zugang": "Registration & Access",
+        "Lernplattform": "Learning Platform",
+        "Warum Psychedu?": "Why Psychedu?",
+        "Pläne": "Plans",
+        "heroSection": {
+            "title": "Psychedu – Your Psychology Degree",
+            "subtitle": "Get your degree online in ~1 Year",
+            "description": "Study faster with a guided, multilingual program. Learn anywhere, stay on track, and finish your studies sooner.",
+            "watchVideoButton": "Watch Video",
+            "startButton": "Start Free Trial"
+        }
+    },
+    "LocaleSwitcher": {
+        "label": "Change language",
+        "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} es {🇪🇸 Spanish} fr {🇫🇷 French} other {Unknown}}"
+    },
+    "moduleDescriptions": {
+        "1": "The foundation for empirical psychology.",
+        "2": "The individual in the context of the group.",
+        "3": "Fundamentals of psychological disorders.",
+        "4": "Human development across the lifespan.",
+        "5": "How we process information.",
+        "6": "What drives and makes us feel.",
+        "7": "The neurobiological foundations of behavior.",
+        "8": "Why people are so different.",
+        "9": "How psychological traits are measured.",
+        "10": "The individual in the world of work."
     }
-},
-"LocaleSwitcher": {
-    "label": "Change language",
-    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} es {🇪🇸 Spanish} fr {🇫🇷 French} other {Unknown}}"
-  }
 }
