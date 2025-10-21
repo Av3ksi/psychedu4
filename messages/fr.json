@@ -1,23 +1,95 @@
 {
-    "landingPage": {
-        "Psychedu Überblick": "Aperçu de Psychedu",
-        "Preise & Abrechnung": "Prix et facturation",
-        "Anmeldung & Zugang": "Inscription et accès",
-        "Lernplattform": "Plateforme d'apprentissage",
-        "Warum Psychedu?": "Pourquoi Psychedu ?",
-        "Pläne": "Forfaits",
-        "heroSection": {
-            "title": "Psychedu – Votre Diplôme de Psychologie",
-            "subtitle": "Obtenez votre diplôme en ligne en ~1 an",
-            "description": "Étudiez plus rapidement grâce à un programme guidé et multilingue. Apprenez n'importe où, restez sur la bonne voie et terminez vos études plus tôt.",
-            "watchVideoButton": "Regarder la vidéo",
-            "startButton": "Démarrer l'essai gratuit"
-        }
+  "landingPage": {
+    "Psychedu Überblick": "Aperçu de Psychedu",
+    "Preise & Abrechnung": "Tarifs et facturation",
+    "Anmeldung & Zugang": "Connexion et accès",
+    "Lernplattform": "Plateforme d’apprentissage",
+    "Warum Psychedu?": "Pourquoi Psychedu ?",
+    "Pläne": "Formules",
+
+    "heroSection": {
+      "title": "Psychedu – Ton diplôme de psychologie",
+      "subtitle": "Obtiens ton diplôme en ligne en environ 1 an",
+      "description": "Étudie plus rapidement grâce à un programme guidé et multilingue. Apprends où tu veux, reste motivé et termine ton cursus plus tôt.",
+      "watchVideoButton": "Regarder la vidéo",
+      "startButton": "Commencer l’essai gratuit"
     },
-    "LocaleSwitcher": {
-        "label": "Changer de langue",
-        "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} es {🇪🇸 Spanish} fr {🇫🇷 Français} other {Inconnu}}"
+
+    "metrics": {
+      "authentication": {
+        "languages": "Langues",
+        "languages_value": "Toutes",
+        "duration": "Durée des études",
+        "duration_value": "~12 mois",
+        "progress": "Suivi des progrès",
+        "progress_value": "En temps réel"
+      },
+      "payments": {
+        "monthly": "Mensuel",
+        "monthly_value": "20",
+        "yearly": "Annuel",
+        "yearly_value": "200",
+        "trial": "Période d’essai",
+        "trial_value": "Oui"
+      },
+      "database": {
+        "modules": "Modules",
+        "modules_value": "50+",
+        "reviews": "Évaluations",
+        "reviews_value": "Hebdomadaire",
+        "resources": "Ressources",
+        "resources_value": "Bibliothèque"
+      },
+      "features": {
+        "title": "Pourquoi Psychedu ?",
+        "description": "L’éducation traditionnelle est coûteuse et souvent peu pratique. Nous te proposons tout ce dont tu as besoin pour ton diplôme – condensé, concret et à un prix équitable.",
+        "prices": "Prix équitables",
+        "prices_value": "Abordable",
+        "relevance": "Pertinence pratique",
+        "relevance_value": "Ciblée",
+        "knowledge": "Connaissances de licence",
+        "knowledge_value": "Condensées"
+      }
     },
+
+    "sections": {
+      "authentication": {
+        "title": "Connexion & Accès",
+        "description": "Connexion sécurisée et tableau de bord étudiant pour suivre ta progression."
+      },
+      "payments": {
+        "title": "Tarifs & Facturation",
+        "description": "Formules simples : 20/mois ou 200/an. Résiliable à tout moment."
+      },
+      "database": {
+        "title": "Plateforme d’apprentissage",
+        "description": "Modules structurés, quiz et ressources conçus pour un diplôme en psychologie."
+      },
+      "features": {
+        "title": "Pourquoi Psychedu ?",
+        "description": "L’éducation traditionnelle est coûteuse et souvent peu pratique. Nous te proposons tout ce dont tu as besoin pour ton diplôme – condensé, concret et à un prix équitable."
+      },
+      "pricing": {
+        "title": "Formules",
+        "description": "20/mois ou 200/an – choisis ce qui te convient le mieux."
+      }
+    },
+
+    "cta": {
+      "title": "Prêt à obtenir ton diplôme de psychologie plus rapidement ?",
+      "description": "Apprends dans ta langue, suis un plan de 12 mois et reste motivé avec l’aide de mentors.",
+      "watchVideoButton": "Regarder la vidéo",
+      "startButton": "Commencer l’essai gratuit",
+      "aboutButton": "À propos",
+      "sourcesButton": "Sources"
+    }
+  },
+
+  "LocaleSwitcher": {
+    "label": "Changer de langue",
+    "locale": "{locale, select, de {🇩🇪 Allemand} en {🇺🇸 Anglais} es {🇪🇸 Espagnol} fr {🇫🇷 Français} other {Inconnu}}"
+  },
+
     "moduleDescriptions": {
         "1": "Le fondement de la psychologie empirique.",
         "2": "L'individu dans le contexte du groupe.",

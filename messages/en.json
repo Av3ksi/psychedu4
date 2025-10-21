@@ -1,138 +1,154 @@
 {
-    "landingPage": {
-        "Psychedu Überblick": "Psychedu Overview",
-        "Preise & Abrechnung": "Prices & Billing",
-        "Anmeldung & Zugang": "Registration & Access",
-        "Lernplattform": "Learning Platform",
-        "Warum Psychedu?": "Why Psychedu?",
-        "Pläne": "Plans",
-        "heroSection": {
-            "title": "Psychedu – Your Psychology Degree",
-            "subtitle": "Get your degree online in ~1 Year",
-            "description": "Study faster with a guided, multilingual program. Learn anywhere, stay on track, and finish your studies sooner.",
-            "watchVideoButton": "Watch Video",
-            "startButton": "Start Free Trial"
-        }
-    },
-    "LocaleSwitcher": {
-        "label": "Change language",
-        "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} es {🇪🇸 Spanish} fr {🇫🇷 French} other {Unknown}}"
-    },
-    "moduleDescriptions": {
-        "1": "The foundation for empirical psychology.",
-        "2": "The individual in the context of the group.",
-        "3": "Fundamentals of psychological disorders.",
-        "4": "Human development across the lifespan.",
-        "5": "How we process information.",
-        "6": "What drives and makes us feel.",
-        "7": "The neurobiological foundations of behavior.",
-        "8": "Why people are so different.",
-        "9": "How psychological traits are measured.",
-        "10": "The individual in the world of work."
-    },
-    "aboutPage": {
-        "backLink": "Back to homepage",
-        "mainTitle": "About Psychedu",
-        "missionTitle": "Our Mission: Rethinking Education",
-        "missionParagraph1": "The traditional university system is often characterized by high costs, rigid structures, and inefficient learning cycles that culminate in annual, stressful exam periods. Important knowledge for later professional practice is often lost in the process.",
-        "missionParagraph2": "Psychedu was born out of the conviction that there must be a better way. Our mission is to create a practice-oriented, flexible, and meaningful alternative that provides you with the essentials of a psychology degree in a compact and accessible manner.",
-        "historyTitle": "The Story Behind Psychedu",
-        "historyParagraph": "Psychedu is the result of a one-year project initiated by a single person from Switzerland. As a student of psychology and economics, our founder experienced the frustrations of the classic system firsthand. Driven by the desire to make learning more efficient, relevant, and inspiring, the vision for this platform emerged: a place where education not only serves to obtain a degree but creates real, applicable value for your future.",
-        "philosophyTitle": "Our Philosophy",
-        "philosophyPoint1": "<strong>Accessible:</strong> We believe that high-quality education should not fail due to excessive prices.",
-        "philosophyPoint2": "<strong>Efficient:</strong> We focus on what really matters – the entire knowledge of a bachelor's degree, presented compactly and understandably.",
-        "philosophyPoint3": "<strong>Practice-Oriented:</strong> We combine theory with application to optimally prepare you for your professional future."
-    },
-    "modulesOverview": {
-        "backLink": "Back to module overview",
-        "statsTitle": "Statistics from A-Z",
-        "statsDescription": "Choose a lesson to deepen your knowledge. Each lesson is divided into Basic Knowledge, Applicability, Masterclass, and Exercises.",
-        "socialTitle": "Social Psychology",
-        "socialDescription": "Explore how individuals are influenced by the actual, imagined, or implied presence of others.",
-        "cardTitleGrundwissen": "Basic Knowledge",
-        "cardTitleAnwendbarkeit": "Applicability",
-        "cardTitleMeisterklasse": "Masterclass",
-        "cardTitleUebungen": "Exercises"
-    },
-    "statisticsModuleDescriptions": {
-        "1_grundwissen": "Define what data is and learn key basic terms like population and sample.",
-        "1_anwendbarkeit": "Understand how surveys in market research are correctly planned and interpreted.",
-        "1_meisterklasse": "Learn to assess data quality and avoid typical fallacies.",
-        "1_uebungen": "Test your knowledge with interactive questions on core concepts.",
-        "2_grundwissen": "Differentiate various sampling methods and the basics of experimental design.",
-        "2_anwendbarkeit": "Plan your own (fictional) study and identify potential confounding factors and ethical hurdles.",
-        "2_meisterklasse": "Analyze complex study designs and evaluate their practical significance.",
-        "2_uebungen": "Apply your knowledge in scenarios to select the best study design.",
-        "3_grundwissen": "Learn to summarize data using measures like mean, median, and standard deviation.",
-        "3_anwendbarkeit": "Create a meaningful dashboard to visualize the performance of a marketing campaign.",
-        "3_meisterklasse": "Interpret box plots and histograms to gain deeper insights into data structure.",
-        "3_uebungen": "Calculate and interpret key metrics for various datasets.",
-        "4_grundwissen": "Understand the axioms and calculation rules of probability theory.",
-        "4_anwendbarkeit": "Calculate the risk of events, e.g., in actuarial science or games.",
-        "4_meisterklasse": "Solve complex problems involving conditional probabilities (Bayes' Theorem).",
-        "4_uebungen": "Solve classic probability puzzles interactively.",
-        "5_grundwissen": "Learn the difference between discrete and continuous random variables.",
-        "5_anwendbarkeit": "Model the number of customers entering a store per hour (Poisson distribution).",
-        "5_meisterklasse": "Understand the theoretical basis behind the most important statistical tests.",
-        "5_uebungen": "Assign the appropriate probability distribution to real-world scenarios.",
-        "6_grundwissen": "Understand the key properties of the 'bell curve' and the 68-95-99.7 rule.",
-        "6_anwendbarkeit": "Standardize values using the z-score to make them comparable across different scales.",
-        "6_meisterklasse": "Check if a dataset is normally distributed and understand the consequences if not.",
-        "6_uebungen": "Calculate probabilities for normally distributed data.",
-        "7_grundwissen": "Learn how to quantify the uncertainty of an estimate.",
-        "7_anwendbarkeit": "Correctly interpret survey results by understanding the reported margin of error.",
-        "7_meisterklasse": "Discuss the factors that influence the width of a confidence interval.",
-        "7_uebungen": "Calculate and interpret confidence intervals for means.",
-        "8_grundwissen": "Formulate null and alternative hypotheses and understand the logic of the p-value.",
-        "8_anwendbarkeit": "Conduct an A/B test to decide which version of a website performs better.",
-        "8_meisterklasse": "Understand the concept of statistical power and how to control Type I and Type II errors.",
-        "8_uebungen": "Correctly apply the t-test in various scenarios.",
-        "9_grundwissen": "Analyze relationships between categorical variables (e.g., gender and product choice).",
-        "9_anwendbarkeit": "Evaluate survey data to see if certain opinions depend on age group.",
-        "9_meisterklasse": "Check the assumptions of the Chi-Square test and interpret the results in detail.",
-        "9_uebungen": "Perform tests of independence using given tables.",
-        "10_grundwissen": "Model and quantify the linear relationship between two variables.",
-        "10_anwendbarkeit": "Create a simple prediction model, e.g., for revenue based on advertising spend.",
-        "10_meisterklasse": "Interpret the coefficient of determination (R-squared) and residual analysis for model fit.",
-        "10_uebungen": "Calculate and interpret correlation coefficients and regression lines.",
-        "11_grundwissen": "Compare the means of three or more groups.",
-        "11_anwendbarkeit": "Find out which of several teaching methods yields the greatest learning success.",
-        "11_meisterklasse": "Perform post-hoc tests to find out specifically which groups differ.",
-        "11_uebungen": "Decide based on case studies when an ANOVA is appropriate.",
-        "12_grundwissen": "Extend the regression model to examine the influence of multiple variables simultaneously.",
-        "12_anwendbarkeit": "Build a model to predict real estate prices based on size, location, and age.",
-        "12_meisterklasse": "Identify and address problems like multicollinearity in your model.",
-        "12_uebungen": "Interpret the coefficients of a multiple regression model.",
-        "13_grundwissen": "Learn how to predict categorical outcomes (Yes/No).",
-        "13_anwendbarkeit": "Develop a model to predict customer churn.",
-        "13_meisterklasse": "Interpret odds ratios and assess the quality of your classification model (e.g., with ROC curves).",
-        "13_uebungen": "Apply the model to real datasets to make predictions.",
-        "14_grundwissen": "Learn about robust testing procedures that do not assume normal distribution.",
-        "14_anwendbarkeit": "Analyze data from rankings or ratings that are not metric.",
-        "14_meisterklasse": "Understand the pros and cons (especially 'power') compared to parametric tests.",
-        "14_uebungen": "Choose the appropriate statistical test in different scenarios.",
-        "15_grundwissen": "Understand the fundamental difference from classical (frequentist) statistics.",
-        "15_anwendbarkeit": "Interpret A/B test results as 'probability that variant B is better'.",
-        "15_meisterklasse": "Define meaningful 'priors' (prior beliefs) and understand their influence on the result.",
-        "15_uebungen": "Solve the Monty Hall problem using Bayes' Theorem.",
-        "16_grundwissen": "Learn the basics of data analysis libraries in Python (pandas) or R.",
-        "16_anwendbarkeit": "Perform a complete data analysis from data cleaning to visualization.",
-        "16_meisterklasse": "Create reproducible analysis scripts and present your results in a Jupyter Notebook.",
-        "16_uebungen": "Solve small programming tasks for data manipulation and visualization."
-    },
-    "premiumAccess": {
-        "title": "Access Denied",
-        "description": "This module is only available to premium users.",
-        "upgradeButton": "Upgrade Now"
-    },
-    "premiumPlaceholder": {
-        "title": "Module {moduleId}",
-        "description": "Learning content for module {moduleId} will be displayed here. (Placeholder for premium content)"
+  "landingPage": {
+    "Psychedu Überblick": "Psychedu Overview",
+    "Preise & Abrechnung": "Pricing & Billing",
+    "Anmeldung & Zugang": "Sign-In & Access",
+    "Lernplattform": "Learning Platform",
+    "Warum Psychedu?": "Why Psychedu?",
+    "Pläne": "Plans",
+
+    "heroSection": {
+      "title": "Psychedu – Your Psychology Degree",
+      "subtitle": "Earn your degree online in ~1 year",
+      "description": "Study faster with a guided, multilingual program. Learn anywhere, stay on track, and finish your degree sooner.",
+      "watchVideoButton": "Watch Video",
+      "startButton": "Start Free Trial"
     },
 
+    "metrics": {
+      "authentication": {
+        "languages": "Languages",
+        "languages_value": "All",
+        "duration": "Study Duration",
+        "duration_value": "~12 months",
+        "progress": "Progress Tracking",
+        "progress_value": "Real-time"
+      },
+      "payments": {
+        "monthly": "Monthly",
+        "monthly_value": "20",
+        "yearly": "Yearly",
+        "yearly_value": "200",
+        "trial": "Trial Period",
+        "trial_value": "Yes"
+      },
+      "database": {
+        "modules": "Modules",
+        "modules_value": "50+",
+        "reviews": "Reviews",
+        "reviews_value": "Weekly",
+        "resources": "Resources",
+        "resources_value": "Library"
+      },
+      "features": {
+        "title": "Why Psychedu?",
+        "description": "Traditional education is expensive and often unfocused. We provide everything you need for your degree – compact, practical, and at a fair price.",
+        "prices": "Fair Prices",
+        "prices_value": "Affordable",
+        "relevance": "Practical Relevance",
+        "relevance_value": "Focused",
+        "knowledge": "Bachelor-Level Knowledge",
+        "knowledge_value": "Compact"
+      }
+    },
 
+    "sections": {
+      "authentication": {
+        "title": "Sign-In & Access",
+        "description": "Secure login and student dashboard for real-time progress tracking."
+      },
+      "payments": {
+        "title": "Pricing & Billing",
+        "description": "Simple plans: 20/month or 200/year. Cancel anytime."
+      },
+      "database": {
+        "title": "Learning Platform",
+        "description": "Structured modules, quizzes, and resources designed for a psychology degree."
+      },
+      "features": {
+        "title": "Why Psychedu?",
+        "description": "Traditional education is expensive and often unfocused. We provide everything you need for your degree – compact, practical, and at a fair price."
+      },
+      "pricing": {
+        "title": "Plans",
+        "description": "20/month or 200/year – choose what fits you best."
+      }
+    },
 
-"statisticsModuleTitles": {
+    "cta": {
+      "title": "Ready to fast-track your psychology degree?",
+      "description": "Learn in your language, follow a 12-month plan, and stay on track with mentors.",
+      "watchVideoButton": "Watch Video",
+      "startButton": "Start Free Trial",
+      "aboutButton": "About Us",
+      "sourcesButton": "Sources"
+    }
+  },
+
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, de {🇩🇪 German} en {🇺🇸 English} es {🇪🇸 Spanish} fr {🇫🇷 French} other {Unknown}}"
+  },
+
+  "moduleDescriptions": {
+    "1": "The foundation for empirical psychology.",
+    "2": "The individual in the context of the group.",
+    "3": "Fundamentals of psychological disorders.",
+    "4": "Human development across the lifespan.",
+    "5": "How we process information.",
+    "6": "What drives and makes us feel.",
+    "7": "The neurobiological foundations of behavior.",
+    "8": "Why people are so different.",
+    "9": "How psychological traits are measured.",
+    "10": "The individual in the world of work."
+  },
+  "moduleTitles": {
+    "1": "Statistics (Free)",
+    "2": "Social Psychology",
+    "3": "Clinical Psychology",
+    "4": "Developmental Psychology",
+    "5": "Cognitive Psychology",
+    "6": "Emotion & Motivation Psychology",
+    "7": "Biological Psychology",
+    "8": "Personality Psychology",
+    "9": "Psychological Assessment",
+    "10": "Industrial & Organizational Psychology"
+  },
+  "aboutPage": {
+    "backLink": "Back to homepage",
+    "mainTitle": "About Psychedu",
+    "missionTitle": "Our Mission: Rethinking Education",
+    "missionParagraph1": "The traditional university system is often characterized by high costs, rigid structures, and inefficient learning cycles that culminate in annual, stressful exam periods. Important knowledge for later professional practice is often lost in the process.",
+    "missionParagraph2": "Psychedu was born out of the conviction that there must be a better way. Our mission is to create a practice-oriented, flexible, and meaningful alternative that provides you with the essentials of a psychology degree in a compact and accessible manner.",
+    "historyTitle": "The Story Behind Psychedu",
+    "historyParagraph": "Psychedu is the result of a one-year project initiated by a single person from Switzerland. As a student of psychology and economics, our founder experienced the frustrations of the classic system firsthand. Driven by the desire to make learning more efficient, relevant, and inspiring, the vision for this platform emerged: a place where education not only serves to obtain a degree but creates real, applicable value for your future.",
+    "philosophyTitle": "Our Philosophy",
+    "philosophyPoint1": "<strong>Accessible:</strong> We believe that high-quality education should not fail due to excessive prices.",
+    "philosophyPoint2": "<strong>Efficient:</strong> We focus on what really matters – the entire knowledge of a bachelor's degree, presented compactly and understandably.",
+    "philosophyPoint3": "<strong>Practice-Oriented:</strong> We combine theory with application to optimally prepare you for your professional future."
+  },
+  "modulesOverview": {
+    "backLink": "Back to module overview",
+    "statsTitle": "Statistics from A-Z",
+    "statsDescription": "Choose a lesson to deepen your knowledge. Each lesson is divided into Basic Knowledge, Applicability, Masterclass, and Exercises.",
+    "socialTitle": "Social Psychology",
+    "socialDescription": "Explore how individuals are influenced by the actual, imagined, or implied presence of others.",
+    "socialSidebarTitle": "Topics in Social Psychology",
+    "cardTitleGrundwissen": "Basic Knowledge",
+    "cardTitleAnwendbarkeit": "Applicability",
+    "cardTitleMeisterklasse": "Masterclass",
+    "cardTitleUebungen": "Exercises"
+  },
+  "premiumAccess": {
+    "title": "Access Denied",
+    "description": "This module is only available to premium users.",
+    "upgradeButton": "Upgrade Now"
+  },
+  "premiumPlaceholder": {
+    "title": "Module {moduleId}",
+    "description": "Learning content for module {moduleId} will be displayed here. (Placeholder for premium content)"
+  },
+  "statisticsModuleTitles": {
     "1": "Introduction & Basic Concepts",
     "2": "Data Collection & Study Design",
     "3": "Descriptive Statistics",
@@ -150,17 +166,109 @@
     "15": "Bayesian Statistics",
     "16": "Practical Data Analysis with Software"
   },
-
-  "moduleTitles": {
-    "1": "Statistics (Free)",
-    "2": "Social Psychology",
-    "3": "Clinical Psychology",
-    "4": "Developmental Psychology",
-    "5": "Cognitive Psychology",
-    "6": "Emotion & Motivation Psychology",
-    "7": "Biological Psychology",
-    "8": "Personality Psychology",
-    "9": "Psychological Assessment",
-    "10": "Industrial & Organizational Psychology"
+  "statisticsModuleDescriptions": {
+    "1_grundwissen": "Define what data is and learn key basic terms like population and sample.",
+    "1_anwendbarkeit": "Understand how surveys in market research are correctly planned and interpreted.",
+    "1_meisterklasse": "Learn to assess data quality and avoid typical fallacies.",
+    "1_uebungen": "Test your knowledge with interactive questions on core concepts.",
+    "2_grundwissen": "Differentiate various sampling methods and the basics of experimental design.",
+    "2_anwendbarkeit": "Plan your own (fictional) study and identify potential confounding factors and ethical hurdles.",
+    "2_meisterklasse": "Analyze complex study designs and evaluate their practical significance.",
+    "2_uebungen": "Apply your knowledge in scenarios to select the best study design.",
+    "3_grundwissen": "Learn to summarize data using measures like mean, median, and standard deviation.",
+    "3_anwendbarkeit": "Create a meaningful dashboard to visualize the performance of a marketing campaign.",
+    "3_meisterklasse": "Interpret box plots and histograms to gain deeper insights into data structure.",
+    "3_uebungen": "Calculate and interpret key metrics for various datasets.",
+    "4_grundwissen": "Understand the axioms and calculation rules of probability theory.",
+    "4_anwendbarkeit": "Calculate the risk of events, e.g., in actuarial science or games.",
+    "4_meisterklasse": "Solve complex problems involving conditional probabilities (Bayes' Theorem).",
+    "4_uebungen": "Solve classic probability puzzles interactively.",
+    "5_grundwissen": "Learn the difference between discrete and continuous random variables.",
+    "5_anwendbarkeit": "Model the number of customers entering a store per hour (Poisson distribution).",
+    "5_meisterklasse": "Understand the theoretical basis behind the most important statistical tests.",
+    "5_uebungen": "Assign the appropriate probability distribution to real-world scenarios.",
+    "6_grundwissen": "Understand the key properties of the 'bell curve' and the 68-95-99.7 rule.",
+    "6_anwendbarkeit": "Standardize values using the z-score to make them comparable across different scales.",
+    "6_meisterklasse": "Check if a dataset is normally distributed and understand the consequences if not.",
+    "6_uebungen": "Calculate probabilities for normally distributed data.",
+    "7_grundwissen": "Learn how to quantify the uncertainty of an estimate.",
+    "7_anwendbarkeit": "Correctly interpret survey results by understanding the reported margin of error.",
+    "7_meisterklasse": "Discuss the factors that influence the width of a confidence interval.",
+    "7_uebungen": "Calculate and interpret confidence intervals for means.",
+    "8_grundwissen": "Formulate null and alternative hypotheses and understand the logic of the p-value.",
+    "8_anwendbarkeit": "Conduct an A/B test to decide which version of a website performs better.",
+    "8_meisterklasse": "Understand the concept of statistical power and how to control Type I and Type II errors.",
+    "8_uebungen": "Correctly apply the t-test in various scenarios.",
+    "9_grundwissen": "Analyze relationships between categorical variables (e.g., gender and product choice).",
+    "9_anwendbarkeit": "Evaluate survey data to see if certain opinions depend on age group.",
+    "9_meisterklasse": "Check the assumptions of the Chi-Square test and interpret the results in detail.",
+    "9_uebungen": "Perform tests of independence using given tables.",
+    "10_grundwissen": "Model and quantify the linear relationship between two variables.",
+    "10_anwendbarkeit": "Create a simple prediction model, e.g., for revenue based on advertising spend.",
+    "10_meisterklasse": "Interpret the coefficient of determination (R-squared) and residual analysis for model fit.",
+    "10_uebungen": "Calculate and interpret correlation coefficients and regression lines.",
+    "11_grundwissen": "Compare the means of three or more groups.",
+    "11_anwendbarkeit": "Find out which of several teaching methods yields the greatest learning success.",
+    "11_meisterklasse": "Perform post-hoc tests to find out specifically which groups differ.",
+    "11_uebungen": "Decide based on case studies when an ANOVA is appropriate.",
+    "12_grundwissen": "Extend the regression model to examine the influence of multiple variables simultaneously.",
+    "12_anwendbarkeit": "Build a model to predict real estate prices based on size, location, and age.",
+    "12_meisterklasse": "Identify and address problems like multicollinearity in your model.",
+    "12_uebungen": "Interpret the coefficients of a multiple regression model.",
+    "13_grundwissen": "Learn how to predict categorical outcomes (Yes/No).",
+    "13_anwendbarkeit": "Develop a model to predict customer churn.",
+    "13_meisterklasse": "Interpret odds ratios and assess the quality of your classification model (e.g., with ROC curves).",
+    "13_uebungen": "Apply the model to real datasets to make predictions.",
+    "14_grundwissen": "Learn about robust testing procedures that do not assume normal distribution.",
+    "14_anwendbarkeit": "Analyze data from rankings or ratings that are not metric.",
+    "14_meisterklasse": "Understand the pros and cons (especially 'power') compared to parametric tests.",
+    "14_uebungen": "Choose the appropriate statistical test in different scenarios.",
+    "15_grundwissen": "Understand the fundamental difference from classical (frequentist) statistics.",
+    "15_anwendbarkeit": "Interpret A/B test results as 'probability that variant B is better'.",
+    "15_meisterklasse": "Define meaningful 'priors' (prior beliefs) and understand their influence on the result.",
+    "15_uebungen": "Solve the Monty Hall problem using Bayes' Theorem.",
+    "16_grundwissen": "Learn the basics of data analysis libraries in Python (pandas) or R.",
+    "16_anwendbarkeit": "Perform a complete data analysis from data cleaning to visualization.",
+    "16_meisterklasse": "Create reproducible analysis scripts and present your results in a Jupyter Notebook.",
+    "16_uebungen": "Solve small programming tasks for data manipulation and visualization."
+  },
+  "socialPsychologyModuleTitles": {
+    "1": "What is Social Psychology?",
+    "2": "Self-Presentation & Social Perception",
+    "3": "Attitudes & Persuasion",
+    "4": "Conformity, Compliance & Obedience",
+    "5": "Prejudice & Discrimination",
+    "6": "Aggression",
+    "7": "Prosocial Behavior"
+  },
+  "socialPsychologyModuleDescriptions": {
+    "1_grundwissen": "Defines the field and explains how we think about ourselves and others.",
+    "1_anwendbarkeit": "Analyze everyday situations through the lens of a social psychologist.",
+    "1_meisterklasse": "Understand the difference between situational and dispositional influences on behavior.",
+    "1_uebungen": "Test your understanding of the core concepts of social perception.",
+    "2_grundwissen": "Learn how we perceive ourselves and how we present ourselves to others.",
+    "2_anwendbarkeit": "Recognize self-presentation strategies in professional life and on social media.",
+    "2_meisterklasse": "Analyze Festinger's 'social comparison theory'.",
+    "2_uebungen": "Apply your knowledge to identify different types of self-presentation.",
+    "3_grundwissen": "Understand how attitudes are formed, changed, and influence our behavior.",
+    "3_anwendbarkeit": "Analyze advertising campaigns and recognize the persuasion techniques used.",
+    "3_meisterklasse": "Discuss the Elaboration-Likelihood Model of persuasion and its practical implications.",
+    "3_uebungen": "Identify cognitive dissonance in various scenarios.",
+    "4_grundwissen": "Get to know the classic studies by Asch, Milgram, and Zimbardo.",
+    "4_anwendbarkeit": "Recognize peer pressure in everyday life and develop strategies to resist it.",
+    "4_meisterklasse": "Discuss the ethical implications of the famous obedience experiments.",
+    "4_uebungen": "Analyze case studies on conformity and obedience.",
+    "5_grundwissen": "Differentiate between stereotypes, prejudice, and discrimination and learn their causes.",
+    "5_anwendbarkeit": "Identify implicit bias in yourself and others.",
+    "5_meisterklasse": "Evaluate the effectiveness of strategies to reduce prejudice.",
+    "5_uebungen": "Analyze examples of different types of prejudice.",
+    "6_grundwissen": "Understand the biological, social, and environmental causes of aggressive behavior.",
+    "6_anwendbarkeit": "Analyze the role of media in promoting aggression (e.g., 'weapons effect').",
+    "6_meisterklasse": "Discuss the frustration-aggression hypothesis and its further developments.",
+    "6_uebungen": "Distinguish between hostile and instrumental aggression.",
+    "7_grundwissen": "Explore why people help others (altruism, empathy).",
+    "7_anwendbarkeit": "Understand the 'bystander effect' and learn how to overcome it in emergencies.",
+    "7_meisterklasse": "Analyze the evolutionary and social theories of helping behavior.",
+    "7D_uebungen": "Apply the 5 steps of helping to real-world scenarios."
   }
 }

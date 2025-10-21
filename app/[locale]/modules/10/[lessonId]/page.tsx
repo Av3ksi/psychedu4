@@ -6,6 +6,10 @@ import { Link } from '@/i18n/navigation';
 import { ArrowLeft, ArrowRight, Check, X, Eye, EyeOff } from 'lucide-react';
 import { ReactNode, useState, FC } from 'react';
 
+import { useSubscription } from '@/hooks/useSubscription';
+import LoadingSpinner from '@/components/LoadingSpinner';
+import { useTranslations } from 'next-intl';
+
 // --- TYP-DEFINITIONEN ---
 interface QuizQuestion {
   q: string;
@@ -111,6 +115,41 @@ export default function LessonDetailPage() {
   const [type, moduleIdStr] = lessonId.split('-');
   const moduleId = parseInt(moduleIdStr, 10);
   const moduleData = aoPsychologyModules.find(m => m.id === moduleId);
+
+   // --- NEUE PREMIUM-CHECK LOGIK ---
+            const { subscription, isLoading: isSubLoading } = useSubscription();
+            const tPremium = useTranslations('premiumAccess');
+            const tModules = useTranslations('modulesOverview'); // Für den "Zurück"-Link
+            
+            // Ladezustand anzeigen
+            if (isSubLoading) {
+              return <LoadingSpinner />;
+            }
+          
+            // Prüfen, ob Premium benötigt wird und ob der Nutzer Premium hat
+            const isPremium = subscription?.status === 'active';
+            // Modul 2 ist ein Premium-Modul. 
+            // (Modul 1 wäre `requiresPremium = false`)
+            const requiresPremium = true; 
+          
+            // Zugriff verweigern, wenn nötig
+            if (requiresPremium && !isPremium) {
+              return (
+                <div className="max-w-3xl mx-auto p-6 text-center">
+                  <h1 className="text-2xl font-bold mb-4">{tPremium('title')}</h1>
+                  <p className="mb-6">{tPremium('description')}</p>
+                  <Link href="/profile" className="px-6 py-2 bg-primary text-white rounded-lg">
+                    {tPremium('upgradeButton')}
+                  </Link>
+                  {/* Link zurück zur ALLGEMEINEN Modulübersicht */}
+                  <Link href="/modules" className="block flex items-center justify-center gap-2 text-primary hover:underline mt-6">
+                        <ArrowLeft className="w-5 h-5" />
+                        <span>{tModules('backLink')}</span>
+                    </Link>
+                </div>
+              );
+            }
+  
 
   // --- NEU: LOGIK FÜR DIE BLÄTTERFUNKTION ---
   const lessonParts = ['grundwissen', 'anwendbarkeit', 'meisterklasse', 'uebungen'];

@@ -1,23 +1,95 @@
 {
-    "landingPage": {
-        "Psychedu Überblick": "Vista general de Psychedu",
-        "Preise & Abrechnung": "Precios y facturación",
-        "Anmeldung & Zugang": "Registro y acceso",
-        "Lernplattform": "Plataforma de aprendizaje",
-        "Warum Psychedu?": "¿Por qué Psychedu?",
-        "Pläne": "Planes",
-        "heroSection": {
-            "title": "Psychedu – Tu Título de Psicología",
-            "subtitle": "Obtén tu título online en ~1 Año",
-            "description": "Estudia más rápido con un programa guiado y multilingüe. Aprende en cualquier lugar, mantente al día y finaliza tus estudios antes.",
-            "watchVideoButton": "Ver video",
-            "startButton": "Comenzar prueba gratuita"
-        }
+  "landingPage": {
+    "Psychedu Überblick": "Resumen de Psychedu",
+    "Preise & Abrechnung": "Precios y facturación",
+    "Anmeldung & Zugang": "Inicio de sesión y acceso",
+    "Lernplattform": "Plataforma de aprendizaje",
+    "Warum Psychedu?": "¿Por qué Psychedu?",
+    "Pläne": "Planes",
+
+    "heroSection": {
+      "title": "Psychedu – Tu título en psicología",
+      "subtitle": "Obtén tu título en línea en aproximadamente 1 año",
+      "description": "Estudia más rápido con un programa guiado y multilingüe. Aprende donde quieras, mantente en camino y termina tus estudios antes.",
+      "watchVideoButton": "Ver video",
+      "startButton": "Comenzar prueba gratuita"
     },
-    "LocaleSwitcher": {
-        "label": "Cambiar idioma",
-        "locale": "{locale, select, de {🇩🇪 Alemán} en {🇺🇸 Inglés} es {🇪🇸 Español} fr {🇫🇷 Francés} other {Desconocido}}"
+
+    "metrics": {
+      "authentication": {
+        "languages": "Idiomas",
+        "languages_value": "Todos",
+        "duration": "Duración de estudio",
+        "duration_value": "~12 meses",
+        "progress": "Seguimiento del progreso",
+        "progress_value": "En tiempo real"
+      },
+      "payments": {
+        "monthly": "Mensual",
+        "monthly_value": "20",
+        "yearly": "Anual",
+        "yearly_value": "200",
+        "trial": "Prueba gratuita",
+        "trial_value": "Sí"
+      },
+      "database": {
+        "modules": "Módulos",
+        "modules_value": "50+",
+        "reviews": "Evaluaciones",
+        "reviews_value": "Semanales",
+        "resources": "Recursos",
+        "resources_value": "Biblioteca"
+      },
+      "features": {
+        "title": "¿Por qué Psychedu?",
+        "description": "La educación tradicional es cara y a menudo poco práctica. Nosotros te ofrecemos todo lo que necesitas para tu título — compacto, práctico y a un precio justo.",
+        "prices": "Precios justos",
+        "prices_value": "Asequible",
+        "relevance": "Relevancia práctica",
+        "relevance_value": "Enfocada",
+        "knowledge": "Conocimientos de licenciatura",
+        "knowledge_value": "Compactos"
+      }
     },
+
+    "sections": {
+      "authentication": {
+        "title": "Inicio de sesión y acceso",
+        "description": "Inicio de sesión seguro y panel del estudiante para seguir tu progreso."
+      },
+      "payments": {
+        "title": "Precios y facturación",
+        "description": "Planes simples: 20/mes o 200/año. Cancela en cualquier momento."
+      },
+      "database": {
+        "title": "Plataforma de aprendizaje",
+        "description": "Módulos estructurados, cuestionarios y recursos diseñados para un título en psicología."
+      },
+      "features": {
+        "title": "¿Por qué Psychedu?",
+        "description": "La educación tradicional es cara y a menudo poco práctica. Nosotros te ofrecemos todo lo que necesitas para tu título — compacto, práctico y a un precio justo."
+      },
+      "pricing": {
+        "title": "Planes",
+        "description": "20/mes o 200/año — elige lo que mejor se adapte a ti."
+      }
+    },
+
+    "cta": {
+      "title": "¿Listo para obtener tu título en psicología más rápido?",
+      "description": "Aprende en tu idioma, sigue un plan de 12 meses y mantente en camino con la ayuda de mentores.",
+      "watchVideoButton": "Ver video",
+      "startButton": "Comenzar prueba gratuita",
+      "aboutButton": "Sobre nosotros",
+      "sourcesButton": "Fuentes"
+    }
+  },
+
+  "LocaleSwitcher": {
+    "label": "Cambiar idioma",
+    "locale": "{locale, select, de {🇩🇪 Alemán} en {🇺🇸 Inglés} es {🇪🇸 Español} fr {🇫🇷 Francés} other {Desconocido}}"
+  },
+
     "moduleDescriptions": {
         "1": "La base de la psicología empírica.",
         "2": "El individuo en el contexto del grupo.",

@@ -9,6 +9,7 @@ import ProtectedRoute from '@/contexts/ProtectedRoute';
 import { Analytics } from "@vercel/analytics/react"
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { getMessages } from 'next-intl/server';
 // import { PostHogProvider } from '@/contexts/PostHogContext';
 // import { PostHogErrorBoundary } from '@/components/PostHogErrorBoundary';
 export function generateStaticParams() {

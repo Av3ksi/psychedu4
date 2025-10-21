@@ -1,23 +1,97 @@
 {
-    "landingPage": {
-        "Psychedu Überblick": "Psychedu Überblick",
-        "Preise & Abrechnung": "Preise & Abrechnung",
-        "Anmeldung & Zugang": "Anmeldung & Zugang",
-        "Lernplattform": "Lernplattform",
-        "Warum Psychedu?": "Warum Psychedu?",
-        "Pläne": "Pläne",
-        "heroSection": {
-            "title": "Psychedu – Dein Psychologie-Abschluss",
-            "subtitle": "Erhalte deinen Abschluss online in ~1 Jahr",
-            "description": "Studiere schneller mit einem geführten, mehrsprachigen Programm. Lerne überall, bleibe auf Kurs und schließe dein Studium früher ab.",
-            "watchVideoButton": "Video ansehen",
-            "startButton": "Kostenlose Testversion starten"
-        }
+  "landingPage": {
+    "Psychedu Überblick": "Psychedu Überblick",
+    "Preise & Abrechnung": "Preise & Abrechnung",
+    "Anmeldung & Zugang": "Anmeldung & Zugang",
+    "Lernplattform": "Lernplattform",
+    "Warum Psychedu?": "Warum Psychedu?",
+    "Pläne": "Pläne",
+
+    "heroSection": {
+      "title": "Psychedu – Dein Psychologie-Abschluss",
+      "subtitle": "Erhalte deinen Abschluss online in ~1 Jahr",
+      "description": "Studiere schneller mit einem geführten, mehrsprachigen Programm. Lerne überall, bleibe auf Kurs und schließe dein Studium früher ab.",
+      "watchVideoButton": "Video ansehen",
+      "startButton": "Kostenlose Testversion starten"
     },
-    "LocaleSwitcher": {
-        "label": "Sprache ändern",
-        "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} es {🇪🇸 Spanish} fr {🇫🇷 French} other {Unknown}}"
+
+    "metrics": {
+      "authentication": {
+        "languages": "Sprachen",
+        "languages_value": "Alle",
+        "duration": "Studiendauer",
+        "duration_value": "~12 Monate",
+        "progress": "Fortschrittsverfolgung",
+        "progress_value": "Echtzeit"
+      },
+      "payments": {
+        "monthly": "Monatlich",
+        "monthly_value": "20",
+        "yearly": "Jährlich",
+        "yearly_value": "200",
+        "trial": "Probezeit",
+        "trial_value": "Ja"
+      },
+      "database": {
+        "modules": "Module",
+        "modules_value": "50+",
+        "reviews": "Bewertungen",
+        "reviews_value": "Wöchentlich",
+        "resources": "Ressourcen",
+        "resources_value": "Bibliothek"
+      },
+      "features": {
+        "title": "Warum Psychedu?",
+        "description": "Traditionelle Bildung ist teuer und oft nicht auf das Wesentliche fokussiert. Wir bieten dir alles, was du für deinen Abschluss brauchst – kompakt, praxisnah und zu einem fairen Preis.",
+        "prices": "Faire Preise",
+        "prices_value": "Günstig",
+        "relevance": "Praxisrelevanz",
+        "relevance_value": "Fokussiert",
+        "knowledge": "Bachelor-Wissen",
+        "knowledge_value": "Kompakt"
+      }
     },
+
+    "sections": {
+      "authentication": {
+        "title": "Anmeldung & Zugang",
+        "description": "Sicheres Anmelden und Studenten-Dashboard zur Fortschrittsverfolgung."
+      },
+      "payments": {
+        "title": "Preise & Abrechnung",
+        "description": "Einfache Pläne: 20/Monat oder 200/Jahr. Jederzeit kündbar."
+      },
+      "database": {
+        "title": "Lernplattform",
+        "description": "Strukturierte Module, Quizze und Ressourcen, die auf einen Psychologie-Abschluss ausgerichtet sind."
+      },
+      "features": {
+        "title": "Warum Psychedu?",
+        "description": "Traditionelle Bildung ist teuer und oft nicht auf das Wesentliche fokussiert. Wir bieten dir alles, was du für deinen Abschluss brauchst – kompakt, praxisnah und zu einem fairen Preis."
+      },
+      "pricing": {
+        "title": "Pläne",
+        "description": "20/Monat oder 200/Jahr – wähle, was zu dir passt."
+      }
+    },
+
+    "cta": {
+      "title": "Bereit, deinen Psychologie-Abschluss schneller zu machen?",
+      "description": "Lerne in deiner Sprache, folge einem 12-Monats-Plan und bleibe mit Mentoren auf Kurs.",
+      "watchVideoButton": "Video ansehen",
+      "startButton": "Kostenlose Testversion starten",
+      "aboutButton": "Über uns",
+      "sourcesButton": "Quellenangabe"
+    }
+  },
+
+  "LocaleSwitcher": {
+    "label": "Sprache ändern",
+    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} es {🇪🇸 Spanisch} fr {🇫🇷 Französisch} other {Unbekannt}}"
+  },
+
+
+
     "moduleDescriptions": {
         "1": "Das Fundament für die empirische Psychologie.",
         "2": "Der Mensch im Kontext der Gruppe.",
@@ -30,6 +104,9 @@
         "9": "Wie psychologische Merkmale gemessen werden.",
         "10": "Der Mensch in der Arbeitswelt."
     },
+
+
+
     "aboutPage": {
         "backLink": "Zurück zur Startseite",
         "mainTitle": "Über Psychedu",
@@ -160,7 +237,41 @@
     "8": "Persönlichkeitspsychologie",
     "9": "Psychologische Diagnostik",
     "10": "Arbeits- & Organisationspsychologie"
+  },
+
+  
+  "metrics": {
+    "authentication": {
+      "languages": "Sprachen",
+      "languages_value": "Alle",
+      "duration": "Studiendauer",
+      "duration_value": "~12 Monate",
+      "progress": "Fortschrittsverfolgung",
+      "progress_value": "Echtzeit"
+    },
+    "payments": {
+      "monthly": "Monatlich",
+      "monthly_value": "20",
+      "yearly": "Jährlich",
+      "yearly_value": "200",
+      "trial": "Probezeit",
+      "trial_value": "Ja"
+    },
+    "database": {
+      "modules": "Module",
+      "modules_value": "50+",
+      "reviews": "Bewertungen",
+      "reviews_value": "Wöchentlich",
+      "resources": "Ressourcen",
+      "resources_value": "Bibliothek"
+    },
+    "features": {
+      "prices": "Faire Preise",
+      "prices_value": "Günstig",
+      "relevance": "Praxisrelevanz",
+      "relevance_value": "Fokussiert",
+      "knowledge": "Bachelor-Wissen",
+      "knowledge_value": "Kompakt"
+    }
   }
-
 }
-
