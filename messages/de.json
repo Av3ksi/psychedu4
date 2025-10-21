@@ -90,6 +90,31 @@
     "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} es {🇪🇸 Spanisch} fr {🇫🇷 Französisch} other {Unbekannt}}"
   },
 
+  
+  "pricingSection": {
+    "monthly": {
+      "name": "Monatlich",
+      "interval": "/Monat",
+      "description": "Voller Zugriff, jederzeit kündbar.",
+      "feature1": "Vollständiger Psychologie-Lehrplan",
+      "feature2": "Mehrsprachige Inhalte",
+      "feature3": "Wöchentliche Tests",
+      "feature4": "Jederzeit kündbar",
+      "cta": "Monatlich starten"
+    },
+    "yearly": {
+      "name": "Jährlich",
+      "interval": "/Jahr",
+      "description": "Bester Preis – spare mit der jährlichen Abrechnung.",
+      "feature1": "Alles aus dem Monatsplan",
+      "feature2": "Beta Access",
+      "feature3": "Priorisierter Support",
+      "feature4": "Beschleunigter Abschluss",
+      "cta": "Jährlich starten",
+      "popularBadge": "Bester Preis"
+    },
+  
+
 
 
     "moduleDescriptions": {
@@ -126,6 +151,7 @@
         "statsDescription": "Wähle eine Lektion, um dein Wissen zu vertiefen. Jede Lektion ist in die Bereiche Grundwissen, Anwendbarkeit, Meisterklasse und Übungen unterteilt.",
         "socialTitle": "Sozialpsychologie",
         "socialDescription": "Erforsche, wie Individuen durch die tatsächliche, vorgestellte oder implizite Anwesenheit anderer beeinflusst werden.",
+        "socialSidebarTitle": "Themen in der Sozialpsychologie",
         "cardTitleGrundwissen": "Grundwissen",
         "cardTitleAnwendbarkeit": "Anwendbarkeit",
         "cardTitleMeisterklasse": "Meisterklasse",
@@ -273,5 +299,50 @@
       "knowledge": "Bachelor-Wissen",
       "knowledge_value": "Kompakt"
     }
+  },
+
+
+  
+  "socialPsychologyModuleTitles": {
+    "1": "Was ist Sozialpsychologie?",
+    "2": "Selbstdarstellung & Soziale Wahrnehmung",
+    "3": "Einstellungen & Überzeugung",
+    "4": "Konformität, Compliance & Gehorsam",
+    "5": "Vorurteile & Diskriminierung",
+    "6": "Aggression",
+    "7": "Prosoziales Verhalten"
+  },
+  "socialPsychologyModuleDescriptions": {
+    "1_grundwissen": "Definiert das Fachgebiet und erklärt, wie wir über uns selbst und andere denken.",
+    "1_anwendbarkeit": "Analysiere Alltagssituationen aus der Sicht eines Sozialpsychologen.",
+    "1_meisterklasse": "Verstehe den Unterschied zwischen situativen und dispositionellen Einflüssen auf das Verhalten.",
+    "1_uebungen": "Teste dein Verständnis der Kernkonzepte der sozialen Wahrnehmung.",
+    "2_grundwissen": "Erfahre, wie wir uns selbst wahrnehmen und wie wir uns anderen präsentieren.",
+    "2_anwendbarkeit": "Erkenne Selbstdarstellungsstrategien im Berufsleben und in sozialen Medien.",
+    "2_meisterklasse": "Analysiere Festingers 'Theorie des sozialen Vergleichs'.",
+    "2_uebungen": "Wende dein Wissen an, um verschiedene Arten der Selbstdarstellung zu identifizieren.",
+    "3_grundwissen": "Verstehe, wie Einstellungen gebildet werden, sich ändern und unser Verhalten beeinflussen.",
+    "3_anwendbarkeit": "Analysiere Werbekampagnen und erkenne die verwendeten Überzeugungstechniken.",
+    "3_meisterklasse": "Diskutiere das Elaboration-Likelihood-Modell der Überzeugung und seine praktischen Implikationen.",
+    "3_uebungen": "Identifiziere kognitive Dissonanz in verschiedenen Szenarien.",
+    "4_grundwissen": "Lerne die klassischen Studien von Asch, Milgram und Zimbardo kennen.",
+    "4_anwendbarkeit": "Erkenne Gruppenzwang im Alltag und entwickle Strategien, um ihm zu widerstehen.",
+    "4_meisterklasse": "Diskutiere die ethischen Implikationen der berühmten Gehorsamsexperimente.",
+    "4_uebungen": "Analysiere Fallstudien zu Konformität und Gehorsam.",
+    "5_grundwissen": "Unterscheide zwischen Stereotypen, Vorurteilen und Diskriminierung und lerne ihre Ursachen kennen.",
+    "5_anwendbarkeit": "Identifiziere implizite Vorurteile bei dir selbst und anderen.",
+    "5_meisterklasse": "Bewerte die Wirksamkeit von Strategien zum Abbau von Vorurteilen.",
+    "5_uebungen": "Analysiere Beispiele für verschiedene Arten von Vorurteilen.",
+    "6_grundwissen": "Verstehe die biologischen, sozialen und umweltbedingten Ursachen von aggressivem Verhalten.",
+    "6_anwendbarkeit": "Analysiere die Rolle der Medien bei der Förderung von Aggression (z.B. 'Waffeneffekt').",
+    "6_meisterklasse": "Diskutiere die Frustrations-Aggressions-Hypothese und ihre Weiterentwicklungen.",
+    "6_uebungen": "Unterscheide zwischen feindseliger und instrumenteller Aggression.",
+    "7_grundwissen": "Erforsche, warum Menschen anderen helfen (Altruismus, Empathie).",
+    "7_anwendbarkeit": "Verstehe den 'Bystander-Effekt' und lerne, wie man ihn in Notsituationen überwindet.",
+    "7_meisterklasse": "Analysiere die evolutionären und sozialen Theorien des Hilfeverhaltens.",
+    "7_uebungen": "Wende die 5 Schritte des Helfens auf reale Szenarien an."
   }
+
+ }
 }
+

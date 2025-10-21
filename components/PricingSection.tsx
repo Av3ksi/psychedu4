@@ -5,43 +5,47 @@ import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-
-const pricingTiers = [
-  {
-    id: "monthly",
-    name: "Monatlich",
-    price: "20 CHF",
-    interval: "/Monat",
-    description: "Voller Zugriff, jederzeit kündbar.",
-    features: [
-      "Vollständiger Psychologie-Lehrplan",
-      "Mehrsprachige Inhalte",
-      "Wöchentliche Tests",
-      "Jederzeit kündbar",
-    ],
-    cta: "Monatlich starten",
-    popular: false,
-  },
-  {
-    id: "yearly",
-    name: "Jährlich",
-    price: "200 CHF",
-    interval: "/Jahr",
-    description: "Bester Preis – spare mit der jährlichen Abrechnung.",
-    features: [
-      "Alles aus dem Monatsplan",
-      "Beta Access",
-      "Priorisierter Support",
-      "Beschleunigter Abschluss",
-    ],
-    cta: "Jährlich starten",
-    popular: true, // Beliebten Plan hervorheben
-  },
-];
+import { useTranslations } from "next-intl"; // Importieren
 
 export function PricingSection() {
   const router = useRouter();
   const [selectedTier, setSelectedTier] = useState<string | null>("yearly");
+  const t = useTranslations("pricingSection"); // Initialisieren
+
+  // Übersetzungs-Keys statt fest codiertem Text verwenden
+  const pricingTiers = [
+    {
+      id: "monthly",
+      name: t("monthly.name"),
+      price: "20 CHF", // Preis-Daten bleiben (könnten auch übersetzt werden, ist aber oft fix)
+      interval: t("monthly.interval"),
+      description: t("monthly.description"),
+      features: [
+        t("monthly.feature1"),
+        t("monthly.feature2"),
+        t("monthly.feature3"),
+        t("monthly.feature4"),
+      ],
+      cta: t("monthly.cta"),
+      popular: false,
+    },
+    {
+      id: "yearly",
+      name: t("yearly.name"),
+      price: "200 CHF",
+      interval: t("yearly.interval"),
+      description: t("yearly.description"),
+      features: [
+        t("yearly.feature1"),
+        t("yearly.feature2"),
+        t("yearly.feature3"),
+        t("yearly.feature4"),
+      ],
+      cta: t("yearly.cta"),
+      popular: true,
+      popularBadge: t("yearly.popularBadge"), // Key für das "Beliebt"-Label
+    },
+  ];
 
   const handleTierClick = (tierId: string) => {
     setSelectedTier((currentTier) => (currentTier === tierId ? null : tierId));
@@ -56,23 +60,22 @@ export function PricingSection() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 max-w-4xl mx-auto">
       {pricingTiers.map((tier, i) => (
         <motion.div
-          key={tier.name}
+          key={tier.id} // Key auf 'id' geändert, da 'name' jetzt übersetzt wird
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: i * 0.1 }}
           onClick={() => handleTierClick(tier.id)}
-          // --- ÄNDERUNG HIER: Die Karte wird zu einem Flex-Container ---
           className={`relative rounded-2xl p-8 shadow-lg cursor-pointer transition-all duration-300 flex flex-col ${
             selectedTier === tier.id
               ? "bg-primary/5 dark:bg-primary/10 ring-2 ring-primary transform scale-105"
               : "bg-white dark:bg-slate-800 ring-1 ring-slate-200 dark:ring-slate-700 hover:ring-primary/50"
           }`}
         >
-          {/* --- ÄNDERUNG HIER: Ein neuer Wrapper, der den verfügbaren Platz ausfüllt --- */}
           <div className="flex-grow">
             {tier.popular && (
               <span className="absolute top-0 right-6 -translate-y-1/2 px-3 py-1 text-sm bg-primary text-white rounded-full">
-                Bester Preis
+                {/* Übersetzten Badge-Text verwenden */}
+                {tier.popularBadge}
               </span>
             )}
             <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
@@ -101,7 +104,6 @@ export function PricingSection() {
             </ul>
           </div>
 
-          {/* Dieser Button wird nun automatisch nach unten gedrückt */}
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}

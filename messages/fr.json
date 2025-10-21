@@ -90,6 +90,32 @@
     "locale": "{locale, select, de {🇩🇪 Allemand} en {🇺🇸 Anglais} es {🇪🇸 Espagnol} fr {🇫🇷 Français} other {Inconnu}}"
   },
 
+  
+  "pricingSection": {
+    "monthly": {
+      "name": "Mensuel",
+      "interval": "/mois",
+      "description": "Accès complet, annulable à tout moment.",
+      "feature1": "Programme complet de psychologie",
+      "feature2": "Contenu multilingue",
+      "feature3": "Quiz hebdomadaires",
+      "feature4": "Annulable à tout moment",
+      "cta": "Commencer (Mensuel)"
+    },
+    "yearly": {
+      "name": "Annuel",
+      "interval": "/an",
+      "description": "Meilleur prix - économisez avec la facturation annuelle.",
+      "feature1": "Tout du plan mensuel",
+      "feature2": "Accès Bêta",
+      "feature3": "Support prioritaire",
+      "feature4": "Diplôme accéléré",
+      "cta": "Commencer (Annuel)",
+      "popularBadge": "Meilleur prix"
+    },
+  
+
+
     "moduleDescriptions": {
         "1": "Le fondement de la psychologie empirique.",
         "2": "L'individu dans le contexte du groupe.",
@@ -121,6 +147,7 @@
         "statsDescription": "Choisissez une leçon pour approfondir vos connaissances. Chaque leçon est divisée en Connaissances de base, Applicabilité, Classe de maître et Exercices.",
         "socialTitle": "Psychologie Sociale",
         "socialDescription": "Explorez comment les individus sont influencés par la présence réelle, imaginée ou implicite des autres.",
+        "socialSidebarTitle": "Thèmes en psychologie sociale",
         "cardTitleGrundwissen": "Connaissances de base",
         "cardTitleAnwendbarkeit": "Applicabilité",
         "cardTitleMeisterklasse": "Classe de maître",
@@ -233,6 +260,49 @@
     "8": "Psychologie de la Personnalité",
     "9": "Évaluation Psychologique",
     "10": "Psychologie du Travail et des Organisations"
+  },
+
+
+  
+  "socialPsychologyModuleTitles": {
+    "1": "Qu'est-ce que la psychologie sociale ?",
+    "2": "Présentation de soi & Perception sociale",
+    "3": "Attitudes & Persuasion",
+    "4": "Conformité, Soumission & Obéissance",
+    "5": "Préjugés & Discrimination",
+    "6": "Agression",
+    "7": "Comportement prosocial"
+  },
+  "socialPsychologyModuleDescriptions": {
+    "1_grundwissen": "Définit le domaine et explique comment nous pensons à nous-mêmes et aux autres.",
+    "1_anwendbarkeit": "Analysez les situations quotidiennes à travers le prisme d'un psychologue social.",
+    "1_meisterklasse": "Comprenez la différence entre les influences situationnelles et dispositionnelles sur le comportement.",
+    "1_uebungen": "Testez votre compréhension des concepts clés de la perception sociale.",
+    "2_grundwissen": "Apprenez comment nous nous percevons et comment nous nous présentons aux autres.",
+    "2_anwendbarkeit": "Reconnaissez les stratégies de présentation de soi dans la vie professionnelle et sur les réseaux sociaux.",
+    "2_meisterklasse": "Analysez la 'théorie de la comparaison sociale' de Festinger.",
+    "2_uebungen": "Appliquez vos connaissances pour identifier différents types de présentation de soi.",
+    "3_grundwissen": "Comprenez comment les attitudes se forment, changent et influencent notre comportement.",
+    "3_anwendbarkeit": "Analysez des campagnes publicitaires et reconnaissez les techniques de persuasion utilisées.",
+    "3_meisterklasse": "Discutez le modèle de probabilité d'élaboration (ELM) de la persuasion et ses implications pratiques.",
+    "3_uebungen": "Identifiez la dissonance cognitive dans divers scénarios.",
+    "4_grundwissen": "Découvrez les études classiques d'Asch, Milgram et Zimbardo.",
+    "4_anwendbarkeit": "Reconnaissez la pression du groupe au quotidien et développez des stratégies pour y résister.",
+    "4_meisterklasse": "Discutez les implications éthiques des célèbres expériences sur l'obéissance.",
+    "4_uebungen": "Analysez des études de cas sur la conformité et l'obéissance.",
+    "5_grundwissen": "Différenciez les stéréotypes, les préjugés et la discrimination et découvrez leurs causes.",
+    "5_anwendbarkeit": "Identifiez les biais implicites chez vous et chez les autres.",
+    "5_meisterklasse": "Évaluez l'efficacité des stratégies de réduction des préjugés.",
+    "5_uebungen": "Analysez des exemples de différents types de préjugés.",
+    "6_grundwissen": "Comprenez les causes biologiques, sociales et environnementales du comportement agressif.",
+    "6_anwendbarkeit": "Analysez le rôle des médias dans la promotion de l'agression (par ex. 'l'effet d'arme').",
+    "6_meisterklasse": "Discutez l'hypothèse frustration-agression et ses développements ultérieurs.",
+    "6_uebungen": "Distinguez l'agression hostile de l'agression instrumentale.",
+    "7_grundwissen": "Explorez pourquoi les gens aident les autres (altruisme, empathie).",
+    "7_anwendbarkeit": "Comprenez 'l'effet du témoin' (bystander effect) et apprenez à le surmonter en cas d'urgence.",
+    "7_meisterklasse": "Analysez les théories évolutives et sociales du comportement d'aide.",
+    "7_uebungen": "Appliquez les 5 étapes de l'aide à des scénarios réels."
+    }
   }
 
 }

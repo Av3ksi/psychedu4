@@ -89,6 +89,31 @@
     "label": "Change language",
     "locale": "{locale, select, de {🇩🇪 German} en {🇺🇸 English} es {🇪🇸 Spanish} fr {🇫🇷 French} other {Unknown}}"
   },
+  
+  "pricingSection": {
+    "monthly": {
+      "name": "Monthly",
+      "interval": "/month",
+      "description": "Full access, cancel anytime.",
+      "feature1": "Complete Psychology Curriculum",
+      "feature2": "Multilingual Content",
+      "feature3": "Weekly Quizzes",
+      "feature4": "Cancel Anytime",
+      "cta": "Start Monthly"
+    },
+    "yearly": {
+      "name": "Yearly",
+      "interval": "/year",
+      "description": "Best value – save with annual billing.",
+      "feature1": "Everything from the monthly plan",
+      "feature2": "Beta Access",
+      "feature3": "Priority Support",
+      "feature4": "Accelerated Graduation",
+      "cta": "Start Yearly",
+      "popularBadge": "Best Value"
+    },
+  
+
 
   "moduleDescriptions": {
     "1": "The foundation for empirical psychology.",
@@ -269,6 +294,7 @@
     "7_grundwissen": "Explore why people help others (altruism, empathy).",
     "7_anwendbarkeit": "Understand the 'bystander effect' and learn how to overcome it in emergencies.",
     "7_meisterklasse": "Analyze the evolutionary and social theories of helping behavior.",
-    "7D_uebungen": "Apply the 5 steps of helping to real-world scenarios."
+    "7_uebungen": "Apply the 5 steps of helping to real-world scenarios."
+  }
   }
 }
