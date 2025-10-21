@@ -10,6 +10,7 @@ import LoadingSpinner from '@/components/LoadingSpinner';
 import { useTranslations } from 'next-intl';
 
 // --- TYP-DEFINITIONEN ---
+// ... (Dein Code für Typen, z.B. QuizQuestion, OpenQuestion)
 interface QuizQuestion {
   q: string;
   a: string[];
@@ -37,6 +38,7 @@ interface SocialPsychologyModule {
 }
 
 // --- HILFS-KOMPONENTEN ---
+// ... (Dein Code für ToggleSolution und UebungenContent)
 const ToggleSolution: FC<{ question: OpenQuestion }> = ({ question }) => {
     const [isOpen, setIsOpen] = useState(false);
     return (
@@ -62,6 +64,9 @@ const UebungenContent: FC<{ data: UebungenData }> = ({ data }) => {
     );
 };
 
+
+// --- INHALTE FÜR MODUL 1...7 ... ---
+// ... (Dein gesamter Inhalt für grundwissenInhalt1, uebungenData1, etc. bleibt hier)
 // --- INHALTE FÜR MODUL 1: Was ist Sozialpsychologie? ---
 const grundwissenInhalt1 = (
     <div className="space-y-8">
@@ -121,7 +126,8 @@ const uebungenData1: UebungenData = {
 };
 const uebungenInhalt1 = <UebungenContent data={uebungenData1} />;
 
-// --- INHALTE FÜR MODUL 2: Selbstdarstellung & Soziale Wahrnehmung ---
+// ... (Restlicher Inhalt für Module 2-7) ...
+
 const grundwissenInhalt2 = (
     <div className="space-y-8">
         <p className="text-lg leading-relaxed">Soziale Wahrnehmung ist der Prozess, durch den wir versuchen, andere Menschen zu verstehen und zu kennen. Ein zentraler Aspekt davon ist das **Selbstkonzept**: unsere Gesamtheit an Überzeugungen und Gefühlen über uns selbst.</p>
@@ -423,6 +429,7 @@ const uebungenData7: UebungenData = {
 };
 const uebungenInhalt7 = <UebungenContent data={uebungenData7} />;
 
+
 // --- MODUL-LISTE (VOLLSTÄNDIG) ---
 const socialPsychologyModules: SocialPsychologyModule[] = [
     { id: 1, title: "Was ist Sozialpsychologie?", content: { grundwissen: grundwissenInhalt1, anwendbarkeit: anwendbarkeitInhalt1, meisterklasse: meisterklasseInhalt1, uebungen: uebungenInhalt1 }},
@@ -437,11 +444,21 @@ const socialPsychologyModules: SocialPsychologyModule[] = [
 
 // --- HAUPTKOMPONENTE FÜR DIE DETAILSEITEN ---
 export default function LessonDetailPage() {
+  // --- ALLE HOOKS AN DEN ANFANG ---
   const { lessonId } = useParams<{ lessonId: string }>();
+  const { subscription, isLoading: isSubLoading } = useSubscription();
+  const tPremium = useTranslations('premiumAccess');
+  const tModules = useTranslations('modulesOverview'); // Für den "Zurück"-Link
+  
   const [type, moduleIdStr] = lessonId.split('-');
   const moduleId = parseInt(moduleIdStr, 10);
   const moduleData = socialPsychologyModules.find(m => m.id === moduleId);
 
+  // --- START DER BEDINGTEN LOGIK (NACH DEN HOOKS) ---
+  if (isSubLoading) {
+    return <LoadingSpinner />;
+  }
+  
   if (!moduleData) {
     return (
         <div className="max-w-4xl mx-auto p-6 md:p-8">
@@ -455,21 +472,9 @@ export default function LessonDetailPage() {
     );
   }
 
-  // --- NEUE PREMIUM-CHECK LOGIK ---
-  const { subscription, isLoading: isSubLoading } = useSubscription();
-  const tPremium = useTranslations('premiumAccess');
-  const tModules = useTranslations('modulesOverview'); // Für den "Zurück"-Link
-  
-  // Ladezustand anzeigen
-  if (isSubLoading) {
-    return <LoadingSpinner />;
-  }
-
   // Prüfen, ob Premium benötigt wird und ob der Nutzer Premium hat
   const isPremium = subscription?.status === 'active';
-  // Modul 2 ist ein Premium-Modul. 
-  // (Modul 1 wäre `requiresPremium = false`)
-  const requiresPremium = true; 
+  const requiresPremium = true; // Modul 2 ist ein Premium-Modul.
 
   // Zugriff verweigern, wenn nötig
   if (requiresPremium && !isPremium) {
@@ -480,7 +485,6 @@ export default function LessonDetailPage() {
         <Link href="/profile" className="px-6 py-2 bg-primary text-white rounded-lg">
           {tPremium('upgradeButton')}
         </Link>
-        {/* Link zurück zur ALLGEMEINEN Modulübersicht */}
         <Link href="/modules" className="block flex items-center justify-center gap-2 text-primary hover:underline mt-6">
               <ArrowLeft className="w-5 h-5" />
               <span>{tModules('backLink')}</span>
@@ -489,18 +493,13 @@ export default function LessonDetailPage() {
     );
   }
 
-
-    // --- NEU: LOGIK FÜR DIE BLÄTTERFUNKTION ---
-    const lessonParts = ['grundwissen', 'anwendbarkeit', 'meisterklasse', 'uebungen'];
-    const currentIndex = lessonParts.indexOf(type);
-
-    const prevPart = currentIndex > 0 ? lessonParts[currentIndex - 1] : null;
-    const nextPart = currentIndex < lessonParts.length - 1 ? lessonParts[currentIndex + 1] : null;
-
-    // Achte auf die korrekte Modulnummer /modules/2/
-    const prevLink = prevPart ? `/modules/2/${prevPart}-${moduleId}` : null;
-    const nextLink = nextPart ? `/modules/2/${nextPart}-${moduleId}` : null;
-    // --- ENDE DER NEUEN LOGIK ---
+  // --- LOGIK FÜR DIE BLÄTTERFUNKTION ---
+  const lessonParts = ['grundwissen', 'anwendbarkeit', 'meisterklasse', 'uebungen'];
+  const currentIndex = lessonParts.indexOf(type);
+  const prevPart = currentIndex > 0 ? lessonParts[currentIndex - 1] : null;
+  const nextPart = currentIndex < lessonParts.length - 1 ? lessonParts[currentIndex + 1] : null;
+  const prevLink = prevPart ? `/modules/2/${prevPart}-${moduleId}` : null;
+  const nextLink = nextPart ? `/modules/2/${nextPart}-${moduleId}` : null;
   
   const contentKey = type as keyof typeof moduleData.content;
   const content = moduleData.content[contentKey] || "Inhalt nicht verfügbar.";
@@ -511,8 +510,8 @@ export default function LessonDetailPage() {
       <div className="mb-8">
         <Link href="/modules/2" className="flex items-center gap-2 text-primary hover:underline">
           <ArrowLeft className="w-5 h-5" />
-          {/* Text korrigiert, um zum richtigen Modul zu passen */}
-          <span>Zurück zur Übersicht Lernen & Gedächtnis</span>
+          {/* Text korrigiert */}
+          <span>Zurück zur Übersicht Sozialpsychologie</span>
         </Link>
       </div>
       <div>
@@ -521,7 +520,6 @@ export default function LessonDetailPage() {
             {content}
         </div>
         
-        {/* --- NEU: UI FÜR DIE BLÄTTERFUNKTION --- */}
         <div className="mt-12 flex justify-between items-center border-t dark:border-slate-700 pt-6">
           {prevLink ? (
             <Link href={prevLink} className="flex items-center gap-2 text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-light transition-colors rounded-md p-2 -m-2">
@@ -529,7 +527,7 @@ export default function LessonDetailPage() {
               <span className="font-semibold">Vorheriger Abschnitt</span>
             </Link>
           ) : (
-            <div /> // Leeres div, damit der "Weiter"-Button rechts bleibt
+            <div />
           )}
           {nextLink ? (
             <Link href={nextLink} className="flex items-center gap-2 text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-light transition-colors rounded-md p-2 -m-2">
@@ -542,8 +540,6 @@ export default function LessonDetailPage() {
             </Link>
           )}
         </div>
-        {/* --- ENDE DER NEUEN UI --- */}
-
       </div>
     </div>
   )

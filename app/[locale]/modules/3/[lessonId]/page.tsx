@@ -5,11 +5,13 @@ import { Link } from '@/i18n/navigation';
 import { ArrowLeft, ArrowRight, Check, X, Eye, EyeOff } from 'lucide-react';
 import { ReactNode, useState, FC } from 'react';
 
+// --- NEUE IMPORTE FÜR PREMIUM-CHECK ---
 import { useSubscription } from '@/hooks/useSubscription';
 import LoadingSpinner from '@/components/LoadingSpinner';
 import { useTranslations } from 'next-intl';
 
 // --- TYP-DEFINITIONEN ---
+// ... (Dein Code für Typen, z.B. QuizQuestion, OpenQuestion)
 interface QuizQuestion {
   q: string;
   a: string[];
@@ -37,6 +39,7 @@ interface ClinicalPsychologyModule {
 }
 
 // --- HILFS-KOMPONENTEN ---
+// ... (Dein Code für ToggleSolution und UebungenContent)
 const ToggleSolution: FC<{ question: OpenQuestion }> = ({ question }) => {
     const [isOpen, setIsOpen] = useState(false);
     return (
@@ -62,8 +65,9 @@ const UebungenContent: FC<{ data: UebungenData }> = ({ data }) => {
     );
 };
 
-// --- INHALTE FÜR ALLE MODULE DER KLINISCHEN PSYCHOLOGIE ---
 
+// --- INHALTE FÜR ALLE MODULE DER KLINISCHEN PSYCHOLOGIE ---
+// ... (Dein gesamter Inhalt für grundwissenInhalt1, uebungenData1, etc. bleibt hier)
 // Modul 1: Einführung
 const grundwissenInhalt1 = (
     <div className="space-y-8">
@@ -115,6 +119,8 @@ const uebungenData1: UebungenData = {
     kreativ: "Stellen Sie sich eine fiktive Kultur vor, in der es als normal gilt, mit den Geistern der Ahnen zu sprechen. Wäre dies nach dem Kriterium der 'Devianz' ein Anzeichen für eine psychische Störung in dieser Kultur? Was lernen wir daraus über die Definition von 'normal'?"
 };
 const uebungenInhalt1 = <UebungenContent data={uebungenData1} />;
+
+// ... (Restlicher Inhalt für Module 2-9) ...
 
 // --- INHALTE FÜR MODUL 2: Diagnostik & Klassifikation ---
 const grundwissenInhalt2 = (
@@ -532,6 +538,7 @@ const uebungenData9: UebungenData = {
 };
 const uebungenInhalt9 = <UebungenContent data={uebungenData9} />;
 
+
 // --- MODUL-LISTE (VOLLSTÄNDIG) ---
 const clinicalPsychologyModules: ClinicalPsychologyModule[] = [
     { id: 1, title: "Einführung in die Klinische Psychologie", content: { grundwissen: grundwissenInhalt1, anwendbarkeit: anwendbarkeitInhalt1, meisterklasse: meisterklasseInhalt1, uebungen: uebungenInhalt1 }},
@@ -547,10 +554,20 @@ const clinicalPsychologyModules: ClinicalPsychologyModule[] = [
 
 // --- HAUPTKOMPONENTE FÜR DIE DETAILSEITEN ---
 export default function LessonDetailPage() {
+  // --- ALLE HOOKS AN DEN ANFANG ---
   const { lessonId } = useParams<{ lessonId: string }>();
+  const { subscription, isLoading: isSubLoading } = useSubscription();
+  const tPremium = useTranslations('premiumAccess');
+  const tModules = useTranslations('modulesOverview'); // Für den "Zurück"-Link
+  
   const [type, moduleIdStr] = lessonId.split('-');
   const moduleId = parseInt(moduleIdStr, 10);
   const moduleData = clinicalPsychologyModules.find(m => m.id === moduleId);
+
+  // --- START DER BEDINGTEN LOGIK (NACH DEN HOOKS) ---
+  if (isSubLoading) {
+    return <LoadingSpinner />;
+  }
 
   if (!moduleData) {
     return (
@@ -565,52 +582,33 @@ export default function LessonDetailPage() {
     );
   }
 
-    // --- NEUE PREMIUM-CHECK LOGIK ---
-    const { subscription, isLoading: isSubLoading } = useSubscription();
-    const tPremium = useTranslations('premiumAccess');
-    const tModules = useTranslations('modulesOverview'); // Für den "Zurück"-Link
-    
-    // Ladezustand anzeigen
-    if (isSubLoading) {
-      return <LoadingSpinner />;
-    }
-  
-    // Prüfen, ob Premium benötigt wird und ob der Nutzer Premium hat
-    const isPremium = subscription?.status === 'active';
-    // Modul 2 ist ein Premium-Modul. 
-    // (Modul 1 wäre `requiresPremium = false`)
-    const requiresPremium = true; 
-  
-    // Zugriff verweigern, wenn nötig
-    if (requiresPremium && !isPremium) {
-      return (
-        <div className="max-w-3xl mx-auto p-6 text-center">
-          <h1 className="text-2xl font-bold mb-4">{tPremium('title')}</h1>
-          <p className="mb-6">{tPremium('description')}</p>
-          <Link href="/profile" className="px-6 py-2 bg-primary text-white rounded-lg">
-            {tPremium('upgradeButton')}
+  // --- PREMIUM-CHECK HINZUGEFÜGT ---
+  const isPremium = subscription?.status === 'active';
+  const requiresPremium = true; // Annahme: Modul 3 ist auch Premium
+
+  if (requiresPremium && !isPremium) {
+    return (
+      <div className="max-w-3xl mx-auto p-6 text-center">
+        <h1 className="text-2xl font-bold mb-4">{tPremium('title')}</h1>
+        <p className="mb-6">{tPremium('description')}</p>
+        <Link href="/profile" className="px-6 py-2 bg-primary text-white rounded-lg">
+          {tPremium('upgradeButton')}
+        </Link>
+        <Link href="/modules" className="block flex items-center justify-center gap-2 text-primary hover:underline mt-6">
+              <ArrowLeft className="w-5 h-5" />
+              <span>{tModules('backLink')}</span>
           </Link>
-          {/* Link zurück zur ALLGEMEINEN Modulübersicht */}
-          <Link href="/modules" className="block flex items-center justify-center gap-2 text-primary hover:underline mt-6">
-                <ArrowLeft className="w-5 h-5" />
-                <span>{tModules('backLink')}</span>
-            </Link>
-        </div>
-      );
-    }
-  
+      </div>
+    );
+  }
 
-  // --- NEU: LOGIK FÜR DIE BLÄTTERFUNKTION ---
-const lessonParts = ['grundwissen', 'anwendbarkeit', 'meisterklasse', 'uebungen'];
-const currentIndex = lessonParts.indexOf(type);
-
-const prevPart = currentIndex > 0 ? lessonParts[currentIndex - 1] : null;
-const nextPart = currentIndex < lessonParts.length - 1 ? lessonParts[currentIndex + 1] : null;
-
-// Achte darauf, dass hier die korrekte Modulnummer (z.B. /modules/3/) steht
-const prevLink = prevPart ? `/modules/3/${prevPart}-${moduleId}` : null;
-const nextLink = nextPart ? `/modules/3/${nextPart}-${moduleId}` : null;
-// --- ENDE DER NEUEN LOGIK ---
+  // --- LOGIK FÜR DIE BLÄTTERFUNKTION ---
+  const lessonParts = ['grundwissen', 'anwendbarkeit', 'meisterklasse', 'uebungen'];
+  const currentIndex = lessonParts.indexOf(type);
+  const prevPart = currentIndex > 0 ? lessonParts[currentIndex - 1] : null;
+  const nextPart = currentIndex < lessonParts.length - 1 ? lessonParts[currentIndex + 1] : null;
+  const prevLink = prevPart ? `/modules/3/${prevPart}-${moduleId}` : null;
+  const nextLink = nextPart ? `/modules/3/${nextPart}-${moduleId}` : null;
   
   const contentKey = type as keyof typeof moduleData.content;
   const content = moduleData.content[contentKey] || "Inhalt nicht verfügbar.";
@@ -619,20 +617,17 @@ const nextLink = nextPart ? `/modules/3/${nextPart}-${moduleId}` : null;
   return (
     <div className="max-w-4xl mx-auto p-6 md:p-8">
       <div className="mb-8">
-        {/* Dies ist der Link zurück zur Modulübersicht */}
         <Link href="/modules/3" className="flex items-center gap-2 text-primary hover:underline">
           <ArrowLeft className="w-5 h-5" />
           <span>Zurück zur Übersicht der Klinischen Psychologie</span>
         </Link>
       </div>
       <div>
-        {/* Dies ist der Container für den Lektionsinhalt */}
         <h1 className="text-3xl font-bold mb-6">{title}</h1>
         <div className="prose prose-lg dark:prose-invert max-w-none">
             {content}
         </div>
 
-        {/* --- HIER DEN BLOCK EINFÜGEN --- */}
         <div className="mt-12 flex justify-between items-center border-t dark:border-slate-700 pt-6">
           {prevLink ? (
             <Link href={prevLink} className="flex items-center gap-2 text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-light transition-colors rounded-md p-2 -m-2">
@@ -640,7 +635,7 @@ const nextLink = nextPart ? `/modules/3/${nextPart}-${moduleId}` : null;
               <span className="font-semibold">Vorheriger Abschnitt</span>
             </Link>
           ) : (
-            <div /> // Leeres div, damit der "Weiter"-Button rechts bleibt
+            <div />
           )}
           {nextLink ? (
             <Link href={nextLink} className="flex items-center gap-2 text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-light transition-colors rounded-md p-2 -m-2">
@@ -653,8 +648,6 @@ const nextLink = nextPart ? `/modules/3/${nextPart}-${moduleId}` : null;
             </Link>
           )}
         </div>
-        {/* --- ENDE DES NEUEN BLOCKS --- */}
-
       </div>
     </div>
   );
