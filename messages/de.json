@@ -6,7 +6,6 @@
     "Lernplattform": "Lernplattform",
     "Warum Psychedu?": "Warum Psychedu?",
     "Pläne": "Pläne",
-
     "heroSection": {
       "title": "Psychedu – Dein Psychologie-Abschluss",
       "subtitle": "Erhalte deinen Abschluss online in ~1 Jahr",
@@ -14,7 +13,6 @@
       "watchVideoButton": "Video ansehen",
       "startButton": "Kostenlose Testversion starten"
     },
-
     "metrics": {
       "authentication": {
         "languages": "Sprachen",
@@ -51,7 +49,6 @@
         "knowledge_value": "Kompakt"
       }
     },
-
     "sections": {
       "authentication": {
         "title": "Anmeldung & Zugang",
@@ -74,7 +71,6 @@
         "description": "20/Monat oder 200/Jahr – wähle, was zu dir passt."
       }
     },
-
     "cta": {
       "title": "Bereit, deinen Psychologie-Abschluss schneller zu machen?",
       "description": "Lerne in deiner Sprache, folge einem 12-Monats-Plan und bleibe mit Mentoren auf Kurs.",
@@ -84,13 +80,10 @@
       "sourcesButton": "Quellenangabe"
     }
   },
-
   "LocaleSwitcher": {
     "label": "Sprache ändern",
     "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} es {🇪🇸 Spanisch} fr {🇫🇷 Französisch} other {Unbekannt}}"
   },
-
-  
   "pricingSection": {
     "monthly": {
       "name": "Monatlich",
@@ -112,128 +105,129 @@
       "feature4": "Beschleunigter Abschluss",
       "cta": "Jährlich starten",
       "popularBadge": "Bester Preis"
-    },
-  
-
-
-
-    "moduleDescriptions": {
-        "1": "Das Fundament für die empirische Psychologie.",
-        "2": "Der Mensch im Kontext der Gruppe.",
-        "3": "Grundlagen psychischer Störungen.",
-        "4": "Die menschliche Entwicklung über die Lebensspanne.",
-        "5": "Wie wir Informationen verarbeiten.",
-        "6": "Was uns antreibt und fühlen lässt.",
-        "7": "Die neurobiologischen Grundlagen des Verhaltens.",
-        "8": "Warum Menschen so unterschiedlich sind.",
-        "9": "Wie psychologische Merkmale gemessen werden.",
-        "10": "Der Mensch in der Arbeitswelt."
-    },
-
-
-
-    "aboutPage": {
-        "backLink": "Zurück zur Startseite",
-        "mainTitle": "Über Psychedu",
-        "missionTitle": "Unsere Mission: Bildung neu denken",
-        "missionParagraph1": "Das traditionelle Universitätssystem ist oft von hohen Kosten, starren Strukturen und ineffizienten Lernzyklen geprägt, die in jährlichen, stressigen Prüfungsphasen gipfeln. Wichtiges Wissen für die spätere Berufspraxis geht dabei häufig verloren.",
-        "missionParagraph2": "Psychedu wurde aus der Überzeugung geboren, dass es einen besseren Weg geben muss. Unsere Mission ist es, eine praxisorientierte, flexible und sinnstiftende Alternative zu schaffen, die dir das Wesentliche eines Psychologie-Abschlusses kompakt und zugänglich vermittelt.",
-        "historyTitle": "Die Geschichte hinter Psychedu",
-        "historyParagraph": "Psychedu ist das Ergebnis eines einjährigen Projekts, das von einer einzigen Person aus der Schweiz ins Leben gerufen wurde. Als Student der Psychologie und Wirtschaft erlebte unser Gründer selbst die Frustrationen des klassischen Systems. Angetrieben von dem Wunsch, das Lernen effizienter, relevanter und inspirierender zu gestalten, entstand die Vision für diese Plattform: Ein Ort, an dem Bildung nicht nur dem Abschluss dient, sondern einen echten, anwendbaren Wert für deine Zukunft schafft.",
-        "philosophyTitle": "Unsere Philosophie",
-        "philosophyPoint1": "<strong>Zugänglich:</strong> Wir glauben, dass hochwertige Bildung nicht an überhöhten Preisen scheitern darf.",
-        "philosophyPoint2": "<strong>Effizient:</strong> Wir konzentrieren uns auf das, was wirklich zählt – das gesamte Wissen eines Bachelor-Studiums, kompakt und verständlich aufbereitet.",
-        "philosophyPoint3": "<strong>Praxisorientiert:</strong> Wir verbinden Theorie mit Anwendung, um dich optimal auf deine berufliche Zukunft vorzubereiten."
-    },
-    "modulesOverview": {
-        "backLink": "Zurück zur Modulübersicht",
-        "statsTitle": "Statistik von A-Z",
-        "statsDescription": "Wähle eine Lektion, um dein Wissen zu vertiefen. Jede Lektion ist in die Bereiche Grundwissen, Anwendbarkeit, Meisterklasse und Übungen unterteilt.",
-        "socialTitle": "Sozialpsychologie",
-        "socialDescription": "Erforsche, wie Individuen durch die tatsächliche, vorgestellte oder implizite Anwesenheit anderer beeinflusst werden.",
-        "socialSidebarTitle": "Themen in der Sozialpsychologie",
-        "cardTitleGrundwissen": "Grundwissen",
-        "cardTitleAnwendbarkeit": "Anwendbarkeit",
-        "cardTitleMeisterklasse": "Meisterklasse",
-        "cardTitleUebungen": "Übungen"
-    },
-    "statisticsModuleDescriptions": {
-        "1_grundwissen": "Definiere, was Daten sind und lerne die wichtigsten Grundbegriffe wie Population und Stichprobe.",
-        "1_anwendbarkeit": "Verstehe, wie Umfragen in der Marktforschung korrekt geplant und interpretiert werden.",
-        "1_meisterklasse": "Lerne, die Qualität von Daten zu beurteilen und typische Fehlschlüsse zu vermeiden.",
-        "1_uebungen": "Teste dein Wissen mit interaktiven Fragen zu den Kernkonzepten.",
-        "2_grundwissen": "Unterscheide verschiedene Stichprobenarten und die Grundlagen des experimentellen Designs.",
-        "2_anwendbarkeit": "Plane eine eigene (fiktive) Studie und erkenne potenzielle Störfaktoren und ethische Hürden.",
-        "2_meisterklasse": "Analysiere komplexe Studiendesigns und beurteile ihre Aussagekraft für die Praxis.",
-        "2_uebungen": "Wende dein Wissen in Szenarien an, um das beste Studiendesign auszuwählen.",
-        "3_grundwissen": "Lerne, Daten mit Kennzahlen wie Mittelwert, Median und Standardabweichung zusammenzufassen.",
-        "3_anwendbarkeit": "Erstelle ein aussagekräftiges Dashboard, um die Performance einer Marketing-Kampagne zu visualisieren.",
-        "3_meisterklasse": "Interpretiere Boxplots und Histogramme, um tiefere Einblicke in die Datenstruktur zu gewinnen.",
-        "3_uebungen": "Berechne und interpretiere die wichtigsten Kennzahlen für verschiedene Datensätze.",
-        "4_grundwissen": "Verstehe die Axiome und Rechenregeln der Wahrscheinlichkeitstheorie.",
-        "4_anwendbarkeit": "Berechne das Risiko für Ereignisse, z.B. in der Versicherungsmathematik oder bei Spielen.",
-        "4_meisterklasse": "Löse komplexe Aufgaben zu bedingten Wahrscheinlichkeiten (Satz von Bayes).",
-        "4_uebungen": "Löse klassische Wahrscheinlichkeits-Rätsel interaktiv.",
-        "5_grundwissen": "Lerne den Unterschied zwischen diskreten und stetigen Zufallsvariablen kennen.",
-        "5_anwendbarkeit": "Modelliere die Anzahl von Kunden, die pro Stunde ein Geschäft betreten (Poisson-Verteilung).",
-        "5_meisterklasse": "Verstehe die theoretische Basis, die hinter den wichtigsten statistischen Tests steckt.",
-        "5_uebungen": "Ordne realen Szenarien die passende Wahrscheinlichkeitsverteilung zu.",
-        "6_grundwissen": "Verstehe die zentralen Eigenschaften der 'Glockenkurve' und die 68-95-99.7-Regel.",
-        "6_anwendbarkeit": "Standardisiere Werte mit dem z-Wert, um sie über verschiedene Skalen hinweg vergleichbar zu machen.",
-        "6_meisterklasse": "Prüfe, ob ein Datensatz normalverteilt ist und was die Konsequenzen sind, wenn nicht.",
-        "6_uebungen": "Berechne Wahrscheinlichkeiten für normalverteilte Daten.",
-        "7_grundwissen": "Lerne, wie man die Unsicherheit einer Schätzung quantifiziert.",
-        "7_anwendbarkeit": "Interpretiere Umfrageergebnisse korrekt, indem du die angegebene Fehlermarge verstehst.",
-        "7_meisterklasse": "Diskutiere die Faktoren, die die Breite eines Konfidenzintervalls beeinflussen.",
-        "7_uebungen": "Berechne und interpretiere Konfidenzintervalle für Mittelwerte.",
-        "8_grundwissen": "Formuliere Null- und Alternativhypothesen und verstehe die Logik des p-Wertes.",
-        "8_anwendbarkeit": "Führe einen A/B-Test aus, um zu entscheiden, welche Version einer Webseite besser funktioniert.",
-        "8_meisterklasse": "Verstehe das Konzept der statistischen Power und wie man Typ-I- und Typ-II-Fehler kontrolliert.",
-        "8_uebungen": "Wende den t-Test in verschiedenen Szenarien korrekt an.",
-        "9_grundwissen": "Analysiere Zusammenhänge zwischen kategorialen Variablen (z.B. Geschlecht und Produktwahl).",
-        "9_anwendbarkeit": "Werte Umfragedaten aus, um zu sehen, ob bestimmte Meinungen von der Altersgruppe abhängen.",
-        "9_meisterklasse": "Prüfe die Voraussetzungen des Chi-Quadrat-Tests und interpretiere die Ergebnisse im Detail.",
-        "9_uebungen": "Führe Tests auf Unabhängigkeit mit vorgegebenen Tabellen durch.",
-        "10_grundwissen": "Modelliere und quantifiziere den linearen Zusammenhang zwischen zwei Variablen.",
-        "10_anwendbarkeit": "Erstelle ein einfaches Vorhersagemodell, z.B. für den Umsatz basierend auf Werbeausgaben.",
-        "10_meisterklasse": "Interpretiere das Bestimmtheitsmass (R-Quadrat) und die Residuenanalyse zur Modellgüte.",
-        "10_uebungen": "Berechne und interpretiere Korrelationskoeffizienten und Regressionsgeraden.",
-        "11_grundwissen": "Vergleiche die Mittelwerte von drei oder mehr Gruppen miteinander.",
-        "11_anwendbarkeit": "Finde heraus, welche von mehreren Lehrmethoden den grössten Lernerfolg bringt.",
-        "11_meisterklasse": "Führe Post-Hoc-Tests durch, um herauszufinden, welche Gruppen sich spezifisch unterscheiden.",
-        "11_uebungen": "Entscheide anhand von Fallstudien, wann eine ANOVA angebracht ist.",
-        "12_grundwissen": "Erweitere das Regressionsmodell, um den Einfluss mehrerer Variablen gleichzeitig zu untersuchen.",
-        "12_anwendbarkeit": "Baue ein Modell zur Vorhersage von Immobilienpreisen basierend auf Grösse, Lage und Alter.",
-        "12_meisterklasse": "Identifiziere und behandle Probleme wie Multikollinearität in deinem Modell.",
-        "12_uebungen": "Interpretiere die Koeffizienten eines multiplen Regressionsmodells.",
-        "13_grundwissen": "Lerne, wie man kategoriale Ergebnisse (Ja/Nein) vorhersagt.",
-        "13_anwendbarkeit": "Entwickle ein Modell zur Vorhersage der Kundenabwanderung (Churn Prediction).",
-        "13_meisterklasse": "Interpretiere Odds Ratios und beurteile die Güte deines Klassifikationsmodells (z.B. mit ROC-Kurven).",
-        "13_uebungen": "Wende das Modell auf reale Datensätze an, um Vorhersagen zu treffen.",
-        "14_grundwissen": "Lerne robuste Testverfahren kennen, die keine Normalverteilung voraussetzen.",
-        "14_anwendbarkeit": "Analysiere Daten aus Ranglisten oder Bewertungen, die nicht metrisch sind.",
-        "14_meisterklasse": "Verstehe die Vor- und Nachteile (insb. die 'Power') im Vergleich zu parametrischen Tests.",
-        "14_uebungen": "Wähle in verschiedenen Szenarien den passenden statistischen Test aus.",
-        "15_grundwissen": "Verstehe den fundamentalen Unterschied zur klassischen (frequentistischen) Statistik.",
-        "15_anwendbarkeit": "Interpretiere A/B-Testergebnisse als 'Wahrscheinlichkeit, dass Variante B besser ist'.",
-        "15_meisterklasse": "Definiere sinnvolle 'Priors' (Vorannahmen) und verstehe deren Einfluss auf das Ergebnis.",
-        "15_uebungen": "Löse das Monty-Hall-Problem mit dem Satz von Bayes.",
-        "16_grundwissen": "Lerne die Grundlagen von Datenanalyse-Bibliotheken in Python (pandas) oder R.",
-        "16_anwendbarkeit": "Führe eine komplette Datenanalyse von der Datenbereinigung bis zur Visualisierung durch.",
-        "16_meisterklasse": "Erstelle reproduzierbare Analyse-Skripte und präsentiere deine Ergebnisse in einem Jupyter-Notebook.",
-        "16_uebungen": "Löse kleine Programmieraufgaben zur Datenmanipulation und -visualisierung."
-    },
-    "premiumAccess": {
-        "title": "Zugriff verweigert",
-        "description": "Dieses Modul ist nur für Premium-Nutzer verfügbar.",
-        "upgradeButton": "Jetzt upgraden"
-    },
-    "premiumPlaceholder": {
-        "title": "Modul {moduleId}",
-        "description": "Hier werden die Lerninhalte für Modul {moduleId} angezeigt. (Platzhalter für Premium-Inhalt)"
-    },
-
-    "statisticsModuleTitles": {
+    }
+  },
+  "moduleListPage": {
+    "title": "Deine Studien-Module",
+    "upgradeButton": "Upgrade",
+    "progressError": "Dein Fortschritt konnte nicht gespeichert werden. Bitte versuche es erneut.",
+    "toggleDoneLabel": "Modul '{title}' als '{status}' markieren",
+    "markIncomplete": "unvollständig",
+    "markComplete": "vollständig"
+  },
+  "moduleDescriptions": {
+    "1": "Das Fundament für die empirische Psychologie.",
+    "2": "Der Mensch im Kontext der Gruppe.",
+    "3": "Grundlagen psychischer Störungen.",
+    "4": "Die menschliche Entwicklung über die Lebensspanne.",
+    "5": "Wie wir Informationen verarbeiten.",
+    "6": "Was uns antreibt und fühlen lässt.",
+    "7": "Die neurobiologischen Grundlagen des Verhaltens.",
+    "8": "Warum Menschen so unterschiedlich sind.",
+    "9": "Wie psychologische Merkmale gemessen werden.",
+    "10": "Der Mensch in der Arbeitswelt."
+  },
+  "aboutPage": {
+    "backLink": "Zurück zur Startseite",
+    "mainTitle": "Über Psychedu",
+    "missionTitle": "Unsere Mission: Bildung neu denken",
+    "missionParagraph1": "Das traditionelle Universitätssystem ist oft von hohen Kosten, starren Strukturen und ineffizienten Lernzyklen geprägt, die in jährlichen, stressigen Prüfungsphasen gipfeln. Wichtiges Wissen für die spätere Berufspraxis geht dabei häufig verloren.",
+    "missionParagraph2": "Psychedu wurde aus der Überzeugung geboren, dass es einen besseren Weg geben muss. Unsere Mission ist es, eine praxisorientierte, flexible und sinnstiftende Alternative zu schaffen, die dir das Wesentliche eines Psychologie-Abschlusses kompakt und zugänglich vermittelt.",
+    "historyTitle": "Die Geschichte hinter Psychedu",
+    "historyParagraph": "Psychedu ist das Ergebnis eines einjährigen Projekts, das von einer einzigen Person aus der Schweiz ins Leben gerufen wurde. Als Student der Psychologie und Wirtschaft erlebte unser Gründer selbst die Frustrationen des klassischen Systems. Angetrieben von dem Wunsch, das Lernen effizienter, relevanter und inspirierender zu gestalten, entstand die Vision für diese Plattform: Ein Ort, an dem Bildung nicht nur dem Abschluss dient, sondern einen echten, anwendbaren Wert für deine Zukunft schafft.",
+    "philosophyTitle": "Unsere Philosophie",
+    "philosophyPoint1": "<strong>Zugänglich:</strong> Wir glauben, dass hochwertige Bildung nicht an überhöhten Preisen scheitern darf.",
+    "philosophyPoint2": "<strong>Effizient:</strong> Wir konzentrieren uns auf das, was wirklich zählt – das gesamte Wissen eines Bachelor-Studiums, kompakt und verständlich aufbereitet.",
+    "philosophyPoint3": "<strong>Praxisorientiert:</strong> Wir verbinden Theorie mit Anwendung, um dich optimal auf deine berufliche Zukunft vorzubereiten."
+  },
+  "modulesOverview": {
+    "backLink": "Zurück zur Modulübersicht",
+    "statsTitle": "Statistik von A-Z",
+    "statsDescription": "Wähle eine Lektion, um dein Wissen zu vertiefen. Jede Lektion ist in die Bereiche Grundwissen, Anwendbarkeit, Meisterklasse und Übungen unterteilt.",
+    "socialTitle": "Sozialpsychologie",
+    "socialDescription": "Erforsche, wie Individuen durch die tatsächliche, vorgestellte oder implizite Anwesenheit anderer beeinflusst werden.",
+    "socialSidebarTitle": "Themen in der Sozialpsychologie",
+    "cardTitleGrundwissen": "Grundwissen",
+    "cardTitleAnwendbarkeit": "Anwendbarkeit",
+    "cardTitleMeisterklasse": "Meisterklasse",
+    "cardTitleUebungen": "Übungen"
+  },
+  "statisticsModuleDescriptions": {
+    "1_grundwissen": "Definiere, was Daten sind und lerne die wichtigsten Grundbegriffe wie Population und Stichprobe.",
+    "1_anwendbarkeit": "Verstehe, wie Umfragen in der Marktforschung korrekt geplant und interpretiert werden.",
+    "1_meisterklasse": "Lerne, die Qualität von Daten zu beurteilen und typische Fehlschlüsse zu vermeiden.",
+    "1_uebungen": "Teste dein Wissen mit interaktiven Fragen zu den Kernkonzepten.",
+    "2_grundwissen": "Unterscheide verschiedene Stichprobenarten und die Grundlagen des experimentellen Designs.",
+    "2_anwendbarkeit": "Plane eine eigene (fiktive) Studie und erkenne potenzielle Störfaktoren und ethische Hürden.",
+    "2_meisterklasse": "Analysiere komplexe Studiendesigns und beurteile ihre Aussagekraft für die Praxis.",
+    "2_uebungen": "Wende dein Wissen in Szenarien an, um das beste Studiendesign auszuwählen.",
+    "3_grundwissen": "Lerne, Daten mit Kennzahlen wie Mittelwert, Median und Standardabweichung zusammenzufassen.",
+    "3_anwendbarkeit": "Erstelle ein aussagekräftiges Dashboard, um die Performance einer Marketing-Kampagne zu visualisieren.",
+    "3_meisterklasse": "Interpretiere Boxplots und Histogramme, um tiefere Einblicke in die Datenstruktur zu gewinnen.",
+    "3_uebungen": "Berechne und interpretiere die wichtigsten Kennzahlen für verschiedene Datensätze.",
+    "4_grundwissen": "Verstehe die Axiome und Rechenregeln der Wahrscheinlichkeitstheorie.",
+    "4_anwendbarkeit": "Berechne das Risiko für Ereignisse, z.B. in der Versicherungsmathematik oder bei Spielen.",
+    "4_meisterklasse": "Löse komplexe Aufgaben zu bedingten Wahrscheinlichkeiten (Satz von Bayes).",
+    "4_uebungen": "Löse klassische Wahrscheinlichkeits-Rätsel interaktiv.",
+    "5_grundwissen": "Lerne den Unterschied zwischen diskreten und stetigen Zufallsvariablen kennen.",
+    "5_anwendbarkeit": "Modelliere die Anzahl von Kunden, die pro Stunde ein Geschäft betreten (Poisson-Verteilung).",
+    "5_meisterklasse": "Verstehe die theoretische Basis, die hinter den wichtigsten statistischen Tests steckt.",
+    "5_uebungen": "Ordne realen Szenarien die passende Wahrscheinlichkeitsverteilung zu.",
+    "6_grundwissen": "Verstehe die zentralen Eigenschaften der 'Glockenkurve' und die 68-95-99.7-Regel.",
+    "6_anwendbarkeit": "Standardisiere Werte mit dem z-Wert, um sie über verschiedene Skalen hinweg vergleichbar zu machen.",
+    "6_meisterklasse": "Prüfe, ob ein Datensatz normalverteilt ist und was die Konsequenzen sind, wenn nicht.",
+    "6_uebungen": "Berechne Wahrscheinlichkeiten für normalverteilte Daten.",
+    "7_grundwissen": "Lerne, wie man die Unsicherheit einer Schätzung quantifiziert.",
+    "7_anwendbarkeit": "Interpretiere Umfrageergebnisse korrekt, indem du die angegebene Fehlermarge verstehst.",
+    "7_meisterklasse": "Diskutiere die Faktoren, die die Breite eines Konfidenzintervalls beeinflussen.",
+    "7_uebungen": "Berechne und interpretiere Konfidenzintervalle für Mittelwerte.",
+    "8_grundwissen": "Formuliere Null- und Alternativhypothesen und verstehe die Logik des p-Wertes.",
+    "8_anwendbarkeit": "Führe einen A/B-Test aus, um zu entscheiden, welche Version einer Webseite besser funktioniert.",
+    "8_meisterklasse": "Verstehe das Konzept der statistischen Power und wie man Typ-I- und Typ-II-Fehler kontrolliert.",
+    "8_uebungen": "Wende den t-Test in verschiedenen Szenarien korrekt an.",
+    "9_grundwissen": "Analysiere Zusammenhänge zwischen kategorialen Variablen (z.B. Geschlecht und Produktwahl).",
+    "9_anwendbarkeit": "Werte Umfragedaten aus, um zu sehen, ob bestimmte Meinungen von der Altersgruppe abhängen.",
+    "9_meisterklasse": "Prüfe die Voraussetzungen des Chi-Quadrat-Tests und interpretiere die Ergebnisse im Detail.",
+    "9_uebungen": "Führe Tests auf Unabhängigkeit mit vorgegebenen Tabellen durch.",
+    "10_grundwissen": "Modelliere und quantifiziere den linearen Zusammenhang zwischen zwei Variablen.",
+    "10_anwendbarkeit": "Erstelle ein einfaches Vorhersagemodell, z.B. für den Umsatz basierend auf Werbeausgaben.",
+    "10_meisterklasse": "Interpretiere das Bestimmtheitsmass (R-Quadrat) und die Residuenanalyse zur Modellgüte.",
+    "10_uebungen": "Berechne und interpretiere Korrelationskoeffizienten und Regressionsgeraden.",
+    "11_grundwissen": "Vergleiche die Mittelwerte von drei oder mehr Gruppen miteinander.",
+    "11_anwendbarkeit": "Finde heraus, welche von mehreren Lehrmethoden den grössten Lernerfolg bringt.",
+    "11_meisterklasse": "Führe Post-Hoc-Tests durch, um herauszufinden, welche Gruppen sich spezifisch unterscheiden.",
+    "11_uebungen": "Entscheide anhand von Fallstudien, wann eine ANOVA angebracht ist.",
+    "12_grundwissen": "Erweitere das Regressionsmodell, um den Einfluss mehrerer Variablen gleichzeitig zu untersuchen.",
+    "12_anwendbarkeit": "Baue ein Modell zur Vorhersage von Immobilienpreisen basierend auf Grösse, Lage und Alter.",
+    "12_meisterklasse": "Identifiziere und behandle Probleme wie Multikollinearität in deinem Modell.",
+    "12_uebungen": "Interpretiere die Koeffizienten eines multiplen Regressionsmodells.",
+    "13_grundwissen": "Lerne, wie man kategoriale Ergebnisse (Ja/Nein) vorhersagt.",
+    "13_anwendbarkeit": "Entwickle ein Modell zur Vorhersage der Kundenabwanderung (Churn Prediction).",
+    "13_meisterklasse": "Interpretiere Odds Ratios und beurteile die Güte deines Klassifikationsmodells (z.B. mit ROC-Kurven).",
+    "13_uebungen": "Wende das Modell auf reale Datensätze an, um Vorhersagen zu treffen.",
+    "14_grundwissen": "Lerne robuste Testverfahren kennen, die keine Normalverteilung voraussetzen.",
+    "14_anwendbarkeit": "Analysiere Daten aus Ranglisten oder Bewertungen, die nicht metrisch sind.",
+    "14_meisterklasse": "Verstehe die Vor- und Nachteile (insb. die 'Power') im Vergleich zu parametrischen Tests.",
+    "14_uebungen": "Wähle in verschiedenen Szenarien den passenden statistischen Test aus.",
+    "15_grundwissen": "Verstehe den fundamentalen Unterschied zur klassischen (frequentistischen) Statistik.",
+    "15_anwendbarkeit": "Interpretiere A/B-Testergebnisse als 'Wahrscheinlichkeit, dass Variante B besser ist'.",
+    "15_meisterklasse": "Definiere sinnvolle 'Priors' (Vorannahmen) und verstehe deren Einfluss auf das Ergebnis.",
+    "15_uebungen": "Löse das Monty-Hall-Problem mit dem Satz von Bayes.",
+    "16_grundwissen": "Lerne die Grundlagen von Datenanalyse-Bibliotheken in Python (pandas) oder R.",
+    "16_anwendbarkeit": "Führe eine komplette Datenanalyse von der Datenbereinigung bis zur Visualisierung durch.",
+    "16_meisterklasse": "Erstelle reproduzierbare Analyse-Skripte und präsentiere deine Ergebnisse in einem Jupyter-Notebook.",
+    "16_uebungen": "Löse kleine Programmieraufgaben zur Datenmanipulation und -visualisierung."
+  },
+  "premiumAccess": {
+    "title": "Zugriff verweigert",
+    "description": "Dieses Modul ist nur für Premium-Nutzer verfügbar.",
+    "upgradeButton": "Jetzt upgraden"
+  },
+  "premiumPlaceholder": {
+    "title": "Modul {moduleId}",
+    "description": "Hier werden die Lerninhalte für Modul {moduleId} angezeigt. (Platzhalter für Premium-Inhalt)"
+  },
+  "statisticsModuleTitles": {
     "1": "Einführung & Grundbegriffe",
     "2": "Datenerhebung & Studiendesign",
     "3": "Beschreibende Statistik",
@@ -250,8 +244,7 @@
     "14": "Nicht-parametrische Tests",
     "15": "Bayes'sche Statistik",
     "16": "Praktische Datenanalyse mit Software"
-  }, 
-
+  },
   "moduleTitles": {
     "1": "Statistik (Gratis)",
     "2": "Sozialpsychologie",
@@ -264,45 +257,6 @@
     "9": "Psychologische Diagnostik",
     "10": "Arbeits- & Organisationspsychologie"
   },
-
-  
-  "metrics": {
-    "authentication": {
-      "languages": "Sprachen",
-      "languages_value": "Alle",
-      "duration": "Studiendauer",
-      "duration_value": "~12 Monate",
-      "progress": "Fortschrittsverfolgung",
-      "progress_value": "Echtzeit"
-    },
-    "payments": {
-      "monthly": "Monatlich",
-      "monthly_value": "20",
-      "yearly": "Jährlich",
-      "yearly_value": "200",
-      "trial": "Probezeit",
-      "trial_value": "Ja"
-    },
-    "database": {
-      "modules": "Module",
-      "modules_value": "50+",
-      "reviews": "Bewertungen",
-      "reviews_value": "Wöchentlich",
-      "resources": "Ressourcen",
-      "resources_value": "Bibliothek"
-    },
-    "features": {
-      "prices": "Faire Preise",
-      "prices_value": "Günstig",
-      "relevance": "Praxisrelevanz",
-      "relevance_value": "Fokussiert",
-      "knowledge": "Bachelor-Wissen",
-      "knowledge_value": "Kompakt"
-    }
-  },
-
-
-  
   "socialPsychologyModuleTitles": {
     "1": "Was ist Sozialpsychologie?",
     "2": "Selbstdarstellung & Soziale Wahrnehmung",
@@ -342,7 +296,4 @@
     "7_meisterklasse": "Analysiere die evolutionären und sozialen Theorien des Hilfeverhaltens.",
     "7_uebungen": "Wende die 5 Schritte des Helfens auf reale Szenarien an."
   }
-
- }
 }
-

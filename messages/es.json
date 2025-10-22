@@ -6,7 +6,6 @@
     "Lernplattform": "Plataforma de aprendizaje",
     "Warum Psychedu?": "¿Por qué Psychedu?",
     "Pläne": "Planes",
-
     "heroSection": {
       "title": "Psychedu – Tu título en psicología",
       "subtitle": "Obtén tu título en línea en aproximadamente 1 año",
@@ -14,7 +13,6 @@
       "watchVideoButton": "Ver video",
       "startButton": "Comenzar prueba gratuita"
     },
-
     "metrics": {
       "authentication": {
         "languages": "Idiomas",
@@ -51,7 +49,6 @@
         "knowledge_value": "Compactos"
       }
     },
-
     "sections": {
       "authentication": {
         "title": "Inicio de sesión y acceso",
@@ -74,7 +71,6 @@
         "description": "20/mes o 200/año — elige lo que mejor se adapte a ti."
       }
     },
-
     "cta": {
       "title": "¿Listo para obtener tu título en psicología más rápido?",
       "description": "Aprende en tu idioma, sigue un plan de 12 meses y mantente en camino con la ayuda de mentores.",
@@ -84,13 +80,10 @@
       "sourcesButton": "Fuentes"
     }
   },
-
   "LocaleSwitcher": {
     "label": "Cambiar idioma",
     "locale": "{locale, select, de {🇩🇪 Alemán} en {🇺🇸 Inglés} es {🇪🇸 Español} fr {🇫🇷 Francés} other {Desconocido}}"
   },
-
-  
   "pricingSection": {
     "monthly": {
       "name": "Mensual",
@@ -112,143 +105,146 @@
       "feature4": "Graduación acelerada",
       "cta": "Empezar Anual",
       "popularBadge": "Mejor valor"
-    },
-  
-
-
-    "moduleDescriptions": {
-        "1": "La base de la psicología empírica.",
-        "2": "El individuo en el contexto del grupo.",
-        "3": "Fundamentos de los trastornos psicológicos.",
-        "4": "Desarrollo humano a lo largo de la vida.",
-        "5": "Cómo procesamos la información.",
-        "6": "Qué nos impulsa y nos hace sentir.",
-        "7": "Las bases neurobiológicas del comportamiento.",
-        "8": "Por qué las personas son tan diferentes.",
-        "9": "Cómo se miden los rasgos psicológicos.",
-        "10": "El individuo en el mundo laboral."
-    },
-    "aboutPage": {
-        "backLink": "Volver a la página de inicio",
-        "mainTitle": "Sobre Psychedu",
-        "missionTitle": "Nuestra Misión: Repensar la Educación",
-        "missionParagraph1": "El sistema universitario tradicional a menudo se caracteriza por altos costos, estructuras rígidas y ciclos de aprendizaje ineficientes que culminan en fases de exámenes anuales y estresantes. El conocimiento importante para la práctica profesional futura a menudo se pierde en el proceso.",
-        "missionParagraph2": "Psychedu nació de la convicción de que debe haber una mejor manera. Nuestra misión es crear una alternativa práctica, flexible y significativa que te brinde lo esencial de un título de psicología de manera compacta y accesible.",
-        "historyTitle": "La Historia Detrás de Psychedu",
-        "historyParagraph": "Psychedu es el resultado de un proyecto de un año iniciado por una sola persona de Suiza. Como estudiante de psicología y economía, nuestro fundador experimentó de primera mano las frustraciones del sistema clásico. Impulsado por el deseo de hacer el aprendizaje más eficiente, relevante e inspirador, surgió la visión de esta plataforma: un lugar donde la educación no solo sirva para obtener un título, sino que cree un valor real y aplicable para tu futuro.",
-        "philosophyTitle": "Nuestra Filosofía",
-        "philosophyPoint1": "<strong>Accesible:</strong> Creemos que la educación de alta calidad no debe fallar por precios exorbitantes.",
-        "philosophyPoint2": "<strong>Eficiente:</strong> Nos centramos en lo que realmente importa: todo el conocimiento de una licenciatura, presentado de forma compacta y comprensible.",
-        "philosophyPoint3": "<strong>Orientada a la práctica:</strong> Combinamos la teoría con la aplicación para prepararte óptimamente para tu futuro profesional."
-    },
-    "modulesOverview": {
-        "backLink": "Volver al resumen de módulos",
-        "statsTitle": "Estadísticas de la A a la Z",
-        "statsDescription": "Elige una lección para profundizar tus conocimientos. Cada lección se divide en Conocimientos básicos, Aplicabilidad, Clase magistral y Ejercicios.",
-        "socialTitle": "Psicología Social",
-        "socialDescription": "Explora cómo los individuos son influenciados por la presencia real, imaginada o implícita de otros.",
-        "socialSidebarTitle": "Temas de psicología social",
-        "cardTitleGrundwissen": "Conocimientos básicos",
-        "cardTitleAnwendbarkeit": "Aplicabilidad",
-        "cardTitleMeisterklasse": "Clase magistral",
-        "cardTitleUebungen": "Ejercicios"
-    },
-    "statisticsModuleDescriptions": {
-        "1_grundwissen": "Define qué son los datos y aprende términos básicos clave como población y muestra.",
-        "1_anwendbarkeit": "Comprende cómo se planifican e interpretan correctamente las encuestas en la investigación de mercados.",
-        "1_meisterklasse": "Aprende a evaluar la calidad de los datos y a evitar falacias típicas.",
-        "1_uebungen": "Pon a prueba tus conocimientos con preguntas interactivas sobre conceptos básicos.",
-        "2_grundwissen": "Distingue varios métodos de muestreo y los fundamentos del diseño experimental.",
-        "2_anwendbarkeit": "Planifica tu propio estudio (ficticio) e identifica posibles factores de confusión y obstáculos éticos.",
-        "2_meisterklasse": "Analiza diseños de estudio complejos y evalúa su importancia práctica.",
-        "2_uebungen": "Aplica tus conocimientos en escenarios para seleccionar el mejor diseño de estudio.",
-        "3_grundwissen": "Aprende a resumir datos usando medidas como la media, la mediana y la desviación estándar.",
-        "3_anwendbarkeit": "Crea un panel de control significativo para visualizar el rendimiento de una campaña de marketing.",
-        "3_meisterklasse": "Interpreta diagramas de caja e histogramas para obtener una visión más profunda de la estructura de los datos.",
-        "3_uebungen": "Calcula e interpreta métricas clave para diversos conjuntos de datos.",
-        "4_grundwissen": "Comprende los axiomas y reglas de cálculo de la teoría de la probabilidad.",
-        "4_anwendbarkeit": "Calcula el riesgo de eventos, p.ej., en ciencia actuarial o juegos.",
-        "4_meisterklasse": "Resuelve problemas complejos que involucran probabilidades condicionales (Teorema de Bayes).",
-        "4_uebungen": "Resuelve acertijos clásicos de probabilidad de forma interactiva.",
-        "5_grundwissen": "Aprende la diferencia entre variables aleatorias discretas y continuas.",
-        "5_anwendbarkeit": "Modela el número de clientes que entran a una tienda por hora (distribución de Poisson).",
-        "5_meisterklasse": "Comprende la base teórica detrás de las pruebas estadísticas más importantes.",
-        "5_uebungen": "Asigna la distribución de probabilidad adecuada a escenarios del mundo real.",
-        "6_grundwissen": "Comprende las propiedades clave de la 'curva de campana' y la regla 68-95-99.7.",
-        "6_anwendbarkeit": "Estandariza valores usando la puntuación z para hacerlos comparables entre diferentes escalas.",
-        "6_meisterklasse": "Comprueba si un conjunto de datos sigue una distribución normal y entiende las consecuencias si no es así.",
-        "6_uebungen": "Calcula probabilidades para datos con distribución normal.",
-        "7_grundwissen": "Aprende a cuantificar la incertidumbre de una estimación.",
-        "7_anwendbarkeit": "Interpreta correctamente los resultados de las encuestas entendiendo el margen de error reportado.",
-        "7_meisterklasse": "Discute los factores que influyen en la amplitud de un intervalo de confianza.",
-        "7_uebungen": "Calcula e interpreta intervalos de confianza para medias.",
-        "8_grundwissen": "Formula hipótesis nulas y alternativas y entiende la lógica del valor p.",
-        "8_anwendbarkeit": "Realiza una prueba A/B para decidir qué versión de un sitio web funciona mejor.",
-        "8_meisterklasse": "Comprende el concepto de potencia estadística y cómo controlar los errores de Tipo I y Tipo II.",
-        "8_uebungen": "Aplica correctamente la prueba t en diversos escenarios.",
-        "9_grundwissen": "Analiza relaciones entre variables categóricas (p.ej., género y elección de producto).",
-        "9_anwendbarkeit": "Evalúa datos de encuestas para ver si ciertas opiniones dependen del grupo de edad.",
-        "9_meisterklasse": "Comprueba los supuestos de la prueba de Chi-Cuadrado e interpreta los resultados en detalle.",
-        "9_uebungen": "Realiza pruebas de independencia usando tablas dadas.",
-        "10_grundwissen": "Modela y cuantifica la relación lineal entre dos variables.",
-        "10_anwendbarkeit": "Crea un modelo de predicción simple, p.ej., para ingresos basado en el gasto publicitario.",
-        "10_meisterklasse": "Interpreta el coeficiente de determinación (R-cuadrado) y el análisis de residuos para el ajuste del modelo.",
-        "10_uebungen": "Calcula e interpreta coeficientes de correlación y rectas de regresión.",
-        "11_grundwissen": "Compara las medias de tres o más grupos.",
-        "11_anwendbarkeit": "Averigua cuál de varios métodos de enseñanza produce el mayor éxito de aprendizaje.",
-        "11_meisterklasse": "Realiza pruebas post-hoc para descubrir específicamente qué grupos difieren.",
-        "11_uebungen": "Decide basándote en estudios de caso cuándo es apropiado un ANOVA.",
-        "12_grundwissen": "Amplía el modelo de regresión para examinar la influencia de múltiples variables simultáneamente.",
-        "12_anwendbarkeit": "Construye un modelo para predecir precios de bienes raíces basado en el tamaño, la ubicación y la antigüedad.",
-        "12_meisterklasse": "Identifica y aborda problemas como la multicolinealidad en tu modelo.",
-        "12_uebungen": "Interpreta los coeficientes de un modelo de regresión múltiple.",
-        "13_grundwissen": "Aprende a predecir resultados categóricos (Sí/No).",
-        "13_anwendbarkeit": "Desarrolla un modelo para predecir la pérdida de clientes (churn).",
-        "13_meisterklasse": "Interpreta odds ratios y evalúa la calidad de tu modelo de clasificación (p.ej., con curvas ROC).",
-        "13_uebungen": "Aplica el modelo a conjuntos de datos reales para hacer predicciones.",
-        "14_grundwissen": "Aprende sobre procedimientos de prueba robustos que no asumen una distribución normal.",
-        "14_anwendbarkeit": "Analiza datos de clasificaciones o valoraciones que no son métricos.",
-        "14_meisterklasse": "Comprende las ventajas y desventajas (especialmente la 'potencia') en comparación con las pruebas paramétricas.",
-        "14_uebungen": "Elige la prueba estadística adecuada en diferentes escenarios.",
-        "15_grundwissen": "Comprende la diferencia fundamental con la estadística clásica (frecuentista).",
-        "15_anwendbarkeit": "Interpreta los resultados de las pruebas A/B como 'probabilidad de que la variante B sea mejor'.",
-        "15_meisterklasse": "Define 'priors' (creencias previas) significativos y comprende su influencia en el resultado.",
-        "15_uebungen": "Resuelve el problema de Monty Hall usando el Teorema de Bayes.",
-        "16_grundwissen": "Aprende los conceptos básicos de las bibliotecas de análisis de datos en Python (pandas) o R.",
-        "16_anwendbarkeit": "Realiza un análisis de datos completo, desde la limpieza de datos hasta la visualización.",
-        "16_meisterklasse": "Crea scripts de análisis reproducibles y presenta tus resultados en un Jupyter Notebook.",
-        "16_uebungen": "Resuelve pequeñas tareas de programación para la manipulación y visualización de datos."
-    },
-    "premiumAccess": {
-        "title": "Acceso denegado",
-        "description": "Este módulo solo está disponible para usuarios premium.",
-        "upgradeButton": "Actualizar ahora"
-    },
-    "premiumPlaceholder": {
-        "title": "Módulo {moduleId}",
-        "description": "El contenido de aprendizaje para el módulo {moduleId} se mostrará aquí. (Espacio reservado para contenido premium)"
-    },
-
-
-    "statisticsModuleTitles": {
-            "1": "Introducción y conceptos básicos",
-            "2": "Recopilación de datos y diseño de estudios",
-            "3": "Estadística descriptiva",
-            "4": "Fundamentos de la probabilidad",
-            "5": "Distribuciones",
-            "6": "La distribución normal",
-            "7": "Intervalos de confianza",
-            "8": "Pruebas de hipótesis",
-            "9": "Pruebas de Chi-cuadrado",
-            "10": "Regresión lineal y correlación",
-            "11": "ANOVA (Análisis de varianza)",
-            "12": "Regresión lineal múltiple",
-            "13": "Regresión logística",
-            "14": "Pruebas no paramétricas",
-            "15": "Estadística bayesiana",
-            "16": "Análisis práctico de datos con software"
+    }
   },
-
+  "moduleListPage": {
+    "title": "Tus Módulos de Estudio",
+    "upgradeButton": "Actualizar",
+    "progressError": "No se pudo guardar tu progreso. Por favor, inténtalo de nuevo.",
+    "toggleDoneLabel": "Marcar módulo '{title}' como '{status}'",
+    "markIncomplete": "incompleto",
+    "markComplete": "completo"
+  },
+  "moduleDescriptions": {
+    "1": "La base de la psicología empírica.",
+    "2": "El individuo en el contexto del grupo.",
+    "3": "Fundamentos de los trastornos psicológicos.",
+    "4": "Desarrollo humano a lo largo de la vida.",
+    "5": "Cómo procesamos la información.",
+    "6": "Qué nos impulsa y nos hace sentir.",
+    "7": "Las bases neurobiológicas del comportamiento.",
+    "8": "Por qué las personas son tan diferentes.",
+    "9": "Cómo se miden los rasgos psicológicos.",
+    "10": "El individuo en el mundo laboral."
+  },
+  "aboutPage": {
+    "backLink": "Volver a la página de inicio",
+    "mainTitle": "Sobre Psychedu",
+    "missionTitle": "Nuestra Misión: Repensar la Educación",
+    "missionParagraph1": "El sistema universitario tradicional a menudo se caracteriza por altos costos, estructuras rígidas y ciclos de aprendizaje ineficientes que culminan en fases de exámenes anuales y estresantes. El conocimiento importante para la práctica profesional futura a menudo se pierde en el proceso.",
+    "missionParagraph2": "Psychedu nació de la convicción de que debe haber una mejor manera. Nuestra misión es crear una alternativa práctica, flexible y significativa que te brinde lo esencial de un título de psicología de manera compacta y accesible.",
+    "historyTitle": "La Historia Detrás de Psychedu",
+    "historyParagraph": "Psychedu es el resultado de un proyecto de un año iniciado por una sola persona de Suiza. Como estudiante de psicología y economía, nuestro fundador experimentó de primera mano las frustraciones del sistema clásico. Impulsado por el deseo de hacer el aprendizaje más eficiente, relevante e inspirador, surgió la visión de esta plataforma: un lugar donde la educación no solo sirva para obtener un título, sino que cree un valor real y aplicable para tu futuro.",
+    "philosophyTitle": "Nuestra Filosofía",
+    "philosophyPoint1": "<strong>Accesible:</strong> Creemos que la educación de alta calidad no debe fallar por precios exorbitantes.",
+    "philosophyPoint2": "<strong>Eficiente:</strong> Nos centramos en lo que realmente importa: todo el conocimiento de una licenciatura, presentado de forma compacta y comprensible.",
+    "philosophyPoint3": "<strong>Orientada a la práctica:</strong> Combinamos la teoría con la aplicación para prepararte óptimamente para tu futuro profesional."
+  },
+  "modulesOverview": {
+    "backLink": "Volver al resumen de módulos",
+    "statsTitle": "Estadísticas de la A a la Z",
+    "statsDescription": "Elige una lección para profundizar tus conocimientos. Cada lección se divide en Conocimientos básicos, Aplicabilidad, Clase magistral y Ejercicios.",
+    "socialTitle": "Psicología Social",
+    "socialDescription": "Explora cómo los individuos son influenciados por la presencia real, imaginada o implícita de otros.",
+    "socialSidebarTitle": "Temas de psicología social",
+    "cardTitleGrundwissen": "Conocimientos básicos",
+    "cardTitleAnwendbarkeit": "Aplicabilidad",
+    "cardTitleMeisterklasse": "Clase magistral",
+    "cardTitleUebungen": "Ejercicios"
+  },
+  "statisticsModuleDescriptions": {
+    "1_grundwissen": "Define qué son los datos y aprende términos básicos clave como población y muestra.",
+    "1_anwendbarkeit": "Comprende cómo se planifican e interpretan correctamente las encuestas en la investigación de mercados.",
+    "1_meisterklasse": "Aprende a evaluar la calidad de los datos y a evitar falacias típicas.",
+    "1_uebungen": "Pon a prueba tus conocimientos con preguntas interactivas sobre conceptos básicos.",
+    "2_grundwissen": "Distingue varios métodos de muestreo y los fundamentos del diseño experimental.",
+    "2_anwendbarkeit": "Planifica tu propio estudio (ficticio) e identifica posibles factores de confusión y obstáculos éticos.",
+    "2_meisterklasse": "Analiza diseños de estudio complejos y evalúa su importancia práctica.",
+    "2_uebungen": "Aplica tus conocimientos en escenarios para seleccionar el mejor diseño de estudio.",
+    "3_grundwissen": "Aprende a resumir datos usando medidas como la media, la mediana y la desviación estándar.",
+    "3_anwendbarkeit": "Crea un panel de control significativo para visualizar el rendimiento de una campaña de marketing.",
+    "3_meisterklasse": "Interpreta diagramas de caja e histogramas para obtener una visión más profunda de la estructura de los datos.",
+    "3_uebungen": "Calcula e interpreta métricas clave para diversos conjuntos de datos.",
+    "4_grundwissen": "Comprende los axiomas y reglas de cálculo de la teoría de la probabilidad.",
+    "4_anwendbarkeit": "Calcula el riesgo de eventos, p.ej., en ciencia actuarial o juegos.",
+    "4_meisterklasse": "Resuelve problemas complejos que involucran probabilidades condicionales (Teorema de Bayes).",
+    "4_uebungen": "Resuelve acertijos clásicos de probabilidad de forma interactiva.",
+    "5_grundwissen": "Aprende la diferencia entre variables aleatorias discretas y continuas.",
+    "5_anwendbarkeit": "Modela el número de clientes que entran a una tienda por hora (distribución de Poisson).",
+    "5_meisterklasse": "Comprende la base teórica detrás de las pruebas estadísticas más importantes.",
+    "5_uebungen": "Asigna la distribución de probabilidad adecuada a escenarios del mundo real.",
+    "6_grundwissen": "Comprende las propiedades clave de la 'curva de campana' y la regla 68-95-99.7.",
+    "6_anwendbarkeit": "Estandariza valores usando la puntuación z para hacerlos comparables entre diferentes escalas.",
+    "6_meisterklasse": "Comprueba si un conjunto de datos sigue una distribución normal y entiende las consecuencias si no es así.",
+    "6_uebungen": "Calcula probabilidades para datos con distribución normal.",
+    "7_grundwissen": "Aprende a cuantificar la incertidumbre de una estimación.",
+    "7_anwendbarkeit": "Interpreta correctamente los resultados de las encuestas entendiendo el margen de error reportado.",
+    "7_meisterklasse": "Discute los factores que influyen en la amplitud de un intervalo de confianza.",
+    "7_uebungen": "Calcula e interpreta intervalos de confianza para medias.",
+    "8_grundwissen": "Formula hipótesis nulas y alternativas y entiende la lógica del valor p.",
+    "8_anwendbarkeit": "Realiza una prueba A/B para decidir qué versión de un sitio web funciona mejor.",
+    "8_meisterklasse": "Comprende el concepto de potencia estadística y cómo controlar los errores de Tipo I y Tipo II.",
+    "8_uebungen": "Aplica correctamente la prueba t en diversos escenarios.",
+    "9_grundwissen": "Analiza relaciones entre variables categóricas (p.ej., género y elección de producto).",
+    "9_anwendbarkeit": "Evalúa datos de encuestas para ver si ciertas opiniones dependen del grupo de edad.",
+    "9_meisterklasse": "Comprueba los supuestos de la prueba de Chi-Cuadrado e interpreta los resultados en detalle.",
+    "9_uebungen": "Realiza pruebas de independencia usando tablas dadas.",
+    "10_grundwissen": "Modela y cuantifica la relación lineal entre dos variables.",
+    "10_anwendbarkeit": "Crea un modelo de predicción simple, p.ej., para ingresos basado en el gasto publicitario.",
+    "10_meisterklasse": "Interpreta el coeficiente de determinación (R-cuadrado) y el análisis de residuos para el ajuste del modelo.",
+    "10_uebungen": "Calcula e interpreta coeficientes de correlación y rectas de regresión.",
+    "11_grundwissen": "Compara las medias de tres o más grupos.",
+    "11_anwendbarkeit": "Averigua cuál de varios métodos de enseñanza produce el mayor éxito de aprendizaje.",
+    "11_meisterklasse": "Realiza pruebas post-hoc para descubrir específicamente qué grupos difieren.",
+    "11_uebungen": "Decide basándote en estudios de caso cuándo es apropiado un ANOVA.",
+    "12_grundwissen": "Amplía el modelo de regresión para examinar la influencia de múltiples variables simultáneamente.",
+    "12_anwendbarkeit": "Construye un modelo para predecir precios de bienes raíces basado en el tamaño, la ubicación y la antigüedad.",
+    "12_meisterklasse": "Identifica y aborda problemas como la multicolinealidad en tu modelo.",
+    "12_uebungen": "Interpreta los coeficientes de un modelo de regresión múltiple.",
+    "13_grundwissen": "Aprende a predecir resultados categóricos (Sí/No).",
+    "13_anwendbarkeit": "Desarrolla un modelo para predecir la pérdida de clientes (churn).",
+    "13_meisterklasse": "Interpreta odds ratios y evalúa la calidad de tu modelo de clasificación (p.ej., con curvas ROC).",
+    "13_uebungen": "Aplica el modelo a conjuntos de datos reales para hacer predicciones.",
+    "14_grundwissen": "Aprende sobre procedimientos de prueba robustos que no asumen una distribución normal.",
+    "14_anwendbarkeit": "Analiza datos de clasificaciones o valoraciones que no son métricos.",
+    "14_meisterklasse": "Comprende las ventajas y desventajas (especialmente la 'potencia') en comparación con las pruebas paramétricas.",
+    "14_uebungen": "Elige la prueba estadística adecuada en diferentes escenarios.",
+    "15_grundwissen": "Comprende la diferencia fundamental con la estadística clásica (frecuentista).",
+    "15_anwendbarkeit": "Interpreta los resultados de las pruebas A/B como 'probabilidad de que la variante B sea mejor'.",
+    "15_meisterklasse": "Define 'priors' (creencias previas) significativos y comprende su influencia en el resultado.",
+    "15_uebungen": "Resuelve el problema de Monty Hall usando el Teorema de Bayes.",
+    "16_grundwissen": "Aprende los conceptos básicos de las bibliotecas de análisis de datos en Python (pandas) o R.",
+    "16_anwendbarkeit": "Realiza un análisis de datos completo, desde la limpieza de datos hasta la visualización.",
+    "16_meisterklasse": "Crea scripts de análisis reproducibles y presenta tus resultados en un Jupyter Notebook.",
+    "16_uebungen": "Resuelve pequeñas tareas de programación para la manipulación y visualización de datos."
+  },
+  "premiumAccess": {
+    "title": "Acceso denegado",
+    "description": "Este módulo solo está disponible para usuarios premium.",
+    "upgradeButton": "Actualizar ahora"
+  },
+  "premiumPlaceholder": {
+    "title": "Módulo {moduleId}",
+    "description": "El contenido de aprendizaje para el módulo {moduleId} se mostrará aquí. (Espacio reservado para contenido premium)"
+  },
+  "statisticsModuleTitles": {
+    "1": "Introducción y conceptos básicos",
+    "2": "Recopilación de datos y diseño de estudios",
+    "3": "Estadística descriptiva",
+    "4": "Fundamentos de la probabilidad",
+    "5": "Distribuciones",
+    "6": "La distribución normal",
+    "7": "Intervalos de confianza",
+    "8": "Pruebas de hipótesis",
+    "9": "Pruebas de Chi-cuadrado",
+    "10": "Regresión lineal y correlación",
+    "11": "ANOVA (Análisis de varianza)",
+    "12": "Regresión lineal múltiple",
+    "13": "Regresión logística",
+    "14": "Pruebas no paramétricas",
+    "15": "Estadística bayesiana",
+    "16": "Análisis práctico de datos con software"
+  },
   "moduleTitles": {
     "1": "Estadística (Gratis)",
     "2": "Psicología Social",
@@ -261,7 +257,6 @@
     "9": "Evaluación Psicológica",
     "10": "Psicología Industrial y Organizacional"
   },
-  
   "socialPsychologyModuleTitles": {
     "1": "¿Qué es la Psicología Social?",
     "2": "Autopresentación y Percepción Social",
@@ -301,5 +296,4 @@
     "7_meisterklasse": "Analiza las teorías evolutivas y sociales del comportamiento de ayuda.",
     "7_uebungen": "Aplica los 5 pasos de la ayuda a escenarios del mundo real."
   }
-}
 }

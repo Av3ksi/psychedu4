@@ -6,7 +6,6 @@
     "Lernplattform": "Learning Platform",
     "Warum Psychedu?": "Why Psychedu?",
     "Pläne": "Plans",
-
     "heroSection": {
       "title": "Psychedu – Your Psychology Degree",
       "subtitle": "Earn your degree online in ~1 year",
@@ -14,7 +13,6 @@
       "watchVideoButton": "Watch Video",
       "startButton": "Start Free Trial"
     },
-
     "metrics": {
       "authentication": {
         "languages": "Languages",
@@ -51,7 +49,6 @@
         "knowledge_value": "Compact"
       }
     },
-
     "sections": {
       "authentication": {
         "title": "Sign-In & Access",
@@ -74,7 +71,6 @@
         "description": "20/month or 200/year – choose what fits you best."
       }
     },
-
     "cta": {
       "title": "Ready to fast-track your psychology degree?",
       "description": "Learn in your language, follow a 12-month plan, and stay on track with mentors.",
@@ -84,12 +80,10 @@
       "sourcesButton": "Sources"
     }
   },
-
   "LocaleSwitcher": {
     "label": "Change language",
     "locale": "{locale, select, de {🇩🇪 German} en {🇺🇸 English} es {🇪🇸 Spanish} fr {🇫🇷 French} other {Unknown}}"
   },
-  
   "pricingSection": {
     "monthly": {
       "name": "Monthly",
@@ -111,10 +105,16 @@
       "feature4": "Accelerated Graduation",
       "cta": "Start Yearly",
       "popularBadge": "Best Value"
-    },
-  
-
-
+    }
+  },
+  "moduleListPage": {
+    "title": "Your Study Modules",
+    "upgradeButton": "Upgrade",
+    "progressError": "Your progress could not be saved. Please try again.",
+    "toggleDoneLabel": "Mark module '{title}' as '{status}'",
+    "markIncomplete": "incomplete",
+    "markComplete": "complete"
+  },
   "moduleDescriptions": {
     "1": "The foundation for empirical psychology.",
     "2": "The individual in the context of the group.",
@@ -294,7 +294,6 @@
     "7_grundwissen": "Explore why people help others (altruism, empathy).",
     "7_anwendbarkeit": "Understand the 'bystander effect' and learn how to overcome it in emergencies.",
     "7_meisterklasse": "Analyze the evolutionary and social theories of helping behavior.",
-    "7_uebungen": "Apply the 5 steps of helping to real-world scenarios."
-  }
+    "7_uebungen" : "Apply the 5 steps of helping to real-world scenarios."
   }
 }

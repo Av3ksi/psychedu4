@@ -1,10 +1,10 @@
 'use client';
+
 import { Link } from '@/i18n/navigation';
 import { useSubscription } from '@/hooks/useSubscription';
 import { Lock, Circle, CheckCircle } from 'lucide-react';
 import LoadingSpinner from '@/components/LoadingSpinner';
 import { useEffect, useState } from 'react';
-// Wichtig: listModulesWithState wird angepasst, oder die Verwendung hier
 import { listModulesWithState, setModuleDone } from '@/utils/modules';
 // NEU: useTranslations importieren
 import { useTranslations } from 'next-intl';
@@ -13,7 +13,7 @@ import { useTranslations } from 'next-intl';
 interface ModuleWithState {
   id: number;
   // title: string; // Titel kommt jetzt aus JSON
-  description: string;
+  description: string; // Beschreibung kommt jetzt aus JSON
   done: boolean;
   sort_order: number;
 }
@@ -22,21 +22,28 @@ export default function ModulesOverviewPage() {
   const { subscription, isLoading: isSubLoading } = useSubscription();
   const [modules, setModules] = useState<ModuleWithState[]>([]);
   const [isLoadingModules, setIsLoadingModules] = useState(true);
-  // Übersetzungsfunktionen holen
-  const tDesc = useTranslations('moduleDescriptions'); // Für Beschreibungen
-  const tTitles = useTranslations('moduleTitles'); // NEU: Für Titel
+
+  // --- Übersetzungsfunktionen holen ---
+  // t holt allgemeine UI-Texte für diese Seite
+  const t = useTranslations('moduleListPage');
+  // tTitles holt die Modultitel
+  const tTitles = useTranslations('moduleTitles');
+  // tDesc holt die Modulbeschreibungen
+  const tDesc = useTranslations('moduleDescriptions');
+
 
   useEffect(() => {
     async function loadModules() {
       try {
         setIsLoadingModules(true);
-        // Annahme: listModulesWithState holt jetzt id, sort_order, done
+        // Annahme: listModulesWithState holt id, sort_order, done
         const modulesFromDb = await listModulesWithState();
 
         const enrichedModules = modulesFromDb.map(m => ({
           ...m,
-          // Beschreibung holen
-          description: tDesc(String(m.id)) || 'Description not available.',
+          // Titel und Beschreibung aus Übersetzungen holen
+          // (Titel wird unten direkt beim Rendern geholt)
+          description: tDesc(String(m.id)) || 'Beschreibung nicht verfügbar.',
           done: m.done || false
         }));
 
@@ -50,12 +57,13 @@ export default function ModulesOverviewPage() {
         setIsLoadingModules(false);
       }
     }
+    
     loadModules();
-    // tDesc und tTitles hinzufügen, falls sich die Sprache ändert
+    // WICHTIG: tDesc und tTitles als Abhängigkeiten hinzufügen.
+    // Lädt die Module neu, wenn sich die Sprache ändert.
   }, [tDesc, tTitles]);
 
   const handleToggleDone = async (moduleId: number) => {
-    // ... (Diese Funktion bleibt unverändert)
     const originalModules = modules;
     const moduleToUpdate = modules.find(m => m.id === moduleId);
     if (!moduleToUpdate) return;
@@ -73,7 +81,8 @@ export default function ModulesOverviewPage() {
     } catch (error) {
       console.error("Fehler beim Speichern des Fortschritts:", error);
       setModules(originalModules);
-      alert("Dein Fortschritt konnte nicht gespeichert werden. Bitte versuche es erneut.");
+      // Übersetzte Fehlermeldung
+      alert(t('progressError'));
     }
   };
 
@@ -85,12 +94,14 @@ export default function ModulesOverviewPage() {
 
   return (
     <div className="max-w-4xl mx-auto p-6 md:p-8">
-      {/* Titel eventuell auch übersetzen? */}
-      <h1 className="text-3xl font-bold mb-6 text-slate-900 dark:text-white">Deine Studien-Module</h1>
+      {/* Übersetzte Überschrift */}
+      <h1 className="text-3xl font-bold mb-6 text-slate-900 dark:text-white">
+        {t('title')}
+      </h1>
       <div className="space-y-4">
         {modules.map((module, index) => {
           const isLocked = index > 0 && !isPremium;
-          // NEU: Titel aus JSON holen
+          // Dynamischen Titel aus tTitles holen
           const title = tTitles(String(module.id));
 
           if (isLocked) {
@@ -98,12 +109,13 @@ export default function ModulesOverviewPage() {
               <div key={module.id} className="flex items-center gap-4 rounded-lg border bg-slate-50 dark:bg-slate-800/50 p-4 opacity-60">
                 <Lock className="w-6 h-6 text-slate-400 flex-shrink-0" />
                 <div className="flex-grow">
-                  {/* GEÄNDERT: Übersetzten Titel verwenden */}
+                  {/* Übersetzten Titel verwenden */}
                   <h2 className="font-semibold text-lg text-slate-500">{title}</h2>
                   <p className="text-sm text-slate-400">{module.description}</p>
                 </div>
                 <Link href="/profile" className="ml-auto text-sm bg-primary text-white px-3 py-1.5 rounded-md hover:bg-primary-dark whitespace-nowrap">
-                  Upgrade
+                  {/* Übersetzter Button-Text */}
+                  {t('upgradeButton')}
                 </Link>
               </div>
             );
@@ -114,7 +126,10 @@ export default function ModulesOverviewPage() {
               <button
                 onClick={() => handleToggleDone(module.id)}
                 className="cursor-pointer p-2 -m-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary"
-                aria-label={`Mark module ${title} as ${module.done ? 'incomplete' : 'complete'}`}
+                aria-label={t('toggleDoneLabel', { 
+                  title: title, 
+                  status: module.done ? t('markIncomplete') : t('markComplete') 
+                })}
               >
                 {module.done ? (
                   <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
@@ -124,7 +139,7 @@ export default function ModulesOverviewPage() {
               </button>
 
               <Link href={`/modules/${module.id}`} className="flex-grow cursor-pointer">
-                  {/* GEÄNDERT: Übersetzten Titel verwenden */}
+                  {/* Übersetzten Titel verwenden */}
                   <h2 className="font-semibold text-lg text-slate-900 dark:text-white">{title}</h2>
                   <p className="text-sm text-slate-600 dark:text-slate-400">{module.description}</p>
               </Link>
