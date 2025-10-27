@@ -3,7 +3,7 @@
 import { Link } from '@/i18n/navigation';
 import { FC, ReactNode } from 'react';
 // Passende Icons für Bio-Psychologie (Beispiele)
-import { Dna, Brain, Network, Microscope, Droplet, ArrowLeft, Lock } from 'lucide-react';
+import { Dna, Brain, Network, Microscope, ArrowLeft} from 'lucide-react';
 import { Link as ScrollLink, Element } from 'react-scroll';
 
 // --- NEUE IMPORTS ---

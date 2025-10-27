@@ -2,7 +2,7 @@
 
 import { Link } from '@/i18n/navigation';
 import { FC, ReactNode } from 'react';
-import { BookOpen, Target, BrainCircuit, Lightbulb, ArrowLeft, Lock } from 'lucide-react';
+import { BookOpen, Target, BrainCircuit, Lightbulb, ArrowLeft} from 'lucide-react';
 import { Link as ScrollLink, Element } from 'react-scroll';
 
 // --- NEUE IMPORTS ---
