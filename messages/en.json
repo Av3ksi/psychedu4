@@ -159,10 +159,23 @@
     "socialTitle": "Social Psychology",
     "socialDescription": "Explore how individuals are influenced by the actual, imagined, or implied presence of others.",
     "socialSidebarTitle": "Topics in Social Psychology",
+    "clinicalSidebarTitle": "Topics in Clinical Psychology",
+    "developmentalSidebarTitle": "Topics in Developmental Psychology",
+    "cognitiveSidebarTitle": "Topics in Cognitive Psychology",
+    "emotionMotivationSidebarTitle": "Emotion & Motivation Psychology",
+    "biologicalSidebarTitle": "Topics in Biological Psychology",
+    "personalitySidebarTitle": "Topics in Personality Psychology",
+    "diagnosticsSidebarTitle": "Topics in Psych. Assessment",
+    "pageTitleGrundwissen": "Basic Knowledge",
+    "pageTitleAnwendbarkeit": "Applicability",
+    "pageTitleMeisterklasse": "Masterclass",
+    "pageTitleUebungen": "Exercises",
+    "workAndOrgSidebarTitle": "Topics in I/O Psychology",
     "cardTitleGrundwissen": "Basic Knowledge",
     "cardTitleAnwendbarkeit": "Applicability",
     "cardTitleMeisterklasse": "Masterclass",
-    "cardTitleUebungen": "Exercises"
+    "cardTitleUebungen": "Exercises",
+    "premiumLock": "Available for premium members."
   },
   "premiumAccess": {
     "title": "Access Denied",
@@ -295,5 +308,1063 @@
     "7_anwendbarkeit": "Understand the 'bystander effect' and learn how to overcome it in emergencies.",
     "7_meisterklasse": "Analyze the evolutionary and social theories of helping behavior.",
     "7_uebungen" : "Apply the 5 steps of helping to real-world scenarios."
+  },
+  "clinicalPsychologyOverview": {
+    "title": "Clinical Psychology",
+    "description": "Explore the causes, diagnoses, and treatments of psychological disorders."
+  },
+  "clinicalPsychologyModuleTitles": {
+    "1": "Introduction to Clinical Psychology",
+    "2": "Diagnostics & Classification (DSM-5 / ICD-11)",
+    "3": "Anxiety and Obsessive-Compulsive Disorders",
+    "4": "Depressive and Bipolar Disorders",
+    "5": "Schizophrenia Spectrum and Other Psychotic Disorders",
+    "6": "Personality Disorders",
+    "7": "Psychodynamic Therapies",
+    "8": "Cognitive Behavioral Therapy (CBT)",
+    "9": "Humanistic and Systemic Therapies"
+  },
+  "clinicalPsychologyModuleDescriptions": {
+    "1_grundwissen": "Defines the field and the biopsychosocial model.",
+    "1_anwendbarkeit": "Understand the difference between everyday feelings and a disorder (the '4 D's').",
+    "1_meisterklasse": "Insight into the historical development of understanding disorders.",
+    "1_uebungen": "Test your knowledge of the basic concepts and the '4 D's'.",
+    "2_grundwissen": "Learn the main classification systems (DSM & ICD).",
+    "2_anwendbarkeit": "Follow the diagnostic process using the example of depression.",
+    "2_meisterklasse": "Discuss the pros and cons of categorical vs. dimensional diagnostics.",
+    "2_uebungen": "Apply your knowledge of diagnostic criteria and approaches.",
+    "3_grundwissen": "Differentiate between panic disorder, GAD, phobias, and obsessive-compulsive disorders.",
+    "3_anwendbarkeit": "Analyze the vicious cycle of panic disorder.",
+    "3_meisterklasse": "Understand the central role of avoidance in maintaining anxiety.",
+    "3_uebungen": "Test your knowledge of the different disorder profiles.",
+    "4_grundwissen": "Learn the core symptoms of depression, mania, and hypomania.",
+    "4_anwendbarkeit": "Understand why distinguishing between unipolar and bipolar depression is crucial.",
+    "4_meisterklasse": "Analyze Aaron Beck's Cognitive Triad of depression.",
+    "4_uebungen": "Apply your knowledge to symptom recognition and differential diagnosis.",
+    "5_grundwissen": "Define positive and negative symptoms of schizophrenia.",
+    "5_anwendbarkeit": "Understand the vulnerability-stress model as an explanatory approach.",
+    "5_meisterklasse": "Insight into the dopamine hypothesis and its modern differentiation.",
+    "5_uebungen": "Test your knowledge of symptom classification and explanatory models.",
+    "6_grundwissen": "Learn the three clusters of personality disorders (A, B, C).",
+    "6_anwendbarkeit": "Analyze the core symptoms of Borderline Personality Disorder in everyday life.",
+    "6_meisterklasse": "Understand the difference between egosyntonic and egodystonic disorders.",
+    "6_uebungen": "Apply your knowledge to the classification and characteristics of personality disorders.",
+    "7_grundwissen": "Understand the core concepts of psychoanalysis (unconscious, defense mechanisms).",
+    "7_anwendbarkeit": "Analyze the concept of transference in the therapeutic relationship.",
+    "7_meisterklasse": "Differentiate classical psychoanalysis from modern psychodynamic methods.",
+    "7_uebungen": "Test your knowledge of psychodynamic concepts and techniques.",
+    "8_grundwissen": "Learn the cognitive ABC model as the basis of CBT.",
+    "8_anwendbarkeit": "Apply cognitive restructuring to a dysfunctional thought.",
+    "8_meisterklasse": "Understand the 'Third Wave' approaches (ACT, Mindfulness).",
+    "8_uebungen": "Identify cognitive distortions and apply the ABC model.",
+    "9_grundwissen": "Understand the basic principles of Humanistic Therapy (Rogers).",
+    "9_anwendbarkeit": "Learn the techniques of active listening and circular questioning.",
+    "9_meisterklasse": "Discuss the difference between process-focused and content-focused therapies.",
+    "9_uebungen": "Test your knowledge of humanistic and systemic basic concepts."
+  },
+
+  "developmentalPsychologyOverview": {
+    "title": "Developmental Psychology",
+    "description": "Explore human development from conception to death."
+  },
+  "developmentalPsychologyModuleTitles": {
+    "1": "Foundations & Theories",
+    "2": "Infancy & Toddlerhood",
+    "3": "Early & Middle Childhood",
+    "4": "Adolescence",
+    "5": "Early Adulthood",
+    "6": "Middle Adulthood",
+    "7": "Late Adulthood",
+    "8": "Dying & Death"
+  },
+  "developmentalPsychologyModuleDescriptions": {
+    "1_grundwissen": "Learn the grand theories of Piaget, Vygotsky, and Erikson.",
+    "1_anwendbarkeit": "Understand the 'Nature vs. Nurture' debate through examples.",
+    "1_meisterklasse": "Discuss longitudinal vs. cross-sectional studies in developmental research.",
+    "1_uebungen": "Match theoretical concepts to their respective thinkers.",
+    "2_grundwissen": "Understand cognitive (e.g., object permanence) and motor development.",
+    "2_anwendbarkeit": "Analyze Bowlby & Ainsworth's attachment theory (Strange Situation).",
+    "2_meisterklasse": "Discuss the effects of early deprivation on brain development.",
+    "2_uebungen": "Identify different attachment styles based on case studies.",
+    "3_grundwissen": "Track the development of language, 'Theory of Mind', and social play.",
+    "3_anwendbarkeit": "Analyze moral development according to Kohlberg (Heinz Dilemma).",
+    "3_meisterklasse": "Understand the psychological foundations of parenting styles.",
+    "3_uebungen": "Apply Kohlberg's stages to moral dilemmas.",
+    "4_grundwissen": "Define the physical (puberty) and cognitive (abstract thought) changes.",
+    "4_anwendbarkeit": "Analyze the concept of 'Identity vs. Role Confusion' (Erikson/Marcia).",
+    "4_meisterklasse": "Discuss the 'Imaginary Audience' phenomenon and risk-taking behavior.",
+    "4_uebungen": "Assign identity statuses according to Marcia to case studies.",
+    "5_grundwissen": "Understand the transitions and challenges (career, partnership, family).",
+    "5_anwendbarkeit": "Analyze Sternberg's Triangular Theory of Love (Intimacy, Passion, Commitment).",
+    "5_meisterklasse": "Discuss the concept of 'Emerging Adulthood' by Arnett.",
+    "5_uebungen": "Apply Sternberg's theory to different relationship phases.",
+    "6_grundwissen": "Define the 'Midlife Crisis' (myth vs. reality) and 'Generativity vs. Stagnation'.",
+    "6_anwendbarkeit": "Understand the 'Sandwich Generation' phenomenon (caring for parents and children).",
+    "6_meisterklasse": "Analyze changes in the 'Big Five' personality traits across the lifespan.",
+    "6_uebungen": "Discuss case studies on generativity and stagnation.",
+    "7_grundwissen": "Distinguish cognitive changes (fluid vs. crystalline intelligence).",
+    "7_anwendbarkeit": "Analyze models of successful aging (e.g., SOC model).",
+    "7_meisterklasse": "Understand Carstensen's 'Socioemotional Selectivity Theory'.",
+    "7_uebungen": "Apply the SOC model to the challenges of aging.",
+    "8_grundwissen": "Learn the five stages of grief by Kübler-Ross.",
+    "8_anwendbarkeit": "Understand models of bereavement and the difference between grief and depression.",
+    "8_meisterklasse": "Discuss cultural differences in dealing with death and dying.",
+    "8_uebungen": "Analyze the stages of grief (Note: Be aware of criticisms of the model)."
+  },
+
+  "cognitivePsychologyOverview": {
+    "title": "Cognitive Psychology",
+    "description": "Explore the mental processes such as perception, memory, thinking, and language."
+  },
+  "cognitivePsychologyModuleTitles": {
+    "1": "Introduction & Perception",
+    "2": "Attention",
+    "3": "Sensory & Short-Term Memory",
+    "4": "Long-Term Memory",
+    "5": "Implicit Memory & Memory Illusions",
+    "6": "Language",
+    "7": "Problem Solving & Decision Making",
+    "8": "Artificial Intelligence & Cognition"
+  },
+  "cognitivePsychologyModuleDescriptions": {
+    "1_grundwissen": "Understand the difference between 'bottom-up' and 'top-down' processing.",
+    "1_anwendbarkeit": "Analyze optical illusions and their importance for design.",
+    "1_meisterklasse": "Discuss the Gestalt principles of perceptual organization.",
+    "1_uebungen": "Test your ability to identify 'bottom-up' and 'top-down' processes.",
+    "2_grundwissen": "Learn about filter theory (Broadbent) and attenuation theory (Treisman).",
+    "2_anwendbarkeit": "Understand the 'cocktail party effect' in your daily life.",
+    "2_meisterklasse": "Discuss the 'early' vs. 'late' selection debate in attention.",
+    "2_uebungen": "Apply the theories to scenarios of selective attention.",
+    "3_grundwissen": "Differentiate between iconic and echoic memory.",
+    "3_anwendbarkeit": "Understand the 'magic number 7 +/- 2' and the 'chunking' technique.",
+    "3_meisterklasse": "Analyze Baddeley's working memory model (phonological loop, etc.).",
+    "3_uebungen": "Test the capacity of your own short-term memory.",
+    "4_grundwissen": "Distinguish between episodic, semantic, and procedural memory.",
+    "4_anwendbarkeit": "Apply mnemonic techniques to improve your learning performance.",
+    "4_meisterklasse": "Discuss the role of the hippocampus in memory consolidation.",
+    "4_uebungen": "Classify memories as episodic, semantic, or procedural.",
+    "5_grundwissen": "Define priming and procedural learning as forms of implicit memory.",
+    "5_anwendbarkeit": "Recognize how advertising uses priming to influence your behavior.",
+    "5_meisterklasse": "Analyze the 'DRM paradigm' for creating false memories.",
+    "5_uebungen": "Experience the effect of memory illusions in an experiment.",
+    "6_grundwissen": "Learn the building blocks of language (phonemes, morphemes, syntax).",
+    "6_anwendbarkeit": "Understand the 'Sapir-Whorf hypothesis': Does language shape our thinking?",
+    "6_meisterklasse": "Discuss the neurological foundations: Broca's and Wernicke's areas.",
+    "6_uebungen": "Identify linguistic ambiguities and how they are resolved.",
+    "7_grundwissen": "Distinguish heuristics (rules of thumb) from algorithms.",
+    "7_anwendbarkeit": "Recognize the availability and representativeness heuristics in everyday life.",
+    "7_meisterklasse": "Analyze 'confirmation bias' in decision making.",
+    "7_uebungen": "Solve problems and identify the heuristics used.",
+    "8_grundwissen": "Understand the basic concepts of neural networks and machine learning.",
+    "8_anwendbarkeit": "Discuss the ethical implications of AI in diagnostics or therapy.",
+    "8_meisterklasse": "Compare cognitive architectures (e.g., ACT-R) with modern AI models.",
+    "8_uebungen": "Analyze how AI systems (e.g., ChatGPT) simulate cognitive processes."
+  },
+
+  "emotionMotivationOverview": {
+    "title": "Emotion & Motivation Psychology",
+    "description": "Explore the driving forces behind our behavior and the complex world of our feelings."
+  },
+  "emotionMotivationModuleTitles": {
+    "1": "Motivation: Theories & Concepts",
+    "2": "Hunger, Eating & Satiety",
+    "3": "Sexual Behavior",
+    "4": "Theories of Emotion",
+    "5": "The Biology of Emotion",
+    "6": "Expression & Regulation of Emotion"
+  },
+  "emotionMotivationModuleDescriptions": {
+    "1_grundwissen": "Understand the difference between intrinsic and extrinsic motivation, drive theory, and Maslow's hierarchy of needs.",
+    "1_anwendbarkeit": "Analyze how workplace bonuses (extrinsic) can undermine the actual joy of the work (intrinsic).",
+    "1_meisterklasse": "Discuss Self-Determination Theory and the three basic psychological needs.",
+    "1_uebungen": "Match everyday examples to the different theories of motivation.",
+    "2_grundwissen": "Learn the biological mechanisms (e.g., leptin, ghrelin) and psychological factors that control hunger and eating behavior.",
+    "2_anwendbarkeit": "Understand why diets often fail (set-point theory) and why we eat more when stressed.",
+    "2_meisterklasse": "Analyze the complex causes of eating disorders such as anorexia and bulimia.",
+    "2_uebungen": "Test your knowledge of the hormonal control of hunger.",
+    "3_grundwissen": "Explore the groundbreaking work of Kinsey and Masters & Johnson on the human sexual response cycle.",
+    "3_anwendbarkeit": "Understand the biological and social foundations of sexual orientation and gender identity.",
+    "3_meisterklasse": "Discuss the evolutionary and sociocultural perspectives on human mating behavior.",
+    "3_uebungen": "Identify the phases of the sexual response cycle.",
+    "4_grundwissen": "Compare the classic theories of emotion: James-Lange, Cannon-Bard, and the Schachter-Singer two-factor theory.",
+    "4_anwendbarkeit": "Analyze your own fear response: What came first, the thought, the physical reaction, or both at the same time?",
+    "4_meisterklasse": "Discuss the role of cognitive appraisal in the generation of emotions (Lazarus).",
+    "4_uebungen": "Apply the different theories to a specific emotional experience.",
+    "5_grundwissen": "Explore the key role of the limbic system, especially the amygdala, in processing fear and emotions.",
+    "5_anwendbarkeit": "Understand why emotional memories (e.g., in PTSD) are so strong and long-lasting.",
+    "5_meisterklasse": "Analyze the difference between the 'fast path' (amygdala) and the 'slow path' (cortex) of fear processing.",
+    "5_uebungen": "Match brain structures to their functions in emotion processing.",
+    "6_grundwissen": "Learn the seven universal basic emotions according to Paul Ekman and the cultural display rules.",
+    "6_anwendbarkeit": "Improve your emotional intelligence by better recognizing microexpressions in others.",
+    "6_meisterklasse": "Discuss the facial feedback hypothesis: Can smiling really improve your mood?",
+    "6_uebungen": "Analyze how different cultures regulate the expression of emotions."
+  },
+
+  "biologicalPsychologyOverview": {
+    "title": "Biological Psychology",
+    "description": "A journey to the biological roots of our behavior, thoughts, and feelings."
+  },
+  "biologicalPsychologyModuleTitles": {
+    "1": "Human Genetics & Behavior",
+    "2": "The Cells of the Nervous System",
+    "3": "The Nervous System: Structure & Function",
+    "4": "The Brain: Structures & Areas",
+    "5": "The Endocrine System"
+  },
+  "biologicalPsychologyModuleDescriptions": {
+    "1_grundwissen": "Understand the basics of behavioral genetics, the difference between genotype and phenotype, and the role of epigenetics.",
+    "1_anwendbarkeit": "Analyze twin studies and understand how they help separate the influence of nature and nurture.",
+    "1_meisterklasse": "Discuss the complex gene-environment interaction and the revolutionary role of epigenetics.",
+    "1_uebungen": "Test your knowledge of the basic concepts of genetics.",
+    "2_grundwissen": "Learn the structure of a neuron (dendrites, axon, synapse) and the role of glial cells.",
+    "2_anwendbarkeit": "Understand the 'all-or-none' principle of the action potential and how nerve signals are transmitted.",
+    "2_meisterklasse": "Analyze the role of neurotransmitters (e.g., dopamine, serotonin) and how psychotropic drugs work.",
+    "2_uebungen": "Label the parts of a neuron and explain their function.",
+    "3_grundwissen": "Distinguish the Central Nervous System (CNS) from the Peripheral Nervous System (PNS) and its subdivisions (somatic/autonomic).",
+    "3_anwendbarkeit": "Understand the 'fight-or-flight' response (sympathetic) and the 'rest-and-digest' response (parasympathetic).",
+    "3_meisterklasse": "Discuss the interplay of the different parts of the nervous system during a complex action like driving.",
+    "3_uebungen": "Assign bodily reactions to the sympathetic or parasympathetic system.",
+    "4_grundwissen": "Explore the main parts of the brain: brainstem, limbic system, and the four lobes of the cerebrum (frontal, parietal, temporal, occipital).",
+    "4_anwendbarkeit": "Understand the famous case study of Phineas Gage and the role of the frontal lobe in personality and impulse control.",
+    "4_meisterklasse": "Analyze the concept of hemispheric specialization (left vs. right) and the function of the corpus callosum.",
+    "4_uebungen": "Connect brain areas with their main functions (e.g., Broca's area with speech production).",
+    "5_grundwissen": "Learn the main glands (e.g., pituitary, thyroid, adrenals) and the hormones they produce.",
+    "5_anwendbarkeit": "Understand the role of adrenaline and cortisol in the stress response.",
+    "5_meisterklasse": "Discuss the interaction between the endocrine system and the nervous system (hypothalamic-pituitary axis).",
+    "5_uebungen": "Distinguish the function of hormones and neurotransmitters."
+  },
+
+  "personalityPsychologyOverview": {
+    "title": "Personality Psychology",
+    "description": "Explore the unique and stable patterns in individuals' thinking, feeling, and behaving."
+  },
+  "personalityPsychologyModuleTitles": {
+    "1": "Introduction & Basic Theories",
+    "2": "Psychodynamic Perspectives",
+    "3": "Humanistic & Existential Perspectives",
+    "4": "Dispositional Perspectives (Traits)",
+    "5": "Biological Perspectives",
+    "6": "Learning & Cognitive Perspectives",
+    "7": "Personality and Culture"
+  },
+  "personalityPsychologyModuleDescriptions": {
+    "1_grundwissen": "Defines personality and introduces central historical theories.",
+    "1_anwendbarkeit": "Recognize different personality concepts in everyday life.",
+    "1_meisterklasse": "Compare the views of human nature in different theoretical approaches.",
+    "1_uebungen": "Test your understanding of basic definitions and theories.",
+    "2_grundwissen": "Explains Freud's structural model (Id, Ego, Superego) and defense mechanisms.",
+    "2_anwendbarkeit": "Analyze everyday behavior using psychodynamic concepts like repression.",
+    "2_meisterklasse": "Discuss post-Freudian developments in psychoanalysis (e.g., Jung, Adler).",
+    "2_uebungen": "Apply your knowledge of psychodynamic processes to case examples.",
+    "3_grundwissen": "Introduces Maslow's hierarchy of needs and Rogers' concept of self-actualization.",
+    "3_anwendbarkeit": "Reflect on your own needs and the pursuit of personal growth.",
+    "3_meisterklasse": "Discuss the importance of meaning-making and existential questions for personality.",
+    "3_uebungen": "Test your understanding of humanistic and existential basic assumptions.",
+    "4_grundwissen": "Explains the trait approach and the Big Five model (Openness, Conscientiousness etc.).",
+    "4_anwendbarkeit": "Assess yourself and others based on the Big Five dimensions.",
+    "4_meisterklasse": "Discuss the stability of traits across the lifespan and situational influences.",
+    "4_uebungen": "Apply the Big Five model and understand the significance of traits.",
+    "5_grundwissen": "Highlights genetic influences (heritability) and neurobiological correlates of personality.",
+    "5_anwendbarkeit": "Understand the biological basis of temperament differences (e.g., shyness).",
+    "5_meisterklasse": "Discuss the interaction of genes and environment (Nature vs. Nurture debate).",
+    "5_uebungen": "Test your knowledge of the biological foundations of personality.",
+    "6_grundwissen": "Explains personality from the perspective of classical and social learning theories (e.g., Bandura).",
+    "6_anwendbarkeit": "Analyze how reward, punishment, and observational learning shape personality.",
+    "6_meisterklasse": "Discuss cognitive constructs like self-efficacy and locus of control.",
+    "6_uebungen": "Apply learning theoretical and cognitive principles to personality development.",
+    "7_grundwissen": "Examines how cultural contexts influence personality expressions (Individualism vs. Collectivism).",
+    "7_anwendbarkeit": "Reflect on cultural differences in self-concept and values.",
+    "7_meisterklasse": "Discuss the universality vs. cultural specificity of personality traits.",
+    "7_uebungen": "Test your understanding of the interplay between personality and culture."
+  },
+
+  "psychologicalDiagnosticsOverview": {
+    "title": "Psychological Assessment",
+    "description": "Explore the methods used to measure and evaluate psychological traits."
+  },
+  "psychologicalDiagnosticsModuleTitles": {
+    "1": "Foundations & Quality Criteria",
+    "2": "Classical Test Theory (CTT)",
+    "3": "Item Response Theory (IRT)",
+    "4": "Test Construction",
+    "5": "Intelligence Assessment",
+    "6": "Personality Assessment",
+    "7": "Behavioral Observation & Interview",
+    "8": "Report Writing & Ethics"
+  },
+  "psychologicalDiagnosticsModuleDescriptions": {
+    "1_grundwissen": "Define assessment and learn the three main quality criteria: Objectivity, Reliability, Validity.",
+    "1_anwendbarkeit": "Analyze why a test can be reliable but not valid.",
+    "1_meisterklasse": "Discuss the different types of validity (Content, Criterion, Construct).",
+    "1_uebungen": "Apply the quality criteria to case studies of test procedures.",
+    "2_grundwissen": "Understand the basic axiom of CTT: Observed Score = True Score + Error.",
+    "2_anwendbarkeit": "Analyze how the reliability (e.g., Retest, Split-Half) of a test is calculated.",
+    "2_meisterklasse": "Discuss the assumptions and limitations of Classical Test Theory.",
+    "2_uebungen": "Test your knowledge of the concepts 'True Score' and 'Measurement Error'.",
+    "3_grundwissen": "Learn the basic concept of IRT (Probabilistic Test Theory).",
+    "3_anwendbarkeit": "Understand the difference between item difficulty and item discrimination in IRT.",
+    "3_meisterklasse": "Discuss the advantages of IRT (e.g., adaptive testing) over CTT.",
+    "3_uebungen": "Interpret Item Characteristic Curves (ICCs).",
+    "4_grundwissen": "Follow the steps of a test construction process (Planning, Item Generation, Analysis).",
+    "4_anwendbarkeit": "Analyze different response formats (Multiple Choice, Rating Scale) and their pros & cons.",
+    "4_meisterklasse": "Understand the importance of norming and standardization samples (e.g., z-scores, T-scores).",
+    "4_uebungen": "Develop items for a simple construct (e.g., 'Satisfaction').",
+    "5_grundwissen": "Learn the most important models of intelligence (Spearman, Thurstone, CHC-Model).",
+    "5_anwendbarkeit": "Understand the structure and application of common tests (e.g., WISC, IST-2000R).",
+    "5_meisterklasse": "Discuss the 'Flynn Effect' and the controversies in intelligence research.",
+    "5_uebungen": "Interpret a fictional intelligence profile and calculate an IQ score.",
+    "6_grundwissen": "Differentiate between objective (e.g., NEO-FFI) and projective methods (e.g., Rorschach).",
+    "6_anwendbarkeit": "Analyze the 'Big Five' model of personality (Openness, Conscientiousness, etc.).",
+    "6_meisterklasse": "Discuss the validity and utility of projective tests.",
+    "6_uebungen": "Apply the Big Five model to describe a person.",
+    "7_grundwissen": "Learn the basics of the diagnostic interview (structured vs. unstructured).",
+    "7_anwendbarkeit": "Understand the methods of systematic behavioral observation (e.g., Time-Sampling).",
+    "7_meisterklasse": "Discuss typical judgment errors (Halo Effect, Leniency Effect) in interviews.",
+    "7_uebungen": "Develop an observation plan for a specific behavior.",
+    "8_grundwissen": "Understand the formal structure of a psychological report.",
+    "8_anwendbarkeit": "Analyze ethical dilemmas (e.g., confidentiality, test fairness).",
+    "8_meisterklasse": "Discuss the diagnostician's responsibility in high-stakes decisions (e.g., custody).",
+    "8_uebungen": "Evaluate case studies based on ethical guidelines."
+  },
+
+  "workAndOrgPsychologyOverview": {
+    "title": "Industrial & Organizational Psychology",
+    "description": "Explore the experience and behavior of people in organizations and at work."
+  },
+  "workAndOrgPsychologyModuleTitles": {
+    "1": "Introduction to I/O Psychology",
+    "2": "Job Analysis & Evaluation",
+    "3": "Personnel Selection",
+    "4": "PerformanceAppraisal & Development",
+    "5": "Work Motivation & Satisfaction",
+    "6": "Stress, Strain & Health",
+    "7": "Leadership",
+    "8": "Teamwork & Organizational Culture"
+  },
+  "workAndOrgPsychologyModuleDescriptions": {
+    "1_grundwissen": "Defines the field and its two main pillars: Industrial (Personnel) and Organizational Psychology.",
+    "1_anwendbarkeit": "Analyze a job advertisement regarding I/O-relevant requirements.",
+    "1_meisterklasse": "Discuss the 'scientist-practitioner' model in I/O Psychology.",
+    "1_uebungen": "Assign case studies to the fields of Industrial or Organizational Psychology.",
+    "2_grundwissen": "Learn methods for the systematic description and evaluation of work activities.",
+    "2_anwendbarkeit": "Understand how job analyses are used to create job requirement profiles.",
+    "2_meisterklasse": "Discuss the pros and cons of different analysis methods (e.g., observation vs. questionnaire).",
+    "2_uebungen": "Apply a simple analysis method to an everyday task.",
+    "3_grundwissen": "Basics of personnel assessment and the 'Big Three' (Intelligence, Integrity, Conscientiousness).",
+    "3_anwendbarkeit": "Analyze the 'predictive validity' of unstructured interviews vs. work samples.",
+    "3_meisterklasse": "Discuss legal and ethical aspects of personnel selection (e.g., discrimination).",
+    "3_uebungen": "Develop interview questions targeting specific competencies.",
+    "4_grundwissen": "Methods for measuring work performance and promoting competencies.",
+    "4_anwendbarkeit": "Recognize typical performance appraisal errors (e.g., halo effect, leniency effect).",
+    "4_meisterklasse": "Discuss the effectiveness of different training methods (e.g., on-the-job vs. simulation).",
+    "4_uebungen": "Identify appraisal errors in fictional employee reviews.",
+    "5_grundwissen": "Classic motivation theories (Maslow, Herzberg) and the Job Characteristics Model.",
+    "5_anwendbarkeit": "Apply the Job Characteristics Model to make a 'boring' job more motivating.",
+    "5_meisterklasse": "Discuss the role of intrinsic vs. extrinsic motivation and the 'overjustification effect'.",
+    "5_uebungen": "Analyze a scenario and identify the acting motivators and hygiene factors.",
+    "6_grundwissen": "The Transactional Model of Stress (Lazarus) and concepts like burnout.",
+    "6_anwendbarkeit": "Distinguish between 'stressors' (demands) and 'resources' at the workplace.",
+    "6_meisterklasse": "Discuss the three dimensions of burnout (exhaustion, cynicism, reduced efficacy).",
+    "6_uebungen": "Develop intervention strategies (preventive vs. reactive) for a stressed team.",
+    "7_grundwissen": "Differentiate between transactional and transformational leadership.",
+    "7_anwendbarkeit": "Recognize the four 'I's' of transformational leadership (e.g., inspirational motivation).",
+    "7_meisterklasse": "Discuss modern leadership concepts like 'Shared Leadership' or 'Authentic Leadership'.",
+    "7_uebungen": "Assign leadership behaviors to the transactional or transformational style.",
+    "8_grundwissen": "Phases of team development (Forming, Storming...) and models of organizational culture (Schein).",
+    "8_anwendbarkeit": "Identify 'groupthink' and how to prevent it.",
+    "8_meisterklasse": "Analyze the 'artifacts', 'values', and 'basic assumptions' of the culture in your (university) environment.",
+    "8_uebungen": "Apply the phases of team development to a project team."
+  },
+
+  "module10": {
+    "backToOverview": "Back to I/O Psychology Overview",
+    "contentNotAvailable": {
+      "title": "Content Coming Soon",
+      "description": "This lesson is currently under construction. Please check back soon!"
+    },
+    "ui": {
+      "showSolution": "Show Solution",
+      "hideSolution": "Hide Solution",
+      "quizTitle": "Single-Choice Questions",
+      "openTitle": "Open Questions",
+      "creativeTitle": "Creative Question",
+      "prevSection": "Previous Section",
+      "nextSection": "Next Section",
+      "backToOverviewButton": "Back to Overview"
+    },
+    "lessons": {
+      "1": {
+        "title": "Introduction to I/O Psychology",
+        "grundwissen": "<div class=\"space-y-4\"><p><strong>Industrial and Organizational (I/O) Psychology</strong> deals with the experience and behavior of people in organizational contexts, i.e., at work. It can be roughly divided into two areas:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Industrial Psychology (Personnel Psychology):</strong> Focus on the work activity itself, job analysis, work design, effects of work on people (e.g., stress, motivation).</li><li><strong>Organizational Psychology:</strong> Focus on the organization as a social system, interactions between people (leadership, teamwork), organizational culture, and development.</li></ul><p>The goal is to understand, explain, predict, and shape work-related processes and structures to promote both the performance and efficiency of the organization and the well-being and development of employees.</p></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><p>Let's take a typical <strong>job advertisement</strong>:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Job Description:</strong> What tasks does the job entail? (Industrial Psychology: Job Analysis)</li><li><strong>Requirements Profile:</strong> What knowledge, skills, abilities, and other characteristics (KSAOs) are sought? (Industrial Psychology: Personnel Assessment)</li><li><strong>'We Offer':</strong> Information about company culture, team, development opportunities. (Organizational Psychology: Culture, Leadership, Personnel Development)</li><li><strong>Selection Process:</strong> How are suitable candidates found? (Industrial Psychology: Personnel Selection)</li></ul><p>This already shows how both areas of I/O psychology intertwine to find the right person for the right job in the right organization.</p></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">The Scientist-Practitioner Model</h3><p>An important guiding principle of I/O Psychology is the Scientist-Practitioner. This means that I/O psychologists work in a scientifically sound manner (<strong>Scientist</strong>) and also apply this knowledge practically (<strong>Practitioner</strong>) to solve concrete problems in organizations.</p><p>They not only develop theories but also evaluate the effectiveness of their interventions (e.g., training, new selection procedures) using scientific methods. At the same time, experiences from practice feed back into research. This cycle ensures that I/O psychology remains both relevant and evidence-based.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "What is the primary focus of Industrial Psychology?", "a": ["Organizational culture", "Leadership", "Analysis and design of work activities"], "correct": 2 },
+            { "q": "The focus on the organization as a social system is typical of...", "a": ["Industrial Psychology", "Organizational Psychology", "Clinical Psychology"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "A company introduces a new employee appraisal system. Which area of I/O psychology is primarily involved here and why?", "solution": "Primarily Industrial Psychology (specifically: Personnel Psychology). It concerns performance appraisal, the development of criteria, and methods for measuring the work performance of individual employees. However, aspects of Organizational Psychology could also be relevant (e.g., employee acceptance of the system, impact on culture)." }
+          ],
+          "kreativ": "Think about your current 'job' (studies, apprenticeship, work). What current problem or challenge could an I/O psychologist investigate or improve?"
+        }
+      },
+      "2": {
+        "title": "Job Analysis & Evaluation",
+        "grundwissen": "<div class=\"space-y-4\"><p><strong>Job analysis</strong> is a systematic process for describing a work activity. It captures:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Tasks:</strong> What is done?</li><li><strong>Methods & Tools:</strong> How is it done?</li><li><strong>Context:</strong> Under what conditions is it done (e.g., noise, time pressure)?</li><li><strong>Requirements:</strong> What knowledge, skills, abilities, and other characteristics (KSAOs) are required?</li></ul><p>Methods for data collection include observation, interviews, questionnaires (e.g., F-JAS, PAQ), or analysis of documents.</p><p><strong>Job evaluation</strong> follows job analysis and aims to determine the relative value or difficulty of different positions within an organization, often as a basis for the salary structure.</p></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><p>Imagine a hospital wants to create a new position for a 'Nurse for Digital Patient Documentation'.</p><p>Using <strong>job analysis</strong>, one would:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li>Interview existing nurses and IT specialists about the tasks involved (entering data, maintaining systems, providing training).</li><li>Observe how similar tasks are currently performed.</li><li>Derive the necessary KSAOs (e.g., basic medical knowledge, IT skills, communication skills).</li></ul><p>The result is a detailed <strong>job requirements profile</strong>. Based on this, <strong>job evaluation</strong> can take place (e.g., assigning a salary grade compared to other positions).</p></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Methods of Job Analysis: Pros and Cons</h3><p>No method is perfect. The choice depends on the goal of the analysis.</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Observation:</strong> Good for manual tasks, provides realistic insights. Con: Observer effect (people behave differently), unsuitable for purely cognitive work.</li><li><strong>Interview (with job incumbent/supervisor):</strong> Flexible, allows follow-up questions, good for complex tasks. Con: Subjective, prone to social desirability, time-consuming.</li><li><strong>Standardized Questionnaire (e.g., PAQ):</strong> Objective, comparable results across many jobs, efficient. Con: Abstract, may not capture all specific details of a job.</li><li><strong>Diary Method:</strong> Captures rare but important events. Con: High effort for job incumbents.</li></ul><p>Often, a combination of different methods (method triangulation) is most effective.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "What are KSAOs?", "a": ["Key Strategic Organizational Objectives", "Knowledge, Skills, Abilities, and Other Characteristics", "Context, Systems, Tasks, Organization"], "correct": 1 },
+            { "q": "Which job analysis method is particularly suitable for purely cognitive tasks?", "a": ["Observation", "Interview", "Analysis of physical workflows"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Why is a careful job analysis the foundation for many other personnel psychology measures (e.g., personnel selection, performance appraisal)?", "solution": "Because it defines WHAT is done in a job and WHAT is needed for it. Without this knowledge, one cannot establish valid selection criteria (who am I looking for?), define relevant performance indicators (what am I evaluating?), or determine meaningful training content (what needs to be developed?)." }
+          ],
+          "kreativ": "Choose an activity you know well (e.g., cooking, cycling, a specific task in your studies). Try to roughly list the main tasks and the KSAOs required for it."
+        }
+      },
+      "3": {
+        "title": "Personnel Selection",
+        "grundwissen": "<div class=\"space-y-4\"><p><strong>Personnel selection</strong> is the process of choosing from a pool of applicants those who are best suited for a position. The goal is to maximize the fit between the person and the job (Person-Job Fit) or the person and the organization (Person-Organization Fit).</p><p>The basis is the <strong>job requirements profile</strong> (from the job analysis). Based on this, <strong>personnel assessment methods</strong> are selected to measure the relevant KSAOs in applicants. Important quality criteria for these methods are:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Objectivity:</strong> Independence from the assessor.</li><li><strong>Reliability:</strong> Measurement accuracy, consistency.</li><li><strong>Validity:</strong> Does the method measure what it is supposed to measure? (Especially important: Predictive Validity - does the result predict future job success?)</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><p>Which methods have proven particularly valid for predicting job success?</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>High Validity:</strong> Intelligence tests (cognitive ability tests), work samples, structured employment interviews, assessment centers (combine multiple methods).</li><li><strong>Medium Validity:</strong> Conscientiousness tests (personality), biographical questionnaires.</li><li><strong>Low Validity:</strong> Unstructured interviews, references, interest tests, graphology (handwriting analysis - no scientific validity!).</li></ul><p><strong>Practical Implication:</strong> Companies should focus on valid methods. A common mistake is overestimating the unstructured interview ('gut feeling'). <strong>Structured interviews</strong>, where all applicants are asked the same questions in the same order and evaluated according to predefined criteria, are significantly more valid.</p></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Legal and Ethical Aspects</h3><p>Personnel selection is subject to strict legal frameworks, particularly non-discrimination laws (e.g., Equal Employment Opportunity laws). Selection procedures must not disadvantage applicants based on gender, age, origin, religion, disability, or sexual identity, unless there is a bona fide occupational qualification (BFOQ) (e.g., physical requirements for firefighters).</p><p>Ethical aspects include transparency towards applicants, fairness of procedures, data protection, and avoiding procedures that disproportionately invade privacy.</p><p><strong>Example:</strong> Asking about pregnancy in job interviews is generally impermissible in many countries.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Which quality criterion describes whether a test predicts future job success?", "a": ["Objectivity", "Reliability", "Predictive Validity"], "correct": 2 },
+            { "q": "Which method typically has the highest validity?", "a": ["Unstructured Interview", "Graphology", "Intelligence Test"], "correct": 2 }
+          ],
+          "open": [
+            { "q": "Why is a structured interview more valid than an unstructured one?", "solution": "Structured interviews reduce subjective influences and biases. Standardized questions and criteria increase the comparability of applicants and focus on the actual relevant requirements, rather than on the interviewer's sympathy or 'gut feeling'." }
+          ],
+          "kreativ": "Develop two short, behavior-based interview questions for the competency 'teamwork'. (Hint: Ask about specific past situations)."
+        }
+      },
+      "4": {
+        "title": "Performance Appraisal & Development",
+        "grundwissen": "<div class=\"space-y-4\"><p><strong>Performance appraisal</strong> is the systematic evaluation of employees' job performance. It serves various purposes:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Administrative:</strong> Basis for decisions about salary, promotion, termination.</li><li><strong>Feedback & Development:</strong> Identification of strengths and weaknesses, derivation of development needs.</li><li><strong>Research:</strong> Evaluation of selection procedures or training programs.</li></ul><p>Methods range from simple rankings to rating scales (graphic scales, behaviorally anchored rating scales - BARS) to Management by Objectives (MbO).</p><p><strong>Personnel development</strong> includes all measures to promote the professional qualifications and competencies of employees (e.g., training, coaching, mentoring, job rotation).</p></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><p>A major problem in performance appraisals are <strong>rating errors</strong>, i.e., systematic biases in perception and evaluation:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Halo Effect:</strong> A single (positive or negative) trait overshadows the entire evaluation. (e.g., An always friendly employee is also rated as very competent, although this is not true).</li><li><strong>Leniency/Severity Effect:</strong> Raters tend to give generally too high or too low ratings.</li><li><strong>Central Tendency Error:</strong> Extreme judgments are avoided.</li><li><strong>Similarity Error:</strong> Employees similar to the rater are rated more favorably.</li><li><strong>Primacy/Recency Effect:</strong> The first or the last impression counts disproportionately.</li></ul><p><strong>Countermeasures:</strong> Rater training, use of clearly defined criteria (e.g., BARS), obtaining feedback from multiple sources (360-degree feedback).</p></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Effectiveness of Training Methods</h3><p>Not every training method is equally effective. Research shows:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>High Effectiveness:</strong> Methods that allow active practice and feedback (e.g., simulations, role-playing, on-the-job training with guidance).</li><li><strong>Medium Effectiveness:</strong> Case studies, group discussions.</li><li><strong>Low Effectiveness:</strong> Pure lectures, reading assignments (without application).</li></ul><p><strong>Transfer</strong> is also important: Is what was learned actually applied on the job? This is promoted by supervisor support, opportunities for application, and a positive learning culture in the company.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "When a rater tends to rate all employees above average, this is called the...", "a": ["Halo Effect", "Leniency Effect", "Recency Effect"], "correct": 1 },
+            { "q": "Which training method typically has the lowest effectiveness for skill acquisition?", "a": ["Simulation", "Role-Playing", "Pure Lecture"], "correct": 2 }
+          ],
+          "open": [
+            { "q": "What is the difference between performance appraisal and potential appraisal?", "solution": "Performance appraisal evaluates the *current* performance in the *current* position (past-oriented). Potential appraisal assesses the employee's *future* development capability, often concerning higher-level positions (future-oriented)." }
+          ],
+          "kreativ": "Imagine you have to design a short training session on 'Active Listening'. Which methods would you use to ensure high effectiveness and good transfer?"
+        }
+      },
+      "5": {
+        "title": "Work Motivation & Satisfaction",
+        "grundwissen": "<div class=\"space-y-4\"><p><strong>Work motivation</strong> refers to the processes that influence the direction, intensity, and persistence of human behavior at work.</p><p>Classic Theories:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Hierarchy of Needs (Maslow):</strong> Motivation arises from unmet needs (physiological -> safety -> social -> esteem -> self-actualization).</li><li><strong>Two-Factor Theory (Herzberg):</strong> Distinguishes hygiene factors (prevent dissatisfaction, e.g., salary, working conditions) and motivators (create satisfaction, e.g., recognition, responsibility, growth).</li></ul><p>Modern Theories (Examples):</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Job Characteristics Model (Hackman & Oldham):</strong> Motivation arises from specific job characteristics (skill variety, task identity, task significance, autonomy, feedback).</li><li><strong>Goal-Setting Theory (Locke & Latham):</strong> Specific, difficult, but accepted goals lead to higher performance.</li></ul><p><strong>Job satisfaction</strong> is a person's affective (emotional) attitude towards their job.</p></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><p>The <strong>Job Characteristics Model</strong> provides concrete starting points for increasing motivation through job design (Job Enrichment/Enlargement):</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Increase Skill Variety:</strong> Let employees perform different tasks (instead of monotony).</li><li><strong>Increase Task Identity:</strong> Let employees create a complete product/service (instead of just a small part).</li><li><strong>Clarify Task Significance:</strong> Show the meaning and impact of the work.</li><li><strong>Grant Autonomy:</strong> Give employees more decision-making power in carrying out their work.</li><li><strong>Enable Feedback:</strong> Provide regular feedback on work performance (directly from the task or through supervisors).</li></ul><p><strong>Example:</strong> A call center agent who only reads scripts (low variety, autonomy) might be more motivated if allowed to handle more complex inquiries, develop their own solutions (more autonomy, variety), and receive direct customer feedback.</p></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Intrinsic vs. Extrinsic Motivation & the Overjustification Effect</h3><p>Motivation can come from within (intrinsic) or outside (extrinsic):</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Intrinsic Motivation:</strong> Doing something because the activity itself is enjoyable or interesting (e.g., a hobby).</li><li><strong>Extrinsic Motivation:</strong> Doing something because of the consequences (e.g., reward, punishment, social pressure).</li></ul><p>The <strong>Overjustification Effect</strong> states that an originally intrinsically motivated activity can lose its appeal if it is suddenly extrinsically rewarded. The person then attributes their behavior not to their own interest ('I do it because it's fun') but to the external reward ('I do it for the money'). If the reward is removed, motivation often drops below the original level.</p><p><strong>Implication:</strong> Purely monetary incentives can undermine intrinsic motivation. Recognition, autonomy, and interesting tasks are often more sustainable motivators.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Which theory distinguishes between hygiene factors and motivators?", "a": ["Maslow's Hierarchy of Needs", "Herzberg's Two-Factor Theory", "Locke's Goal-Setting Theory"], "correct": 1 },
+            { "q": "When an activity is performed for its own sake, it is called...", "a": ["Extrinsic Motivation", "Intrinsic Motivation", "Goal Setting"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Name the five core job characteristics of the Job Characteristics Model.", "solution": "1. Skill Variety, 2. Task Identity, 3. Task Significance, 4. Autonomy, 5. Feedback from the job." }
+          ],
+          "kreativ": "Describe a situation where you experienced the overjustification effect (e.g., a hobby turned into a paid job and lost its appeal)."
+        }
+      },
+      "6": {
+        "title": "Stress, Strain & Health",
+        "grundwissen": "<div class=\"space-y-4\"><p><strong>Stress</strong> at work occurs when the demands (stressors) exceed a person's coping resources.</p><p>The <strong>Transactional Model of Stress (Lazarus & Folkman)</strong> emphasizes subjective appraisal:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Primary Appraisal:</strong> Is the situation relevant? Is it threatening, challenging, or irrelevant?</li><li><strong>Secondary Appraisal:</strong> Do I have the resources to cope with the situation?</li></ul><p>Stress arises only when a situation is appraised as threatening/challenging AND one's own resources are deemed insufficient.</p><p><strong>Stressors</strong> can include: time pressure, workload, role conflicts, social conflicts, poor working conditions.</p><p><strong>Resources</strong> can include: social support, job control (autonomy), skills, positive self-efficacy beliefs.</p><p>Long-term stress can lead to negative consequences: psychological (e.g., <strong>burnout</strong>, depression, anxiety) and physical (e.g., cardiovascular diseases).</p></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><p>The <strong>Job Demands-Resources (JD-R) Model</strong> is a further development and very relevant in practice. It posits two processes:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Health Impairment Process:</strong> High demands lead via strain to negative consequences such as burnout and health problems.</li><li><strong>Motivational Process:</strong> High resources (e.g., autonomy, support) lead via work engagement to positive consequences such as high performance and organizational commitment.</li></ul><p>The <strong>Buffer Hypothesis</strong> is important: Resources can mitigate the negative effects of demands. A person with strong social support can cope better with high time pressure.</p><p><strong>Interventions:</strong> Stress management should not only focus on the individual (e.g., relaxation techniques) but also improve working conditions (situational prevention): reduce demands and/or strengthen resources.</p></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Burnout: More Than Just Exhaustion</h3><p>Burnout is often equated with mere exhaustion. However, according to Maslach & Jackson, the syndrome comprises three dimensions:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Emotional Exhaustion:</strong> Feeling drained and overwhelmed.</li><li><strong>Depersonalization/Cynicism:</strong> A detached, negative, or cynical attitude towards work and people (clients, customers, colleagues).</li><li><strong>Reduced Personal Accomplishment:</strong> Feeling incompetent and unable to make a difference at work.</li></ul><p>This differentiation is important for diagnosis and intervention. Not all exhaustion is burnout. It is the interplay of the three dimensions, especially cynicism, that constitutes the full picture.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "What does the buffer hypothesis in the JD-R model state?", "a": ["Resources amplify the negative effects of demands.", "Resources can mitigate the negative effects of demands.", "Demands and resources act independently."], "correct": 1 },
+            { "q": "Which dimension is NOT part of the burnout syndrome according to Maslach & Jackson?", "a": ["Emotional Exhaustion", "Physical Illness", "Depersonalization/Cynicism"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Name two examples each of job-related demands (stressors) and resources.", "solution": "Demands: High time pressure, unclear work assignments, conflicts with colleagues, noise at the workplace. Resources: Job control (autonomy), social support from colleagues/supervisors, training opportunities, clear feedback." }
+          ],
+          "kreativ": "Develop a concrete measure to strengthen resources at the workplace to counteract the health impairment process."
+        }
+      },
+      "7": {
+        "title": "Leadership",
+        "grundwissen": "<div class=\"space-y-4\"><p><strong>Leadership</strong> is the process of influencing individuals or groups to achieve common goals.</p><p>Classic approaches focused on traits (Trait Approach: 'born leaders') or behavioral styles (e.g., task-oriented vs. employee-oriented).</p><p>Modern approaches emphasize interaction and context:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Contingency Theories (e.g., Fiedler):</strong> There is no 'best' leadership style; success depends on the situation.</li><li><strong>Transactional Leadership:</strong> Based on an exchange relationship (reward for performance, correction for deviation). Focus on management tasks.</li><li><strong>Transformational Leadership:</strong> Inspiring leadership that motivates employees beyond their self-interest. Focus on visions and change.</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><p><strong>Transformational Leadership</strong> (Bass) is considered particularly effective today for promoting performance, satisfaction, and engagement. It comprises four components (the '4 I's'):</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Idealized Influence:</strong> The leader serves as a role model who is trusted and emulated (charisma).</li><li><strong>Inspirational Motivation:</strong> Communicating an attractive vision, enthusiasm for goals.</li><li><strong>Intellectual Stimulation:</strong> Encouraging creative and independent thinking, questioning assumptions.</li><li><strong>Individualized Consideration:</strong> Addressing the individual needs and strengths of employees, coaching and mentoring.</li></ul><p><strong>Example:</strong> A leader who not only sets clear goals (transactional) but also conveys an inspiring vision for the team's future and supports each individual's development is leading transformationally.</p></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Newer Leadership Concepts</h3><p>Leadership research is constantly evolving. Current concepts include:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Authentic Leadership:</strong> Emphasizes self-awareness, transparency, ethical behavior, and balanced processing by the leader.</li><li><strong>Ethical Leadership:</strong> Modeling normatively appropriate conduct and promoting it among employees.</li><li><strong>Servant Leadership:</strong> Focus on the well-being and growth of employees; the leader sees themselves as a supporter.</li><li><strong>Shared Leadership:</strong> Leadership is not a process solely emanating from one person but can be dynamically distributed within the team.</li></ul><p>These approaches often complement transformational leadership and emphasize specific aspects such as ethics, authenticity, or the distribution of responsibility.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Which leadership style is primarily based on an exchange relationship (reward for performance)?", "a": ["Transformational", "Transactional", "Laissez-faire"], "correct": 1 },
+            { "q": "Encouraging creative thinking is characteristic of which component of transformational leadership?", "a": ["Idealized Influence", "Inspirational Motivation", "Intellectual Stimulation"], "correct": 2 }
+          ],
+          "open": [
+            { "q": "Explain the main difference between transactional and transformational leadership.", "solution": "Transactional leadership focuses on managing tasks and rewards/corrections within existing structures ('Do this, get that'). Transformational leadership aims to intrinsically motivate employees, convey a vision, and inspire them to grow beyond their previous performance and co-create change." }
+          ],
+          "kreativ": "Describe a person (real or fictional) whom you perceive as a good leader. What characteristics (transformational, ethical, authentic, etc.) does this person exhibit?"
+        }
+      },
+      "8": {
+        "title": "Teamwork & Organizational Culture",
+        "grundwissen": "<div class=\"space-y-4\"><p><strong>Teams (Work Groups)</strong> are social units of two or more people who interact and are interdependent to achieve common goals.</p><p><strong>Team development</strong> often proceeds in stages (e.g., according to Tuckman):</p><ol class=\"list-decimal list-inside space-y-1 pl-4\"><li><strong>Forming:</strong> Uncertainty, getting acquainted.</li><li><strong>Storming:</strong> Conflicts over roles, goals, leadership.</li><li><strong>Norming:</strong> Development of norms, cohesion.</li><li><strong>Performing:</strong> Focus on the task, effective collaboration.</li><li><strong>Adjourning:</strong> For temporary teams.</li></ol><p><strong>Organizational culture</strong> is the shared system of values, norms, beliefs, and assumptions that shapes the behavior of organizational members ('How we do things around here'). According to Schein, there are three levels: visible artifacts, espoused values, and basic underlying assumptions.</p></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><p>Team performance is not always better than the sum of individual performances. There are potential <strong>process gains</strong> (e.g., synergy, error correction) but also <strong>process losses</strong>:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Coordination Losses:</strong> Time and energy lost on coordination.</li><li><strong>Motivation Losses:</strong><ul class=\"list-disc list-inside pl-6 mt-1\"><li><strong>Social Loafing:</strong> Individuals exert less effort because their contribution is not identifiable.</li><li><strong>Free Riding:</strong> Individuals reduce their performance because they believe their contribution is not important.</li><li><strong>Sucker Effect:</strong> High performers reduce their effort because they don't want to be exploited.</li></ul></li><li><strong>Groupthink:</strong> Striving for consensus suppresses critical thinking and leads to poor decisions.</li></ul><p><strong>Countermeasures:</strong> Clear goals, identifiability of individual contributions, promoting open communication and critical thinking.</p></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Schein's Levels of Organizational Culture</h3><p>To understand a culture, one must look deeper:</p><ul class=\"list-disc list-inside space-y-3 pl-4\"><li><strong>Level 1: Artifacts:</strong> The visible and audible - architecture, dress code, language, rituals, stories. Easy to observe, but hard to interpret. (e.g., open-plan offices, using first names).</li><li><strong>Level 2: Espoused Values:</strong> What the organization officially says is important - mission statements, strategies, goals. (e.g., 'We are customer-oriented'). These may or may not align with actual behavior.</li><li><strong>Level 3: Basic Underlying Assumptions:</strong> The deepest, unconscious, taken-for-granted beliefs about how the world works, what is right and wrong. Hard to discern, but they most strongly guide behavior. (e.g., 'Conflict is always bad and must be avoided' vs. 'Conflict is productive').</li></ul><p>Cultural development often involves working on these deep basic assumptions.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Which stage of team development according to Tuckman is often characterized by conflict?", "a": ["Forming", "Storming", "Norming"], "correct": 1 },
+            { "q": "The phenomenon where individuals exert less effort in a group because their contribution is not visible is called...", "a": ["Groupthink", "Social Loafing", "Sucker Effect"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Name the three levels of organizational culture according to Schein.", "solution": "1. Artifacts (visible, e.g., clothing, office design), 2. Espoused Values (stated, e.g., mission statement), 3. Basic Underlying Assumptions (unconscious, taken-for-granted)." }
+          ],
+          "kreativ": "Describe an 'artifact' from an organization you know (university, work, club). What 'espoused values' or 'basic assumptions' might lie behind it?"
+        }
+      }
+    }
+  },
+
+ "module6": {
+    "backToOverview": "Back to Emotion & Motivation Psychology Overview",
+    "contentError": {
+      "title": "Loading Error",
+      "description": "The content for this lesson could not be loaded. Please try again later or check the translation files."
+    },
+    "ui": {
+      "showSolution": "Show Solution",
+      "hideSolution": "Hide Solution",
+      "quizTitle": "Single-Choice Questions",
+      "openTitle": "Open Questions",
+      "creativeTitle": "Creative Question",
+      "prevSection": "Previous Section",
+      "nextSection": "Next Section",
+      "backToOverviewButton": "Back to Overview",
+      "grundwissenTitle": "Basic Knowledge",
+      "anwendbarkeitTitle": "Applicability",
+      "meisterklasseTitle": "Masterclass",
+      "uebungenTitle": "Exercises",
+      "loadingError": "Error loading exercise data."
+    },
+    "lessons": {
+      "1": {
+        "title": "Motivation: Theories & Concepts",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">Motivation describes the wants or needs that direct and drive our behavior. It's the 'why' behind our actions.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">Intrinsic vs. Extrinsic Motivation</h3><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Intrinsic Motivation:</strong> Arises from internal factors. We do something because it brings us joy, interest, or a sense of fulfillment. (Example: Reading a book out of pure curiosity).</li><li><strong>Extrinsic Motivation:</strong> Arises from external factors. We do something to receive a reward or avoid punishment. (Example: Reading a book to get a good grade on a test).</li></ul><h3 class=\"text-2xl font-semibold border-b pb-2\">Classic Motivation Theories</h3><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Drive Theory:</strong> States that deviations from homeostasis (biological equilibrium) create physiological needs. These needs lead to psychological drives (e.g., hunger, thirst) that motivate us to restore balance.</li><li><strong>Maslow's Hierarchy of Needs:</strong> Abraham Maslow proposed a hierarchy of needs in pyramid form. Basic needs (like physiological and safety needs) must be met before higher needs (social needs, self-esteem, self-actualization) become motivating.</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">The Overjustification Effect</h3><p class=\"text-lg leading-relaxed\">What happens when you externally reward an activity someone already enjoys (intrinsic motivation)?</p><p>Studies show this can backfire. The <strong>Overjustification Effect</strong> states that an external reward can undermine a person's intrinsic motivation. The person begins to see their behavior as justified by the reward rather than their own interest.</p><p><strong>Example:</strong> A child who enjoys drawing for fun receives one dollar from their parents for each drawing. Suddenly, drawing becomes a 'job'. If the parents stop giving money, the child often loses interest in drawing – the original intrinsic joy was 'extinguished' by the extrinsic reward.</p><p><strong>Application in Management:</strong> Unexpected verbal praise is often more effective for boosting motivation than predictable material bonuses, as it enhances feelings of competence without undermining intrinsic motivation.</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Self-Determination Theory (Deci &amp; Ryan)</h3><p>This modern theory expands on the concept of intrinsic motivation. It posits that humans have an innate drive for growth based on three universal psychological needs:</p><ol class=\"list-decimal list-inside space-y-3 pl-2\"><li><strong>Autonomy:</strong> The need to control one's own life and make decisions consistent with one's values.</li><li><strong>Competence:</strong> The need to feel capable and effective in dealing with challenges.</li><li><strong>Relatedness:</strong> The need to feel connected to others, belong, and care for others.</li></ol><p>An environment that nurtures these three needs promotes optimal motivation, performance, and well-being. Unlike Maslow's hierarchy, these needs do not have to be satisfied in a specific order but are all important simultaneously.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "If you complete a task because you find it exciting, this is an example of...", "a": ["Extrinsic Motivation", "Intrinsic Motivation", "Drive Reduction"], "correct": 1 },
+            { "q": "Which need is at the top of Maslow's pyramid?", "a": ["Safety", "Esteem", "Self-Actualization"], "correct": 2 }
+          ],
+          "open": [
+            { "q": "Explain the overjustification effect using your own example.", "solution": "Example: Someone loves cooking for friends as a hobby. They complete culinary training and work as a chef in a stressful restaurant. The pay (extrinsic) and pressure replace the original joy (intrinsic), and they lose the desire to cook, even in their free time." }
+          ],
+          "kreativ": "How could a teacher foster the three basic psychological needs from Self-Determination Theory in the classroom to enhance students' learning motivation?"
+        }
+      },
+      "2": {
+        "title": "Hunger, Eating & Satiety",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">Our eating behavior is controlled by a complex interplay of biological and psychological factors.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">Biological Mechanisms</h3><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Homeostasis:</strong> The body strives to maintain a stable energy level.</li><li><strong>Hormones:</strong> Hunger and satiety signals are regulated by hormones. <strong>Ghrelin</strong> ('hunger hormone') is secreted when the stomach is empty. <strong>Leptin</strong> ('satiety hormone') is released by fat cells and signals the brain that enough energy is available.</li><li><strong>Hypothalamus:</strong> A key brain region that integrates these signals and controls feelings of hunger and fullness.</li></ul><h3 class=\"text-2xl font-semibold border-b pb-2\">Set-Point Theory</h3><p>This theory suggests that each individual has a genetically predetermined 'set point' weight. The body actively tries to maintain this weight by slowing metabolism and increasing hunger during weight loss, and speeding up metabolism during weight gain.</p></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Why Diets Often Fail</h3><p class=\"text-lg leading-relaxed\">Set-point theory provides a compelling explanation for why it's so difficult to lose weight and keep it off.</p><p>When a person starts a calorie-restricted diet and loses weight, their body interprets this as famine. It actively fights against weight loss:</p><ol class=\"list-decimal list-inside space-y-3 pl-2\"><li><strong>Metabolism slows down:</strong> The body enters 'energy-saving mode' and burns fewer calories at rest.</li><li><strong>Hunger increases:</strong> The body releases more ghrelin to encourage food intake.</li></ol><p>The result is the dreaded 'diet plateau,' where weight loss stalls despite continued dieting. Once the person stops dieting, the still-slowed metabolism leads to rapid weight regain, often exceeding the initial weight (yo-yo effect). This is not a sign of weak willpower but a strong biological response.</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Psychological and Social Influences on Eating Behavior</h3><p>Besides biology, external and psychological factors also control what and how much we eat:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Portion Size:</strong> We tend to eat more when served larger portions, regardless of our actual hunger.</li><li><strong>Social Context:</strong> We often eat more in the company of others than alone.</li><li><strong>'Externals' vs. 'Internals':</strong> Some people (Externals) let their eating behavior be strongly guided by external cues (e.g., sight of food, time of day), while others (Internals) rely more on internal hunger and satiety signals.</li><li><strong>Emotional Eating:</strong> Many people eat in response to negative emotions like stress, boredom, or sadness.</li></ul></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Which hormone is known as the ‘satiety hormone’?", "a": ["Ghrelin", "Leptin", "Insulin"], "correct": 1 },
+            { "q": "The theory that the body attempts to maintain a specific weight is called...", "a": ["Drive Theory", "Homeostasis Theory", "Set-Point Theory"], "correct": 2 }
+          ],
+          "open": [
+            { "q": "Explain the yo-yo effect after a diet using set-point theory.", "solution": "During a diet, the body lowers its metabolism to conserve energy. After the diet, the person returns to normal eating habits, but the metabolism remains slowed for a while. As a result, more calories are stored as fat, leading to rapid weight regain." }
+          ],
+          "kreativ": "Design three concrete strategies to reduce the influence of external food cues in daily life."
+        }
+      },
+      "3": {
+        "title": "Sexual Behavior",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">The scientific study of human sexual behavior was long taboo. Researchers like Alfred Kinsey and William Masters & Virginia Johnson were pioneers.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">The Kinsey Reports</h3><p>In the 1940s and 50s, Alfred Kinsey conducted large-scale surveys on sexual behavior. His findings were shocking for the time, showing that behaviors like masturbation or homosexual experiences were far more common than publicly admitted. He also proposed viewing sexual orientation as a continuum (the Kinsey scale) rather than a strict dichotomy.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">The Sexual Response Cycle (Masters &amp; Johnson)</h3><p>Masters and Johnson observed thousands of sexual acts in the lab and described a four-phase cycle of physiological arousal:</p><ol class=\"list-decimal list-inside space-y-3 pl-2\"><li><strong>Excitement Phase:</strong> Start of sexual arousal, erection in men, lubrication in women.</li><li><strong>Plateau Phase:</strong> Arousal intensifies further.</li><li><strong>Orgasm Phase:</strong> Rhythmic contractions of pelvic muscles and the peak of sexual pleasure.</li><li><strong>Resolution Phase:</strong> The body returns to its unaroused state. Men experience a refractory period during which another orgasm is impossible.</li></ol></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Sexual Orientation and Gender Identity</h3><p class=\"text-lg leading-relaxed\">It's crucial to distinguish these two concepts:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Sexual Orientation:</strong> Refers to emotional, romantic, and sexual attraction to others (e.g., heterosexual, homosexual, bisexual). Research strongly suggests that sexual orientation has a biological basis and is not a conscious choice.</li><li><strong>Gender Identity:</strong> A person's deeply felt, internal sense of being male, female, both, or neither. It may align with the sex assigned at birth (cisgender) or not (transgender).</li></ul><p>Understanding this distinction is fundamental for respectful and informed engagement with the diversity of human identities and relationships.</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Evolutionary Perspectives on Mating Behavior</h3><p>Evolutionary psychology attempts to explain differences in mating behavior between the sexes through differing 'reproductive investments'.</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Parental Investment Theory:</strong> Women have a higher minimum investment in reproduction (pregnancy, lactation). They are therefore evolutionarily 'programmed' to be more selective in mate choice and seek partners with resources and stability.</li><li><strong>Male Strategies:</strong> Men have a lower minimum investment. Their evolutionarily successful strategy might involve spreading their genes widely, potentially leading to a greater willingness for short-term sexual relationships.</li></ul><p><strong>Critique:</strong> These theories are controversial. They can explain important biological tendencies but risk naturalizing and justifying culturally shaped gender roles. Sociocultural factors (e.g., access to education and economic power) have an enormous influence on mate choice that goes beyond purely biological explanations.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Which phase follows the plateau phase in the sexual response cycle?", "a": ["Excitement Phase", "Resolution Phase", "Orgasm Phase"], "correct": 2 },
+            { "q": "A person's internal sense of being male or female is called...", "a": ["Sexual Orientation", "Gender Identity", "Gender Role"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "What was the most important contribution of the Kinsey reports?", "solution": "The Kinsey reports broke a societal taboo and showed through empirical data that there was a large discrepancy between the public moral discourse about sex and people's actual, private sexual behavior. They significantly contributed to normalizing scientific sex research." }
+          ],
+          "kreativ": "Discuss the strengths and weaknesses of the evolutionary explanation for gender differences in mate selection."
+        }
+      },
+      "4": {
+        "title": "Emotion Theories",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">An emotion is a complex, subjective state that often occurs in response to an experience and is associated with physiological and behavioral changes. But what comes first: the feeling or the bodily reaction?</p><h3 class=\"text-2xl font-semibold border-b pb-2\">The Classic Theories</h3><ul class=\"list-disc list-inside space-y-4 pl-2\"><li><strong>James-Lange Theory:</strong> The intuitive view is wrong. We don't cry because we're sad; we're sad because we cry. Emotion is the perception of our own physiological response to a stimulus.<br/>(Stimulus → Physiological Arousal → Emotion)</li><li><strong>Cannon-Bard Theory:</strong> Physiological arousal and emotional experience occur <strong>simultaneously and independently</strong>. When we see a bear, the thalamus sends signals simultaneously to the cortex (creating fear) and the sympathetic nervous system (creating a racing heart).<br/>(Stimulus → Physiological Arousal + Emotion)</li><li><strong>Schachter-Singer Two-Factor Theory:</strong> Emotions have two ingredients: non-specific physiological arousal and a <strong>cognitive appraisal</strong> (label) that explains this arousal. Arousal alone is not sufficient.<br/>(Stimulus → Physiological Arousal → Cognitive Appraisal → Emotion)</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">The Suspension Bridge Study (Dutton &amp; Aron)</h3><p class=\"text-lg leading-relaxed\">This famous experiment is a perfect demonstration of the Two-Factor Theory.</p><p><strong>The Setup:</strong> Male participants crossed either a shaky, fear-inducing suspension bridge (high physiological arousal) or a stable, safe bridge (low arousal). At the end of the bridge, they were approached by an attractive female interviewer who gave them her phone number.</p><p><strong>The Result:</strong> The men who had crossed the fear-inducing bridge called the interviewer significantly more often than the men from the safe bridge.</p><p><strong>Interpretation (Two-Factor Theory):</strong> The men on the suspension bridge experienced strong but non-specific physiological arousal (racing heart, sweaty palms). They mistakenly attributed this arousal not to the fear of the bridge, but interpreted it as sexual attraction to the interviewer (<strong>misattribution of arousal</strong>). This shows how cognitive appraisal determines the quality of our emotions.</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Lazarus' Cognitive-Mediational Theory</h3><p>Richard Lazarus went a step further than Schachter and Singer. He argued that an emotion cannot arise without a prior cognitive appraisal of the stimulus. This appraisal often occurs unconsciously and lightning-fast.</p><p><strong>Sequence according to Lazarus:</strong> Stimulus → Cognitive Appraisal → Emotion + Physiological Arousal</p><p>The crucial difference: While Schachter-Singer posits that arousal comes first and is then interpreted, Lazarus argues that the interpretation of the stimulus comes first, triggering the emotion and arousal. When you see a bear, you instantly appraise it as a threat, and *therefore* you feel fear and your heart starts racing.</p><p>This theory emphasizes the subjectivity of emotions: The same event can trigger completely different emotions in two people, depending on how they individually appraise it.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Which theory states ‘I am afraid because I tremble’?", "a": ["Cannon-Bard Theory", "James-Lange Theory", "Two-Factor Theory"], "correct": 1 },
+            { "q": "The suspension bridge study is a classic example of...", "a": ["Misattribution of arousal", "Catharsis", "Homeostasis"], "correct": 0 }
+          ],
+          "open": [
+            { "q": "Explain the main difference between the Cannon-Bard theory and the Schachter-Singer theory.", "solution": "In Cannon-Bard, physiological arousal and emotion occur simultaneously and independently. In Schachter-Singer, physiological arousal is non-specific and requires an additional cognitive appraisal to become a specific emotion. The cognitive appraisal is the crucial second factor." }
+          ],
+          "kreativ": "Imagine you just drank strong coffee (high physiological arousal). How could the same arousal lead to completely different emotions depending on the context (a horror movie vs. reuniting with a good friend)? Explain using the Two-Factor Theory."
+        }
+      },
+      "5": {
+        "title": "The Biology of Emotions",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">Emotions are deeply rooted in the biology of our brain. The <strong>limbic system</strong>, a group of interconnected structures deep within the brain, plays a central role.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">Key Structures of the Limbic System</h3><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Amygdala:</strong> Consists of two almond-shaped nuclei and is the main 'hub' for processing emotions, especially fear and threat detection. It links emotions to memories.</li><li><strong>Hippocampus:</strong> Crucial for forming new emotional memories.</li><li><strong>Hypothalamus:</strong> Activates the sympathetic nervous system in response to emotional stimuli, thereby controlling bodily reactions (racing heart, sweating).</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">The Two Pathways of Fear (LeDoux)</h3><p class=\"text-lg leading-relaxed\">Why do we startle before we consciously know what's happening? Joseph LeDoux discovered that fear signals take two parallel paths in the brain:</p><ol class=\"list-decimal list-inside space-y-4 pl-2\"><li><strong>The Fast Pathway (Low Road):</strong> A sensory stimulus (e.g., a snake-like shape on the ground) goes from the thalamus <strong>directly</strong> to the amygdala. The amygdala immediately triggers a physical fear response (freezing, increased blood pressure) before we have consciously identified the stimulus. This is a fast but inaccurate 'quick and dirty' mechanism ensuring our survival.</li><li><strong>The Slow Pathway (High Road):</strong> Simultaneously, the signal goes from the thalamus to the <strong>visual cortex</strong>. There, the stimulus is analyzed in detail ('It's just a curved stick, not a snake'). This information is then relayed to the amygdala.</li></ol><p>If the cortex gives the 'all-clear', it calms the amygdala, and the fear response subsides. This dual pathway explains why we often react physically first and consciously understand why only a moment later.</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Emotional Memories and PTSD</h3><p>The close connection between the amygdala and hippocampus explains why emotional events are embedded much deeper and longer in memory than neutral ones. During a traumatic event, the amygdala works overtime, 'burning' the emotional significance of the event into memory.</p><p>In <strong>Post-Traumatic Stress Disorder (PTSD)</strong>, this system seems overactive. The amygdala overreacts to stimuli reminiscent of the trauma (triggers), causing massive fear responses as if the event were happening again in real time. The hippocampus struggles to correctly place the memory in its temporal context ('that was then'), leading to intrusive recollections (flashbacks).</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Which brain structure is central to fear processing?", "a": ["Hippocampus", "Hypothalamus", "Amygdala"], "correct": 2 },
+            { "q": "The ‘fast pathway’ of fear runs from the thalamus directly to the...", "a": ["Visual Cortex", "Amygdala", "Hippocampus"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Explain why the ‘fast pathway’ of fear makes sense from an evolutionary perspective.", "solution": "In a dangerous situation (e.g., rustling in the bushes), it is more vital for survival to react with flight once too often than once too little. The fast, inaccurate pathway ensures an immediate protective reaction even before the brain has fully analyzed the stimulus. Better to startle at a stick unnecessarily than to be bitten by a snake." }
+          ],
+          "kreativ": "How could knowledge about the two pathways of fear be used in the therapy of phobias?"
+        }
+      },
+      "6": {
+        "title": "Expression & Regulation of Emotions",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">Emotions are not just internal states but are also communicated externally, mainly through facial expressions.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">The Seven Basic Emotions (Paul Ekman)</h3><p>Researcher Paul Ekman showed in cross-cultural studies that there are at least seven basic emotions whose facial expressions are universal and understood by people worldwide, even in cultures isolated from the outside world:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li>Joy</li><li>Surprise</li><li>Sadness</li><li>Fear</li><li>Disgust</li><li>Anger</li><li>Contempt</li></ul><h3 class=\"text-2xl font-semibold border-b pb-2\">Cultural Display Rules</h3><p>Although the expression of basic emotions is universal, we learn specific rules in our culture about when, where, and how strongly we are allowed to show these emotions. These <strong>Display Rules</strong> explain cultural differences in emotional expression. (Example: In many Asian cultures, it is considered rude to openly show negative emotions in front of authority figures).</p></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Microexpressions: Detecting Hidden Feelings</h3><p class=\"text-lg leading-relaxed\">When a person tries to suppress or hide an emotion, the true feeling can often 'leak' through the face for a tiny fraction of a second (approx. 1/15 to 1/25 second). These involuntary and very brief expressions are called <strong>microexpressions</strong>.</p><p><strong>Application:</strong> The ability to recognize microexpressions is a key skill for professions that rely on understanding nonverbal signals, e.g., for:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Therapists:</strong> To recognize if a client is touching on a sensitive topic, even if they downplay it verbally.</li><li><strong>Negotiators:</strong> To detect hidden rejection or joy in response to an offer.</li><li><strong>Security Officers:</strong> To identify suspicious behavior and nervous tension.</li></ul><p>Training in microexpression recognition can improve emotional intelligence and empathy skills.</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">The Facial Feedback Hypothesis</h3><p>This hypothesis reverses the usual causality and asks: Can our facial expression influence our emotions?</p><p>The theory says: Yes. The activation of our facial muscles sends sensory feedback to the brain, which in turn influences our emotional experience. So, a smile can actually make us feel a little happier, and a frown can worsen our mood.</p><p><strong>The 'Pen-in-Mouth' Study (Strack et al., 1988):</strong> In the classic study, participants held a pen either only with their lips (creating a frown) or only with their teeth (activating smile muscles) while rating cartoons. The 'smiling' group rated the cartoons as significantly funnier.</p><p><strong>Modern View:</strong> Although the original study was controversial in replications, many recent studies suggest the effect exists, albeit small. It's a fascinating example of the close interaction between body and mind (embodiment).</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Which of the following is NOT a universal basic emotion according to Ekman?", "a": ["Joy", "Disgust", "Guilt"], "correct": 2 },
+            { "q": "Culturally learned rules about when to show emotions are called...", "a": ["Display Rules", "Emotional Intelligence", "Microexpressions"], "correct": 0 }
+          ],
+          "open": [
+            { "q": "Explain the Facial Feedback Hypothesis in your own words.", "solution": "The hypothesis suggests that our emotional experience not only causes our facial expression, but conversely, our facial expression can also influence our feeling. Tensing the smile muscles sends signals to the brain that can slightly lift our mood, while a frown can lower it." }
+          ],
+          "kreativ": "Pay close attention to a person's nonverbal signals (facial expressions, gestures) during your next interaction. Were there moments when the nonverbal signals differed from what the person said verbally? What might that imply?"
+        }
+      },
+       "7": {
+        "title": "Stress & Health",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">Stress is the body's response to any demand or change. Events that trigger stress are called stressors. These can range from major life events (positive or negative) to daily hassles.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">The Physiology of Stress: The General Adaptation Syndrome (GAS)</h3><p>Hans Selye described a three-stage physiological response to prolonged stress:</p><ol class=\"list-decimal list-inside space-y-3 pl-2\"><li><strong>Alarm Reaction:</strong> The body recognizes the stressor and mobilizes resources ('Fight-or-Flight' response, sympathetic activation, release of adrenaline).</li><li><strong>Resistance Stage:</strong> The body adapts and tries to resist the ongoing stressor. The initial alarm reaction subsides, but the body remains at a heightened level of arousal (release of cortisol).</li><li><strong>Exhaustion Stage:</strong> If the stressor persists, the body's resources are depleted. Susceptibility to illness increases significantly.</li></ol><h3 class=\"text-2xl font-semibold border-b pb-2\">Stress and the Immune System</h3><p>Chronic stress can suppress the immune system, making us more vulnerable to infections and diseases. Psychoneuroimmunology explores these complex interactions.</p></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Coping with Stress</h3><p class=\"text-lg leading-relaxed\">How we cope with stress significantly impacts our health. Lazarus & Folkman distinguish two main strategies:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Problem-Focused Coping:</strong> Attempts to change or eliminate the stressor itself. (Example: Studying for an exam, seeking a clarifying conversation during a conflict). Most effective when the stressor is controllable.</li><li><strong>Emotion-Focused Coping:</strong> Attempts to alleviate the negative emotional responses to the stressor without changing the stressor itself. (Example: Distraction, seeking social support, relaxation techniques, reappraising the situation). Often helpful when the stressor is uncontrollable.</li></ul><h3 class=\"text-2xl font-semibold border-b pb-2\">The Role of Social Support</h3><p>A strong social network (friends, family) is one of the most important protective factors against the negative effects of stress. Social support can be emotional (listening, comfort), instrumental (practical help), or informational (advice).</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Perceived Control and Stress</h3><p>The extent to which we believe we have control over a stressor significantly influences how stressful we perceive it and how we react.</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>High Perceived Control:</strong> More likely leads to problem-focused coping and fewer negative stress consequences.</li><li><strong>Low Perceived Control:</strong> More likely leads to emotion-focused coping or helplessness and is associated with stronger negative impacts.</li></ul><p>Even if actual control is limited, the mere belief in one's ability to influence the situation (self-efficacy expectation according to Bandura) can act as an important buffer.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">Optimism vs. Pessimism</h3><p>General outlook on life also plays a role. Optimists (who generally expect positive outcomes) tend to appraise stressors as less threatening, use more active coping strategies, and experience fewer negative health consequences than pessimists.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Which phase follows the resistance stage in the General Adaptation Syndrome?", "a": ["Alarm Reaction", "Exhaustion Stage", "Appraisal Phase"], "correct": 1 },
+            { "q": "If you try to distract yourself with sports after an argument, this is an example of...", "a": ["Problem-Focused Coping", "Emotion-Focused Coping", "Social Support"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Explain why social support is an important stress buffer.", "solution": "Social support can act in various ways: It offers emotional relief (feeling understood), practical help (reduces the burden), information/advice (aids problem-solving), and strengthens feelings of belonging and self-worth, which increases resilience to stress." }
+          ],
+          "kreativ": "Describe a stressor in your life. What problem-focused and emotion-focused coping strategies could you apply?"
+        }
+      }
+    }
+  },
+
+  "module7": {
+    "backToOverview": "Back to Biological Psychology Overview",
+    "contentError": {
+      "title": "Loading Error",
+      "description": "The content for this lesson could not be loaded. Please try again later or check the translation files."
+    },
+    "ui": {
+      "showSolution": "Show Solution",
+      "hideSolution": "Hide Solution",
+      "quizTitle": "Single-Choice Questions",
+      "openTitle": "Open Questions",
+      "creativeTitle": "Creative Question",
+      "prevSection": "Previous Section",
+      "nextSection": "Next Section",
+      "backToOverviewButton": "Back to Overview",
+      "grundwissenTitle": "Basic Knowledge",
+      "anwendbarkeitTitle": "Applicability",
+      "meisterklasseTitle": "Masterclass",
+      "uebungenTitle": "Exercises",
+      "loadingError": "Error loading exercise data."
+    },
+    "lessons": {
+      "1": {
+        "title": "Genetics & Behavior",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">Biological psychology investigates how our biology influences our behavior. A fundamental starting point is genetics.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">Basic Concepts of Genetics</h3><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Chromosomes:</strong> Long strands of genetic material (DNA) located in the cell nucleus. Humans have 23 pairs of chromosomes.</li><li><strong>Genes:</strong> Segments on the DNA that contain instructions for making proteins. Proteins are the building blocks of life and determine our traits.</li><li><strong>Genotype vs. Phenotype:</strong> The <strong>genotype</strong> is an individual's genetic makeup. The <strong>phenotype</strong> are the actual observable characteristics (e.g., hair color, height, but also personality traits) resulting from the interaction of the genotype with the environment.</li><li><strong>Alleles:</strong> Different versions of a gene. They can be dominant or recessive.</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Twin and Adoption Studies: Nature vs. Nurture</h3><p class=\"text-lg leading-relaxed\">How can we separate the influence of genes (nature) from that of upbringing (nurture)? Behavioral genetics uses natural experiments for this:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Twin Studies:</strong> Compare identical twins (share 100% of their genes) with fraternal twins (share about 50% of their genes). If identical twins are more similar in a trait (e.g., intelligence) than fraternal twins, this suggests a strong genetic influence.</li><li><strong>Adoption Studies:</strong> Compare adopted children with both their biological parents (shared genes) and their adoptive parents (shared environment). If children resemble their biological parents more in a trait, this points to a genetic influence.</li></ul><div class=\"bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg\"><p><strong>Insight:</strong> Almost all complex human traits, from personality to the risk of psychological disorders, are the result of a complex interaction of <strong>both</strong> – genes and environment. The question is not 'Nature OR Nurture?' but 'How do Nature AND Nurture interact?'</p></div></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Epigenetics: The Bridge Between Nature and Nurture</h3><p>Epigenetics revolutionizes our understanding of gene-environment interaction. It describes mechanisms by which the environment can change the <strong>activity</strong> of genes without altering the DNA sequence itself.</p><p>Think of DNA as the computer hardware and epigenetics as the software determining which programs run. Experiences like stress, diet, or trauma can leave epigenetic 'marks' on the DNA. These marks act like dimmers that can 'turn up' or 'turn down' gene activity.</p><p><strong>Significance:</strong> This means our life experiences actively shape our biological predisposition and can even be passed on to the next generation. It's the molecular bridge explaining how environmental influences 'get under the skin' and alter our biological function long-term.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "The observable characteristics of a person are called...", "a": ["Genotype", "Phenotype", "Allele"], "correct": 1 },
+            { "q": "Epigenetics studies how the environment influences the ... of genes.", "a": ["DNA sequence", "Gene activity", "Number of chromosomes"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Why are identical twins reared apart so interesting for research?", "solution": "They offer the perfect 'natural experiment'. Since they are genetically identical (same genotype), any differences in their observable traits (phenotype) can be attributed to environmental influences. Similarities, on the other hand, suggest a strong genetic influence." }
+          ],
+          "kreativ": "Discuss the ethical and social implications of knowing that traumatic experiences can cause potentially heritable epigenetic changes."
+        }
+      },
+      "2": {
+        "title": "Cells of the Nervous System",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">The nervous system consists of two main types of cells:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Neurons:</strong> The fundamental information carriers. They are responsible for receiving sensory information, sending commands to muscles, and processing information in the brain.</li><li><strong>Glial Cells:</strong> Long considered mere 'support tissue,' they play crucial roles in nourishing neurons, forming the myelin sheath, and maintaining homeostasis in the brain.</li></ul><h3 class=\"text-2xl font-semibold border-b pb-2\">Structure of a Neuron</h3><p>A typical neuron consists of three main parts:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Soma (Cell Body):</strong> Contains the nucleus and vital organelles.</li><li><strong>Dendrites:</strong> Tree-like branches that receive signals from other neurons.</li><li><strong>Axon:</strong> A long projection that transmits signals away from the soma to other neurons, muscles, or glands. Many axons are covered by a <strong>myelin sheath</strong>, a fatty layer that vastly speeds up signal transmission.</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">The Action Potential: The Language of Neurons</h3><p class=\"text-lg leading-relaxed\">Communication within a neuron is an electrical process. An <strong>action potential</strong> is a brief electrical impulse that travels down the axon. It operates on the <strong>all-or-none principle</strong>:</p><p>A neuron either 'fires' at full strength or not at all, much like a light switch is either on or off. There are no 'half' action potentials. The intensity of a stimulus is coded not by the strength of a single impulse, but by the <strong>frequency</strong> (the number of action potentials per second).</p><h3 class=\"text-2xl font-semibold border-b pb-2\">The Synapse: Communication Between Neurons</h3><p>The gap between the axon terminal of one neuron and the dendrite of the next is called the <strong>synaptic cleft</strong>. Here, the electrical signal is converted into a chemical one: The arriving action potential triggers the release of <strong>neurotransmitters</strong> (chemical messengers) into the cleft. These bind to receptors on the receiving neuron, causing either excitation (making it more likely to fire) or inhibition.</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">How Psychotropic Drugs Work: Agonists and Antagonists</h3><p>Many psychological disorders are associated with an imbalance of neurotransmitters. Psychotropic drugs work by specifically influencing this system:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Agonists:</strong> Substances that <strong>enhance</strong> the effect of a neurotransmitter. They might increase production, inhibit reuptake (keeping the neurotransmitter in the synaptic cleft longer), or directly mimic the receptor.<br/><em class=\"text-slate-600 dark:text-slate-400\">Example: Selective Serotonin Reuptake Inhibitors (SSRIs), used for depression, are agonists for serotonin.</em></li><li><strong>Antagonists:</strong> Substances that <strong>block</strong> or weaken the effect of a neurotransmitter. They typically do this by binding to the receptor without activating it, thus blocking the place for the actual neurotransmitter.<br/><em class=\"text-slate-600 dark:text-slate-400\">Example: Antipsychotics, used for schizophrenia, are often antagonists for dopamine.</em></li></ul></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Which part of a neuron typically receives signals from other neurons?", "a": ["Axon", "Soma", "Dendrite"], "correct": 2 },
+            { "q": "The ‘all-or-none’ principle describes...", "a": ["the release of neurotransmitters.", "the action potential.", "the function of glial cells."], "correct": 1 }
+          ],
+          "open": [
+            { "q": "What is the function of the myelin sheath, and what happens when it is damaged (as in Multiple Sclerosis)?", "solution": "The myelin sheath is an insulating fatty layer around the axon that dramatically increases the speed of electrical signal transmission. In Multiple Sclerosis, this sheath is attacked and destroyed by the immune system. This slows down or blocks nerve impulses, leading to a variety of neurological symptoms such as muscle weakness, coordination problems, and vision disturbances." }
+          ],
+          "kreativ": "Imagine dopamine is a 'key' and the dopamine receptor is a 'lock'. Using this analogy, describe what a dopamine agonist and a dopamine antagonist do."
+        }
+      },
+      "3": {
+        "title": "Nervous System & Brain Structures",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">The nervous system is our body's complex communication network. It is broadly divided into two main parts:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Central Nervous System (CNS):</strong> Consists of the brain and spinal cord. It is the command center that integrates all incoming information and coordinates all outgoing commands.</li><li><strong>Peripheral Nervous System (PNS):</strong> Consists of all nerves outside the brain and spinal cord. It connects the CNS to the rest of the body (limbs, organs, senses).</li></ul><h3 class=\"text-2xl font-semibold border-b pb-2\">Divisions of the Peripheral Nervous System</h3><p>The PNS is further divided:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Somatic Nervous System:</strong> Controls our <strong>voluntary</strong> movements and transmits sensory information from the skin and muscles to the CNS. (When you decide to raise your arm, that's somatic).</li><li><strong>Autonomic Nervous System:</strong> Controls our <strong>involuntary</strong> bodily functions such as heartbeat, breathing, digestion, and gland activity.</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">The Autonomic Nervous System itself consists of two opposing systems that act like the body's accelerator and brake:</p><h3 class=\"text-2xl font-semibold border-b pb-2\">Sympathetic vs. Parasympathetic</h3><ul class=\"list-disc list-inside space-y-4 pl-2\"><li><strong>Sympathetic Nervous System (The Accelerator):</strong> Prepares the body for stressful situations and high demands – the <strong>'Fight-or-Flight'</strong> response.<br/><em class=\"text-slate-600 dark:text-slate-400\">Effect: Speeds up heart rate, dilates pupils, inhibits digestion, releases energy reserves.</em></li><li><strong>Parasympathetic Nervous System (The Brake):</strong> Brings the body into a state of rest and recovery – the <strong>'Rest-and-Digest'</strong> response.<br/><em class=\"text-slate-600 dark:text-slate-400\">Effect: Slows heart rate, constricts pupils, stimulates digestion, stores energy.</em></li></ul><p><strong>Application:</strong> When you are nervous before an exam, you feel the activity of your sympathetic system (racing heart, sweaty palms). Relaxation techniques like deep, slow breathing specifically activate the parasympathetic system and help the body calm down again.</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Reflexes: The Spinal Cord Shortcut</h3><p>Some responses need to happen so quickly that they cannot take the full path to the brain and back. This is where the spinal cord comes in.</p><p>A <strong>reflex arc</strong> is a neural circuit that allows for an extremely fast, involuntary response to a stimulus. Example: You touch a hot stove.</p><ol class=\"list-decimal list-inside space-y-3 pl-2\"><li>Sensory neurons in your hand send a pain signal.</li><li>The signal travels to the spinal cord.</li><li>In the spinal cord, the signal is directly relayed via an <strong>interneuron</strong> to a motor neuron.</li><li>The motor neuron sends an immediate command to your arm muscle to pull the hand away.</li></ol><p>Only <strong>after</strong> you have already pulled your hand away does the pain information reach the brain, making you consciously aware of the pain. This shortcut via the spinal cord is a vital protective mechanism that prevents serious injury.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "The brain and spinal cord together form the...", "a": ["Peripheral Nervous System", "Somatic Nervous System", "Central Nervous System"], "correct": 2 },
+            { "q": "Which system is responsible for the 'fight-or-flight' response?", "a": ["Somatic System", "Sympathetic System", "Parasympathetic System"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "You just ate a large meal and feel tired and relaxed. Which part of your autonomic nervous system is currently dominant and why?", "solution": "The parasympathetic system. It is responsible for 'rest-and-digest' functions. It slows the heart rate and diverts blood and energy to the digestive tract to process the food, leading to feelings of relaxation and tiredness." }
+          ],
+          "kreativ": "Describe the chain of events in your nervous system from the moment you see a ball flying towards you to the moment you catch it."
+        }
+      },
+      "4": {
+        "title": "The Brain: Parts & Functions",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">The brain is the most complex organ in the human body and the control center for all our thoughts, feelings, and actions. It can be divided into three main areas:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Hindbrain (Brainstem):</strong> The oldest part, responsible for vital basic functions (breathing, heartbeat, sleep). Contains the medulla, pons, and the cerebellum, which is crucial for coordination and balance.</li><li><strong>Midbrain & Limbic System:</strong> Located inside the brain. The limbic system is the emotion center (contains amygdala, hippocampus, hypothalamus).</li><li><strong>Forebrain (Cerebrum/Cortex):</strong> The outer, highly folded layer responsible for higher cognitive functions like thinking, language, and planning. It is divided into two hemispheres.</li></ul><h3 class=\"text-2xl font-semibold border-b pb-2\">The Four Lobes of the Cortex</h3><p>Each hemisphere of the cortex is divided into four lobes:</p><ol class=\"list-decimal list-inside space-y-3 pl-2\"><li><strong>Frontal Lobe:</strong> Seat of personality, abstract thinking, planning, impulse control, and language production (Broca's area).</li><li><strong>Parietal Lobe:</strong> Processes sensory information such as touch, temperature, and pain (somatosensory cortex).</li><li><strong>Temporal Lobe:</strong> Responsible for hearing (auditory cortex) and language comprehension (Wernicke's area).</li><li><strong>Occipital Lobe:</strong> Exclusively serves the processing of visual information (visual cortex).</li></ol></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">The Case of Phineas Gage</h3><p class=\"text-lg leading-relaxed\">One of the most famous cases in neuroscience history is that of railroad worker Phineas Gage. In 1848, an explosion drove an iron rod through his skull, destroying large parts of his <strong>frontal lobe</strong>.</p><p>Miraculously, Gage survived, but his personality changed dramatically. The man previously described as reliable, friendly, and considerate became impulsive, unreliable, impatient, and socially inappropriate. His friends said he was 'no longer Gage'.</p><p><strong>Significance:</strong> The case of Phineas Gage was one of the first and most compelling pieces of evidence that specific higher cognitive functions such as personality, social judgment, and impulse control are localized in a specific brain area – the frontal lobe. It strikingly demonstrated the connection between brain structure and personality.</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Lateralization: Left vs. Right Brain Hemisphere</h3><p>The two brain hemispheres are not identical but have specialized functions. This phenomenon is called lateralization.</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Left Hemisphere:</strong> Dominates language production and comprehension, logical thinking, and mathematical skills in most right-handers.</li><li><strong>Right Hemisphere:</strong> Specializes in spatial perception, face recognition, nonverbal communication, and processing emotions.</li></ul><p>The hemispheres are connected by the <strong>Corpus Callosum</strong>, a thick bundle of nerve fibers allowing constant communication between both sides. In so-called <strong>split-brain patients</strong>, where the corpus callosum was severed (an outdated treatment for severe epilepsy), the separate abilities of the hemispheres can be studied fascinatingly.</p><div class=\"bg-red-50 dark:bg-red-900/30 p-4 rounded-lg\"><p><strong>Beware of Pop Psychology:</strong> The idea of pure 'left-brain' or 'right-brain' thinkers is a gross oversimplification. Almost all complex tasks involve close collaboration between both hemispheres.</p></div></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Which lobe of the brain is primarily responsible for vision?", "a": ["Frontal Lobe", "Temporal Lobe", "Occipital Lobe"], "correct": 2 },
+            { "q": "The case study of Phineas Gage highlighted the importance of the ... for personality.", "a": ["Frontal Lobe", "Parietal Lobe", "Cerebellum"], "correct": 0 }
+          ],
+          "open": [
+            { "q": "What is the difference between Broca's area and Wernicke's area?", "solution": "Both are crucial for language but have different functions and are usually located in the left hemisphere. Broca's area (in the frontal lobe) is responsible for language production – forming sentences. Wernicke's area (in the temporal lobe) is responsible for language comprehension – understanding the meaning of words." }
+          ],
+          "kreativ": "Imagine the corpus callosum stopped functioning in a person. Describe a strange situation that might occur in this person's daily life, based on knowledge of hemispheric specialization."
+        }
+      },
+      "5": {
+        "title": "The Endocrine System",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">The endocrine system is a second major communication system in the body. It consists of a series of glands that secrete chemical messengers, called <strong>hormones</strong>, directly into the bloodstream.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">Hormones vs. Neurotransmitters</h3><p>Hormones act more slowly than the electrical signals of neurons, but their effects are often more widespread and longer-lasting. While neurotransmitters act at a specific synapse, hormones travel throughout the body and affect all cells that have the appropriate receptor.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">Major Glands</h3><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Pituitary Gland:</strong> Considered the 'master gland' as it controls many other glands and produces growth hormone.</li><li><strong>Thyroid Gland:</strong> Regulates metabolism.</li><li><strong>Adrenal Glands:</strong> Sit atop the kidneys and secrete hormones like adrenaline and cortisol during stress situations.</li><li><strong>Pancreas:</strong> Regulates blood sugar levels through insulin and glucagon.</li><li><strong>Gonads (Ovaries/Testes):</strong> Produce sex hormones like estrogen and testosterone.</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">The Biological Stress Response</h3><p class=\"text-lg leading-relaxed\">When you face an acute threat (e.g., a car brakes right in front of you), the <strong>'fight-or-flight' response</strong> is triggered by both the nervous system and the endocrine system.</p><ol class=\"list-decimal list-inside space-y-4 pl-2\"><li><strong>Fast Response (Nervous System):</strong> The sympathetic nervous system activates the adrenal glands, which immediately release <strong>adrenaline (epinephrine)</strong>. This causes instant physical changes: racing heart, increased blood pressure, rapid breathing. The body is ready for maximum performance.</li><li><strong>Slow Response (Hormonal System):</strong> In parallel, the <strong>HPA axis</strong> (Hypothalamic-Pituitary-Adrenal axis) is activated. The hypothalamus signals the pituitary gland, which in turn stimulates the adrenal cortex to release <strong>cortisol</strong>. Cortisol is the 'stress hormone' that helps the body cope with prolonged stress by providing energy (sugar).</li></ol><p>While the adrenaline response subsides within minutes, chronic stress can lead to persistently elevated cortisol levels, which can have negative consequences for the immune system and general health.</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">The Hypothalamic-Pituitary Axis: The Bridge Between Brain and Body</h3><p>How are the brain and endocrine system connected? The crucial interface is the <strong>hypothalamus</strong>.</p><p>The hypothalamus is part of the brain (and the limbic system) and acts as the supreme control center. It receives information from the entire body and brain about the organism's state. Based on this, it controls the <strong>pituitary gland</strong>, located directly beneath it.</p><p>The pituitary gland, in turn, releases 'regulatory hormones' that command most other glands in the body (thyroid, adrenals, gonads) to produce their respective hormones. This cascade – from the brain via the hypothalamus and pituitary to the body's glands – ensures that our body can respond hormonally to our thoughts, feelings, and environmental demands. It is the ultimate embodiment of the mind-body connection.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Which gland is considered the 'master gland' of the endocrine system?", "a": ["Thyroid Gland", "Adrenal Gland", "Pituitary Gland"], "correct": 2 },
+            { "q": "Which hormone is primarily involved in the short-term 'fight-or-flight' response?", "a": ["Insulin", "Adrenaline", "Testosterone"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Describe the main difference in the mode of action between neurotransmitters and hormones.", "solution": "Neurotransmitters act very quickly and locally at a specific synapse between two neurons. Hormones are released into the bloodstream, act more slowly, travel throughout the body, and can have a broad, long-lasting effect on many different target organs." }
+          ],
+          "kreativ": "Chronic stress can lead to elevated cortisol levels. Briefly research two potential negative health consequences of persistently high cortisol levels."
+        }
+      }
+    }
+  },
+
+  "module9": {
+    "backToOverview": "Back to Psychological Assessment Overview",
+    "contentError": {
+      "title": "Loading Error",
+      "description": "The content for this lesson could not be loaded. Please try again later or check the translation files."
+    },
+    "contentNotAvailableYet": {
+       "description": "Content for this lesson is not yet available but will be added soon.",
+       "exercises": "Exercises for this lesson are not yet available."
+    },
+    "ui": {
+      "showSolution": "Show Solution",
+      "hideSolution": "Hide Solution",
+      "quizTitle": "Single-Choice Questions",
+      "openTitle": "Open Questions",
+      "creativeTitle": "Creative Question",
+      "prevSection": "Previous Section",
+      "nextSection": "Next Section",
+      "backToOverviewButton": "Back to Overview",
+      "grundwissenTitle": "Basic Knowledge",
+      "anwendbarkeitTitle": "Applicability",
+      "meisterklasseTitle": "Masterclass",
+      "uebungenTitle": "Exercises",
+      "loadingError": "Error loading exercise data."
+    },
+    "lessons": {
+      "1": {
+        "title": "Fundamentals of Psychometrics",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">Psychometrics is the science of measuring psychological characteristics such as knowledge, abilities, attitudes, and personality. For this measurement to meet scientific standards, tests must exhibit three fundamental properties:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Standardization:</strong> The way a test is administered, scored, and interpreted must be identical for all individuals. This ensures the comparability of results.</li><li><strong>Norming:</strong> The test is administered to a large, representative sample (the norm group) to determine 'normal' or average results. An individual's performance can then be compared to this norm group.</li><li><strong>Objectivity:</strong> The test result must be independent of the person administering or scoring the test.</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Online Quiz vs. Psychometric Test</h3><p class=\"text-lg leading-relaxed\">The internet is full of countless personality or IQ quizzes. Why aren't these real psychometric tests?</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Lack of Standardization:</strong> You can take the quiz in any situation (distracted, tired), which distorts the results.</li><li><strong>Lack of Norming:</strong> Your result ('You are a creative visionary!') is not compared to a representative comparison group. It's unclear what the result means compared to others.</li><li><strong>Unclear Quality Criteria:</strong> There is no information about whether the test is reliable or valid.</li></ul><p>Real psychometric tests (e.g., a clinical intelligence test), on the other hand, are administered under strictly standardized conditions, and the results are interpreted based on a large norm sample, allowing for a meaningful classification of individual performance.</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Classical Test Theory (CTT)</h3><p>CTT is the foundation of most psychological tests. Its central basic assumption is simple but fundamental:</p><div class=\"p-4 bg-slate-100 dark:bg-slate-800 rounded-md text-center font-mono\">Observed Score (X) = True Score (T) + Measurement Error (E)</div><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Observed Score:</strong> The actual result a person achieves on a test (e.g., 110 IQ points).</li><li><strong>True Score:</strong> The actual, but unknown, extent of the trait in the person.</li><li><strong>Measurement Error:</strong> Random influences that distort the result (daily form, fatigue, guessing, unclear questions).</li></ul><p>The goal of every good test is to keep the <strong>Measurement Error (E) as small as possible</strong>, so that the Observed Score (X) is the most accurate estimate possible of the True Score (T). The quality criteria of reliability and validity are methods to assess the magnitude of this measurement error.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "When a test is tried out on a large, representative group to create comparative values, it's called...", "a": ["Standardization", "Norming", "Objectivity"], "correct": 1 },
+            { "q": "Classical Test Theory states that every measured score consists of a true score and a...", "a": ["Measurement error", "Bias", "Standard score"], "correct": 0 }
+          ],
+          "open": [
+            { "q": "Why is standardization so important when administering a test?", "solution": "Without standardization, the results are not comparable. If one person takes a test in a quiet room with plenty of time and another in a noisy environment under time pressure, it's unclear whether a performance difference is due to the person or the different testing conditions. Standardization ensures that the conditions are the same for everyone." }
+          ],
+          "kreativ": "Imagine you are developing a test to measure 'humor'. Name two possible sources of measurement error that could distort the result."
+        }
+      },
+      "2": {
+        "title": "Reliability",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">Reliability is the quality criterion that indicates the <strong>accuracy and consistency</strong> of a measurement. A reliable test yields similar results upon repeated measurement under the same conditions.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">Types of Reliability Assessment</h3><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Test-Retest Reliability:</strong> The same test is administered to the same person at two different time points. The correlation between the two results indicates the reliability. (Good for stable traits like personality).</li><li><strong>Inter-Rater Reliability:</strong> Two or more independent observers (raters) score the same behavior. The agreement between their ratings indicates the reliability. (Important for behavioral observations or scoring open-ended questions).</li><li><strong>Internal Consistency:</strong> Measures how well the individual items of a test measure the same construct. A common method is <strong>Cronbach's Alpha</strong>. You can think of it as splitting the test into many small parts and checking if all parts measure in the same direction.</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Reliability in Everyday Life: The Bathroom Scale</h3><p class=\"text-lg leading-relaxed\">Imagine you want to measure your weight.</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Scenario 1 (High Reliability):</strong> You step on your scale three times in a row, and it reads: 70.1 kg, 70.2 kg, 70.1 kg. The measurements are very consistent. The scale is reliable.</li><li><strong>Scenario 2 (Low Reliability):</strong> You step on the scale three times in a row, and it reads: 68.5 kg, 71.3 kg, 69.4 kg. The measurements fluctuate widely, even though your true weight hasn't changed. This scale is not reliable and therefore useless.</li></ul><p>Just like with a scale, we expect a psychological test not to 'roll the dice' but to provide a consistent, reliable measurement of the trait of interest.</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">What is a 'Good' Reliability Value?</h3><p>Reliability coefficients (like Cronbach's Alpha or a correlation) range from 0 to 1. A value of 1 means perfect reliability (no measurement error), a value of 0 means the result is purely random.</p><p>Rules of thumb for evaluation are context-dependent:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>For important individual diagnoses (e.g., clinical tests):</strong> Very high reliabilities are required, typically above .90.</li><li><strong>For research purposes (e.g., group comparisons):</strong> Values around .80 are often considered good.</li><li><strong>For newly developed or exploratory scales:</strong> Values around .70 may be considered acceptable.</li></ul><p>According to Classical Test Theory, a test with a reliability of .80 means that 80% of the variance in the test scores is due to true differences between individuals, while 20% is due to random measurement error.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Which quality criterion describes the measurement accuracy and consistency of a test?", "a": ["Validity", "Objectivity", "Reliability"], "correct": 2 },
+            { "q": "If two psychologists observe a child's aggressiveness during play and their ratings strongly agree, this indicates high...", "a": ["Test-Retest Reliability", "Inter-Rater Reliability", "Internal Consistency"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Why is test-retest reliability unsuitable for checking the reliability of a mood test?", "solution": "Mood, by definition, is a fluctuating, unstable state. If a mood test yields different results today and in a week, it's not necessarily due to an unreliable test, but because the person's true mood has changed. For such state measurements, internal consistency (e.g., Cronbach's Alpha) is the better measure." }
+          ],
+          "kreativ": "You have developed a new 10-item questionnaire to measure 'creativity'. Describe how you would check its internal consistency and its test-retest reliability."
+        }
+      },
+      "3": {
+        "title": "Validity",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">Validity is the most important quality criterion. It answers the question: <strong>Does the test actually measure what it claims to measure?</strong> A test can be perfectly reliable but still not valid.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">Types of Validity</h3><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Content Validity:</strong> Indicates how representative the test content (items) is for the trait being measured. (Example: A math exam containing only addition problems has low content validity for the entire subject of mathematics).</li><li><strong>Criterion Validity:</strong> Refers to the relationship between the test score and an external criterion.<ul class=\"list-disc list-inside pl-6 mt-2\"><li><strong>Concurrent Validity:</strong> Test and criterion are assessed at the same time. (e.g., correlation of a new depression questionnaire with an already established clinical diagnosis).</li><li><strong>Predictive Validity:</strong> The test is used to predict a future criterion. (e.g., correlation of a college aptitude test with later academic success).</li></ul></li><li><strong>Construct Validity:</strong> The 'total package'. It's not a single metric but the overall evidence that a test actually measures the theoretical construct (e.g., intelligence, anxiety).</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Reliability vs. Validity: The Target Analogy</h3><p class=\"text-lg leading-relaxed\">Imagine an archer shooting at a target. The center of the target is the 'true value' we want to measure.</p><ul class=\"list-disc list-inside space-y-4 pl-2\"><li><strong>Low Reliability, Low Validity:</strong> The arrows land scattered all over the target. The shots are neither consistent nor hit the mark.</li><li><strong>High Reliability, Low Validity:</strong> All arrows land very close together, but in the upper left corner of the target. The measurement is consistent (reliable) but systematically wrong (not valid). (Example: A scale that consistently reads 5kg too high).</li><li><strong>High Reliability, High Validity:</strong> All arrows land close together in the center of the target. The measurement is consistent AND correct. <strong>This is the goal of every psychometric test.</strong></li></ul><div class=\"bg-yellow-50 dark:bg-yellow-900/30 p-4 rounded-lg\"><p><strong>Key Insight:</strong> A measurement cannot be valid if it is not reliable. If the arrows land everywhere, they cannot be in the center. However, a measurement can be very reliable without being valid (it measures something consistently, but the wrong thing).</p></div></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Construct Validity: The Nomological Network</h3><p>Construct validity is the most demanding but also the most important concept. It involves formulating a theory about the construct being measured and then empirically testing whether the test behaves as the theory predicts.</p><p>One weaves a 'nomological network' of hypotheses:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Convergent Validity:</strong> The test should correlate highly with other tests measuring the same or a similar construct. (A new intelligence test should correlate highly with an established IQ test).</li><li><strong>Discriminant Validity:</strong> The test should correlate lowly or not at all with tests measuring different, independent constructs. (An intelligence test should not correlate highly with a test of body height).</li></ul><p>The more these theoretically derived relationships can be empirically confirmed, the stronger the evidence for the test's construct validity.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "The most important quality criterion of a test is...", "a": ["Reliability", "Validity", "Standardization"], "correct": 1 },
+            { "q": "If an aptitude test for pilots predicts well who will later become a good pilot, it has high...", "a": ["Content Validity", "Predictive Validity", "Internal Consistency"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Can a test be valid if it is not reliable? Justify using the target analogy.", "solution": "No. If a test is not reliable, the measurement results are random and inconsistent. In the target analogy, this means the arrows land scattered everywhere. If they are scattered everywhere, they cannot systematically land in the center (the true value). Therefore, a measurement must be reliable before it can possibly be valid." }
+          ],
+          "kreativ": "You are developing a questionnaire to measure 'smartphone addiction'. How would you proceed to check its convergent and discriminant validity?"
+        }
+      },
+      "4": {
+        "title": "Intelligence Measurement",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">Intelligence is one of the most studied but also most controversial constructs in psychology. It generally refers to the ability to learn, reason, and adapt to new situations.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">History of Intelligence Measurement</h3><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Alfred Binet:</strong> Developed the first intelligence test in the early 20th century to identify French schoolchildren with learning difficulties.</li><li><strong>William Stern:</strong> Developed the formula for the <strong>Intelligence Quotient (IQ)</strong> from Binet's work: (Mental Age / Chronological Age) * 100.</li><li><strong>David Wechsler:</strong> Developed the most widely used IQ tests today (WAIS for adults, WISC for children). He introduced the <strong>deviation IQ</strong>: IQ is no longer calculated by the formula but by comparing individual performance to the performance of the age-matched norm sample.</li></ul><p>By modern definition, an IQ test has a mean of <strong>100</strong> and a standard deviation of <strong>15</strong>. This means approx. 68% of all people have an IQ between 85 and 115.</p></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">The Structure of a Modern IQ Test (e.g., WAIS-IV)</h3><p class=\"text-lg leading-relaxed\">A modern test like the Wechsler Adult Intelligence Scale (WAIS) measures not only general intelligence (Full Scale IQ) but also provides differentiated scores for four main indices:</p><ol class=\"list-decimal list-inside space-y-4 pl-2\"><li><strong>Verbal Comprehension:</strong> Measures verbal knowledge and reasoning. (Subtests e.g., Vocabulary, Similarities).</li><li><strong>Perceptual Reasoning:</strong> Measures non-verbal, logical, and spatial abilities. (Subtests e.g., Matrix Reasoning, Block Design).</li><li><strong>Working Memory:</strong> Measures the ability to briefly store and manipulate information. (Subtests e.g., Digit Span, Arithmetic).</li><li><strong>Processing Speed:</strong> Measures the speed and accuracy of visual information processing. (Subtests e.g., Symbol Search).</li></ol><p>Analyzing the profile of these four indices can tell a clinician much more than the Full Scale IQ alone. Large discrepancies between indices can indicate specific learning disabilities or neurological problems.</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">The Flynn Effect and the Limits of IQ</h3><p>The <strong>Flynn Effect</strong>, named after James Flynn, describes the observation that average IQ scores have steadily increased in many parts of the world throughout the 20th century (approx. 3 points per decade). The reasons are debated, but improved nutrition, education, and a more complex environment likely play a role.</p><p>This leads to important critical considerations:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Relativity of IQ:</strong> The Flynn Effect shows that IQ is not an absolute measure of 'smartness' but always relative to the respective norm sample. Therefore, IQ tests must be regularly re-normed.</li><li><strong>What does IQ measure?</strong> An IQ test measures well the ability for logical-abstract thinking, which is important in Western school and professional systems. However, it does not measure other important aspects such as social intelligence, emotional intelligence, creativity, or practical wisdom.</li></ul></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "An average IQ in a modern test is...", "a": ["120", "100", "15"], "correct": 1 },
+            { "q": "The steady rise in average IQ scores in the 20th century is known as the...", "a": ["Wechsler Effect", "Binet Effect", "Flynn Effect"], "correct": 2 }
+          ],
+          "open": [
+            { "q": "A 10-year-old child solves the tasks of an average 12-year-old on an old intelligence test. Calculate their IQ using Stern's historical formula.", "solution": "IQ = (Mental Age / Chronological Age) * 100 = (12 / 10) * 100 = 120." }
+          ],
+          "kreativ": "Discuss the statement: 'IQ tests are just a measure of how good someone is at taking IQ tests'."
+        }
+      },
+      "5": {
+        "title": "Test Construction & Ethics",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">Developing a good psychometric test is a long and elaborate process. It typically follows several steps:</p><ol class=\"list-decimal list-inside space-y-3 pl-2\"><li><strong>Planning:</strong> Defining the construct to be measured and the target group.</li><li><strong>Item Construction:</strong> Creating a large pool of potential questions (items).</li><li><strong>Pilot Testing:</strong> The item pool is administered to an initial sample.</li><li><strong>Item Analysis:</strong> Statistical analysis of individual items. Items that are too difficult, too easy, or do not correlate well with the rest of the test (poor discrimination) are discarded.</li><li><strong>Revision and Final Version:</strong> Compiling the final test version.</li><li><strong>Norming:</strong> Administering the final test to a large, representative sample to establish norms.</li></ol></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Cultural Bias in Testing</h3><p class=\"text-lg leading-relaxed\">A major problem in test construction is the danger of <strong>cultural bias</strong>. This means that a test systematically disadvantages members of certain cultural or social groups because the test content or formats presuppose knowledge and experiences of the majority culture.</p><p><strong>Historical Example:</strong> Early American IQ tests included questions like: 'What do you do with a scratch on your finger?' The 'correct' answer was 'Apply iodine.' An immigrant child from a poor country, who might have learned to squeeze the wound or bind it with a cloth, would be classified here as 'less intelligent,' although it's a matter of cultural knowledge, not intelligence.</p><p>Modern test constructors strive to avoid such obvious and subtle biases, e.g., by using non-verbal, abstract tasks (like matrix tests) or through statistical analyses that check if an item performs differently across various demographic groups.</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Ethical Responsibility in Testing</h3><p>Psychologists who use tests are subject to strict ethical guidelines. Test use is not a harmless game but an intervention that can have significant consequences for people's lives (e.g., in hiring decisions, custody disputes, or clinical diagnoses).</p><p>Key ethical principles include:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Competence:</strong> The user must be qualified for the specific test and know its limitations.</li><li><strong>Informed Consent:</strong> The test-taker must be informed about the purpose of the test and the use of the results and must agree.</li><li><strong>Confidentiality:</strong> Test results are strictly confidential and may only be disclosed with the person's consent.</li><li><strong>Responsible Interpretation:</strong> A test result should never be viewed in isolation. It must always be interpreted in the context of the whole person, their life history, and the testing situation. A single numerical value (like IQ) can never fully describe a human being.</li></ul></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "The statistical process of weeding out bad questions in test development is called...", "a": ["Norming", "Standardization", "Item Analysis"], "correct": 2 },
+            { "q": "When a test systematically disadvantages a certain cultural group, it is referred to as...", "a": ["Measurement Error", "Low Reliability", "Cultural Bias"], "correct": 2 }
+          ],
+          "open": [
+            { "q": "Why should a single IQ score never be the sole basis for a major life decision (e.g., school choice)?", "solution": "Because an IQ score is always just an estimate of the 'true' score and is subject to measurement error. Furthermore, it only measures a segment of human abilities (logical-abstract thinking) and ignores other important areas like creativity, social or emotional intelligence. Such an important decision should always be based on a broad range of information (school grades, teacher judgments, interests, personality)." }
+          ],
+          "kreativ": "Design a test question for an intelligence test that you believe has a strong cultural bias favoring young, tech-savvy individuals from Western Europe."
+        }
+      },
+       "6": {
+        "title": "Personality Tests",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">Personality refers to the relatively enduring patterns of thoughts, feelings, and behaviors that characterize a person. Personality tests attempt to capture these patterns. There are two main approaches:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Projective Tests:</strong> Present ambiguous material (e.g., inkblots in the Rorschach test, pictures in the Thematic Apperception Test - TAT). The assumption is that individuals project their unconscious wishes, conflicts, and needs onto the material.</li><li><strong>Objective Tests (Questionnaires):</strong> Consist of standardized questions with predetermined response options (e.g., Yes/No, rating scales). They measure personality dimensions based on self-report. The best-known model is the <strong>Big Five Model</strong> (Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism - OCEAN).</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Pros and Cons of the Approaches</h3><p class=\"text-lg leading-relaxed\"><strong>Projective Tests:</strong></p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Pros:</strong> Can provide insights into unconscious processes, harder to fake (as purpose is unclear).</li><li><strong>Cons:</strong> Quality criteria (objectivity, reliability, validity) often insufficient, scoring is very subjective and complex. Use is controversial today, more as an exploratory tool.</li></ul><p><strong>Objective Tests (Questionnaires):</strong></p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Pros:</strong> High objectivity and economy, good reliability and validity scores for established tests (e.g., NEO-PI-R for Big Five).</li><li><strong>Cons:</strong> Susceptible to faking (social desirability), measure only the conscious self-concept, response tendencies (e.g., central tendency) can distort results.</li></ul><p>In practice, both types of information are often combined (e.g., questionnaire plus behavioral observation or interview).</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">The Big Five Model (OCEAN)</h3><p>This model is the most scientifically validated model for describing personality structure. It states that human personality can be described along five broad, relatively stable, and cross-culturally valid dimensions:</p><ol class=\"list-decimal list-inside space-y-3 pl-2\"><li><strong>Openness to Experience:</strong> Curious, imaginative, intellectual vs. conventional, down-to-earth.</li><li><strong>Conscientiousness:</strong> Organized, reliable, disciplined vs. disorganized, spontaneous, careless.</li><li><strong>Extraversion:</strong> Sociable, energetic, talkative vs. reserved, quiet, solitary.</li><li><strong>Agreeableness:</strong> Friendly, cooperative, compassionate vs. critical, suspicious, competitive.</li><li><strong>Neuroticism (Emotional Stability vs. Neuroticism):</strong> Anxious, moody, vulnerable vs. calm, stable, self-confident.</li></ol><p>These five factors are not understood as types, but as dimensions on which each person has an individual score. They have high predictive power for many life domains (e.g., job success, health, relationship satisfaction).</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Which test belongs to the projective techniques?", "a": ["NEO-PI-R", "Rorschach Test", "WAIS-IV"], "correct": 1 },
+            { "q": "Which dimension is NOT part of the Big Five?", "a": ["Extraversion", "Intelligence", "Conscientiousness"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Name one advantage and one disadvantage of objective personality questionnaires.", "solution": "Advantage: High objectivity, economy, good psychometric properties for established tests. Disadvantage: Susceptible to faking (social desirability), measure only the conscious self-concept." }
+          ],
+          "kreativ": "Describe a fictional person who scores extremely high on 'Openness to Experience' and extremely low on 'Conscientiousness'. How might this manifest in everyday life?"
+        }
+      },
+      "7": {
+        "title": "Clinical Assessment",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">Clinical assessment is the process of collecting and integrating information to identify, describe, and classify a psychological disorder. The goal is to gain a comprehensive understanding of a person's problems to plan appropriate treatment.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">Methods of Clinical Assessment</h3><p>Rarely is only one method used. Typically, multiple sources of information are combined:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Clinical Interview:</strong> The most important tool. A conversation where information about symptoms, life history, social situation, etc., is gathered. Can be unstructured, semi-structured, or fully structured (e.g., SCID).</li><li><strong>Behavioral Observation:</strong> Systematic observation of the person's behavior in natural or standardized situations.</li><li><strong>Psychological Testing:</strong> Use of standardized procedures to measure intelligence, personality, specific symptoms (e.g., depression questionnaire like BDI), or neuropsychological functions.</li><li><strong>Collateral Information:</strong> Gathering information from significant others (family, partner, teachers).</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">The Diagnostic Process: Example Anxiety Disorder</h3><p class=\"text-lg leading-relaxed\">A patient presents with symptoms like racing heart, shortness of breath, and constant worry.</p><ol class=\"list-decimal list-inside space-y-4 pl-2\"><li><strong>Initial Interview:</strong> The clinician asks in detail about the nature, frequency, duration, and triggers of the symptoms, impairment in daily life, history, and physical illnesses. Are there panic attacks? Generalized worries? Social anxieties?</li><li><strong>Questionnaires:</strong> Use of specific questionnaires to quantify anxiety symptoms (e.g., Beck Anxiety Inventory - BAI) or to screen for comorbid disorders (e.g., depression).</li><li><strong>Behavioral Observation (if applicable):</strong> How does the patient behave in the waiting room or during the interview (nervous, tense)?</li><li><strong>Differential Diagnosis:</strong> Ruling out other possible causes (physical illnesses like thyroid problems; other mental disorders).</li><li><strong>Diagnosis:</strong> Matching the collected information with the criteria of a classification system (e.g., DSM-5 or ICD-10/11) to determine the specific anxiety disorder (e.g., Panic Disorder, Generalized Anxiety Disorder).</li></ol><p>This process leads to a diagnosis that serves as the basis for treatment planning.</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Structured vs. Unstructured Interviews</h3><p>The clinical interview is central, but its quality heavily depends on how it's conducted.</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Unstructured Interview:</strong> Free conversation, the clinician follows their intuition. Pro: Flexible, good for building rapport. Con: Low reliability (different interviewers reach different conclusions), risk of overlooking important areas.</li><li><strong>Structured Interview (e.g., SCID, DIPS):</strong> Fixed set of questions, often directly linked to diagnostic criteria. All relevant areas are systematically covered. Pro: High reliability and validity, standardized. Con: Less flexible, can feel schematic.</li><li><strong>Semi-structured Interview:</strong> Combination of fixed questions and room for flexible follow-up. Good compromise.</li></ul><p>For research purposes, and often in clinical practice, (semi-)structured interviews are preferred to increase the reliability of diagnoses.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "What is the most important tool in clinical assessment?", "a": ["Psychological Tests", "Clinical Interview", "Behavioral Observation"], "correct": 1 },
+            { "q": "The SCID (Structured Clinical Interview for DSM) is an example of a...", "a": ["Unstructured Interview", "Structured Interview", "Projective Test"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Name two reasons why it's important to always rule out physical causes for psychological complaints (differential diagnosis).", "solution": "1. Physical illnesses (e.g., thyroid dysfunction, heart conditions, neurological problems) can cause symptoms resembling a mental disorder (e.g., anxiety, depression). Misdiagnosis would lead to incorrect treatment. 2. A mental disorder can also occur together with a physical illness (comorbidity), which influences treatment." }
+          ],
+          "kreativ": "A friend tells you they've been feeling down lately. What kind of questions would you ask them (as a layperson, not a diagnostician!) to get an initial impression of the severity and possible causes?"
+        }
+      },
+      "8": {
+        "title": "Report Writing & Ethics",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">Psychological assessment not only serves treatment planning but also answers specific questions from third parties (e.g., courts, insurance companies, employers). The outcome of this process is often a <strong>psychological report</strong>.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">Purpose and Types of Reports</h3><p>Reports are needed in various contexts:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Forensic Psychology:</strong> Criminal responsibility, witness credibility, risk assessment, child custody.</li><li><strong>Traffic Psychology:</strong> Fitness to drive (e.g., after DUI).</li><li><strong>Industrial & Organizational Psychology:</strong> Aptitude assessment for specific jobs.</li><li><strong>Clinical Psychology:</strong> Assessment of treatment need, work capacity for insurance companies.</li></ul><p>A report must meet the highest scientific and formal standards, be clear and comprehensible, and precisely answer the referring party's question.</p></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Example: Child Custody Evaluation Report</h3><p class=\"text-lg leading-relaxed\">After a divorce, parents dispute custody. The court commissions a psychologist to write a report on the arrangement that best serves the <strong>child's best interests</strong>.</p><p>The assessment process typically includes:</p><ol class=\"list-decimal list-inside space-y-4 pl-2\"><li><strong>Record Review:</strong> Court documents, reports from child protective services, etc.</li><li><strong>Parent Interviews:</strong> Separate conversations about their perspectives, parenting goals, resources, conflicts.</li><li><strong>Interaction Observation:</strong> Observing each parent's interaction with the child.</li><li><strong>Child Interview:</strong> Age-appropriate conversations and possibly play-based methods to understand the child's wishes and attachments (without overwhelming the child or creating loyalty conflicts).</li><li><strong>Psychological Testing (if needed):</strong> For specific questions (e.g., parenting capacity, child's developmental status).</li><li><strong>Integration & Evaluation:</strong> All information is synthesized and evaluated regarding the child's best interests.</li><li><strong>Report Writing:</strong> Drafting the written report with transparent presentation of methods, results, and a reasoned recommendation to the court.</li></ol><p>This process requires high professional competence, neutrality, and ethical sensitivity.</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Ethical Dilemmas in Assessment</h3><p>Psychological assessors often find themselves in a field of tension between different interests and ethical obligations:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Neutrality vs. Partisanship:</strong> The assessor must remain objective, even if commissioned by one party.</li><li><strong>Client's Well-being vs. Mandate from Court/Insurance:</strong> What if the assessment results have disadvantages for the client (e.g., loss of custody, denial of pension)? The assessor must be transparent about the consequences.</li><li><strong>Confidentiality vs. Duty to Inform:</strong> What information may/must be disclosed to the commissioning party?</li><li><strong>Dealing with Malingering/Dissimulation:</strong> How to handle suspicion that a client is faking or downplaying symptoms?</li><li><strong>Limits of Assessment:</strong> Psychological assessment is never error-free. Assessors must know the limits of their methods and clearly state uncertainties ('diagnostic reservation').</li></ul><p>Adherence to ethical guidelines (e.g., from professional associations) and continuous self-reflection are essential for assessors.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "A psychological report on criminal responsibility falls into the domain of...", "a": ["Traffic Psychology", "Clinical Psychology", "Forensic Psychology"], "correct": 2 },
+            { "q": "What is NOT a central ethical principle in assessment?", "a": ["Neutrality", "Confidentiality", "Guaranteeing a positive outcome for the client"], "correct": 2 }
+          ],
+          "open": [
+            { "q": "Why is it important for an assessment report to be comprehensible?", "solution": "A report must transparently explain HOW the assessor reached their conclusions. This means: What questions were asked, which methods (interviews, tests, observations) were used, what results were obtained, and how were these interpreted? Only then can the commissioning party (e.g., a judge) evaluate the quality of the report and make an informed decision." }
+          ],
+          "kreativ": "A company commissions you to assess the 'teamwork skills' of applicants. What ethical aspects would you particularly consider when selecting your diagnostic methods?"
+        }
+      }
+    }
+  },
+
+  "module8": {
+    "backToOverview": "Back to Personality Psychology Overview",
+    "contentError": {
+      "title": "Loading Error",
+      "description": "The content for this lesson could not be loaded. Please try again later or check the translation files."
+    },
+    "contentNotAvailableYet": {
+       "description": "Content for this lesson is not yet available but will be added soon.",
+       "exercises": "Exercises for this lesson are not yet available."
+    },
+    "ui": {
+      "showSolution": "Show Solution",
+      "hideSolution": "Hide Solution",
+      "quizTitle": "Single-Choice Questions",
+      "openTitle": "Open Questions",
+      "creativeTitle": "Creative Question",
+      "prevSection": "Previous Section",
+      "nextSection": "Next Section",
+      "backToOverviewButton": "Back to Overview",
+      "grundwissenTitle": "Basic Knowledge",
+      "anwendbarkeitTitle": "Applicability",
+      "meisterklasseTitle": "Masterclass",
+      "uebungenTitle": "Exercises",
+      "loadingError": "Error loading exercise data."
+    },
+    "lessons": {
+      "1": {
+        "title": "Introduction & Psychodynamic Perspective",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">Personality refers to the long-standing traits and patterns that propel individuals to consistently think, feel, and behave in specific ways. It's what makes us unique individuals.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">Freud's Psychoanalytic Theory</h3><p>Sigmund Freud was the first to develop a comprehensive theory of personality. His central idea was that unconscious drives, primarily sexual and aggressive, shape our personality.</p><p>He proposed three interacting systems:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Id:</strong> The primitive, unconscious reservoir of our drives. It operates on the **pleasure principle**, seeking immediate gratification.</li><li><strong>Ego:</strong> The rational part of our personality that tries to find a realistic balance between the demands of the id and the rules of the external world. It operates on the **reality principle**.</li><li><strong>Superego:</strong> Our internal conscience and moral compass. It develops through the internalization of social rules and parental norms.</li></ul><p>According to Freud, a healthy person has a strong ego capable of balancing the conflicts between the id and superego.</p></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Defense Mechanisms in Everyday Life</h3><p class=\"text-lg leading-relaxed\">When the ego experiences anxiety because it cannot resolve the conflict between the id and superego, it resorts to unconscious **defense mechanisms**. We all use them to protect ourselves from unpleasant feelings.</p><ul class=\"list-disc list-inside space-y-4 pl-2\"><li><strong>Repression:</strong> Anxiety-provoking memories are banished from consciousness. (Example: An accident victim cannot recall the details.)</li><li><strong>Projection:</strong> Attributing one's own unacceptable desires or impulses to others. (Example: Someone who is dishonest themselves constantly accuses others of lying.)</li><li><strong>Rationalization:</strong> Justifying behavior with flimsy but acceptable-sounding reasons. (Example: 'I failed the exam because the professor doesn't like me,' instead of 'I didn't study.')</li><li><strong>Sublimation:</strong> Channeling unacceptable drives into socially acceptable activities. (Example: A person with strong aggressive impulses becomes a successful surgeon or boxer.)</li></ul></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Criticism of Freud and His Legacy</h3><p>Freud's theories are highly controversial scientifically today:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Not Falsifiable:</strong> Many of his concepts (like the unconscious) are so vague that they are difficult to scientifically test or refute.</li><li><strong>Overemphasis on Sexuality:</strong> His focus on early childhood sexual drives is seen by many as exaggerated.</li><li><strong>Lack of Empirical Evidence:</strong> His theories are primarily based on case studies of his (mostly wealthy, female, Viennese) patients, not systematic research.</li></ul><p><strong>Nevertheless, his influence is undeniable:</strong> Freud popularized psychology and introduced concepts like the importance of childhood, the unconscious, and the role of defense mechanisms into our cultural vocabulary. Many modern psychodynamic theories build on his basic ideas, even if they have revised many details.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Which system operates on the 'pleasure principle'?", "a": ["Ego", "Superego", "Id"], "correct": 2 },
+            { "q": "Channeling an unacceptable impulse (e.g., aggression) into a socially acceptable activity (e.g., sports) is called...", "a": ["Projection", "Sublimation", "Repression"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Explain the fundamental conflict between id, ego, and superego using an example.", "solution": "Example: You are standing at the checkout and see a chocolate bar (Id says: 'I want it now!'). Your Superego says: 'Stealing is wrong!'. Your Ego mediates and decides: 'I will buy the chocolate bar now and eat it after paying.'" }
+          ],
+          "kreativ": "What defense mechanism might a person be using who starts working excessively after a painful breakup to avoid thinking about it? Justify your answer."
+        }
+      },
+      "2": {
+        "title": "Neo-Freudians & Humanistic Perspective",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">Many of Freud's students further developed his ideas but reduced the emphasis on sexuality, highlighting social and cultural factors instead.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">Important Neo-Freudians</h3><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Alfred Adler:</strong> Focused on the **inferiority complex** and the innate drive for superiority.</li><li><strong>Erik Erikson:</strong> Developed the **psychosocial theory of development**, describing personality development across the lifespan in eight stages (e.g., 'Trust vs. Mistrust').</li><li><strong>Carl Jung:</strong> Introduced the concepts of the **collective unconscious** and **archetypes** (universal symbols like the hero, the mother), as well as the dimensions of **extraversion vs. introversion**.</li></ul><h3 class=\"text-2xl font-semibold border-b pb-2\">The Humanistic Perspective</h3><p>As the 'third force' in psychology, humanists like Abraham Maslow and Carl Rogers turned away from the pessimistic view of psychoanalysis. They emphasized the innate potential for growth and self-actualization in healthy individuals.</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Abraham Maslow:</strong> Known for his **hierarchy of needs**, topped by **self-actualization** – achieving one's full potential.</li><li><strong>Carl Rogers:</strong> Emphasized the importance of the **self-concept**. He distinguished between the **real self** (who we actually are) and the **ideal self** (who we would like to be). **Congruence** between these two is crucial for mental health.</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Congruence and Incongruence according to Rogers</h3><p class=\"text-lg leading-relaxed\">Carl Rogers' concept of congruence has great practical importance for our well-being.</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Congruence:</strong> When our self-image (real self) largely matches who we want to be (ideal self), we experience congruence. This leads to high self-worth and a feeling of satisfaction.</li><li><strong>Incongruence:</strong> When there is a large gap between our real and ideal selves, this leads to dissatisfaction, anxiety, and low self-worth.</li></ul><p><strong>Example:</strong> A young man has the ideal self of being a successful lawyer to make his parents proud. However, his real self is that he is actually passionate about art and music. This incongruence leads to dissatisfaction in law school. A goal of Rogerian therapy would be to help him develop an ideal self that better matches his true interests, or to find ways to accept and express his real self (his artistic inclinations) more.</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Jung's Collective Unconscious</h3><p>Carl Jung's most fascinating and controversial contribution is the idea of the **collective unconscious**. Unlike Freud's personal unconscious, which consists of repressed individual experiences, the collective unconscious, according to Jung, is a universal reservoir shared by all humans, containing latent memory traces from our species' history.</p><p>The content of this unconscious are the **archetypes** – universal, innate images and symbols that appear in the myths, fairy tales, and religions of all cultures:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>The Persona:</strong> The 'mask' we wear in public.</li><li><strong>The Shadow:</strong> The dark, repressed side of our personality.</li><li><strong>Anima/Animus:</strong> The feminine aspects within the male psyche and vice versa.</li></ul><p>Although scientifically unprovable, Jung's theory has had an enormous influence on literature, art, and film studies, as it provides a powerful tool for analyzing universal human themes.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "The concept of the 'collective unconscious' comes from...", "a": ["Adler", "Erikson", "Jung"], "correct": 2 },
+            { "q": "If your real self and ideal self differ greatly, you experience, according to Rogers...", "a": ["Congruence", "Incongruence", "Self-Actualization"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "What is the 'inferiority complex' according to Adler, and how does it drive us?", "solution": "Adler believed that all humans are born with a feeling of inferiority because they are small and helpless as children. This feeling drives us throughout life to overcome it and strive for superiority, competence, and mastery. Personality is thus shaped by how we deal with this basic feeling." }
+          ],
+          "kreativ": "Describe a well-known movie character (e.g., Luke Skywalker, Harry Potter) using Jung's archetypes (e.g., the hero, the wise old man, the shadow)."
+        }
+      },
+      "3": {
+        "title": "Learning & Biological Perspectives",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">These approaches view personality not as the result of internal conflicts, but as a product of learning processes and biological predispositions.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">Behaviorist Perspective</h3><p>Strict behaviorists like B.F. Skinner argued that personality is not an innate construct. Instead, our 'personality traits' are stable patterns of behavior that we have learned because they were reinforced (rewarded) in the past. Our personality is therefore the sum of our learning history.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">Biological Perspective: Temperament</h3><p>The biological perspective argues that personality differences are largely based on innate, genetically determined differences in temperament. **Temperament** is the early-appearing, biologically based tendency to feel and act in certain ways.</p><p>Researchers like Thomas and Chess identified three basic temperament types in infants:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>The easy child:</strong> Positive mood, adaptable, regular rhythms.</li><li><strong>The difficult child:</strong> Negative mood, reacts poorly to novelty, irregular rhythms.</li><li><strong>The slow-to-warm-up child:</strong> Low activity, slightly negative, takes time to adapt to new things.</li></ul><p>These early temperamental differences are considered the biological foundation upon which later personality is built through interaction with the environment.</p></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Application: Conditioning in Everyday Life</h3><p>The behaviorist principles of classical and operant conditioning constantly shape our behavior:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Classical Conditioning:</strong> A neutral stimulus (e.g., the sound of a doorbell) is paired with an unconditioned stimulus (e.g., the arrival of visitors) and eventually triggers a response alone (e.g., joy).</li><li><strong>Operant Conditioning:</strong> Behavior is shaped by its consequences. Behavior that is rewarded (positive reinforcement) or ends unpleasant states (negative reinforcement) occurs more frequently. Behavior that is punished occurs less frequently.</li></ul><p><strong>Example:</strong> A child learns to clean their room (behavior) because they receive praise for it (positive reinforcement). They learn not to touch a hot stove (behavior) because they burned themselves once (punishment).</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Heritability of Personality Traits</h3><p>Behavioral genetics investigates the contribution of genetic influences on personality differences using twin and adoption studies. The results consistently show that **all personality traits are heritable to a significant degree**, with heritability estimates for the Big Five typically ranging between 40% and 60%.</p><p><strong>Key Points:</strong></p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Heritability is not about individuals:</strong> It describes the proportion of variance in a *population* attributable to genetic differences.</li><li><strong>Genes don't determine everything:</strong> Non-shared environmental influences (unique experiences) also play a large role.</li><li><strong>Gene-Environment Interaction:</strong> Genes and environment influence each other in complex ways (see epigenetics in Module 7).</li></ul></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Explaining personality as the sum of our learning history is typical of the...", "a": ["Psychodynamic Perspective", "Humanistic Perspective", "Behaviorist Perspective"], "correct": 2 },
+            { "q": "The innate, biological tendency to act and feel in certain ways is...", "a": ["Personality", "Temperament", "Character"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Explain the difference between positive and negative reinforcement in operant conditioning.", "solution": "Both increase the likelihood of a behavior. Positive reinforcement does so by adding a pleasant stimulus (e.g., praise). Negative reinforcement does so by removing an unpleasant stimulus (e.g., the car's beeping stops when you fasten your seatbelt)." }
+          ],
+          "kreativ": "Which of the three temperament types (easy, difficult, slow-to-warm-up) would you assign to yourself as a baby, and why?"
+        }
+      },
+       "4": {
+        "title": "Trait Theories",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">Trait theorists attempt to describe personality by identifying stable, characteristic features and behaviors, known as **traits**. Instead of asking 'why' (like Freud), they focus on 'what'.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">The Five-Factor Model ('Big Five')</h3><p>The most dominant model today is the Five-Factor Model. It states that almost all personality differences can be traced back to five broad dimensions. A useful acronym is **OCEAN** (or CANOE):</p><ul class=\"list-disc list-inside space-y-4 pl-2\"><li><strong>O - Openness to Experience:</strong> Imagination, creativity, curiosity vs. down-to-earth, conventional.</li><li><strong>C - Conscientiousness:</strong> Organization, discipline, carefulness vs. easy-going, carelessness.</li><li><strong>E - Extraversion:</strong> Sociability, energy, positive emotionality vs. introversion, reserve.</li><li><strong>A - Agreeableness:</strong> Compassion, cooperativeness, friendliness vs. suspicion, competitiveness.</li><li><strong>N - Neuroticism:</strong> Emotional instability, anxiety, moodiness vs. Emotional stability, calmness.</li></ul><p>Each person can be placed on a continuum from high to low on each of these five dimensions.</p></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">The Big Five in the Workplace</h3><p class=\"text-lg leading-relaxed\">The Five-Factor Model has high predictive power for occupational success and is therefore often used in personnel selection.</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Conscientiousness</strong> is the strongest single predictor of overall job success in almost all professions. Conscientious people are reliable, organized, and disciplined.</li><li><strong>Extraversion</strong> is a good predictor of success in jobs requiring significant social interaction, such as sales or management.</li><li><strong>Agreeableness</strong> is important for jobs requiring teamwork and cooperation.</li><li><strong>Openness to Experience</strong> correlates with creativity and the ability to adapt to change.</li><li>High **Neuroticism** (low emotional stability) is often a negative predictor of job satisfaction and performance, especially in stressful environments.</li></ul><p>Knowing your own Big Five scores can help you choose a career path that fits well with your personality.</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Person-Situation Debate</h3><p>One of the biggest debates in personality psychology was the person-situation debate, initiated by Walter Mischel. He argued that people's behavior is much less consistent across different situations than trait theorists assume.</p><p><strong>Example:</strong> Someone who is extremely conscientious at the office might be very messy at home. Someone who is very extraverted among friends might be very shy in a large, unfamiliar group.</p><p><strong>The Modern Synthesis (Interactionism):</strong> Today, most psychologists agree that both personality (traits) and the situation influence behavior. The truth lies in the interaction:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li>Strong situations (e.g., in a church, in the military) leave little room for individual personality differences and compel most people into similar behavior.</li><li>Weak situations (e.g., at a party, in a park) allow ample room for individual personality to emerge.</li></ul><p>Thus, our behavior is always a product of who we are **and** where we are.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Which dimension is NOT part of the 'Big Five'?", "a": ["Openness", "Honesty", "Conscientiousness"], "correct": 1 },
+            { "q": "Which 'Big Five' trait is the best overall predictor of job success?", "a": ["Extraversion", "Agreeableness", "Conscientiousness"], "correct": 2 }
+          ],
+          "open": [
+            { "q": "Describe a person who is high in Extraversion and low in Conscientiousness. What profession might they have?", "solution": "This person is likely very sociable, enthusiastic, and loves being the center of attention, but is also disorganized, undisciplined, and unreliable with details. A career in event management or as an entertainer might be a good fit, where their social energy is an advantage, as long as they have a team for detailed planning." }
+          ],
+          "kreativ": "The Person-Situation Debate: Describe a 'strong' and a 'weak' situation from your own life and how your behavior differed in both."
+        }
+      },
+      "5": {
+        "title": "Personality Tests",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">Personality tests are standardized instruments designed to measure aspects of a person's personality. There are mainly two types of tests:</p><h3 class=\"text-2xl font-semibold border-b pb-2\">Self-Report Inventories</h3><p>These are typically questionnaires with multiple-choice or scaled responses (e.g., 'strongly agree' to 'strongly disagree'). They are easy to administer and score.</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Example:</strong> The **MMPI (Minnesota Multiphasic Personality Inventory)** is one of the most widely used clinical personality tests. It contains hundreds of True/False questions and is used to screen for psychological problems.</li></ul><p>The major challenge with these tests is social desirability – the tendency for people to present themselves in a better light.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">Projective Tests</h3><p>These tests are based on the psychodynamic assumption that people project their unconscious fears, desires, and conflicts onto ambiguous material. Interpretation is highly subjective.</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Rorschach Inkblot Test:</strong> The person interprets a series of symmetrical inkblots.</li><li><strong>Thematic Apperception Test (TAT):</strong> The person makes up stories about a series of ambiguous pictures.</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">The 'Lie Scale' in the MMPI</h3><p class=\"text-lg leading-relaxed\">How do tests like the MMPI deal with the problem of social desirability? They have built-in **validity scales**.</p><p>One such scale is the **Lie Scale (L Scale)**. It contains a series of questions about minor, very common human flaws that almost everyone commits but dislikes admitting. Examples might include:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li>'I read every editorial in the newspaper every day.'</li><li>'I sometimes get angry.' (Answering 'False' would be suspicious)</li><li>'I have never done anything I am ashamed of.'</li></ul><p>If a person answers too many of these questions in an overly virtuous way (denying common minor flaws), it suggests they are trying to deliberately present themselves better than they are. A high score on the L Scale invalidates the entire test profile or at least makes it questionable.</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">The Controversy Surrounding Projective Tests</h3><p>While projective tests are very present in pop culture, their scientific recognition is highly debated. The main criticisms are:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Low Reliability:</strong> Two different administrators can arrive at completely different interpretations for the same person.</li><li><strong>Low Validity:</strong> There is little evidence that these tests actually measure what they claim to measure or that they can predict future behavior.</li></ul><p>Modern standardized scoring systems (like Exner's for the Rorschach) have attempted to improve reliability. Nevertheless, projective tests are rarely used as primary diagnostic tools in modern, empirically oriented psychology. However, they can be useful in therapy to initiate conversation and generate hypotheses about a client's inner world ('icebreaker').</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "The Rorschach test is an example of a...", "a": ["Self-report inventory", "Projective test", "Performance test"], "correct": 1 },
+            { "q": "What is a major problem with self-report questionnaires?", "a": ["Social desirability", "Excessive cost", "Complex scoring"], "correct": 0 }
+          ],
+          "open": [
+            { "q": "Why is the scientific validity of projective tests like the TAT controversial?", "solution": "Validity is controversial because the interpretation of the stories heavily depends on the individual therapist (low objectivity and reliability). Furthermore, there is little empirical evidence that the stories told actually reflect the person's unconscious conflicts or allow predictions about future behavior." }
+          ],
+          "kreativ": "Imagine you had to design a very simple 'personality test' with only one question to learn as much as possible about a person. What question would you ask and why?"
+        }
+      },
+       "6": {
+        "title": "Learning & Cognitive Perspectives",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">These approaches view personality not as the result of internal conflicts, but as a product of learning processes and cognitive patterns.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">Behaviorist Perspective</h3><p>Strict behaviorists like B.F. Skinner argued that personality is not an innate construct. Instead, our 'personality traits' are stable patterns of behavior that we have learned because they were reinforced (rewarded) in the past. Our personality is therefore the sum of our learning history.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">Social-Cognitive Perspective (Bandura)</h3><p>Albert Bandura expanded behaviorism to include cognitive processes. He agreed that we learn but also emphasized the role of thinking and observation.</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Observational Learning:</strong> We learn by observing others' behavior and its consequences (modeling).</li><li><strong>Self-Efficacy:</strong> Our belief in our own ability to complete tasks successfully. High self-efficacy influences which challenges we take on and how persistent we are.</li><li><strong>Reciprocal Determinism:</strong> Personality is a constant interplay between cognitive factors (thoughts, beliefs), our behavior, and the environment. Each factor influences the other two.</li></ul><h3 class=\"text-2xl font-semibold border-b pb-2\">Julian Rotter's Locus of Control</h3><p>Rotter introduced the concept of locus of control, a cognitive expectation about the extent to which we can control our own lives:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Internal Locus of Control:</strong> Belief that one controls one's own fate.</li><li><strong>External Locus of Control:</strong> Belief that outside forces (chance, fate, other people) determine one's life.</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Self-Efficacy in Everyday Life</h3><p class=\"text-lg leading-relaxed\">Your belief in your ability to succeed has an enormous impact on your life.</p><p>Imagine two students facing a difficult math exam.</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Student A (high self-efficacy):</strong> Thinks, 'This is hard, but if I put in the effort, I can do it.' They will embrace the challenge, study intensively, and not be discouraged by setbacks.</li><li><strong>Student B (low self-efficacy):</strong> Thinks, 'I've never been good at math, I can't possibly pass this.' They will avoid the task, study less, and give up at the first difficulty.</li></ul><p>In the end, Student A is likely to be more successful, not necessarily because they are 'smarter,' but because their belief in their own ability positively influenced their behavior (effort, persistence). This is a self-fulfilling prophecy.</p><h3 class=\"text-2xl font-semibold border-b pb-2\">Locus of Control and Health</h3><p>People with an internal locus of control tend to live healthier lives, cope better with stress, and more actively seek solutions to problems than people with an external locus of control.</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Walter Mischel's Marshmallow Test and Delay of Gratification</h3><p>Walter Mischel became famous for his experiments on **delay of gratification**. In the classic 'Marshmallow Test,' children were offered a choice: eat one marshmallow immediately or wait and get two later.</p><p>The ability to postpone immediate gratification for a larger, later reward proved to be an astonishingly stable personality trait with far-reaching consequences. Children who could wait longer in preschool later showed:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li>Better academic performance</li><li>Higher social competence</li><li>Better stress coping</li><li>Lower risk of obesity</li></ul><p>Mischel argued this demonstrates how cognitive and attentional skills (distracting oneself, thinking about the reward) are crucial for self-control and thus for personality development.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Bandura's concept of belief in one's own capabilities is called...", "a": ["Self-Concept", "Self-Efficacy", "Locus of Control"], "correct": 1 },
+            { "q": "The belief that outside forces determine one's fate is...", "a": ["Internal Locus of Control", "External Locus of Control", "Self-Efficacy"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Explain Reciprocal Determinism with an example.", "solution": "Example: A person with the cognitive belief 'I am sociable' (Cognition) is more likely to go to parties (Behavior). At parties, they meet other sociable people who reinforce their positive behavior (Environment). This positive social environment, in turn, strengthens their belief in being sociable." }
+          ],
+          "kreativ": "How could the concept of self-efficacy be used in therapy for people with social anxiety?"
+        }
+      },
+      "7": {
+        "title": "Personality & Culture",
+        "grundwissen": "<div class=\"space-y-8\"><p class=\"text-lg leading-relaxed\">Does the culture we grow up in influence our personality? And are personality models like the Big Five universally valid?</p><h3 class=\"text-2xl font-semibold border-b pb-2\">Hofstede's Cultural Dimensions</h3><p>Geert Hofstede identified several dimensions along which cultures can differ. One of the best known is:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Individualism vs. Collectivism:</strong><br/>- <strong>Individualistic cultures</strong> (e.g., USA, Western Europe) emphasize personal goals, autonomy, and uniqueness.<br/>- <strong>Collectivistic cultures</strong> (e.g., many Asian, Latin American countries) emphasize group goals, harmony, and interdependence.</li></ul><h3 class=\"text-2xl font-semibold border-b pb-2\">Culture and Personality</h3><p>Research shows that average personality profiles can vary across cultures:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li>People in individualistic cultures tend to describe themselves as more independent and show higher scores in Extraversion and Openness.</li><li>People in collectivistic cultures tend to define themselves in terms of their social roles and show higher scores in Agreeableness.</li></ul><p><strong>But caution:</strong> These are average differences! There are huge individual variations *within* each culture.</p></div>",
+        "anwendbarkeit": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Culture and Self-Concept</h3><p class=\"text-lg leading-relaxed\">Markus & Kitayama distinguish two types of self-concept shaped by culture:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Independent Self:</strong> Typical of individualistic cultures. The self is seen as autonomous, unique, and separate from others. Important values are self-realization and personal achievement.</li><li><strong>Interdependent Self:</strong> Typical of collectivistic cultures. The self is seen as part of a social network, defined by relationships and roles. Important values are harmony, fitting in with the group, and fulfilling obligations.</li></ul><p><strong>Example:</strong> Asked 'Who am I?', a person with an independent self might answer 'I am smart, athletic...' (personal attributes), whereas a person with an interdependent self might answer 'I am a son, a student, a member of the soccer club...' (social roles).</p><p>These different self-concepts influence how we think, feel, and behave.</p></div>",
+        "meisterklasse": "<div class=\"space-y-8\"><h3 class=\"text-2xl font-semibold border-b pb-2\">Are the Big Five Universal?</h3><p>The Five-Factor Model has been studied in many different cultures and languages. The results suggest that the basic structure of the Big Five (especially Extraversion, Agreeableness, Conscientiousness, and Neuroticism) is largely universal.</p><p>However, there are also cultural variations:</p><ul class=\"list-disc list-inside space-y-3 pl-2\"><li><strong>Openness to Experience:</strong> This dimension is less clearly defined or interpreted differently in some cultures.</li><li><strong>Additional Factors:</strong> In some cultures (e.g., China), additional, culture-specific personality factors have been found that go beyond the Big Five (e.g., 'Interpersonal Relatedness').</li><li><strong>Measurement Invariance:</strong> It is a methodological challenge to ensure that a personality questionnaire truly measures the exact same thing across different languages and cultures.</li></ul><p><strong>Conclusion:</strong> The Big Five appear to be a good approximation of a universal personality structure, but cultural contexts can influence the expression, meaning, and possibly even the structure of personality traits.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Which cultural dimension describes the extent to which group goals are prioritized over individual goals?", "a": ["Masculinity vs. Femininity", "Individualism vs. Collectivism", "Power Distance"], "correct": 1 },
+            { "q": "The self-concept as part of a social network is typical of the...", "a": ["Independent Self", "Interdependent Self", "Ideal Self"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Are the Big Five personality traits equally pronounced in all cultures?", "solution": "No, there are average differences between cultures. For example, individualistic cultures tend to have higher average scores on Extraversion and Openness, while collectivistic cultures often show higher average scores on Agreeableness. However, it's crucial to emphasize that individual diversity within each culture is very large." }
+          ],
+          "kreativ": "How might the difference between an independent and an interdependent self-concept affect behavior in a competitive situation?"
+        }
+      }
+    }
   }
+ 
+  
+
+
 }

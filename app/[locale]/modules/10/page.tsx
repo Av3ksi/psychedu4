@@ -2,80 +2,148 @@
 
 import { Link } from '@/i18n/navigation';
 import { FC, ReactNode } from 'react';
-import { BookOpen, Target, BrainCircuit, Lightbulb, ArrowLeft } from 'lucide-react';
+// Icons (ggf. anpassen, ich verwende die Standard-Icons)
+import { BookOpen, Target, BrainCircuit, Lightbulb, ArrowLeft, Lock } from 'lucide-react';
 import { Link as ScrollLink, Element } from 'react-scroll';
 
-// --- DATEN FÜR DIE A&O-PSYCHOLOGIE ---
-const aoPsychologyModules = [
-  { id: 1, title: "Einführung in die A&O-Psychologie", relevance: "green", descriptions: { grundwissen: "Definiert die drei Hauptbereiche: Arbeits- (Industrial), Organisations- (Organizational) und Ingenieurpsychologie (Human Factors).", anwendbarkeit: "Verstehe, wie A&O-Psychologen Unternehmen dabei helfen, die richtigen Mitarbeiter einzustellen und die Produktivität zu steigern.", meisterklasse: "Analysiere den Hawthorne-Effekt und seine revolutionäre Bedeutung für die Betrachtung von Mitarbeitern.", uebungen: "Ordne typische Aufgaben den drei Bereichen der A&O-Psychologie zu." }},
-  { id: 2, title: "Personalauswahl", relevance: "orange", descriptions: { grundwissen: "Lerne die Methoden der Anforderungsanalyse und die verschiedenen Auswahlverfahren (Interview, Tests, Assessment Center) kennen.", anwendbarkeit: "Erkenne die Schwächen des unstrukturierten Interviews und die Vorteile des strukturierten, verhaltensbasierten Interviews.", meisterklasse: "Diskutiere das Problem des 'unconscious bias' im Auswahlprozess und Strategien zu seiner Reduzierung.", uebungen: "Entwickle eine verhaltensbasierte Interviewfrage für eine bestimmte Position." }},
-  { id: 3, title: "Mitarbeiterbeurteilung & -entwicklung", relevance: "green", descriptions: { grundwissen: "Verstehe den Zweck von Leistungsbeurteilungen und die verschiedenen Methoden (z.B. 360-Grad-Feedback).", anwendbarkeit: "Lerne, konstruktives Feedback zu geben, das auf beobachtbarem Verhalten basiert.", meisterklasse: "Analysiere die häufigsten Beurteilungsfehler (z.B. Halo-Effekt, Milde-Härte-Fehler) und wie man sie vermeidet.", uebungen: "Identifiziere verschiedene Beurteilungsfehler in Fallbeispielen." }},
-  { id: 4, title: "Arbeitsmotivation & -zufriedenheit", relevance: "red", descriptions: { grundwissen: "Lerne die wichtigsten Theorien der Arbeitsmotivation (z.B. von Herzberg, Maslow) und die Faktoren der Arbeitszufriedenheit kennen.", anwendbarkeit: "Verstehe, warum Bezahlung allein nicht glücklich macht (Zwei-Faktoren-Theorie).", meisterklasse: "Diskutiere die Bedeutung von 'Job Crafting' zur Steigerung der eigenen Arbeitszufriedenheit und Motivation.", uebungen: "Wende Herzbergs Theorie auf eine konkrete Arbeitssituation an." }},
-  { id: 5, title: "Führung & Teamarbeit", relevance: "orange", descriptions: { grundwissen: "Unterscheide verschiedene Führungsstile (z.B. transaktional, transformational, Laissez-faire).", anwendbarkeit: "Analysiere die Stärken und Schwächen deines eigenen (oder eines bekannten) Führungsstils.", meisterklasse: "Diskutiere die psychologischen Prozesse, die zu 'Groupthink' (Gruppendenken) führen und wie man es verhindern kann.", uebungen: "Identifiziere Merkmale von transformationaler Führung in Beispielen." }},
-  { id: 6, title: "Organisationskultur & Ergonomie", relevance: "green", descriptions: { grundwissen: "Verstehe, was Organisationskultur ist und wie sie das Verhalten der Mitarbeiter prägt.", anwendbarkeit: "Analysiere die sichtbaren Artefakte (Bürogestaltung, Kleiderordnung) und die tieferen Werte einer bekannten Unternehmenskultur.", meisterklasse: "Diskutiere die Herausforderungen bei der Veränderung einer etablierten Organisationskultur.", uebungen: "Unterscheide zwischen den verschiedenen Ebenen der Organisationskultur." }},
+// --- NEUE IMPORTS ---
+import { useSubscription } from '@/hooks/useSubscription';
+import LoadingSpinner from '@/components/LoadingSpinner';
+import { useTranslations } from 'next-intl';
+// --- ENDE NEUE IMPORTS ---
+
+// --- DATENSTRUKTUR FÜR MODUL 10 ---
+// Titel und Beschreibungen kommen jetzt aus den JSON-Dateien
+// Modul 10 hat 8 Lektionen
+const workAndOrgPsychologyModulesBase = [
+  { id: 1, relevance: "green" },
+  { id: 2, relevance: "green" },
+  { id: 3, relevance: "orange" },
+  { id: 4, relevance: "green" },
+  { id: 5, relevance: "orange" },
+  { id: 6, relevance: "orange" },
+  { id: 7, relevance: "green" },
+  { id: 8, relevance: "green" },
 ];
 
-// --- HILFS-KOMPONENTEN ---
+// --- HILFS-KOMPONENTEN (unverändert) ---
 const RelevanceIndicator: FC<{ relevance: string }> = ({ relevance }) => {
-  const colorMap: { [key: string]: string } = { green: 'bg-green-500', orange: 'bg-orange-500', red: 'bg-red-500' };
+  const colorMap: { [key: string]: string } = {
+    green: 'bg-green-500',
+    orange: 'bg-orange-500',
+    red: 'bg-red-500',
+  };
   return <span className={`w-3 h-3 rounded-full ${colorMap[relevance]}`}></span>;
 };
 
 const SectionCard: FC<{ title: string; icon: ReactNode; href: string; children: ReactNode }> = ({ title, icon, href, children }) => (
   <Link href={href} className="block group">
     <div className="bg-white dark:bg-neutral-dark border border-slate-200 dark:border-slate-700 rounded-lg p-6 h-full group-hover:border-primary group-hover:shadow-lg transition-all flex flex-col">
-      <div className="flex items-center gap-3 mb-3"> {icon} <h3 className="text-xl font-semibold text-slate-900 dark:text-white">{title}</h3> </div>
-      <div className="prose prose-slate dark:prose-invert max-w-none text-sm flex-grow"> {children} </div>
+      <div className="flex items-center gap-3 mb-3">
+        {icon}
+        <h3 className="text-xl font-semibold text-slate-900 dark:text-white">{title}</h3>
+      </div>
+      <div className="prose prose-slate dark:prose-invert max-w-none text-sm flex-grow">
+          {children}
+      </div>
     </div>
   </Link>
 );
 
-// --- HAUPTKOMPONENTE FÜR DIE ÜBERSICHTSSEITE ---
-export default function AoPsychologyPage() {
+// --- HAUPTKOMPONENTE FÜR DIE ÜBERSICHTSSEITE (JETZT ANGEPASST) ---
+export default function WorkAndOrgPsychologyPage() {
+    
+    // --- NEUE HOOKS ---
+    const { subscription, isLoading: isSubLoading } = useSubscription();
+    const tPremium = useTranslations('premiumAccess');
+    const tModules = useTranslations('modulesOverview'); // Für "Zurück"-Link & Karten-Titel
+    // Neue Namespaces für die Inhalte von Modul 10
+    const tPage = useTranslations('workAndOrgPsychologyOverview');
+    const tTitles = useTranslations('workAndOrgPsychologyModuleTitles'); 
+    const tDesc = useTranslations('workAndOrgPsychologyModuleDescriptions'); 
+
+    if (isSubLoading) {
+        return <LoadingSpinner />;
+    }
+
+    const isPremium = subscription?.status === 'active';
+    const requiresPremium = true; // Modul 10 ist Premium
+
+    if (requiresPremium && !isPremium) {
+        return (
+            <div className="max-w-3xl mx-auto p-6 text-center">
+                <h1 className="text-2xl font-bold mb-4">{tPremium('title')}</h1>
+                <p className="mb-6">{tPremium('description')}</p>
+                <Link href="/profile" className="px-6 py-2 bg-primary text-white rounded-lg">
+                    {tPremium('upgradeButton')}
+                </Link>
+                <Link href="/modules" className="block flex items-center justify-center gap-2 text-primary hover:underline mt-6">
+                    <ArrowLeft className="w-5 h-5" />
+                    <span>{tModules('backLink')}</span>
+                </Link>
+            </div>
+        );
+    }
+    // --- ENDE PREMIUM-CHECK LOGIK ---
+
     return (
         <div className="flex">
+            {/* Seitenleiste für die Navigation */}
             <aside className="sticky top-20 h-[calc(100vh-5rem)] w-64 flex-shrink-0 p-4 hidden lg:block overflow-y-auto">
                 <Link href="/modules" className="flex items-center gap-2 text-sm text-slate-500 hover:text-primary mb-4">
                   <ArrowLeft className="w-4 h-4" />
-                  Zurück zur Modulübersicht
+                  {tModules('backLink')}
                 </Link>
-                <h2 className="font-bold mb-4">A&O-Psychologie</h2>
+                {/* Verwendet 'workAndOrgSidebarTitle' aus 'modulesOverview' */}
+                <h2 className="font-bold mb-4">{tModules('workAndOrgSidebarTitle')}</h2>
                 <nav className="space-y-2">
-                    {aoPsychologyModules.map(module => (
-                        <ScrollLink key={module.id} to={`module-${module.id}`} spy={true} smooth={true} offset={-90} duration={500}
+                    {workAndOrgPsychologyModulesBase.map(module => (
+                        <ScrollLink 
+                            key={module.id} 
+                            to={`module-${module.id}`} 
+                            spy={true} 
+                            smooth={true} 
+                            offset={-90} 
+                            duration={500}
                             className="flex items-center gap-3 p-2 rounded-md cursor-pointer text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
-                            activeClass="!text-primary font-semibold bg-primary/10">
+                            activeClass="!text-primary font-semibold bg-primary/10"
+                        >
                             <RelevanceIndicator relevance={module.relevance} />
-                            <span className="text-sm">{module.title}</span>
+                            {/* Holt Titel aus 'workAndOrgPsychologyModuleTitles' */}
+                            <span className="text-sm">{tTitles(String(module.id))}</span>
                         </ScrollLink>
                     ))}
                 </nav>
             </aside>
+
+            {/* Hauptinhalt */}
             <main className="flex-grow p-6 md:p-8">
                 <div className="max-w-4xl mx-auto">
-                    <h1 className="text-4xl font-bold mb-4">Arbeits- & Organisationspsychologie</h1>
+                    {/* Verwendet Titel und Beschreibung aus 'workAndOrgPsychologyOverview' */}
+                    <h1 className="text-4xl font-bold mb-4">{tPage('title')}</h1>
                     <p className="text-lg text-slate-600 dark:text-slate-400 mb-12">
-                        Die Anwendung psychologischer Prinzipien zur Optimierung von Arbeitsplätzen und zur Steigerung des Wohlbefindens von Mitarbeitern.
+                        {tPage('description')}
                     </p>
                     <div className="space-y-12">
-                        {aoPsychologyModules.map(module => (
+                        {workAndOrgPsychologyModulesBase.map(module => (
                             <Element key={module.id} name={`module-${module.id}`}>
                                 <div className="flex items-center gap-4 mb-4">
                                     <RelevanceIndicator relevance={module.relevance} />
-                                    <h2 className="text-2xl font-bold">{module.id}. {module.title}</h2>
+                                    <h2 className="text-2xl font-bold">{module.id}. {tTitles(String(module.id))}</h2>
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <SectionCard title="Grundwissen" icon={<BookOpen className="w-6 h-6 text-primary"/>} href={`/modules/10/grundwissen-${module.id}`}>
-                                        <p>{module.descriptions.grundwissen}</p>
+                                    {/* Verwendet Karten-Titel aus 'modulesOverview' und Links zu /modules/10/ */}
+                                    <SectionCard title={tModules('cardTitleGrundwissen')} icon={<BookOpen className="w-6 h-6 text-primary"/>} href={`/modules/10/grundwissen-${module.id}`}>
+                                        <p>{tDesc(`${module.id}_grundwissen`)}</p>
                                     </SectionCard>
-                                    <SectionCard title="Anwendbarkeit" icon={<Target className="w-6 h-6 text-primary"/>} href={`/modules/10/anwendbarkeit-${module.id}`}>
-                                         <p>{module.descriptions.anwendbarkeit}</p>
+                                    <SectionCard title={tModules('cardTitleAnwendbarkeit')} icon={<Target className="w-6 h-6 text-primary"/>} href={`/modules/10/anwendbarkeit-${module.id}`}>
+                                         <p>{tDesc(`${module.id}_anwendbarkeit`)}</p>
                                     </SectionCard>
-                                    <SectionCard title="Meisterklasse" icon={<BrainCircuit className="w-6 h-6 text-primary"/>} href={`/modules/10/meisterklasse-${module.id}`}>
-                                        <p>{module.descriptions.meisterklasse}</p>
+                                    <SectionCard title={tModules('cardTitleMeisterklasse')} icon={<BrainCircuit className="w-6 h-6 text-primary"/>} href={`/modules/10/meisterklasse-${module.id}`}>
+                                        <p>{tDesc(`${module.id}_meisterklasse`)}</p>
                                     </SectionCard>
-                                    <SectionCard title="Übungen" icon={<Lightbulb className="w-6 h-6 text-primary"/>} href={`/modules/10/uebungen-${module.id}`}>
-                                        <p>{module.descriptions.uebungen}</p>
+                                    <SectionCard title={tModules('cardTitleUebungen')} icon={<Lightbulb className="w-6 h-6 text-primary"/>} href={`/modules/10/uebungen-${module.id}`}>
+                                        <p>{tDesc(`${module.id}_uebungen`)}</p>
                                     </SectionCard>
                                 </div>
                             </Element>
