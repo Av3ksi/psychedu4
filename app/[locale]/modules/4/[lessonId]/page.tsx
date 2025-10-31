@@ -2,15 +2,13 @@
 
 import { useParams } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
-// NEU: ArrowRight importiert
 import { ArrowLeft, ArrowRight, Check, X, Eye, EyeOff } from 'lucide-react';
 import { ReactNode, useState, FC } from 'react';
-
 import { useSubscription } from '@/hooks/useSubscription';
 import LoadingSpinner from '@/components/LoadingSpinner';
 import { useTranslations } from 'next-intl';
 
-// --- TYP-DEFINITIONEN ---
+// --- TYPEN ---
 interface QuizQuestion {
   q: string;
   a: string[];
@@ -25,217 +23,309 @@ interface UebungenData {
   open: OpenQuestion[];
   kreativ: string;
 }
-interface ModuleContent {
-  grundwissen: ReactNode;
-  anwendbarkeit: ReactNode;
-  meisterklasse: ReactNode;
-  uebungen: ReactNode;
-}
-interface DevelopmentalPsychologyModule {
-  id: number;
-  title: string;
-  content: ModuleContent;
-}
 
 // --- HILFS-KOMPONENTEN ---
 const ToggleSolution: FC<{ question: OpenQuestion }> = ({ question }) => {
-    const [isOpen, setIsOpen] = useState(false);
-    return (
-        <div className="border-t dark:border-slate-700 pt-4">
-            <p className="font-semibold">{question.q}</p>
-            <button onClick={() => setIsOpen(!isOpen)} className="text-sm text-primary hover:underline flex items-center gap-2 my-2">
-                {isOpen ? <EyeOff className="w-4 h-4"/> : <Eye className="w-4 h-4"/>}
-                {isOpen ? 'Lösung verbergen' : 'Lösung anzeigen'}
-            </button>
-            {isOpen && <div className="p-4 bg-slate-100 dark:bg-slate-800 rounded-md text-slate-700 dark:text-slate-300"><p>{question.solution}</p></div>}
-        </div>
-    );
-};
-const UebungenContent: FC<{ data: UebungenData }> = ({ data }) => {
-    const [answers, setAnswers] = useState<(number | null)[]>(new Array(data.quiz.length).fill(null));
-    const handleSelect = (quizIndex: number, answerIndex: number) => { setAnswers(prev => { const newAnswers = [...prev]; newAnswers[quizIndex] = answerIndex; return newAnswers; }); };
-    return (
-        <div className="space-y-12">
-            <div><h3 className="text-2xl font-semibold border-b pb-2 mb-4">Single-Choice-Fragen</h3><div className="space-y-6">{data.quiz.map((q, i) => (<div key={i} className="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg"><p className="font-semibold mb-3">{i+1}. {q.q}</p><div className="space-y-2">{q.a.map((ans, j) => {const isSelected = answers[i] === j; const isCorrect = q.correct === j; let buttonClass = 'bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600'; if (isSelected) { buttonClass = isCorrect ? 'bg-green-200 dark:bg-green-800 text-slate-900 dark:text-white' : 'bg-red-200 dark:bg-red-800 text-slate-900 dark:text-white'; } return (<button key={j} onClick={() => handleSelect(i, j)} className={`w-full text-left p-2 rounded-md transition-colors flex items-center justify-between ${buttonClass}`}><span>{ans}</span>{isSelected && (isCorrect ? <Check className="w-5 h-5 text-green-700 dark:text-green-300" /> : <X className="w-5 h-5 text-red-700 dark:text-red-300" />)}</button>);})}</div></div>))}</div></div>
-            <div><h3 className="text-2xl font-semibold border-b pb-2 mb-4">Offene Fragen</h3><div className="space-y-6">{data.open.map((q, i) => <ToggleSolution key={i} question={q} />)}</div></div>
-            <div><h3 className="text-2xl font-semibold border-b pb-2 mb-4">Kreativitätsfrage</h3><div className="p-4 border-l-4 border-purple-400 bg-purple-50 dark:bg-purple-900/20"><p className="italic text-slate-700 dark:text-slate-300">{data.kreativ}</p></div></div>
-        </div>
-    );
+  const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations('module4.ui');
+  return (
+    <div className="border-t dark:border-slate-700 pt-4">
+      <p className="font-semibold">{question.q}</p>
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="text-sm text-primary hover:underline flex items-center gap-2 my-2"
+      >
+        {isOpen ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+        {isOpen ? t('hideSolution') : t('showSolution')}
+      </button>
+      {isOpen && (
+        <div
+          className="p-4 bg-slate-100 dark:bg-slate-800 rounded-md text-slate-700 dark:text-slate-300"
+          dangerouslySetInnerHTML={{ __html: question.solution }}
+        />
+      )}
+    </div>
+  );
 };
 
-// --- INHALTE FÜR ALLE MODULE DER ENTWICKLUNGSPSYCHOLOGIE ---
-// (Alle Inhalts-Konstanten wie grundwissenInhalt1 etc. bleiben unverändert hier)
+const UebungenContent: FC<{ data: UebungenData; moduleNumber: number }> = ({
+  data,
+  moduleNumber,
+}) => {
+  const [answers, setAnswers] = useState<(number | null)[]>(
+    new Array(data?.quiz?.length ?? 0).fill(null)
+  );
+  const handleSelect = (quizIndex: number, answerIndex: number) => {
+    setAnswers((prev) => {
+      const newAnswers = [...prev];
+      newAnswers[quizIndex] = answerIndex;
+      return newAnswers;
+    });
+  };
+  const t = useTranslations(`module${moduleNumber}.ui`);
 
-const grundwissenInhalt1 = ( <div className="space-y-8"> <p className="text-lg leading-relaxed">Die Entwicklungspsychologie ist das wissenschaftliche Studium der systematischen psychologischen Veränderungen, die ein Mensch im Laufe seines Lebens erfährt. Sie untersucht Entwicklung in drei Hauptbereichen:</p> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Physische Entwicklung:</strong> Wachstum und Veränderungen des Körpers und des Gehirns, der Sinne, der motorischen Fähigkeiten und der Gesundheit.</li> <li><strong>Kognitive Entwicklung:</strong> Veränderungen in Denkprozessen, Intelligenz, Gedächtnis und Sprache.</li> <li><strong>Psychosoziale Entwicklung:</strong> Veränderungen in Emotionen, Persönlichkeit und sozialen Beziehungen.</li> </ul> <h3 className="text-2xl font-semibold border-b pb-2">Zentrale Fragen der Entwicklungspsychologie</h3> <p>Die Forschung in diesem Feld wird von mehreren grundlegenden Fragen angetrieben:</p> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Kontinuierliche vs. diskontinuierliche Entwicklung:</strong> Ist Entwicklung ein gradueller, kumulativer Prozess (wie ein Baum, der wächst) oder findet sie in plötzlichen, klar abgegrenzten Stufen statt (wie eine Raupe, die zum Schmetterling wird)?</li> <li><strong>Ein Verlauf oder viele Verläufe?:</strong> Gibt es einen universellen Entwicklungsverlauf für alle Kinder, oder ist die Entwicklung stark vom spezifischen kulturellen und individuellen Kontext abhängig?</li> <li><strong>Anlage vs. Umwelt (Nature vs. Nurture):</strong> Wie stark werden wir von unseren Genen (Anlage) und wie stark von unserer Umwelt und unseren Erfahrungen (Umwelt) geprägt? Heute geht man von einer ständigen Interaktion beider Faktoren aus.</li> </ul> </div> );
-const anwendbarkeitInhalt1 = ( <div className="space-y-8"> <p className="text-lg leading-relaxed">Die Debatte um **Anlage vs. Umwelt** hat immense praktische Konsequenzen für Politik, Erziehung und Gesellschaft.</p> <p><strong>Beispiel: Intelligenz.</strong></p> <ul className="list-disc list-inside space-y-3 pl-2"> <li>Wenn man annimmt, Intelligenz sei **rein genetisch** (Anlage), könnten politische Entscheidungsträger zu dem Schluss kommen, dass Förderprogramme für Kinder aus benachteiligten Verhältnissen sinnlos sind, da ihr Potenzial ja ohnehin festgelegt ist.</li> <li>Wenn man annimmt, Intelligenz sei **rein durch die Umwelt** formbar, könnte man extreme Erziehungsmethoden rechtfertigen und genetische Prädispositionen ignorieren.</li> </ul> <p>Die moderne Sicht: Die Entwicklungspsychologie zeigt, dass die Wahrheit in der Mitte liegt. Gene legen eine bestimmte **Reaktionsnorm** fest – einen Bereich von möglichen Entwicklungsergebnissen. Die Umwelt bestimmt dann, wo innerhalb dieses Bereichs sich eine Person tatsächlich entwickelt. Ein Kind mit hohem genetischem Potenzial für Intelligenz wird dieses in einer anregenden, fördernden Umgebung besser entfalten können als in einer vernachlässigenden.</p> <div className="bg-yellow-50 dark:bg-yellow-900/30 p-4 rounded-lg"><p>Dieses Wissen ist die Grundlage für Programme wie &quot;Head Start&quot; in den USA, die darauf abzielen, Kindern aus benachteiligten Familien eine anregende frühe Umwelt zu bieten, um ihr volles Potenzial zu ermöglichen.</p></div> </div> );
-const meisterklasseInhalt1 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Forschungsdesigns: Längsschnitt vs. Querschnitt</h3> <p>Um Entwicklung zu untersuchen, verwenden Forscher hauptsächlich zwei Designs, die beide ihre Tücken haben:</p> <ul className="list-disc list-inside space-y-4 pl-2"> <li> <strong>Querschnittstudie (Cross-sectional):</strong> Man vergleicht zum selben Zeitpunkt verschiedene Altersgruppen miteinander (z.B. eine Gruppe 20-Jährige, eine Gruppe 40-Jährige und eine Gruppe 60-Jährige). <br/><em className="text-slate-600 dark:text-slate-400">Vorteil: Schnell und günstig. Nachteil: Man kann nicht sicher sein, ob die Unterschiede auf das Alter oder auf **Kohorteneffekte** zurückzuführen sind (z.B. sind 60-Jährige mit Computern anders aufgewachsen als 20-Jährige).</em> </li> <li> <strong>Längsschnittstudie (Longitudinal):</strong> Man begleitet dieselbe Gruppe von Menschen über einen langen Zeitraum und misst sie wiederholt. <br/><em className="text-slate-600 dark:text-slate-400">Vorteil: Misst tatsächliche individuelle Entwicklung und hat keine Kohorteneffekte. Nachteil: Extrem teuer, zeitaufwändig und leidet unter **Attrition** (Teilnehmer scheiden aus der Studie aus).</em> </li> </ul> <p>Moderne Forschung versucht oft, **sequenzielle Designs** zu verwenden, die beide Ansätze kombinieren, um deren jeweilige Schwächen auszugleichen.</p> </div> );
-const uebungenData1: UebungenData = { quiz: [ { q: "Die Frage, ob Entwicklung graduell oder in Stufen verläuft, bezieht sich auf...", a: ["Anlage vs. Umwelt", "Kontinuierlich vs. Diskontinuierlich", "Ein oder viele Verläufe"], correct: 1 }, { q: "Eine Studie, die 20-, 40- und 60-Jährige im Jahr 2025 befragt und vergleicht, ist eine...", a: ["Längsschnittstudie", "Experimentelle Studie", "Querschnittstudie"], correct: 2 }, ], open: [ { q: "Erkläre den Begriff 'Kohorteneffekt' an einem eigenen Beispiel.", solution: "Ein Kohorteneffekt ist ein Unterschied zwischen Altersgruppen, der nicht auf das Alter selbst, sondern auf die unterschiedlichen historischen und kulturellen Erfahrungen dieser Generationen ('Kohorten') zurückgeht. Beispiel: Wenn man heute die Social-Media-Nutzung von 20- und 70-Jährigen vergleicht, liegt der Unterschied nicht primär daran, dass man mit 70 'alt' ist, sondern daran, dass die 20-Jährigen mit Smartphones aufgewachsen sind und die 70-Jährigen nicht." }, ], kreativ: "Wenn du unbegrenzte Ressourcen hättest, welche Frage der Entwicklungspsychologie würdest du mit einer Längsschnittstudie untersuchen, die über 50 Jahre läuft?" };
-const uebungenInhalt1 = <UebungenContent data={uebungenData1} />;
-const grundwissenInhalt2 = ( <div className="space-y-8"> <p className="text-lg leading-relaxed">Grosse Theorien bieten einen Rahmen, um die Entwicklung zu verstehen und zu erklären. Drei der einflussreichsten Theorien sind die von Freud, Erikson und Piaget.</p> <h3 className="text-2xl font-semibold border-b pb-2">Psychosexuelle Theorie (Sigmund Freud)</h3> <p>Freud postulierte, dass die Persönlichkeit sich in der Kindheit durch eine Reihe von **psychosexuellen Phasen** entwickelt. In jeder Phase konzentriert sich die libidinöse Energie auf eine andere erogene Zone. Ungelöste Konflikte in einer Phase können zu **Fixierungen** führen, die das Verhalten im Erwachsenenalter beeinflussen.</p> <h3 className="text-2xl font-semibold border-b pb-2">Psychosoziale Theorie (Erik Erikson)</h3> <p>Erikson modifizierte Freuds Theorie und betonte die soziale Natur der Entwicklung. Er schlug 8 Stufen vor, die die gesamte Lebensspanne abdecken. Jede Stufe ist durch eine zentrale **psychosoziale Krise** oder Aufgabe gekennzeichnet, deren erfolgreiche Bewältigung zu einer gesunden Persönlichkeit beiträgt. (z.B. Urvertrauen vs. Misstrauen im Säuglingsalter).</p> <h3 className="text-2xl font-semibold border-b pb-2">Kognitive Entwicklungstheorie (Jean Piaget)</h3> <p>Piaget konzentrierte sich darauf, wie Kinder die Welt verstehen. Er glaubte, dass Kinder aktiv Wissen konstruieren, indem sie ihre Erfahrungen in **Schemata** (mentale Modelle) organisieren. Entwicklung geschieht durch zwei Prozesse: **Assimilation** (neue Informationen in bestehende Schemata einfügen) und **Akkommodation** (bestehende Schemata anpassen, um neue Informationen aufzunehmen). Er schlug vier diskontinuierliche Stufen der kognitiven Entwicklung vor (sensomotorisch, präoperational, konkret-operational, formal-operational).</p> </div> );
-const anwendbarkeitInhalt2 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Piaget im Klassenzimmer</h3> <p className="text-lg leading-relaxed">Piagets Theorie hat die Pädagogik nachhaltig beeinflusst. Ein Lehrer, der Piagets Stufen versteht, kann seinen Unterricht anpassen.</p> <p><strong>Beispiel: Ein 7-jähriges Kind (konkret-operationale Stufe)</strong></p> <p>In dieser Stufe beginnen Kinder, logisch über konkrete Ereignisse nachzudenken, haben aber noch Mühe mit abstrakten Konzepten. Sie verstehen das **Prinzip der Erhaltung** (dass die Menge gleich bleibt, auch wenn sich die Form ändert).</p> <p><strong>Anwendung:</strong> Anstatt einem Kind abstrakt zu erklären, dass 1/2 und 2/4 das Gleiche sind, gibt ihm der Lehrer zwei identische Pizzen aus Pappe. Eine teilt er in zwei Hälften, die andere in vier Viertel. Das Kind kann nun konkret sehen und nachvollziehen, dass die Gesamtmenge dieselbe ist. Abstrakte mathematische Regeln werden durch konkrete, handelnde Erfahrungen begreifbar gemacht.</p> </div> );
-const meisterklasseInhalt2 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Vygotsky vs. Piaget: Die Rolle des Sozialen</h3> <p>Lew Vygotskys **soziokulturelle Theorie** stellt eine wichtige Alternative zu Piaget dar. Während Piaget das Kind als &quot;kleinen Wissenschaftler&quot; sah, der die Welt weitgehend allein entdeckt, betonte Vygotsky die entscheidende Rolle der sozialen Interaktion und Kultur.</p> <p>Sein zentrales Konzept ist die **Zone der proximalen Entwicklung (ZPD)**. Dies ist der Bereich zwischen dem, was ein Kind alleine tun kann, und dem, was es mit der Hilfe und Anleitung eines kompetenteren Anderen (Eltern, Lehrer, Peer) erreichen kann. Lernen findet laut Vygotsky am effektivsten in dieser Zone statt.</p> <p><strong>Vergleich:</strong></p> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Piaget:</strong> Entwicklung treibt das Lernen an. Ein Kind muss erst eine bestimmte kognitive Stufe erreichen, bevor es bestimmte Dinge lernen kann.</li> <li><strong>Vygotsky:</strong> Lernen treibt die Entwicklung an. Durch soziale Interaktion und das Lösen von Problemen in der ZPD wird die kognitive Entwicklung aktiv vorangetrieben.</li> </ul> </div> );
-const uebungenData2: UebungenData = { quiz: [ { q: "Welcher Theoretiker betonte die Rolle von psychosozialen Krisen über die gesamte Lebensspanne?", a: ["Freud", "Piaget", "Erikson"], correct: 2 }, { q: "Wenn ein Kind einen Hund sieht und ihn in sein bestehendes Schema 'Wauwau' einordnet, ist das ein Beispiel für...", a: ["Akkommodation", "Assimilation", "Fixierung"], correct: 1 }, ], open: [ { q: "Was ist der Hauptunterschied zwischen Freuds und Eriksons Theorien?", solution: "Freud fokussierte sich auf psychosexuelle Konflikte in der Kindheit als treibende Kraft der Persönlichkeitsentwicklung. Erikson erweiterte dies zu einer psychosozialen Theorie, die die gesamte Lebensspanne umfasst und die Rolle sozialer Interaktionen und kultureller Erwartungen in den Vordergrund stellt." }, ], kreativ: "Ein Kind, das noch nicht das Prinzip der Erhaltung verstanden hat, glaubt, dass ein hohes, schmales Glas mehr Saft enthält als ein niedriges, breites Glas, obwohl die Menge identisch ist. In welcher von Piagets Phasen befindet sich dieses Kind wahrscheinlich und warum?" };
-const uebungenInhalt2 = <UebungenContent data={uebungenData2} />;
-const grundwissenInhalt3 = ( <div className="space-y-8"> <p className="text-lg leading-relaxed">Die Entwicklung beginnt lange vor der Geburt. Die pränatale Phase ist eine Zeit dramatischen Wachstums und Wandels, die in drei Hauptstadien unterteilt wird:</p> <ol className="list-decimal list-inside space-y-3 pl-2"> <li><strong>Germinales Stadium (Woche 1-2):</strong> Von der Befruchtung bis zur Einnistung der Zygote in die Gebärmutterwand. Schnelle Zellteilung findet statt.</li> <li><strong>Embryonales Stadium (Woche 3-8):</strong> Der Zellhaufen wird zum Embryo. Die Grundstrukturen des Körpers und der Organe bilden sich. Dies ist eine hochsensible Phase.</li> <li><strong>Fötales Stadium (Woche 9 bis Geburt):</strong> Der Embryo wird zum Fötus. Wachstum und Ausdifferenzierung der Organe und Körpersysteme. Das Gehirn entwickelt sich rasant.</li> </ol> <h3 className="text-2xl font-semibold border-b pb-2">Reflexe des Neugeborenen</h3> <p>Neugeborene kommen mit einer Reihe angeborener, automatischer Reaktionen auf bestimmte Reize zur Welt, die ihr Überleben sichern. Dazu gehören der Saugreflex, der Greifreflex und der Moro-Reflex (Schreckreaktion).</p> </div> );
-const anwendbarkeitInhalt3 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Teratogene: Gefahren für die Entwicklung</h3> <p className="text-lg leading-relaxed">Ein **Teratogen** ist jeder Umweltfaktor – biologisch, chemisch oder physikalisch – der während der pränatalen Entwicklung Geburtsfehler verursachen kann. Die Anfälligkeit des Embryos/Fötus ist während des embryonalen Stadiums am grössten, wenn die Organe gebildet werden.</p> <p><strong>Beispiel Alkohol:</strong> Alkoholkonsum während der Schwangerschaft ist eine der häufigsten vermeidbaren Ursachen für geistige Behinderungen bei Kindern. Er kann zum **Fetalen Alkoholsyndrom (FAS)** führen, das durch Gesichts-Anomalien, Wachstumsstörungen und schwere kognitive Defizite gekennzeichnet ist.</p> <div className="bg-red-50 dark:bg-red-900/30 p-4 rounded-lg"><p><strong>Wichtige Botschaft:</strong> Da es keine bekannte sichere Menge an Alkohol während der Schwangerschaft gibt, ist der vollständige Verzicht die einzige sichere Empfehlung. Dies zu verstehen und zu kommunizieren ist eine wichtige Aufgabe im Gesundheitswesen.</p></div> </div> );
-const meisterklasseInhalt3 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Epigenetik: Wie die Umwelt unsere Gene steuert</h3> <p>Die moderne Forschung zeigt, dass die Anlage-Umwelt-Debatte noch komplexer ist. Die **Epigenetik** untersucht, wie Umweltfaktoren die Genexpression verändern können, ohne die DNA-Sequenz selbst zu verändern. Man kann es sich wie Schalter vorstellen, die Gene &quot;an-&quot; oder &quot;ausschalten&quot;.</p> <p><strong>Pränatale Einflüsse:</strong> Der mütterliche Stress, die Ernährung oder die Exposition gegenüber Giftstoffen während der Schwangerschaft können epigenetische Veränderungen beim Fötus bewirken. Diese Veränderungen können die Anfälligkeit des Kindes für Krankheiten wie Herzerkrankungen, Diabetes oder auch psychische Störungen im späteren Leben beeinflussen.</p> <p>Dies unterstreicht, dass die pränatale Phase eine kritische Periode ist, in der die Umweltbedingungen die langfristige gesundheitliche Entwicklung eines Individuums auf molekularer Ebene prägen können.</p> </div> );
-const uebungenData3: UebungenData = { quiz: [ { q: "In welchem Stadium der pränatalen Entwicklung bilden sich die Grundstrukturen der Organe?", a: ["Germinales Stadium", "Embryonales Stadium", "Fötales Stadium"], correct: 1 }, { q: "Ein Umweltfaktor, der Geburtsfehler verursachen kann, wird als ... bezeichnet.", a: ["Genotyp", "Phänotyp", "Teratogen"], correct: 2 }, ], open: [ { q: "Warum ist das embryonale Stadium besonders anfällig für die schädliche Wirkung von Teratogenen?", solution: "In diesem Stadium (Woche 3-8) findet die Organogenese statt, d.h. die grundlegende Bildung aller wichtigen Organe wie Herz, Gehirn und Gliedmassen. Störungen in dieser kritischen Phase haben oft schwerwiegende und irreversible Folgen für die Struktur und Funktion dieser Organe." }, ], kreativ: "Abgesehen von Alkohol und Nikotin, recherchiere und nenne zwei weitere potenzielle Teratogene und ihre möglichen Auswirkungen." };
-const uebungenInhalt3 = <UebungenContent data={uebungenData3} />;
-const grundwissenInhalt4 = ( <div className="space-y-8"> <p className="text-lg leading-relaxed">Die ersten zwei Jahre sind eine Zeit explosionsartiger Entwicklung. Das Gehirn wächst rasant, neue neuronale Verbindungen werden in atemberaubendem Tempo geknüpft (&quot;Synaptic Blooming&quot;), gefolgt von einer Phase des &quot;Pruning&quot;, in der ungenutzte Verbindungen abgebaut werden, um das Gehirn effizienter zu machen.</p> <h3 className="text-2xl font-semibold border-b pb-2">Motorische Entwicklung</h3> <p>Die motorische Entwicklung folgt zwei Prinzipien:</p> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Cephalocaudal:</strong> Entwicklung vom Kopf zum Fuss (ein Baby kann erst den Kopf heben, dann sitzen, dann laufen).</li> <li><strong>Proximodistal:</strong> Entwicklung von der Körpermitte nach aussen (ein Baby kann erst den Arm bewegen, dann die Hand, dann die Finger greifen).</li> </ul> <h3 className="text-2xl font-semibold border-b pb-2">Kognitive Entwicklung (Piaget: Sensomotorische Stufe)</h3> <p>Von Geburt bis zum Alter von ca. 2 Jahren lernen Kinder die Welt durch ihre Sinne und motorischen Handlungen kennen. Der grösste kognitive Meilenstein in dieser Phase ist die Entwicklung der **Objektpermanenz**: das Verständnis, dass Objekte weiterhin existieren, auch wenn man sie nicht mehr sehen, hören oder fühlen kann.</p> </div> );
-const anwendbarkeitInhalt4 = ( <div className="space-y-8"> <p className="text-lg leading-relaxed">Das Konzept der Objektpermanenz lässt sich leicht im Spiel beobachten und fördern.</p> <p><strong>Beispiel: Das Guck-Guck-Spiel (Peek-a-boo)</strong></p> <p>Ein sehr junger Säugling, der noch keine Objektpermanenz hat, ist oft verwirrt oder verliert das Interesse, wenn ein Gesicht hinter Händen verschwindet – für ihn ist es buchstäblich weg. Ein älterer Säugling (ca. ab 8 Monaten), der beginnt, Objektpermanenz zu entwickeln, zeigt Freude und Erwartung, weil er weiss, dass das Gesicht noch da ist und gleich wieder auftauchen wird. Das Spiel wird zu einer lustigen Bestätigung seines neuen Wissens.</p> <p><strong>Anwendung für Eltern:</strong> Spiele, bei denen Spielzeug unter einer Decke versteckt und wiedergefunden wird, sind nicht nur ein lustiger Zeitvertreib, sondern eine aktive Förderung dieser fundamentalen kognitiven Fähigkeit.</p> </div> );
-const meisterklasseInhalt4 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Die Kritik an Piaget: Früher als gedacht?</h3> <p>Piaget glaubte, dass die volle Objektpermanenz sich erst relativ spät entwickelt. Moderne Forschungsmethoden, die nicht auf Greif-Handlungen angewiesen sind, sondern die Blickzeiten von Babys messen, deuten jedoch darauf hin, dass ein grundlegendes Verständnis viel früher vorhanden sein könnte.</p> <p>In Studien von Baillargeon schauten schon 3-4 Monate alte Säuglinge signifikant länger auf ein &quot;unmögliches&quot; Ereignis (z.B. ein Auto, das scheinbar durch ein festes Hindernis rollt) als auf ein mögliches Ereignis. Dies legt nahe, dass sie bereits eine Erwartung darüber haben, dass das Hindernis weiterhin existiert, auch wenn es verdeckt ist.</p> <p>Dies zeigt, dass Piagets Stufen zwar eine brillante Beschreibung der Entwicklung sind, er aber die Fähigkeiten von Säuglingen möglicherweise unterschätzt hat, weil seine Methoden von ihren noch unreifen motorischen Fähigkeiten abhingen.</p> </div> );
-const uebungenData4: UebungenData = { quiz: [ { q: "Das Prinzip 'vom Kopf zum Fuss' in der motorischen Entwicklung nennt man...", a: ["Proximodistal", "Cephalocaudal", "Sensomotorisch"], correct: 1 }, { q: "Das Verständnis, dass Objekte weiter existieren, auch wenn sie nicht sichtbar sind, ist...", a: ["Assimilation", "Akkommodation", "Objektpermanenz"], correct: 2 }, ], open: [ { q: "Beschreibe den Prozess des 'Synaptic Pruning' und erkläre, warum er für eine effiziente Gehirnentwicklung wichtig ist.", solution: "Während der frühen Entwicklung werden massiv mehr synaptische Verbindungen gebildet, als benötigt werden ('Blooming'). 'Pruning' ist der Prozess, bei dem selten oder nie genutzte Verbindungen wieder abgebaut werden. Das ist wichtig, weil es das Gehirn effizienter macht. Statt eines unorganisierten Dschungels entsteht ein optimiertes, schnelles neuronales Netzwerk, in dem die wichtigen und häufig genutzten Pfade gestärkt sind." }, ], kreativ: "Entwirf ein einfaches Spiel für ein 1-jähriges Kind, das gezielt die Entwicklung der Feinmotorik (proximodistales Prinzip) fördert." };
-const uebungenInhalt4 = <UebungenContent data={uebungenData4} />;
-const grundwissenInhalt5 = ( <div className="space-y-8"> <p className="text-lg leading-relaxed">Die sozioemotionale Entwicklung befasst sich mit den primären emotionalen Bindungen, die ein Kind aufbaut. Die **Bindungstheorie (Attachment Theory)**, ursprünglich von John Bowlby entwickelt, ist hier das zentrale Konzept.</p> <h3 className="text-2xl font-semibold border-b pb-2">Bindung als &quot;sicherer Hafen&quot;</h3> <p>Bowlby beschrieb die Bindung zwischen Säugling und primärer Bezugsperson als ein angeborenes System, das das Überleben sichert. Die Bezugsperson dient als **sicherer Hafen (Safe Haven)**, zu dem das Kind bei Angst oder Stress zurückkehren kann, und als **sichere Basis (Secure Base)**, von der aus es die Welt erkunden kann.</p> <h3 className="text-2xl font-semibold border-b pb-2">Die &quot;Fremde Situation&quot; (Mary Ainsworth)</h3> <p>Mary Ainsworth entwickelte ein standardisiertes Laborexperiment, um die Qualität der Bindung zu beurteilen. Basierend auf dem Verhalten des Kindes bei der Trennung von und der Wiedervereinigung mit der Bezugsperson, identifizierte sie verschiedene Bindungsstile:</p> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Sicher gebunden:</strong> Das Kind vermisst die Bezugsperson, freut sich bei der Wiederkehr und lässt sich schnell trösten. Es nutzt die Bezugsperson als sichere Basis.</li> <li><strong>Unsicher-vermeidend gebunden:</strong> Das Kind zeigt kaum eine Reaktion auf die Trennung und ignoriert die Bezugsperson bei der Wiederkehr.</li> <li><strong>Unsicher-ambivalent/ängstlich gebunden:</strong> Das Kind ist bei Trennung extrem gestresst, zeigt aber bei der Wiederkehr ambivalentes Verhalten (Nähe suchen und gleichzeitig abwehren/wütend sein).</li> </ul> </div> );
-const anwendbarkeitInhalt5 = ( <div className="space-y-8"> <p className="text-lg leading-relaxed">Die frühe Bindungserfahrung formt unser **inneres Arbeitsmodell (Internal Working Model)** von Beziehungen. Dieses Modell ist eine Art mentale Blaupause, die unsere Erwartungen an uns selbst und an andere in zukünftigen Beziehungen prägt.</p> <h3 className="text-2xl font-semibold border-b pb-2">Auswirkungen auf romantische Beziehungen im Erwachsenenalter</h3> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Sicher gebundene Kinder</strong> entwickeln sich eher zu Erwachsenen, die vertrauensvolle, stabile und zufriedene Beziehungen führen können. Sie glauben, dass sie liebenswert sind und dass andere vertrauenswürdig sind.</li> <li><strong>Unsicher-vermeidende Kinder</strong> werden oft zu Erwachsenen, die Schwierigkeiten mit Intimität haben, emotional distanziert sind und Bindung vermeiden.</li> <li><strong>Unsicher-ambivalente Kinder</strong> neigen dazu, als Erwachsene in Beziehungen sehr ängstlich, besitzergreifend und eifersüchtig zu sein, ständig besorgt, verlassen zu werden.</li> </ul> <p>Das Verständnis des eigenen Bindungsstils kann Erwachsenen helfen, wiederkehrende Muster in ihren Beziehungen zu verstehen und gezielt daran zu arbeiten.</p> </div> );
-const meisterklasseInhalt5 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Stabilität und Veränderung von Bindungsstilen</h3> <p>Obwohl die frühen Bindungserfahrungen prägend sind, ist der Bindungsstil nicht in Stein gemeisselt. Er kann sich durch spätere signifikante Beziehungserfahrungen (sowohl positive als auch negative) im Laufe des Lebens verändern.</p> <p>Eine Person mit einem unsicheren Bindungsstil kann durch eine stabile, liebevolle Partnerschaft eine &quot;erarbeitete Sicherheit&quot; (earned security) entwickeln. Umgekehrt können traumatische Erlebnisse in einer Erwachsenenbeziehung auch einen ursprünglich sicheren Stil erschüttern.</p> <h3 className="text-2xl font-semibold border-b pb-2">Kulturelle Kritik</h3> <p>Die &quot;Fremde Situation&quot; wurde in einer westlichen, individualistischen Kultur entwickelt. Kulturen, in denen Kinder von mehreren Personen betreut werden oder in denen Unabhängigkeit weniger betont wird (z.B. in Japan), zeigen oft andere Verteilungsmuster der Bindungsstile. Kritiker argumentieren daher, dass das Experiment nicht universell den gleichen &quot;Goldstandard&quot; für eine &quot;gute&quot; Bindung darstellt und kulturelle Werte berücksichtigen muss.</p> </div> );
-const uebungenData5: UebungenData = { quiz: [ { q: "Die Bindungstheorie wurde ursprünglich formuliert von...", a: ["Mary Ainsworth", "Jean Piaget", "John Bowlby"], correct: 2 }, { q: "Ein Kind, das bei der Rückkehr der Mutter wütend ist und sich gleichzeitig an sie klammert, zeigt wahrscheinlich einen ... Bindungsstil.", a: ["sicheren", "unsicher-vermeidenden", "unsicher-ambivalenten"], correct: 2 }, ], open: [ { q: "Erkläre die Doppelrolle der Bezugsperson als 'sicherer Hafen' und 'sichere Basis'.", solution: "Als &apos;sicherer Hafen&apos; dient die Bezugsperson als Zufluchtsort bei Angst und Stress; das Kind sucht ihre Nähe, um sich zu beruhigen. Als &apos;sichere Basis&apos; dient sie als Ausgangspunkt für die Erkundung der Welt; das Kind traut sich, die Umgebung zu erkunden, weil es weiss, dass es jederzeit zur sicheren Basis zurückkehren kann." }, ], kreativ: "Beschreibe, wie sich ein 'inneres Arbeitsmodell' einer unsicher-vermeidenden Person in einer konkreten Situation im Erwachsenenleben äussern könnte (z.B. bei einem Konflikt mit dem Partner)." };
-const uebungenInhalt5 = <UebungenContent data={uebungenData5} />;
-const grundwissenInhalt6 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Kognitive Entwicklung (Piaget)</h3> <p>In diesem Zeitraum durchlaufen Kinder zwei wichtige Stufen:</p> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Präoperationale Stufe (ca. 2-7 Jahre):</strong> Kinder benutzen Sprache und Symbole, aber ihr Denken ist noch nicht logisch. Es ist geprägt von **Egozentrismus** (die Unfähigkeit, die Perspektive eines anderen einzunehmen) und sie scheitern an Erhaltungsaufgaben.</li> <li><strong>Konkret-operationale Stufe (ca. 7-11 Jahre):</strong> Kinder können logisch über konkrete Ereignisse nachdenken. Sie meistern das Prinzip der Erhaltung und können mathematische Transformationen durchführen. Abstraktes Denken ist aber noch schwierig.</li> </ul> <h3 className="text-2xl font-semibold border-b pb-2">Psychosoziale Entwicklung (Erikson)</h3> <p>Kinder navigieren durch zwei zentrale Krisen:</p> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Initiative vs. Schuldgefühl (3-6 Jahre):</strong> Kinder beginnen, Aktivitäten zu planen und zu initiieren. Werden sie dabei unterstützt, entwickeln sie Initiative. Werden sie ausgebremst oder kritisiert, entwickeln sie Schuldgefühle.</li> <li><strong>Werksinn vs. Minderwertigkeitsgefühl (6-12 Jahre):</strong> Kinder vergleichen sich mit Gleichaltrigen und wollen Dinge meistern. Erfolg führt zu einem Gefühl der Kompetenz (Werksinn), Misserfolg zu Minderwertigkeitsgefühlen.</li> </ul> </div> );
-const anwendbarkeitInhalt6 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Erziehungsstile nach Baumrind</h3> <p>Die Art, wie Eltern auf die Bedürfnisse ihrer Kinder reagieren und Anforderungen an sie stellen, hat einen grossen Einfluss auf deren sozioemotionale Entwicklung. Baumrind unterschied vier Stile:</p> <div className="overflow-x-auto"><table className="w-full text-left border-collapse"><thead><tr className="bg-slate-100 dark:bg-slate-800"><th className="p-3 font-semibold border-b dark:border-slate-700">Stil</th><th className="p-3 font-semibold border-b dark:border-slate-700">Beschreibung</th><th className="p-3 font-semibold border-b dark:border-slate-700">Typisches Ergebnis beim Kind</th></tr></thead><tbody><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Autoritativ</td><td className="p-3">Hohe Anforderungen, aber auch hohe Wärme und Reaktionsfähigkeit. Regeln werden erklärt.</td><td className="p-3">Hohes Selbstwertgefühl, gute soziale Kompetenzen.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Autoritär</td><td className="p-3">Hohe Anforderungen, aber geringe Wärme. Strenge Regeln, Gehorsam wird erwartet.</td><td className="p-3">Ängstlich, unglücklich, geringes Selbstwertgefühl.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Permissiv</td><td className="p-3">Geringe Anforderungen, aber hohe Wärme. Wenig Regeln, Eltern sind eher &quot;Freunde&quot;.</td><td className="p-3">Geringe Selbstdisziplin, Probleme mit Autoritäten.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Vernachlässigend</td><td className="p-3">Geringe Anforderungen und geringe Wärme. Eltern sind unbeteiligt.</td><td className="p-3">Geringes Selbstwertgefühl, hohes Risiko für emotionale und Verhaltensprobleme.</td></tr></tbody></table></div> <p className="mt-4">In westlichen Kulturen gilt der **autoritative Stil** als der vorteilhafteste für die Entwicklung des Kindes.</p> </div> );
-const meisterklasseInhalt6 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Moralische Entwicklung (Lawrence Kohlberg)</h3> <p>Kohlberg erweiterte Piagets Ideen und schlug drei Ebenen der moralischen Entwicklung vor, die er durch die Reaktionen von Menschen auf moralische Dilemmata (z.B. das Heinz-Dilemma) untersuchte:</p> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Präkonventionelle Ebene:</strong> Moral basiert auf Eigennutz. Richtig ist, was belohnt wird; falsch ist, was bestraft wird.</li> <li><strong>Konventionelle Ebene:</strong> Moral basiert auf sozialen Regeln und Gesetzen. Richtig ist, was die Gesellschaft oder Autoritäten vorgeben, um die soziale Ordnung aufrechtzuerhalten.</li> <li><strong>Postkonventionelle Ebene:</strong> Moral basiert auf universellen ethischen Prinzipien und dem eigenen Gewissen, die über Gesetze hinausgehen können.</li> </ul> <h3 className="text-2xl font-semibold border-b pb-2">Gilligans Kritik</h3> <p>Carol Gilligan kritisierte Kohlbergs Theorie als sexistisch, da er sie hauptsächlich an Jungen entwickelt hatte. Sie argumentierte, dass Frauen in ihrer moralischen Urteilsfindung tendenziell eine **Fürsorge- und Beziehungsperspektive (care perspective)** stärker betonen, während Männer eher eine **Gerechtigkeitsperspektive (justice perspective)** einnehmen. In Kohlbergs System wurden Frauen dadurch oft fälschlicherweise als moralisch weniger entwickelt eingestuft.</p> </div> );
-const uebungenData6: UebungenData = { quiz: [ { q: "Die Unfähigkeit eines Kindes, die Perspektive eines anderen einzunehmen, nennt Piaget...", a: ["Egozentrismus", "Objektpermanenz", "Erhaltung"], correct: 0 }, { q: "Welcher Erziehungsstil gilt in westlichen Kulturen als am vorteilhaftesten?", a: ["Autoritär", "Permissiv", "Autoritativ"], correct: 2 }, ], open: [ { q: "Erkläre das 'Heinz-Dilemma' kurz und gib eine mögliche Antwort, die der konventionellen Ebene der moralischen Entwicklung entspricht.", solution: "Das Heinz-Dilemma: Die Frau eines Mannes ist todkrank. Ein Apotheker hat ein Medikament, das sie retten könnte, verlangt aber einen Wucherpreis, den der Mann nicht bezahlen kann. Darf der Mann das Medikament stehlen? Eine konventionelle Antwort wäre: &apos;Nein, er darf nicht stehlen, denn Stehlen ist gegen das Gesetz und wenn jeder stehlen würde, hätten wir Chaos. Er sollte einen legalen Weg finden.&apos;" }, ], kreativ: "Ein 4-jähriges Kind sagt, es sei 'mehr Wind', weil die Bäume sich so stark bewegen. Welches kognitive Merkmal der präoperationalen Phase zeigt sich hier?" };
-const uebungenInhalt6 = <UebungenContent data={uebungenData6} />;
-const grundwissenInhalt7 = ( <div className="space-y-8"> <p className="text-lg leading-relaxed">Die Adoleszenz (ca. 12-18 Jahre) ist die Übergangsphase von der Kindheit zum Erwachsenenalter, geprägt von tiefgreifenden Veränderungen.</p> <h3 className="text-2xl font-semibold border-b pb-2">Physische Entwicklung: Pubertät</h3> <p>Gesteuert durch Hormone, kommt es zu einem Wachstumsschub und der Entwicklung der primären und sekundären Geschlechtsmerkmale. Das Gehirn entwickelt sich weiter, insbesondere der **präfrontale Kortex**, der für Impulskontrolle und Urteilsvermögen zuständig ist. Seine Unreife erklärt zum Teil das risikofreudige Verhalten von Jugendlichen.</p> <h3 className="text-2xl font-semibold border-b pb-2">Kognitive Entwicklung</h3> <p>Jugendliche erreichen Piagets **formal-operationale Stufe**. Sie können nun abstrakt, hypothetisch und deduktiv denken (&quot;Was wäre, wenn...?&quot;). Dies führt auch zu einer Form des **kognitiven Egozentrismus**, z.B. dem Glauben an ein &quot;imaginäres Publikum&quot; (Gefühl, ständig beobachtet und bewertet zu werden).</p> <h3 className="text-2xl font-semibold border-b pb-2">Psychosoziale Entwicklung (Erikson)</h3> <p>Die zentrale Krise dieser Phase ist **Identität vs. Rollenkonfusion**. Jugendliche experimentieren mit verschiedenen Rollen, Werten und Identitäten, um die Frage &quot;Wer bin ich?&quot; zu beantworten. Die Peer-Gruppe wird zur wichtigsten sozialen Referenz.</p> </div> );
-const anwendbarkeitInhalt7 = ( <div className="space-y-8"> <p className="text-lg leading-relaxed">Konflikte zwischen Eltern und Jugendlichen sind in dieser Phase normal und sogar entwicklungspsychologisch notwendig.</p> <h3 className="text-2xl font-semibold border-b pb-2">Ein typischer Konflikt: Die Ausgehzeit</h3> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Sicht des Jugendlichen:</strong> Getrieben von dem Wunsch nach Autonomie und der Zugehörigkeit zur Peer-Gruppe, kämpft der Jugendliche für mehr Freiheiten. Dank seiner neu entwickelten formal-operationalen Fähigkeiten kann er nun abstrakt argumentieren und die elterlichen Regeln als &quot;unfair&quot; oder &quot;unlogisch&quot; in Frage stellen.</li> <li><strong>Sicht der Eltern:</strong> Sie sorgen sich um die Sicherheit ihres Kindes und sind sich (oft unbewusst) der noch unreifen Impulskontrolle des jugendlichen Gehirns bewusst. Sie versuchen, Grenzen zu setzen, um vor Risiken zu schützen.</li> </ul> <p>Das Verständnis dieser unterschiedlichen entwicklungsbedingten Perspektiven kann Eltern helfen, die Autonomiebestrebungen ihres Kindes als normalen und gesunden Schritt zur Identitätsfindung anzuerkennen, anstatt nur als Rebellion.</p> </div> );
-const meisterklasseInhalt7 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">James Marcias Identitätszustände</h3> <p>Marcia erweiterte Eriksons Theorie und operationalisierte die Identitätssuche anhand von zwei Dimensionen: **Exploration** (das aktive Auseinandersetzen mit Alternativen) und **Commitment** (das Festlegen auf eine Wahl).</p> <div className="overflow-x-auto"><table className="w-full text-left border-collapse"><thead><tr className="bg-slate-100 dark:bg-slate-800"><th className="p-3 font-semibold border-b dark:border-slate-700">Identitätszustand</th><th className="p-3 font-semibold border-b dark:border-slate-700">Exploration</th><th className="p-3 font-semibold border-b dark:border-slate-700">Commitment</th><th className="p-3 font-semibold border-b dark:border-slate-700">Beschreibung</th></tr></thead><tbody><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Erarbeitete Identität (Achievement)</td><td className="p-3">Ja</td><td className="p-3">Ja</td><td className="p-3">Hat Alternativen erkundet und sich bewusst entschieden.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Moratorium</td><td className="p-3">Ja</td><td className="p-3">Nein</td><td className="p-3">Befindet sich aktiv in der Krise der Erkundung.</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Übernommene Identität (Foreclosure)</td><td className="p-3">Nein</td><td className="p-3">Ja</td><td className="p-3">Hat sich festgelegt, ohne zu explorieren (z.B. übernimmt den Beruf der Eltern).</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Diffuse Identität (Diffusion)</td><td className="p-3">Nein</td><td className="p-3">Nein</td><td className="p-3">Hat weder exploriert noch sich festgelegt.</td></tr></tbody></table></div> <p className="mt-4">Entwicklung verläuft oft vom diffusen/übernommenen Zustand über das Moratorium zur erarbeiteten Identität.</p> </div> );
-const uebungenData7: UebungenData = { quiz: [ { q: "Die zentrale psychosoziale Krise der Adoleszenz nach Erikson ist...", a: ["Intimität vs. Isolation", "Identität vs. Rollenkonfusion", "Werksinn vs. Minderwertigkeit"], correct: 1 }, { q: "Die Fähigkeit zum abstrakten und hypothetischen Denken beginnt in Piagets ... Stufe.", a: ["konkret-operationalen", "formal-operationalen", "präoperationalen"], correct: 1 }, ], open: [ { q: "Ein Jugendlicher beschliesst, Anwalt zu werden, weil seine beiden Eltern Anwälte sind, ohne jemals andere Berufe in Betracht gezogen zu haben. In welchem Identitätszustand nach Marcia befindet er sich?", solution: "Er befindet sich im Zustand der 'Übernommenen Identität' (Foreclosure). Er hat ein hohes Commitment (er hat sich entschieden), aber keine Exploration (keine Auseinandersetzung mit Alternativen) durchlaufen." }, ], kreativ: "Erkläre das Konzept des 'imaginären Publikums' und gib ein konkretes Beispiel, wie es das Verhalten eines 15-Jährigen beeinflussen könnte." };
-const uebungenInhalt7 = <UebungenContent data={uebungenData7} />;
-const grundwissenInhalt8 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Frühes Erwachsenenalter (ca. 20-40 Jahre)</h3> <p>Dies ist eine Phase der körperlichen Höchstleistungsfähigkeit. Die zentrale psychosoziale Krise nach Erikson ist **Intimität vs. Isolation**. Nachdem die eigene Identität gefestigt ist, liegt der Fokus auf der Entwicklung von tiefen, intimen Beziehungen zu anderen. Gelingt dies nicht, drohen Gefühle von Einsamkeit und Isolation.</p> <h3 className="text-2xl font-semibold border-b pb-2">Mittleres Erwachsenenalter (ca. 40-65 Jahre)</h3> <p>Die körperlichen Veränderungen (z.B. nachlassende Sehkraft, Gewichtszunahme) werden sichtbarer. Kognitiv unterscheidet man:</p> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Fluide Intelligenz:</strong> Die Fähigkeit, schnell zu denken, Probleme zu lösen und Muster zu erkennen. Nimmt tendenziell ab.</li> <li><strong>Kristalline Intelligenz:</strong> Das angesammelte Wissen und die Erfahrung. Bleibt stabil oder nimmt sogar zu.</li> </ul> <p>Die psychosoziale Krise ist **Generativität vs. Stagnation**. Generativität bezeichnet das Bedürfnis, etwas zu schaffen oder zu hinterlassen, das über die eigene Person hinausgeht (z.B. Kinder grossziehen, die nächste Generation im Beruf fördern, sich sozial engagieren). Gelingt dies nicht, entsteht ein Gefühl der Stagnation und Bedeutungslosigkeit.</p> </div> );
-const anwendbarkeitInhalt8 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Die &quot;Midlife Crisis&quot;: Mythos oder Realität?</h3> <p className="text-lg leading-relaxed">Das populäre Bild eines 45-Jährigen, der seinen Job kündigt, ein Sportauto kauft und seine Familie verlässt, ist eher ein Mythos als die Regel. Die Forschung zeigt, dass eine &quot;Krise&quot; in der Lebensmitte keineswegs unvermeidlich ist.</p> <p>Was es jedoch gibt, ist eine **Midlife Transition**: eine Phase der Neubewertung und Reflexion. Menschen in diesem Alter blicken auf ihr bisheriges Leben zurück und fragen sich, ob sie ihre Ziele erreicht haben. Anstatt einer Krise ist dies für viele eine Zeit des positiven Wandels, der Neuorientierung und der Festigung von Werten. Der Fokus verschiebt sich oft von Ehrgeiz hin zu Beziehungen und dem Wunsch, einen Beitrag zu leisten – ganz im Sinne von Eriksons Generativität.</p> </div> );
-const meisterklasseInhalt8 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Sternbergs Dreieckstheorie der Liebe</h3> <p>Robert Sternberg schlug vor, dass Liebe aus drei Komponenten besteht:</p> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Intimität (Intimacy):</strong> Gefühle von Nähe, Verbundenheit und Zuneigung.</li> <li><strong>Leidenschaft (Passion):</strong> Die Triebe, die zu Romantik, körperlicher Anziehung und sexueller Vollendung führen.</li> <li><strong>Festlegung/Bindung (Commitment):</strong> Die kurzfristige Entscheidung, jemanden zu lieben, und die langfristige Entschlossenheit, diese Liebe aufrechtzuerhalten.</li> </ul> <p>Die Kombination dieser drei Komponenten ergibt verschiedene Arten von Liebe:</p> <div className="overflow-x-auto"><table className="w-full text-left border-collapse"><thead><tr className="bg-slate-100 dark:bg-slate-800"><th className="p-3 font-semibold border-b dark:border-slate-700">Liebesform</th><th className="p-3 font-semibold border-b dark:border-slate-700">Intimität</th><th className="p-3 font-semibold border-b dark:border-slate-700">Leidenschaft</th><th className="p-3 font-semibold border-b dark:border-slate-700">Bindung</th></tr></thead><tbody><tr className="border-b dark:border-slate-700"><td className="p-3">Kameradschaftliche Liebe</td><td className="p-3">Ja</td><td className="p-3">Nein</td><td className="p-3">Ja</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3">Romantische Liebe</td><td className="p-3">Ja</td><td className="p-3">Ja</td><td className="p-3">Nein</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3">Fatuous Love (Alberne Liebe)</td><td className="p-3">Nein</td><td className="p-3">Ja</td><td className="p-3">Ja</td></tr><tr className="border-b dark:border-slate-700"><td className="p-3 font-bold">Vollkommene Liebe</td><td className="p-3 font-bold">Ja</td><td className="p-3 font-bold">Ja</td><td className="p-3 font-bold">Ja</td></tr></tbody></table></div> </div> );
-const uebungenData8: UebungenData = { quiz: [ { q: "Die zentrale psychosoziale Krise im frühen Erwachsenenalter ist...", a: ["Identität vs. Rollenkonfusion", "Intimität vs. Isolation", "Generativität vs. Stagnation"], correct: 1 }, { q: "Welche Art von Intelligenz neigt dazu, im mittleren Erwachsenenalter abzunehmen?", a: ["Kristalline Intelligenz", "Fluide Intelligenz", "Emotionale Intelligenz"], correct: 1 }, ], open: [ { q: "Erkläre den Unterschied zwischen fluider und kristalliner Intelligenz an einem Beispiel.", solution: "Fluide Intelligenz ist die Fähigkeit, neue Probleme ohne Vorwissen zu lösen, z.B. das schnelle Erkennen eines Musters in einer Reihe von Symbolen. Kristalline Intelligenz ist angesammeltes Wissen und Erfahrung, z.B. ein grosser Wortschatz oder das Wissen über historische Fakten. Ein junger Programmierer ist vielleicht schneller im Erlernen einer völlig neuen Programmiersprache (fluid), während ein erfahrener Programmierer auf ein riesiges Repertoire an bewährten Lösungen zurückgreifen kann (kristallin)." }, ], kreativ: "Beschreibe eine fiktive Person, die die Krise der 'Generativität vs. Stagnation' erfolgreich bewältigt hat, ohne eigene Kinder zu haben." };
-const uebungenInhalt8 = <UebungenContent data={uebungenData8} />;
-const grundwissenInhalt9 = ( <div className="space-y-8"> <p className="text-lg leading-relaxed">Das späte Erwachsenenalter (ab ca. 65 Jahren) ist eine Phase, die oft von mehr Unterschieden als Gemeinsamkeiten geprägt ist. Man unterscheidet oft zwischen den &quot;jungen Alten&quot; (65-74), &quot;alten Alten&quot; (75-84) und den &quot;ältesten Alten&quot; (85+).</p> <h3 className="text-2xl font-semibold border-b pb-2">Körperliche und kognitive Veränderungen</h3> <p>Die körperliche Leistungsfähigkeit nimmt ab, und das Risiko für chronische Krankheiten steigt. Kognitiv verlangsamt sich die Verarbeitungsgeschwindigkeit, aber angesammeltes Wissen und Lebenserfahrung (kristalline Intelligenz) bleiben oft lange stabil. Demenz ist eine Krankheit, kein normaler Teil des Alterns.</p> <h3 className="text-2xl font-semibold border-b pb-2">Psychosoziale Entwicklung</h3> <p>Eriksons letzte Stufe ist **Integrität vs. Verzweiflung**. Ältere Menschen blicken auf ihr Leben zurück. Empfinden sie ein Gefühl der Zufriedenheit und Akzeptanz, erreichen sie Integrität. Empfinden sie Reue und sehen ihr Leben als eine Reihe von verpassten Chancen, führt dies zu Verzweiflung.</p> <h3 className="text-2xl font-semibold border-b pb-2">Die fünf Phasen des Sterbens (Kübler-Ross)</h3> <p>Elisabeth Kübler-Ross beschrieb fünf Phasen, die Menschen durchlaufen können, wenn sie mit ihrer eigenen Sterblichkeit konfrontiert werden: 1. Leugnen, 2. Zorn, 3. Verhandeln, 4. Depression, 5. Akzeptanz.</p> </div> );
-const anwendbarkeitInhalt9 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Sozioemotionale Selektivitätstheorie (Carstensen)</h3> <p className="text-lg leading-relaxed">Diese Theorie erklärt, warum ältere Erwachsene oft zufriedener sind als jüngere, obwohl ihre körperlichen Fähigkeiten abnehmen. Sie postuliert, dass sich unsere sozialen Ziele im Laufe des Lebens ändern, abhängig von unserer Zeitperspektive.</p> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Junge Erwachsene (offene Zeitperspektive):</strong> Der Fokus liegt auf der Zukunft, dem Sammeln von Informationen, dem Knüpfen neuer Kontakte und dem Erwerb von Wissen.</li> <li><strong>Ältere Erwachsene (begrenzte Zeitperspektive):</strong> Die Zeit wird als endlich wahrgenommen. Der Fokus verschiebt sich auf die Gegenwart und auf emotional bedeutsame Ziele. Soziale Netzwerke werden kleiner, aber enger und emotional befriedigender. Man investiert Zeit und Energie gezielt in die Beziehungen, die einem am wichtigsten sind.</li> </ul> <p><strong>Anwendung:</strong> Dieses Wissen hilft, das Verhalten älterer Menschen zu verstehen. Wenn ein Grossvater kein Interesse mehr an grossen Partys hat, aber viel Zeit mit seinen Enkeln verbringen möchte, ist das kein Zeichen von Rückzug, sondern eine adaptive und positive Neuausrichtung seiner Prioritäten.</p> </div> );
-const meisterklasseInhalt9 = ( <div className="space-y-8"> <h3 className="text-2xl font-semibold border-b pb-2">Kritik am Phasenmodell von Kübler-Ross</h3> <p>Obwohl Kübler-Ross&apos; Modell sehr populär ist und das Bewusstsein für die Bedürfnisse Sterbender enorm geschärft hat, ist es aus wissenschaftlicher Sicht umstritten:</p> <ul className="list-disc list-inside space-y-3 pl-2"> <li><strong>Fehlende empirische Evidenz:</strong> Die Forschung konnte nicht bestätigen, dass alle Menschen diese fünf Phasen durchlaufen oder dass sie in dieser spezifischen Reihenfolge auftreten.</li> <li><strong>Gefahr der Normativität:</strong> Das Modell wurde oft als &quot;richtiger&quot; Weg zu sterben missverstanden. Dies kann Druck auf Sterbende und ihre Angehörigen ausüben, wenn ihre individuellen Reaktionen nicht den Phasen entsprechen.</li> </ul> <p>Heute wird der Sterbeprozess eher als ein individueller und oszillierender Prozess verstanden, in dem verschiedene Emotionen nebeneinander existieren und in ihrer Intensität schwanken können. Das Modell ist eher als eine Beschreibung möglicher Reaktionen zu sehen, nicht als ein Fahrplan, dem jeder folgen muss.</p> </div> );
-const uebungenData9: UebungenData = { quiz: [ { q: "Eriksons letzte psychosoziale Krise ist...", a: ["Generativität vs. Stagnation", "Integrität vs. Verzweiflung", "Intimität vs. Isolation"], correct: 1 }, { q: "Die Sozioemotionale Selektivitätstheorie besagt, dass ältere Erwachsene ihre sozialen Netzwerke...", a: ["vergrössern, um neue Leute kennenzulernen.", "verkleinern, um sich auf emotional nahe Beziehungen zu konzentrieren.", "unverändert lassen."], correct: 1 }, ], open: [ { q: "Was ist der Hauptunterschied zwischen der 'Lebenserwartung' und der 'maximalen Lebensspanne'?", solution: "Die Lebenserwartung ist die durchschnittliche Anzahl von Jahren, die eine Person, die in einem bestimmten Jahr geboren wurde, voraussichtlich leben wird. Sie ist statistisch und stark von Faktoren wie Medizin und Lebensstil abhängig. Die maximale Lebensspanne ist das biologisch maximal mögliche Alter für unsere Spezies (derzeit ca. 120-125 Jahre) und hat sich kaum verändert." }, ], kreativ: "Entwirf eine Aktivität für eine Seniorengruppe, die gezielt das Gefühl der 'Integrität' nach Erikson fördern soll (z.B. durch Lebensrückblick)." };
-const uebungenInhalt9 = <UebungenContent data={uebungenData9} />;
+  if (!data || !data.quiz || !data.open || !data.kreativ) {
+    return <p>{t('loadingError')}</p>;
+  }
 
-// --- MODUL-LISTE (VOLLSTÄNDIG) ---
-const developmentalPsychologyModules: DevelopmentalPsychologyModule[] = [
-    { id: 1, title: "Einführung in die Entwicklungspsychologie", content: { grundwissen: grundwissenInhalt1, anwendbarkeit: anwendbarkeitInhalt1, meisterklasse: meisterklasseInhalt1, uebungen: uebungenInhalt1 }},
-    { id: 2, title: "Theorien der Entwicklung", content: { grundwissen: grundwissenInhalt2, anwendbarkeit: anwendbarkeitInhalt2, meisterklasse: meisterklasseInhalt2, uebungen: uebungenInhalt2 }},
-    { id: 3, title: "Pränatale Entwicklung, Geburt & das Neugeborene", content: { grundwissen: grundwissenInhalt3, anwendbarkeit: anwendbarkeitInhalt3, meisterklasse: meisterklasseInhalt3, uebungen: uebungenInhalt3 }},
-    { id: 4, title: "Säuglingsalter & Kleinkindzeit: Körper & Kognition", content: { grundwissen: grundwissenInhalt4, anwendbarkeit: anwendbarkeitInhalt4, meisterklasse: meisterklasseInhalt4, uebungen: uebungenInhalt4 }},
-    { id: 5, title: "Säuglingsalter & Kleinkindzeit: Sozioemotionale Entwicklung", content: { grundwissen: grundwissenInhalt5, anwendbarkeit: anwendbarkeitInhalt5, meisterklasse: meisterklasseInhalt5, uebungen: uebungenInhalt5 }},
-    { id: 6, title: "Frühe & Mittlere Kindheit", content: { grundwissen: grundwissenInhalt6, anwendbarkeit: anwendbarkeitInhalt6, meisterklasse: meisterklasseInhalt6, uebungen: uebungenInhalt6 }},
-    { id: 7, title: "Adoleszenz", content: { grundwissen: grundwissenInhalt7, anwendbarkeit: anwendbarkeitInhalt7, meisterklasse: meisterklasseInhalt7, uebungen: uebungenInhalt7 }},
-    { id: 8, title: "Frühes & Mittleres Erwachsenenalter", content: { grundwissen: grundwissenInhalt8, anwendbarkeit: anwendbarkeitInhalt8, meisterklasse: meisterklasseInhalt8, uebungen: uebungenInhalt8 }},
-    { id: 9, title: "Spätes Erwachsenenalter, Tod & Sterben", content: { grundwissen: grundwissenInhalt9, anwendbarkeit: anwendbarkeitInhalt9, meisterklasse: meisterklasseInhalt9, uebungen: uebungenInhalt9 }},
-];
+  return (
+    <div className="space-y-12">
+      {/* Quiz */}
+      <div>
+        <h3 className="text-2xl font-semibold border-b pb-2 mb-4">
+          {t('quizTitle')}
+        </h3>
+        <div className="space-y-6">
+          {data.quiz.map((q, i) => (
+            <div
+              key={i}
+              className="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg"
+            >
+              <p className="font-semibold mb-3">
+                {i + 1}. {q.q}
+              </p>
+              <div className="space-y-2">
+                {q.a.map((ans, j) => {
+                  const isSelected = answers[i] === j;
+                  const isCorrect = q.correct === j;
+                  let buttonClass =
+                    'bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600';
+                  if (isSelected) {
+                    buttonClass = isCorrect
+                      ? 'bg-green-200 dark:bg-green-800 text-slate-900 dark:text-white'
+                      : 'bg-red-200 dark:bg-red-800 text-slate-900 dark:text-white';
+                  }
+                  return (
+                    <button
+                      key={j}
+                      onClick={() => handleSelect(i, j)}
+                      className={`w-full text-left p-2 rounded-md transition-colors flex items-center justify-between ${buttonClass}`}
+                    >
+                      <span>{ans}</span>
+                      {isSelected &&
+                        (isCorrect ? (
+                          <Check className="w-5 h-5 text-green-700 dark:text-green-300" />
+                        ) : (
+                          <X className="w-5 h-5 text-red-700 dark:text-red-300" />
+                        ))}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
 
-// --- HAUPTKOMPONENTE FÜR DIE DETAILSEITEN ---
+      {/* Offene Fragen */}
+      <div>
+        <h3 className="text-2xl font-semibold border-b pb-2 mb-4">
+          {t('openTitle')}
+        </h3>
+        <div className="space-y-6">
+          {data.open.map((q, i) => (
+            <ToggleSolution key={i} question={q} />
+          ))}
+        </div>
+      </div>
+
+      {/* Kreativaufgabe */}
+      <div>
+        <h3 className="text-2xl font-semibold border-b pb-2 mb-4">
+          {t('creativeTitle')}
+        </h3>
+        <div className="p-4 border-l-4 border-purple-400 bg-purple-50 dark:bg-purple-900/20">
+          <p className="italic text-slate-700 dark:text-slate-300">
+            {data.kreativ}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// --- HAUPT-KOMPONENTE ---
 export default function LessonDetailPage() {
-  const { lessonId } = useParams<{ lessonId: string }>();
-  const [type, moduleIdStr] = lessonId.split('-');
-  const moduleId = parseInt(moduleIdStr, 10);
-  const moduleData = developmentalPsychologyModules.find(m => m.id === moduleId);
+  const params = useParams<{ lessonId: string }>();
+  const { subscription, isLoading: isSubLoading } = useSubscription();
+  const tPremium = useTranslations('premiumAccess');
+  const tModulesOverview = useTranslations('modulesOverview');
+  const { lessonId } = params;
 
+  // --- Modul 4 Check ---
+  let moduleNumber: number | null = null;
+  let type: string | null = null;
+  let moduleIdStr: string | null = null;
+  let isValidId = false;
 
-
-
-
-    // --- NEUE PREMIUM-CHECK LOGIK ---
-    const { subscription, isLoading: isSubLoading } = useSubscription();
-    const tPremium = useTranslations('premiumAccess');
-    const tModules = useTranslations('modulesOverview'); // Für den "Zurück"-Link
-    
-    // Ladezustand anzeigen
-    if (isSubLoading) {
-      return <LoadingSpinner />;
+  if (lessonId && typeof lessonId === 'string' && lessonId.includes('-')) {
+    [type, moduleIdStr] = lessonId.split('-');
+    const parsedModuleId = parseInt(moduleIdStr, 10);
+    if (!isNaN(parsedModuleId) && parsedModuleId >= 1 && parsedModuleId <= 8) {
+      moduleNumber = 4;
+      isValidId = true;
     }
-  
-    // Prüfen, ob Premium benötigt wird und ob der Nutzer Premium hat
-    const isPremium = subscription?.status === 'active';
-    // Modul 2 ist ein Premium-Modul. 
-    // (Modul 1 wäre `requiresPremium = false`)
-    const requiresPremium = true; 
-  
-    // Zugriff verweigern, wenn nötig
-    if (requiresPremium && !isPremium) {
-      return (
-        <div className="max-w-3xl mx-auto p-6 text-center">
-          <h1 className="text-2xl font-bold mb-4">{tPremium('title')}</h1>
-          <p className="mb-6">{tPremium('description')}</p>
-          <Link href="/profile" className="px-6 py-2 bg-primary text-white rounded-lg">
-            {tPremium('upgradeButton')}
-          </Link>
-          {/* Link zurück zur ALLGEMEINEN Modulübersicht */}
-          <Link href="/modules" className="block flex items-center justify-center gap-2 text-primary hover:underline mt-6">
-                <ArrowLeft className="w-5 h-5" />
-                <span>{tModules('backLink')}</span>
-            </Link>
-        </div>
-      );
-    }
-  
-  
-  // --- NEU: LOGIK FÜR DIE BLÄTTERFUNKTION ---
-  const lessonParts = ['grundwissen', 'anwendbarkeit', 'meisterklasse', 'uebungen'];
-  const currentIndex = lessonParts.indexOf(type);
+  }
 
-  const prevPart = currentIndex > 0 ? lessonParts[currentIndex - 1] : null;
-  const nextPart = currentIndex < lessonParts.length - 1 ? lessonParts[currentIndex + 1] : null;
+  const tModule = useTranslations(isValidId ? `module4` : 'module1');
 
-  const prevLink = prevPart ? `/modules/4/${prevPart}-${moduleId}` : null;
-  const nextLink = nextPart ? `/modules/4/${nextPart}-${moduleId}` : null;
-  // --- ENDE DER NEUEN LOGIK ---
-
-  if (!moduleData) {
+  if (!isValidId) {
     return (
-        <div className="max-w-4xl mx-auto p-6 md:p-8">
-            <h1 className="text-2xl font-bold">Inhalt in Kürze verfügbar</h1>
-            <p className="mt-4">Diese Lektion wird gerade erstellt. Bitte schauen Sie bald wieder vorbei!</p>
-            <Link href="/modules/4" className="flex items-center gap-2 text-primary hover:underline mt-6">
-                <ArrowLeft className="w-5 h-5" />
-                <span>Zurück zur Übersicht der Entwicklungspsychologie</span>
-            </Link>
-        </div>
+      <div className="max-w-4xl mx-auto p-6 md:p-8">
+        <h1 className="text-2xl font-bold">{tModule('contentError.title')}</h1>
+        <p>{tModule('contentError.description')}</p>
+        <Link
+          href="/modules/4"
+          className="flex items-center gap-2 text-primary hover:underline mt-6"
+        >
+          <ArrowLeft className="w-5 h-5" />
+          <span>{tModule('backToOverview')}</span>
+        </Link>
+      </div>
     );
   }
-  
-  const contentKey = type as keyof typeof moduleData.content;
-  const content = moduleData.content[contentKey] || "Inhalt nicht verfügbar.";
-  const title = `${type.charAt(0).toUpperCase() + type.slice(1)}: ${moduleData.title}`;
+
+  if (isSubLoading) return <LoadingSpinner />;
+
+  const isPremium = subscription?.status === 'active';
+  const requiresPremium = true; // Modul 4 ist Premium
+
+  if (requiresPremium && !isPremium) {
+    return (
+      <div className="max-w-3xl mx-auto p-6 text-center">
+        <h1 className="text-2xl font-bold mb-4">{tPremium('title')}</h1>
+        <p className="mb-6">{tPremium('description')}</p>
+        <Link href="/profile" className="px-6 py-2 bg-primary text-white rounded-lg">
+          {tPremium('upgradeButton')}
+        </Link>
+        <Link
+          href="/modules"
+          className="block flex items-center justify-center gap-2 text-primary hover:underline mt-6"
+        >
+          <ArrowLeft className="w-5 h-5" />
+          <span>{tModulesOverview('backLink')}</span>
+        </Link>
+      </div>
+    );
+  }
+
+  // --- Inhalte laden ---
+  let content: ReactNode;
+  let lessonTitle: string;
+  let contentAvailable = true;
+  const lessonKey = moduleIdStr!;
+
+  try {
+    lessonTitle = tModule(`lessons.${lessonKey}.title`);
+    const contentKey = type as
+      | 'grundwissen'
+      | 'anwendbarkeit'
+      | 'meisterklasse'
+      | 'uebungen';
+
+    if (contentKey === 'uebungen') {
+      const uebungenData: UebungenData = tModule.raw(
+        `lessons.${lessonKey}.uebungen`
+      );
+      if (!uebungenData?.quiz || !uebungenData?.open || !uebungenData?.kreativ)
+        throw new Error('Übungsdaten unvollständig');
+      content = <UebungenContent data={uebungenData} moduleNumber={moduleNumber!} />;
+    } else {
+      const htmlContent = tModule.raw(`lessons.${lessonKey}.${contentKey}`);
+      if (!htmlContent) throw new Error('HTML-Inhalt fehlt');
+      content = <div dangerouslySetInnerHTML={{ __html: htmlContent }} />;
+    }
+  } catch (error) {
+    console.error(`Fehler beim Laden von Modul ${moduleNumber}`, error);
+    contentAvailable = false;
+    lessonTitle = tModule('contentError.title');
+    content = <p>{tModule('contentError.description')}</p>;
+  }
+
+  if (!contentAvailable) {
+    return (
+      <div className="max-w-4xl mx-auto p-6 md:p-8">
+        <h1 className="text-2xl font-bold">{lessonTitle}</h1>
+        {content}
+        <Link
+          href="/modules/4"
+          className="flex items-center gap-2 text-primary hover:underline mt-6"
+        >
+          <ArrowLeft className="w-5 h-5" />
+          <span>{tModule('backToOverview')}</span>
+        </Link>
+      </div>
+    );
+  }
+
+  // --- Navigation ---
+  const lessonParts = ['grundwissen', 'anwendbarkeit', 'meisterklasse', 'uebungen'];
+  const currentIndex = lessonParts.indexOf(type!);
+  const prevPart = currentIndex > 0 ? lessonParts[currentIndex - 1] : null;
+  const nextPart = currentIndex < lessonParts.length - 1 ? lessonParts[currentIndex + 1] : null;
+  const prevLink = prevPart ? `/modules/4/${prevPart}-${lessonKey}` : null;
+  const nextLink = nextPart ? `/modules/4/${nextPart}-${lessonKey}` : null;
+
+  let pageTypeFormatted = type;
+  if (type === 'grundwissen')
+    pageTypeFormatted = tModulesOverview('pageTitleGrundwissen');
+  else if (type === 'anwendbarkeit')
+    pageTypeFormatted = tModulesOverview('pageTitleAnwendbarkeit');
+  else if (type === 'meisterklasse')
+    pageTypeFormatted = tModulesOverview('pageTitleMeisterklasse');
+  else if (type === 'uebungen')
+    pageTypeFormatted = tModulesOverview('pageTitleUebungen');
+
+  const title = `${pageTypeFormatted}: ${lessonTitle}`;
 
   return (
     <div className="max-w-4xl mx-auto p-6 md:p-8">
       <div className="mb-8">
-        <Link href="/modules/4" className="flex items-center gap-2 text-primary hover:underline">
+        <Link
+          href="/modules/4"
+          className="flex items-center gap-2 text-primary hover:underline"
+        >
           <ArrowLeft className="w-5 h-5" />
-          <span>Zurück zur Übersicht der Entwicklungspsychologie</span>
+          <span>{tModule('backToOverview')}</span>
         </Link>
       </div>
+
       <div>
         <h1 className="text-3xl font-bold mb-6">{title}</h1>
         <div className="prose prose-lg dark:prose-invert max-w-none">
-            {content}
+          {content}
         </div>
-        
-        {/* --- NEU: UI FÜR DIE BLÄTTERFUNKTION --- */}
+
+        {/* Navigation */}
         <div className="mt-12 flex justify-between items-center border-t dark:border-slate-700 pt-6">
           {prevLink ? (
-            <Link href={prevLink} className="flex items-center gap-2 text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-light transition-colors rounded-md p-2 -m-2">
+            <Link
+              href={prevLink}
+              className="flex items-center gap-2 text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-light transition-colors rounded-md p-2 -m-2"
+            >
               <ArrowLeft className="w-4 h-4" />
-              <span className="font-semibold">Vorheriger Abschnitt</span>
+              <span className="font-semibold">{tModule('ui.prevSection')}</span>
             </Link>
           ) : (
-            <div /> // Leeres div, damit der "Weiter"-Button rechts bleibt
+            <div />
           )}
           {nextLink ? (
-            <Link href={nextLink} className="flex items-center gap-2 text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-light transition-colors rounded-md p-2 -m-2">
-              <span className="font-semibold">Nächster Abschnitt</span>
+            <Link
+              href={nextLink}
+              className="flex items-center gap-2 text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary-light transition-colors rounded-md p-2 -m-2"
+            >
+              <span className="font-semibold">{tModule('ui.nextSection')}</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           ) : (
-             <Link href="/modules/4" className="flex items-center gap-2 bg-primary text-white font-semibold px-4 py-2 rounded-lg hover:bg-primary-dark transition-colors">
-              <span>Zurück zur Übersicht</span>
+            <Link
+              href="/modules/4"
+              className="flex items-center gap-2 bg-primary text-white font-semibold px-4 py-2 rounded-lg hover:bg-primary-dark transition-colors"
+            >
+              <span>{tModule('ui.backToOverviewButton')}</span>
             </Link>
           )}
         </div>
-        {/* --- ENDE DER NEUEN UI --- */}
-
       </div>
     </div>
   );
