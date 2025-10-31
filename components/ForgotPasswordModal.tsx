@@ -1,3 +1,5 @@
+// components/ForgotPasswordModal.tsx
+
 'use client';
 
 import { useState } from 'react';
@@ -21,7 +23,8 @@ export function ForgotPasswordModal({ isOpen, onClose }: ForgotPasswordModalProp
 
     try {
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: `${window.location.origin}/update-password#`,
+        // HIER IST DIE KORREKTUR: Das '#' am Ende wurde entfernt
+        redirectTo: `${window.location.origin}/update-password`,
       });
       if (error) throw error;
       setSuccess(true);
@@ -90,4 +93,4 @@ export function ForgotPasswordModal({ isOpen, onClose }: ForgotPasswordModalProp
       </div>
     </div>
   );
-} 
+}

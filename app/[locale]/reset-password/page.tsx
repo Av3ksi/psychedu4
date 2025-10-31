@@ -1,3 +1,5 @@
+// app/[locale]/reset-password/page.tsx
+
 'use client';
 
 import { useState, useEffect, Suspense } from 'react';
@@ -28,7 +30,8 @@ function ResetPasswordContent() {
 
     try {
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: `${window.location.origin}/update-password#`,
+        // HIER IST DIE KORREKTUR: Das '#' am Ende wurde entfernt
+        redirectTo: `${window.location.origin}/update-password`,
       });
       if (error) throw error;
       setSuccess(true);
@@ -96,4 +99,4 @@ export default function ResetPasswordPage() {
       <ResetPasswordContent />
     </Suspense>
   );
-} 
+}
