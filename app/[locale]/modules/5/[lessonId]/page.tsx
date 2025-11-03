@@ -161,7 +161,7 @@ export default function LessonDetailPage() {
   if (lessonId && typeof lessonId === 'string' && lessonId.includes('-')) {
     [type, moduleIdStr] = lessonId.split('-');
     const parsedModuleId = parseInt(moduleIdStr, 10);
-    if (!isNaN(parsedModuleId) && parsedModuleId >= 1 && parsedModuleId <= 8) {
+    if (!isNaN(parsedModuleId) && parsedModuleId >= 1 && parsedModuleId <= 12) {
       moduleNumber = 5;
       isValidId = true;
     }

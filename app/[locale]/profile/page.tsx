@@ -10,12 +10,13 @@ import { AccountManagement } from '@/components/AccountManagement';
 import LoadingSpinner from '@/components/LoadingSpinner';
 import { ErrorBoundary } from 'react-error-boundary';
 import { fetchProfileProgress } from '@/utils/modules';
+import { useTranslations } from 'next-intl'; 
 
 // Die Preis-IDs bleiben wie gehabt.
 const monthlyPriceId = process.env.NEXT_PUBLIC_STRIPE_MONTHLY_PRICE_ID || '';
 const yearlyPriceId = process.env.NEXT_PUBLIC_STRIPE_YEARLY_PRICE_ID || '';
 
-// CustomStripeButton Komponente bleibt unverändert...
+// CustomStripeButton Komponente
 interface CustomStripeButtonProps {
   priceId: string;
   label: string;
@@ -26,6 +27,7 @@ interface CustomStripeButtonProps {
 function CustomStripeButton({ priceId, label, planName, price }: CustomStripeButtonProps) {
   const [loading, setLoading] = useState(false);
   const { supabase } = useAuth();
+  const t = useTranslations('profilePage.stripeButton'); 
 
   const handleCheckout = async () => {
     setLoading(true);
@@ -50,7 +52,8 @@ function CustomStripeButton({ priceId, label, planName, price }: CustomStripeBut
       if (url) window.location.href = url;
     } catch (error) {
       console.error('Checkout failed:', error);
-      alert(`Ein Fehler ist aufgetreten: ${error instanceof Error ? error.message : 'Unbekannter Fehler'}`);
+      const errorMessage = error instanceof Error ? error.message : t('unknownError');
+      alert(t('checkoutError', { error: errorMessage })); 
     } finally {
       setLoading(false);
     }
@@ -68,7 +71,7 @@ function CustomStripeButton({ priceId, label, planName, price }: CustomStripeBut
           <p className="text-sm text-slate-600 dark:text-slate-400">{price}</p>
         </div>
         <div className="px-4 py-2 bg-primary text-white rounded-lg">
-          {loading ? 'Lade...' : label}
+          {loading ? t('loading') : label} 
         </div>
       </div>
     </button>
@@ -77,13 +80,13 @@ function CustomStripeButton({ priceId, label, planName, price }: CustomStripeBut
 
 
 function ProfileContent() {
+  const t = useTranslations('profilePage'); 
   const searchParams = useSearchParams();
   const { user } = useAuth();
   const { subscription, isLoading: isLoadingSubscription, syncWithStripe, fetchSubscription } = useSubscription();
   const paymentStatus = searchParams.get('payment');
   const [prog, setProg] = useState({ percent: 0, completed_modules: 0, total_modules: 10 });
   
-  // NEU: States für den Kündigungs-Modal
   const [isCancelModalOpen, setIsCancelModalOpen] = useState(false);
   const [isCancelling, setIsCancelling] = useState(false);
   const [cancelError, setCancelError] = useState('');
@@ -110,10 +113,6 @@ function ProfileContent() {
     }
   }, [syncWithStripe, subscription?.stripe_subscription_id]);
 
-  // useEffect(() => {
-  //   if (!user) router.push('/login');
-  // }, [user, router]);
-
   useEffect(() => {
     if (user?.id) fetchSubscription();
   }, [user?.id, fetchSubscription]);
@@ -127,13 +126,12 @@ function ProfileContent() {
         body: JSON.stringify({ subscriptionId: subscription.stripe_subscription_id }),
       });
       if (!response.ok) throw new Error('Failed to reactivate subscription');
-      await fetchSubscription(); // Zustand neu laden
+      await fetchSubscription(); 
     } catch (error) {
       console.error('Error reactivating subscription:', error);
     }
   };
   
-  // NEU: Funktion zur Kündigung des Abonnements
   const handleCancelSubscription = async () => {
     if (!subscription?.stripe_subscription_id) return;
 
@@ -152,7 +150,6 @@ function ProfileContent() {
         throw new Error(data.error || 'Kündigung fehlgeschlagen.');
       }
       
-      // Wichtig: Den Abo-Status neu laden, um die Änderungen anzuzeigen
       await fetchSubscription(); 
       setIsCancelModalOpen(false);
 
@@ -169,22 +166,36 @@ function ProfileContent() {
     return <LoadingSpinner />;
   }
 
+  // Hilfsfunktion, um das Datum sicher zu formatieren
+  // HIER IST DIE KORREKTUR: 'string' wurde als Typ hinzugefügt
+  const getFormattedDate = (date: Date | number | string | undefined) => {
+    if (!date) return '';
+    try {
+      return new Date(date).toLocaleDateString();
+    } catch (e) {
+      return '';
+    }
+  };
+
+  // Diese Zeile sollte jetzt keinen Fehler mehr verursachen
+  const formattedEndDate = getFormattedDate(subscription?.current_period_end);
+
   return (
-    <ErrorBoundary fallback={<div className="p-4 text-red-600 dark:text-red-400">Failed to load subscription details.</div>}>
+    // Hier ist die Korrektur von 'fallback' zu 'FallbackComponent'
+    <ErrorBoundary FallbackComponent={() => <div className="p-4 text-red-600 dark:text-red-400">{t('fallbackError')}</div>}>
       <div className="min-h-screen bg-slate-50 dark:bg-[#0B1120] px-4 py-8">
         <div className="max-w-4xl mx-auto">
-          {/* ... (Code für Erfolgsmeldung, Titel, AccountManagement, Studienfortschritt bleibt gleich) ... */}
            {paymentStatus === 'success' && (
             <div className="mb-8 p-4 bg-green-50 dark:bg-green-900/30 rounded-lg">
-              <p className="text-green-700 dark:text-green-400">🎉 Danke für dein Abonnement! Deine Zahlung war erfolgreich.</p>
+              <p className="text-green-700 dark:text-green-400">{t('paymentSuccess')}</p>
             </div>
           )}
 
-          <h1 className="text-3xl font-bold mb-8 text-slate-900 dark:text-white">Profil</h1>
+          <h1 className="text-3xl font-bold mb-8 text-slate-900 dark:text-white">{t('title')}</h1>
           <AccountManagement />
           <div className="bg-white dark:bg-neutral-dark border border-slate-200 dark:border-slate-700 rounded-lg shadow p-6 mb-8">
             <div className="flex items-center justify-between mb-3">
-              <h2 className="text-xl font-semibold text-slate-900 dark:text-white">Studienfortschritt</h2>
+              <h2 className="text-xl font-semibold text-slate-900 dark:text-white">{t('progressCard.title')}</h2>
               <span className="text-sm text-slate-700 dark:text-slate-300">
                 {prog.completed_modules}/{prog.total_modules} · {prog.percent}%
               </span>
@@ -197,7 +208,7 @@ function ProfileContent() {
                 href="/modules"
                 className="px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700"
               >
-                Module ansehen/abhaken
+                {t('progressCard.viewModulesLink')}
               </Link>
               <Link
                 href={prog.percent >= 100 ? '/exam' : '#'}
@@ -209,87 +220,84 @@ function ProfileContent() {
                 aria-disabled={prog.percent < 100}
                 onClick={(e) => { if (prog.percent < 100) e.preventDefault(); }}
               >
-                Grosse Prüfung starten
+                {t('progressCard.startExamLink')}
               </Link>
             </div>
           </div>
 
 
           <div className="bg-white dark:bg-neutral-dark border border-slate-200 dark:border-slate-700 rounded-lg shadow p-6 mb-8">
-            <h2 className="text-xl font-semibold mb-4 text-slate-900 dark:text-white">Abonnement-Status</h2>
+            <h2 className="text-xl font-semibold mb-4 text-slate-900 dark:text-white">{t('subscriptionCard.title')}</h2>
             {isLoadingSubscription ? (
               <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
                   <div className="w-4 h-4 border-2 border-slate-400 dark:border-slate-600 border-t-transparent rounded-full animate-spin" />
-                  <span>Lade Abo-Details...</span>
+                  <span>{t('subscriptionCard.loading')}</span>
               </div>
             ) : subscription ? (
               <div className="space-y-3 text-slate-800 dark:text-slate-200">
-                {/* ... (Anzeige von Status, Plan, nächste Zahlung bleibt gleich) ... */}
                 <div className="flex justify-between">
-                    <span className="font-medium">Status:</span>
+                    <span className="font-medium">{t('subscriptionCard.statusLabel')}</span>
                     <span className="font-bold text-green-500">
-                        Premium Aktiv
+                        {t('subscriptionCard.status.active')}
                     </span>
                 </div>
                 <div className="flex justify-between">
-                    <span className="font-medium">Aktueller Plan:</span>
+                    <span className="font-medium">{t('subscriptionCard.planLabel')}</span>
                     <span>
-                        {subscription.price_id === monthlyPriceId ? 'Monats-Abo' : 'Jahres-Abo'}
+                        {subscription.price_id === monthlyPriceId ? t('subscriptionCard.plan.monthly') : t('subscriptionCard.plan.yearly')}
                     </span>
                 </div>
                  <div className="flex justify-between">
-                    <span className="font-medium">Nächste Zahlung:</span>
+                    <span className="font-medium">{t('subscriptionCard.nextPaymentLabel')}</span>
                     <span>
-                        {new Date(subscription.current_period_end).toLocaleDateString()}
+                        {formattedEndDate}
                     </span>
                 </div>
                  {subscription.cancel_at_period_end ? (
                   <div className="mt-4 p-4 bg-yellow-50 dark:bg-yellow-900/30 rounded-lg">
                     <p className="text-yellow-700 dark:text-yellow-400 mb-2">
-                      Dein Abo ist gekündigt und endet am {new Date(subscription.current_period_end).toLocaleDateString()}
+                      {t('subscriptionCard.cancelledMessage', { date: formattedEndDate })}
                     </p>
                     <button
                       onClick={handleReactivateSubscription}
                       className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg"
                     >
-                      Abo reaktivieren
+                      {t('subscriptionCard.reactivateButton')}
                     </button>
                   </div>
                 ) : (
-                  // NEU: Button zum Kündigen des Abos
                   <div className="mt-6">
                     <button
                       onClick={() => setIsCancelModalOpen(true)}
                       className="w-full px-4 py-2 text-sm text-center text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 rounded-lg hover:bg-red-100 dark:hover:bg-red-900/40 transition-colors"
                     >
-                      Abonnement kündigen
+                      {t('subscriptionCard.cancelButton')}
                     </button>
                   </div>
                 )}
               </div>
             ) : (
               <div className="mt-4 space-y-4 text-slate-800 dark:text-slate-200">
-                 {/* ... (Anzeige für "Kein Premium" und Kauf-Buttons bleibt gleich) ... */}
                   <div className="flex justify-between text-slate-800 dark:text-slate-200">
-                    <span className="font-medium">Status:</span>
+                    <span className="font-medium">{t('subscriptionCard.statusLabel')}</span>
                     <span className="font-bold text-yellow-500">
-                        Kein Premium
+                        {t('subscriptionCard.status.none')}
                     </span>
                 </div>
-                <p className="text-center">Wähle einen Plan, um vollen Zugriff zu erhalten.</p>
+                <p className="text-center">{t('subscriptionCard.noSubscription')}</p>
                 
                 <div className="space-y-3 pt-4">
                   <CustomStripeButton 
                     priceId={monthlyPriceId}
-                    label="Abonnieren"
-                    planName="Monats-Abo"
-                    price="20 CHF / Monat"
+                    label={t('subscriptionCard.subscribeButton')}
+                    planName={t('subscriptionCard.plan.monthly')}
+                    price={t('stripeButton.priceMonthly')}
                   />
                   <CustomStripeButton 
                     priceId={yearlyPriceId}
-                    label="Abonnieren"
-                    planName="Jahres-Abo"
-                    price="200 CHF / Jahr"
+                    label={t('subscriptionCard.subscribeButton')}
+                    planName={t('subscriptionCard.plan.yearly')}
+                    price={t('stripeButton.priceYearly')}
                   />
                 </div>
               </div>
@@ -298,13 +306,12 @@ function ProfileContent() {
         </div>
       </div>
        
-      {/* NEU: Modal zur Bestätigung der Kündigung */}
       {isCancelModalOpen && subscription && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
             <div className="bg-white dark:bg-gray-800 rounded-lg p-6 max-w-md w-full shadow-xl">
-                <h3 className="text-xl font-semibold mb-4 text-slate-900 dark:text-white">Abonnement kündigen?</h3>
+                <h3 className="text-xl font-semibold mb-4 text-slate-900 dark:text-white">{t('cancelModal.title')}</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                    Bist du sicher? Dein Abonnement bleibt bis zum Ende des aktuellen Abrechnungszeitraums am {new Date(subscription.current_period_end).toLocaleDateString()} aktiv.
+                    {t('cancelModal.confirmation', { date: formattedEndDate })}
                 </p>
                 {cancelError && (
                     <p className="text-red-500 mb-4">{cancelError}</p>
@@ -314,14 +321,14 @@ function ProfileContent() {
                         onClick={() => setIsCancelModalOpen(false)}
                         className="px-4 py-2 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700"
                     >
-                        Abbrechen
+                        {t('cancelModal.buttonCancel')}
                     </button>
                     <button
                         onClick={handleCancelSubscription}
                         disabled={isCancelling}
                         className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 disabled:opacity-50"
                     >
-                        {isCancelling ? 'Wird gekündigt...' : 'Ja, kündigen'}
+                        {isCancelling ? t('cancelModal.buttonLoading') : t('cancelModal.buttonConfirm')}
                     </button>
                 </div>
             </div>

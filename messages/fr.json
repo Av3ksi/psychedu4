@@ -32,7 +32,7 @@
       },
       "database": {
         "modules": "Modules",
-        "modules_value": "50+",
+        "modules_value": "10",
         "reviews": "Évaluations",
         "reviews_value": "Hebdomadaire",
         "resources": "Ressources",
@@ -418,48 +418,68 @@
     "description": "Explorez les processus mentaux tels que la perception, la mémoire, la pensée et le langage."
   },
   "cognitivePsychologyModuleTitles": {
-    "1": "Introduction et Perception",
-    "2": "Attention",
-    "3": "Mémoire Sensorielle et à Court Terme",
-    "4": "Mémoire à Long Terme",
-    "5": "Mémoire Implicite et Illusions de Mémoire",
-    "6": "Langage",
-    "7": "Résolution de Problèmes et Prise de Décision",
-    "8": "Intelligence Artificielle et Cognition"
+    "1": "Comment apprendre efficacement",
+    "2": "Qualité vs Quantité",
+    "3": "Théorie de l'équilibre",
+    "4": "Taxonomie de Bloom",
+    "5": "Introduction & Perception",
+    "6": "Attention",
+    "7": "Mémoire sensorielle & à court terme",
+    "8": "Mémoire à long terme",
+    "9": "Mémoire implicite & Illusions mémorielles",
+    "10": "Langage",
+    "11": "Résolution de problèmes & Prise de décision",
+    "12": "Intelligence Artificielle & Cognition"
   },
   "cognitivePsychologyModuleDescriptions": {
-    "1_grundwissen": "Comprendre la différence entre le traitement 'ascendant' (bottom-up) et 'descendant' (top-down).",
-    "1_anwendbarkeit": "Analyser les illusions d'optique et leur importance pour le design.",
-    "1_meisterklasse": "Discuter des lois de la Gestalt sur l'organisation perceptive.",
-    "1_uebungen": "Tester votre capacité à identifier les processus 'ascendants' et 'descendants'.",
-    "2_grundwissen": "Apprendre la théorie du filtre (Broadbent) et la théorie de l'atténuation (Treisman).",
-    "2_anwendbarkeit": "Comprendre l' 'effet cocktail' dans votre vie quotidienne.",
-    "2_meisterklasse": "Discuter du débat sur la sélection 'précoce' vs 'tardive' de l'attention.",
-    "2_uebungen": "Appliquer les théories à des scénarios d'attention sélective.",
-    "3_grundwissen": "Différencier la mémoire iconique et échoïque.",
-    "3_anwendbarkeit": "Comprendre le 'nombre magique 7 +/- 2' et la technique de 'regroupement' (chunking).",
-    "3_meisterklasse": "Analyser le modèle de mémoire de travail de Baddeley (boucle phonologique, etc.).",
-    "3_uebungen": "Tester la capacité de votre propre mémoire à court terme.",
-    "4_grundwissen": "Distinguer la mémoire épisodique, sémantique et procédurale.",
-    "4_anwendbarkeit": "Appliquer des techniques mnémoniques pour améliorer vos performances d'apprentissage.",
-    "4_meisterklasse": "Discuter du rôle de l'hippocampe dans la consolidation de la mémoire.",
-    "4_uebungen": "Classifier les souvenirs comme épisodiques, sémantiques ou procéduraux.",
-    "5_grundwissen": "Définir l'amorçage et l'apprentissage procédural comme formes de mémoire implicite.",
-    "5_anwendbarkeit": "Reconnaître comment la publicité utilise l'amorçage pour influencer votre comportement.",
-    "5_meisterklasse": "Analyser le 'paradigme DRM' pour la création de faux souvenirs.",
-    "5_uebungen": "Expérimenter l'effet des illusions de mémoire dans une expérience.",
-    "6_grundwissen": "Apprendre les composantes du langage (phonèmes, morphèmes, syntaxe).",
-    "6_anwendbarkeit": "Comprendre l' 'hypothèse de Sapir-Whorf' : la langue façonne-t-elle notre pensée ?",
-    "6_meisterklasse": "Discuter des bases neurologiques : aires de Broca et de Wernicke.",
-    "6_uebungen": "Identifier les ambiguïtés linguistiques et comment elles sont résolues.",
-    "7_grundwissen": "Distinguer les heuristiques (règles empiriques) des algorithmes.",
-    "7_anwendbarkeit": "Reconnaître les heuristiques de disponibilité et de représentativité au quotidien.",
-    "7_meisterklasse": "Analyser le 'biais de confirmation' dans la prise de décision.",
-    "7_uebungen": "Résoudre des problèmes et identifier les heuristiques utilisées.",
-    "8_grundwissen": "Comprendre les concepts de base des réseaux neuronaux et de l'apprentissage automatique.",
-    "8_anwendbarkeit": "Discuter des implications éthiques de l'IA dans le diagnostic ou la thérapie.",
-    "8_meisterklasse": "Comparer les architectures cognitives (par ex. ACT-R) avec les modèles d'IA modernes.",
-    "8_uebungen": "Analyser comment les systèmes d'IA (par ex. ChatGPT) simulent les processus cognitifs."
+    "1_grundwissen": "Fondamentaux de l'apprentissage efficace : espacement, entrelacement et pratique de récupération.",
+    "1_anwendbarkeit": "Appliquez le 'Rappel Actif' pour tester vos connaissances au lieu de la lecture passive.",
+    "1_meisterklasse": "Comprenez les mécanismes cognitifs derrière la 'Courbe de l'oubli' et comment la déjouer.",
+    "1_uebungen": "Créez un plan d'étude intégrant la répétition espacée.",
+    "2_grundwissen": "Pourquoi la compréhension profonde (Qualité) surpasse la mémorisation par cœur (Quantité).",
+    "2_anwendbarkeit": "Analysez le concept de 'Deep Work' (Travail en profondeur) de Cal Newport dans le contexte de l'apprentissage.",
+    "2_meisterklasse": "Discutez de la différence entre 'Shallow Work' (Travail superficiel) et 'Deep Work' dans l'acquisition des connaissances.",
+    "2_uebungen": "Identifiez vos propres habitudes de 'Shallow Work' et développez des stratégies pour le 'Deep Work'.",
+    "3_grundwissen": "Le concept d'homéostasie et d'équilibre cognitif selon Piaget.",
+    "3_anwendbarkeit": "Comprenez comment le stress et la dissonance cognitive perturbent l'équilibre.",
+    "3_meisterklasse": "Discutez de l'assimilation et de l'accommodation comme processus de restauration de l'équilibre cognitif.",
+    "3_uebungen": "Analysez un exemple de dissonance cognitive et les stratégies pour la résoudre.",
+    "4_grundwissen": "Les six niveaux de l'apprentissage : Mémoriser, Comprendre, Appliquer, Analyser, Évaluer, Créer.",
+    "4_anwendbarkeit": "Formulez des objectifs d'apprentissage et des questions d'examen pour différents niveaux de la taxonomie.",
+    "4_meisterklasse": "Examen critique et application de la taxonomie révisée à l'ère numérique.",
+    "4_uebungen": "Classez des tâches existantes selon les niveaux de la taxonomie de Bloom.",
+    "5_grundwissen": "Comprenez la différence entre le traitement 'Bottom-Up' (ascendant) et 'Top-Down' (descendant).",
+    "5_anwendbarkeit": "Analysez les illusions d'optique et leur importance pour le design.",
+    "5_meisterklasse": "Discutez des lois de la Gestalt sur l'organisation perceptive.",
+    "5_uebungen": "Testez votre capacité à identifier les processus 'Bottom-Up' et 'Top-Down'.",
+    "6_grundwissen": "Découvrez la Théorie du filtre (Broadbent) et la Théorie de l'atténuation (Treisman).",
+    "6_anwendbarkeit": "Comprenez l''Effet Cocktail Party' dans votre vie quotidienne.",
+    "6_meisterklasse": "Discutez du débat sur la sélection 'précoce' vs 'tardive' de l'attention.",
+    "6_uebungen": "Appliquez les théories à des scénarios d'attention sélective.",
+    "7_grundwissen": "Distinguez la mémoire iconique et échoïque.",
+    "7_anwendbarkeit": "Comprenez le 'nombre magique 7 +/- 2' et la technique du 'Chunking' (regroupement).",
+    "7_meisterklasse": "Analysez le modèle de la mémoire de travail de Baddeley (boucle phonologique, etc.).",
+    "7_uebungen": "Testez la capacité de votre propre mémoire à court terme.",
+    "8_grundwissen": "Distinguez la mémoire épisodique, sémantique et procédurale.",
+    "8_anwendbarkeit": "Appliquez des techniques mnémoniques pour améliorer vos performances d'apprentissage.",
+    "8_meisterklasse": "Discutez du rôle de l'hippocampe dans la consolidation de la mémoire.",
+    "8_uebungen": "Classez des contenus de mémoire comme épisodiques, sémantiques ou procéduraux.",
+    "9_grundwissen": "Définissez l'amorçage et l'apprentissage procédural comme formes de mémoire implicite.",
+    "9_anwendbarkeit": "Reconnaissez comment la publicité utilise l'amorçage pour influencer votre comportement.",
+    "9_meisterklasse": "Analysez le 'Paradigme DRM' pour la création de faux souvenirs.",
+    "9_uebungen": "Expérimentez l'effet des illusions mémorielles dans une expérience.",
+    "10_grundwissen": "Apprenez les composantes du langage (phonèmes, morphèmes, syntaxe).",
+    "10_anwendbarkeit": "Comprenez l''Hypothèse Sapir-Whorf' : le langage influence-t-il notre pensée ?",
+    "10_meisterklasse": "Discutez des fondements neurologiques : aires de Broca et de Wernicke.",
+    "10_uebungen": "Identifiez les ambiguïtés linguistiques et leur résolution.",
+    "11_grundwissen": "Distinguez les heuristiques (règles empiriques) des algorithmes.",
+    "11_anwendbarkeit": "Reconnaissez les heuristiques de disponibilité et de représentativité au quotidien.",
+    "11_meisterklasse": "Analysez le 'Biais de confirmation' dans la prise de décision.",
+    "11_uebungen": "Résolvez des problèmes et identifiez les heuristiques utilisées.",
+    "12_grundwissen": "Comprenez les concepts de base des réseaux neuronaux et de l'apprentissage automatique.",
+    "12_anwendbarkeit": "Discutez des implications éthiques de l'IA dans le diagnostic ou la thérapie.",
+    "12_meisterklasse": "Comparez les architectures cognitives (par ex., ACT-R) avec les modèles d'IA modernes.",
+    "12_uebungen": "Analysez comment les systèmes d'IA (par ex., ChatGPT) simulent les processus cognitifs."
   },
 
   "emotionMotivationOverview": {
@@ -1365,34 +1385,6 @@
     }
   },
 
-  "module5": {
-  "backToOverview": "Retour à l’aperçu de la psychologie cognitive",
-  "contentError": {
-    "title": "Erreur de chargement",
-    "description": "Le contenu de cette leçon n’a pas pu être chargé. Veuillez réessayer plus tard ou vérifier les fichiers de traduction."
-  },
-  "contentNotAvailableYet": {
-    "description": "Le contenu de cette leçon n’est pas encore disponible, mais sera ajouté bientôt.",
-    "exercises": "Les exercices pour cette leçon ne sont pas encore disponibles."
-  },
-  "ui": {
-    "showSolution": "Afficher la solution",
-    "hideSolution": "Masquer la solution",
-    "quizTitle": "Questions à choix unique",
-    "openTitle": "Questions ouvertes",
-    "creativeTitle": "Question de créativité",
-    "prevSection": "Section précédente",
-    "nextSection": "Section suivante",
-    "backToOverviewButton": "Retour à l’aperçu",
-    "grundwissenTitle": "Connaissances de base",
-    "anwendbarkeitTitle": "Applicabilité",
-    "meisterklasseTitle": "Classe de maître",
-    "uebungenTitle": "Exercices",
-    "loadingError": "Erreur lors du chargement des données d’exercice."
-  }
-},
-
-
   "module4": {
     "backToOverview": "Retour à l'aperçu de la Psychologie du Développement",
     "contentError": {
@@ -2295,7 +2287,281 @@
     }
     
   }
-}
+  
+},
+"profilePage": {
+    "fallbackError": "Échec du chargement des détails de l'abonnement.",
+    "paymentSuccess": "🎉 Merci pour votre abonnement ! Votre paiement a été effectué avec succès.",
+    "title": "Profil",
+    "progressCard": {
+      "title": "Progression des Études",
+      "viewModulesLink": "Voir/Cocher les Modules",
+      "startExamLink": "Commencer l'Examen Final"
+    },
+    "subscriptionCard": {
+      "title": "Statut de l'Abonnement",
+      "loading": "Chargement des détails de l'abonnement...",
+      "statusLabel": "Statut :",
+      "status": {
+        "active": "Premium Actif",
+        "none": "Pas de Premium"
+      },
+      "planLabel": "Plan Actuel :",
+      "plan": {
+        "monthly": "Plan Mensuel",
+        "yearly": "Plan Annuel"
+      },
+      "nextPaymentLabel": "Prochain Paiement :",
+      "cancelledMessage": "Votre abonnement est annulé et se terminera le {date}",
+      "reactivateButton": "Réactiver l'Abonnement",
+      "cancelButton": "Annuler l'Abonnement",
+      "noSubscription": "Choisissez un plan pour obtenir un accès complet.",
+      "subscribeButton": "S'abonner"
+    },
+    "stripeButton": {
+      "loading": "Chargement...",
+      "priceMonthly": "20 CHF / Mois",
+      "priceYearly": "200 CHF / An",
+      "checkoutError": "Une erreur est survenue : {error}",
+      "unknownError": "Erreur inconnue"
+    },
+    "cancelModal": {
+      "title": "Annuler l'Abonnement ?",
+      "confirmation": "Êtes-vous sûr ? Votre abonnement restera actif jusqu'à la fin de la période de facturation en cours le {date}.",
+      "buttonCancel": "Annuler",
+      "buttonConfirm": "Oui, annuler",
+      "buttonLoading": "Annulation..."
+    }
+  },
+
+  "module5": {
+    "backToOverview": "Retour à l'aperçu de la Psychologie Cognitive",
+    "contentError": {
+      "title": "Erreur lors du chargement",
+      "description": "Le contenu de cette leçon n'a pas pu être chargé. Veuillez réessayer plus tard ou vérifier les fichiers de traduction."
+    },
+    "contentNotAvailableYet": {
+       "description": "Le contenu de cette leçon n'est pas encore disponible, mais sera ajouté prochainement.",
+       "exercises": "Les exercices pour cette leçon ne sont pas encore disponibles."
+    },
+    "ui": {
+      "showSolution": "Afficher la solution",
+      "hideSolution": "Masquer la solution",
+      "quizTitle": "Questions à choix unique",
+      "openTitle": "Questions ouvertes",
+      "creativeTitle": "Question créative",
+      "prevSection": "Section précédente",
+      "nextSection": "Section suivante",
+      "backToOverviewButton": "Retour à l'aperçu",
+      "grundwissenTitle": "Savoir de base",
+      "anwendbarkeitTitle": "Applicabilité",
+      "meisterklasseTitle": "Classe de maître",
+      "uebungenTitle": "Exercices",
+      "loadingError": "Erreur lors du chargement des données d'exercices."
+    },
+    "lessons": {
+      "1": {
+        "title": "Comment apprendre efficacement",
+        "grundwissen": "<div class=\"space-y-4\"><p>L'apprentissage efficace repose sur des principes cognitifs. La relecture passive est inefficace. Les trois piliers d'un apprentissage réussi sont :</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Pratique de récupération (Rappel Actif) :</strong> Tester activement ses propres connaissances (par ex. avec des fiches, auto-interrogation) est bien plus efficace que la lecture passive. Cela renforce les voies de récupération dans le cerveau.</li><li><strong>Répétition espacée (Spaced Repetition) :</strong> Répartir l'apprentissage sur une période plus longue (par ex. 1 heure sur 5 jours) est préférable au 'Binge-learning' (5 heures en un jour).</li><li><strong>Entrelacement (Interleaving) :</strong> Mélanger différents sujets ou types de problèmes apparentés au sein d'une même session d'étude, au lieu de terminer complètement un sujet avant de passer au suivant.</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Rappel Actif plutôt que surlignage passif</h3><p>De nombreux étudiants passent des heures à lire des manuels et à utiliser des surligneurs. Le cerveau reste passif et signale à tort la 'familiarité' au lieu de la 'compréhension'.</p><p><strong>Application (Rappel Actif) :</strong></p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li>Lisez une section.</li><li>Fermez le livre et essayez de résumer les idées principales dans vos propres mots (par écrit ou oralement).</li><li>Créez des questions sur la section lue et répondez-y le lendemain.</li><li>Utilisez des applications de fiches (Anki, Quizlet) qui appliquent automatiquement la répétition espacée.</li></ul><p>Cette 'lutte' lors de la mémorisation est ce qui rend l'apprentissage efficace.</p></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">La courbe de l'oubli d'Ebbinghaus & la Difficulté Souhaitable</h3><p>Hermann Ebbinghaus a montré que nous oublions de manière exponentielle si nous ne répétons pas ce que nous avons appris. La 'courbe de l'oubli' est extrêmement raide au début.</p><p>La <strong>Répétition Espacée</strong> contrecarre cela en vous faisant réviser la connaissance juste au moment où vous êtes sur le point de l'oublier. Chaque récupération aplatit la courbe.</p><p>Le concept de <strong>'Difficulté Souhaitable' (Desirable Difficulty)</strong> stipule que l'apprentissage est plus durable lorsqu'il est associé à un effort. Les méthodes d'apprentissage faciles et fluides (comme la relecture) procurent une sensation agréable mais mènent à une moins bonne rétention à long terme que les méthodes ardues (comme le Rappel Actif ou l'Entrelacement).</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Selon la courbe de l'oubli, quelle est la méthode la moins efficace ?", "a": ["Étudier 5 heures d'affilée en une fois.", "Étudier 1 heure par jour pendant 5 jours.", "S'interroger activement sur ce qu'on a appris."], "correct": 0 },
+            { "q": "Mélanger différents types de problèmes s'appelle...", "a": ["Espacement", "Rappel Actif", "Entrelacement"], "correct": 2 }
+          ],
+          "open": [
+            { "q": "Expliquez la différence entre la 'fluidité' (familiarité) et la véritable 'maîtrise' (compréhension) dans l'apprentissage.", "solution": "La fluidité est le sentiment trompeur de connaître quelque chose parce qu'on l'a vu souvent (par ex. lors de la relecture). La véritable maîtrise (compréhension) signifie qu'on peut activement récupérer l'information, l'expliquer dans ses propres mots et l'appliquer à de nouveaux problèmes." }
+          ],
+          "kreativ": "Créez un plan d'étude de 3 jours pour un sujet de votre choix, intégrant l'espacement, le rappel actif et l'entrelacement."
+        }
+      },
+      "2": {
+        "title": "Qualité vs Quantité",
+        "grundwissen": "<div class=\"space-y-4\"><p>Dans le contexte de l'apprentissage, la qualité du temps investi est plus importante que la simple quantité (nombre d'heures).</p><p>Cal Newport a défini les termes :</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Deep Work (Travail en profondeur) :</strong> Capacité à se concentrer sans distraction sur une tâche cognitivement exigeante. Dans cet état (flux), la connaissance est rapidement absorbée et des connexions complexes sont établies.</li><li><strong>Shallow Work (Travail superficiel) :</strong> Tâches cognitivement peu exigeantes, souvent effectuées en étant distrait (par ex. vérifier ses e-mails, lecture passive, 'organiser' le matériel d'étude).</li></ul><p>Beaucoup d'étudiants passent beaucoup de temps en 'Shallow Work', ce qui est élevé en quantité mais faible en qualité.</p></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Le Deep Work dans les études</h3><p>Une heure de 'Deep Work' peut être plus efficace que trois heures de 'Shallow Work'.</p><p><strong>Application :</strong></p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Blocs de temps :</strong> Planifiez des blocs fixes et ininterrompus (par ex. 60-90 minutes) uniquement pour l'étude.</li><li><strong>Éliminer les distractions :</strong> Smartphone dans une autre pièce, notifications désactivées, onglets du navigateur fermés.</li><li><strong>Objectif clair :</strong> Définissez exactement ce que vous voulez accomplir dans ce bloc (par ex. 'Comprendre le chapitre 3 et résoudre 10 questions d'exercice', pas seulement 'étudier').</li><li><strong>Entraînement à la concentration :</strong> Commencez par des blocs plus courts (par ex. 25 min, technique Pomodoro) et augmentez la durée.</li></ul></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Monotâche et Résidu d'attention</h3><p>Notre cerveau n'est pas fait pour le multitâche. Ce que nous appelons 'multitâche' est en fait une commutation rapide entre les tâches ('Task Switching').</p><p>Chaque commutation, même un bref coup d'œil à un e-mail, laisse un <strong>'Résidu d'Attention' (Attention Residue)</strong>. Une partie de votre cerveau pense encore à la tâche précédente, ce qui réduit la performance cognitive pour la tâche principale.</p><p>Le 'Shallow Work' est caractérisé par une commutation constante des tâches. Le 'Deep Work' est l'acte de monotâche, qui permet au cerveau de consacrer sa pleine capacité à un seul problème.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Qu'est-ce qu'un 'Résidu d'Attention' ?", "a": ["Un état de concentration maximale.", "Des résidus cognitifs après avoir changé de tâche.", "Une méthode d'apprentissage."], "correct": 1 },
+            { "q": "Quelle activité est un exemple clair de 'Shallow Work' ?", "a": ["Résoudre un problème de programmation complexe.", "Trier des documents d'étude en écoutant de la musique.", "Comprendre une démonstration mathématique."], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Expliquez pourquoi le 'Deep Work' est plus important pour comprendre des relations complexes que le 'Shallow Work'.", "solution": "Les relations complexes nécessitent de maintenir et de manipuler de nombreuses informations différentes dans la mémoire de travail. Le 'Shallow Work', caractérisé par les distractions et le changement de tâches, empêche d'atteindre ce niveau de traitement profond. Le 'Deep Work' (monotâche) permet au cerveau d'utiliser toute la capacité de la mémoire de travail pour établir ces connexions." }
+          ],
+          "kreativ": "Suivez vos habitudes d'étude pendant une journée. Combien de temps passez-vous en 'Deep Work' et combien en 'Shallow Work' ? Quelles sont vos plus grandes sources de distraction ?"
+        }
+      },
+      "3": {
+        "title": "Théorie de l'équilibre",
+        "grundwissen": "<div class=\"space-y-4\"><p>En psychologie, l''équilibre' fait référence à deux concepts principaux :</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Homéostasie :</strong> Un principe biologique selon lequel le corps tente de maintenir un état interne stable (par ex. température, glycémie). Les pulsions (par ex. faim, soif) apparaissent lorsque cet équilibre est rompu et motivent un comportement pour le rétablir.</li><li><strong>Équilibre cognitif (Piaget) :</strong> Un état mental où nos schémas de pensée existants (structures de connaissances) correspondent aux nouvelles informations de l'environnement. Un déséquilibre (équilibration) est le moteur du développement cognitif.</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">La dissonance cognitive comme déséquilibre</h3><p>La théorie de la <strong>dissonance cognitive</strong> de Leon Festinger décrit un déséquilibre psychologique. Il survient lorsqu'une personne a deux cognitions contradictoires (pensées, croyances, attitudes) ou un comportement qui contredit ses croyances.</p><p><strong>Exemple :</strong><br/>Cognition A : 'Fumer est mortel.'<br/>Comportement B : 'Je fume tous les jours.'</p><p>Cette contradiction crée un état de tension désagréable (dissonance) qui nous motive à rétablir l'équilibre. Cela se fait par :</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li>Changement de comportement (arrêter de fumer).</li><li>Changement d'attitude (minimiser le danger de fumer).</li><li>Ajout de nouvelles cognitions (par ex. 'Helmut Schmidt fumait aussi et il a vécu jusqu'à 96 ans').</li></ul></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">L'équilibration de Piaget : Assimilation & Accommodation</h3><p>Jean Piaget voyait le développement cognitif comme un processus constant de recherche d'équilibre (équilibration).</p><p>Lorsqu'un enfant rencontre une nouvelle information qui ne correspond pas à sa vision du monde, un déséquilibre se crée. Pour le résoudre, il existe deux mécanismes :</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Assimilation :</strong> La nouvelle information est adaptée pour s'intégrer à un schéma existant. (Un enfant voit un teckel et dit 'chien', car il a déjà un schéma pour 'chien').</li><li><strong>Accommodation :</strong> Le schéma existant est modifié pour intégrer la nouvelle information. (L'enfant voit une vache, dit 'chien', les parents corrigent. L'enfant doit modifier son schéma 'animal à quatre pattes' et créer un nouveau schéma 'vache').</li></ul><p>L'apprentissage est une danse constante entre assimilation et accommodation.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Un enfant voit un papillon et l'appelle 'oiseau'. C'est un exemple de...", "a": ["Accommodation", "Assimilation", "Homéostasie"], "correct": 1 },
+            { "q": "La dissonance cognitive est un état...", "a": ["d'équilibre cognitif.", "d'homéostasie biologique.", "de déséquilibre psychologique."], "correct": 2 }
+          ],
+          "open": [
+            { "q": "Expliquez la différence entre l'homéostasie biologique et l'équilibre cognitif.", "solution": "L'homéostasie est un processus physiologique visant à maintenir un état corporel interne stable (par ex. la température). L'équilibre cognitif est un état mental où nos structures de connaissances internes (schémas) sont cohérentes avec les informations externes. Les deux sont des états d'équilibre, mais à des niveaux différents (biologique vs cognitif)." }
+          ],
+          "kreativ": "Décrivez une expérience personnelle où vous avez ressenti de la dissonance cognitive et comment vous l'avez résolue (consciemment ou inconsciemment)."
+        }
+      },
+      "4": {
+        "title": "Taxonomie de Bloom",
+        "grundwissen": "<div class=\"space-y-4\"><p>La taxonomie de Bloom est un modèle hiérarchique qui classe les objectifs d'apprentissage en différents niveaux de complexité. Elle est souvent représentée comme une pyramide pour montrer que les niveaux supérieurs reposent sur les niveaux inférieurs.</p><p>Les six niveaux (révisés) de bas en haut :</p><ol class=\"list-decimal list-inside space-y-2 pl-4\"><li><strong>Mémoriser (Remembering) :</strong> Rappeler des faits, connaître des définitions.</li><li><strong>Comprendre (Understanding) :</strong> Expliquer des concepts, reformuler dans ses propres mots.</li><li><strong>Appliquer (Applying) :</strong> Utiliser des connaissances dans de nouvelles situations ou pour résoudre des problèmes.</li><li><strong>Analyser (Analyzing) :</strong> Décomposer l'information en parties, identifier les relations et les structures.</li><li><strong>Évaluer (Evaluating) :</strong> Porter des jugements, justifier des opinions, appliquer des critères.</li><li><strong>Créer (Creating) :</strong> Développer de nouveaux produits, idées ou théories.</li></ol></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Formuler des objectifs d'apprentissage et des questions d'examen</h3><p>La taxonomie aide les enseignants et les apprenants à aller au-delà de la simple connaissance des faits.</p><p><strong>Exemples de questions à différents niveaux (sur le thème 'Changement climatique') :</strong></p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Mémoriser :</strong> 'Citez trois gaz à effet de serre.'</li><li><strong>Comprendre :</strong> 'Expliquez l'effet de serre dans vos propres mots.'</li><li><strong>Appliquer :</strong> 'Calculez l'empreinte carbone pour un voyage exemple.'</li><li><strong>Analyser :</strong> 'Comparez les impacts économiques du changement climatique sur le pays A et le pays B.'</li><li><strong>Évaluer :</strong> 'Évaluez l'efficacité de l'Accord de Paris sur le climat.'</li><li><strong>Créer :</strong> 'Développez un plan pour réduire les émissions de CO2 dans votre université.'</li></ul><p>En apprenant, vous devriez essayer de couvrir tous les niveaux, pas seulement la 'Mémorisation'.</p></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">La taxonomie révisée (Anderson & Krathwohl)</h3><p>La taxonomie originale de Bloom (1956) utilisait des noms (Connaissance, Compréhension...). La version révisée (2001) par Anderson et Krathwohl utilise des verbes (Mémoriser, Comprendre...) pour souligner le processus actif de l'apprentissage.</p><p>Le plus grand changement se situe au sommet : 'Synthèse' a été remplacé par 'Créer' et positionné comme le niveau le plus élevé, tandis qu''Évaluer' est passé au deuxième rang.</p><p>À l'ère numérique, la taxonomie est souvent élargie pour y associer des outils numériques (par ex. 'Googler' comme forme de Mémorisation, 'Bloguer' comme forme de Création). Elle reste un outil fondamental pour la planification pédagogique.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Quel est le niveau le plus élevé de la taxonomie révisée de Bloom ?", "a": ["Analyser", "Évaluer", "Créer"], "correct": 2 },
+            { "q": "La question 'Expliquez le concept X dans vos propres mots' teste quel niveau ?", "a": ["Mémoriser", "Comprendre", "Appliquer"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Pourquoi est-il insuffisant pour un apprentissage profond de rester au niveau 'Mémoriser' ?", "solution": "La simple 'Mémorisation' n'est que le rappel de faits isolés (apprentissage par cœur). Cela ne signifie pas que l'on a compris les relations, que l'on peut appliquer la connaissance, l'évaluer de manière critique ou créer quelque chose de nouveau avec. L'apprentissage profond nécessite les niveaux supérieurs de la taxonomie." }
+          ],
+          "kreativ": "Prenez le sujet 'Dissonance Cognitive' (de la leçon précédente) et formulez une question d'examen pour le niveau 'Analyser' et une pour le niveau 'Évaluer'."
+        }
+      },
+      "5": {
+        "title": "Introduction & Perception",
+        "grundwissen": "<div class=\"space-y-4\"><p>Notre perception du monde n'est pas une copie passive de la réalité. C'est un processus actif composé de deux parties :</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Sensation :</strong> Le processus par lequel nos récepteurs sensoriels (yeux, oreilles, peau, etc.) reçoivent l'énergie physique de l'environnement et la convertissent en signaux neuronaux. C'est un processus <strong>Bottom-Up</strong> (ascendant, guidé par les données).</li><li><strong>Perception :</strong> Le processus par lequel notre cerveau organise, interprète et donne un sens à ces informations sensorielles. C'est un processus <strong>Top-Down</strong> (descendant, guidé par les concepts), fortement influencé par nos expériences, nos attentes et nos connaissances.</li></ul><p>Imaginez que vous voyez des lettres sur un panneau. Les ondes lumineuses réfléchies par les lettres qui atteignent votre rétine déclenchent une sensation (Bottom-Up). Le fait que votre cerveau reconnaisse ces formes comme des mots et comprenne leur signification est basé sur vos connaissances préalables et vos attentes (Top-Down).</p></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><p>Les illusions d'optique sont des exemples fascinants de la manière dont nos processus Top-Down (attentes, connaissances acquises sur le monde) peuvent supplanter ou mal interpréter les données Bottom-Up (l'image réelle sur la rétine).</p><h3 class=\"text-xl font-semibold mb-2\">Exemple : Illusion de Müller-Lyer</h3><p>Deux lignes de même longueur semblent de longueurs différentes selon que les pointes de flèche à leurs extrémités sont tournées vers l'intérieur ou l'extérieur.</p><p></p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Bottom-Up :</strong> Les lignes sur la rétine ont la même longueur.</li><li><strong>Top-Down :</strong> Notre cerveau interprète les lignes en fonction de notre expérience des espaces tridimensionnels (coins de pièces/bâtiments). La ligne avec les pointes vers l'extérieur semble plus éloignée et est donc 'corrigée' par le cerveau comme étant plus longue.</li></ul><p><strong>Importance pour le design :</strong> Les designers utilisent ces principes. Les lignes verticales dans les pièces ou sur les vêtements peuvent suggérer la hauteur, les lignes horizontales la largeur. Les flèches ou le tracé des lignes peuvent diriger le regard et manipuler les impressions de taille.</p></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Les lois de la Gestalt sur l'organisation perceptive</h3><p>Les psychologues de la Gestalt ont formulé des principes selon lesquels notre cerveau regroupe automatiquement les informations sensorielles en ensembles significatifs ('Le tout est plus que la somme de ses parties') :</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Loi de proximité :</strong> Les éléments proches les uns des autres sont perçus comme appartenant au même groupe.</li><li><strong>Loi de similarité :</strong> Les éléments similaires sont perçus comme appartenant au même groupe (par ex. même couleur ou forme).</li><li><strong>Loi de bonne continuation :</strong> Nous avons tendance à percevoir les lignes et les motifs de manière à ce qu'ils forment un tracé continu et lisse.</li><li><strong>Loi de clôture :</strong> Nous avons tendance à compléter mentalement les figures incomplètes.</li><li><strong>Séparation Figure-Fond :</strong> Notre perception sépare automatiquement un objet (figure) de son arrière-plan (fond).</li></ul><p>Ces lois sont fondamentales pour le design UI/UX afin de créer des interfaces utilisateur intuitives et compréhensibles.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Le processus par lequel le cerveau interprète les impressions sensorielles s'appelle...", "a": ["Sensation", "Perception", "Transduction"], "correct": 1 },
+            { "q": "Lorsque vous reconnaissez des lettres incomplètes, vous utilisez principalement la loi de la Gestalt de...", "a": ["Proximité", "Similarité", "Clôture"], "correct": 2 }
+          ],
+          "open": [
+            { "q": "Expliquez la différence entre le traitement Bottom-Up et Top-Down dans le contexte de la perception.", "solution": "Le traitement Bottom-Up commence au niveau des récepteurs sensoriels et 'remonte' vers le cerveau. C'est l'analyse guidée par les données des informations sensorielles. Le traitement Top-Down est guidé par les concepts ; notre cerveau utilise nos connaissances, nos attentes et nos expériences pour interpréter et donner un sens aux impressions sensorielles." }
+          ],
+          "kreativ": "Trouvez le logo d'une marque connue. Quelles lois de la Gestalt y sont utilisées pour diriger la perception ou transmettre un message ?"
+        }
+      },
+      "6": {
+        "title": "Attention",
+        "grundwissen": "<div class=\"space-y-4\"><p>L'attention est la concentration sélective sur certains aspects de l'environnement, tout en en ignorant d'autres. Les premières théories ont tenté d'expliquer comment fonctionne cette sélection :</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Théorie du filtre (Broadbent, 1958) :</strong> L'attention comme un 'goulot d'étranglement' précoce. Les informations sensorielles arrivent dans un stock, un filtre sélectionne un canal basé sur des caractéristiques physiques (par ex. tonalité, lieu). Seules les informations de ce canal sont traitées ultérieurement (analyse sémantique). Les informations non traitées sont complètement bloquées.</li><li><strong>Théorie de l'atténuation (Treisman, 1964) :</strong> Modification de Broadbent. Le filtre ne bloque pas complètement les informations non traitées, mais les affaiblit ('atténue'). Les stimuli pertinents ou intenses (comme son propre nom) peuvent franchir le seuil et devenir conscients, même s'ils proviennent d'un canal non surveillé.</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">L'Effet Cocktail Party</h3><p>Ce phénomène décrit notre capacité à nous concentrer sur une seule conversation dans un environnement bruyant (comme une fête) et à ignorer les autres bruits.</p><p>En même temps, nous pouvons percevoir des stimuli importants provenant du bruit de fond ignoré, par exemple si quelqu'un appelle notre nom.</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li>La <strong>Théorie du filtre</strong> ne peut *pas* expliquer l'audition de son propre nom, car il provient d'un canal non surveillé et devrait être bloqué.</li><li>La <strong>Théorie de l'atténuation</strong> peut l'expliquer : Les autres conversations sont atténuées, mais son propre nom est un stimulus très pertinent qui peut pénétrer même le canal atténué.</li></ul><p>Cela montre que la sélection n'est pas toujours absolue et que la signification des stimuli joue un rôle.</p></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Sélection précoce vs tardive & Modèles de ressources</h3><p>Le débat s'est poursuivi : la sélection a-t-elle lieu tôt (avant l'analyse sémantique) ou tard (après l'analyse sémantique) ?</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Théories de la sélection tardive (par ex. Deutsch & Deutsch) :</strong> Ont soutenu que tous les stimuli sont traités jusqu'au niveau sémantique et que la sélection n'a lieu qu'après, en fonction de la pertinence pour la tâche en cours.</li></ul><p><strong>Vue moderne (Modèles de ressources, par ex. Lavie) :</strong> L'attention est considérée comme une ressource limitée. La profondeur du traitement des stimuli non pertinents dépend de la quantité de ressources que la tâche principale consomme :</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Charge perceptive élevée (tâche difficile) :</strong> Peu de ressources restantes, les stimuli non pertinents sont filtrés tôt (soutient la sélection précoce).</li><li><strong>Charge perceptive faible (tâche facile) :</strong> Plus de ressources disponibles, les stimuli non pertinents sont plus susceptibles d'être co-traités (soutient la sélection tardive).</li></ul><p>Le lieu de la sélection est donc flexible et dépend de la tâche.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Quelle théorie postule un blocage complet de l'information non surveillée ?", "a": ["Théorie du filtre (Broadbent)", "Théorie de l'atténuation (Treisman)", "Théorie de la sélection tardive"], "correct": 0 },
+            { "q": "Le phénomène d'entendre son propre nom dans une pièce bruyante soutient la...", "a": ["Théorie du filtre", "Théorie de l'atténuation", "Théorie des ressources"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Qu'est-ce que l''écoute dichotique' et à quoi servait-elle dans la recherche sur l'attention ?", "solution": "Lors de l'écoute dichotique, une personne reçoit simultanément des messages différents à chaque oreille via des écouteurs. On demande à la personne de ne prêter attention qu'à un seul message (de le 'suivre', c'est-à-dire de le répéter à voix haute). On examine ensuite ce qui est perçu du message ignoré. C'était un paradigme expérimental important pour étudier les mécanismes de sélection de l'attention." }
+          ],
+          "kreativ": "Pourquoi est-il si difficile de suivre un cours magistral si quelqu'un chuchote à côté de vous, même si vous essayez d'ignorer le chuchotement ? Expliquez cela avec les concepts de l'attention."
+        }
+      },
+       "7": {
+        "title": "Mémoire sensorielle & à court terme",
+        "grundwissen": "<div class=\"space-y-4\"><p>La mémoire commence par des stocks sensoriels à très courte durée de vie, avant que l'information n'atteigne la mémoire à court terme.</p><h3 class=\"text-xl font-semibold mb-2\">Mémoire sensorielle</h3><p>Conserve une copie exacte des stimuli sensoriels pendant un temps très court :</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Mémoire iconique (visuelle) :</strong> Stocke les informations visuelles pendant env. 250-500 millisecondes. Nécessaire pour, par ex., lier les lettres en mots lors de la lecture ou percevoir les mouvements comme fluides.</li><li><strong>Mémoire échoïque (auditive) :</strong> Stocke les informations auditives pendant env. 2-4 secondes. Nécessaire pour comprendre le langage parlé (avoir encore le début d'une phrase 'présent' lorsque la fin arrive).</li></ul><p>Seules les informations auxquelles on prête attention sont transmises à la mémoire à court terme.</p><h3 class=\"text-xl font-semibold mb-2\">Mémoire à court terme (MCT)</h3><p>Un stock à capacité et durée limitées, qui maintient actives les informations que nous traitons actuellement.</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Durée :</strong> Sans répétition active (Rehearsal), env. 15-30 secondes.</li><li><strong>Capacité :</strong> 'Nombre magique' 7 ± 2 unités d'information (Chunks) selon George Miller.</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Le 'Nombre magique 7 +/- 2' & le Chunking</h3><p>George Miller (1956) a remarqué que les gens peuvent généralement retenir 5 à 9 (donc 7 ± 2) unités d'information non liées dans leur mémoire à court terme (par ex. chiffres, lettres, mots).</p><p>Comment pouvons-nous alors mémoriser des informations plus longues comme les numéros de téléphone ? Par le <strong>Chunking</strong> (regroupement) : Nous regroupons les éléments individuels en unités plus grandes et significatives ('Chunks').</p><p>Exemple : La séquence de chiffres <strong>0 7 9 1 2 3 4 5 6 7</strong> (10 chiffres) est difficile à retenir. Regroupée en numéro de téléphone <strong>079 123 45 67</strong> (3 Chunks), cela devient facile.</p><p>Grâce au chunking, nous pouvons augmenter la *quantité* d'information par chunk et ainsi étendre la capacité effective de la mémoire à court terme. L'expertise dans un domaine (par ex. les échecs) repose souvent sur la capacité à reconnaître des motifs complexes comme des chunks.</p></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Le modèle de la mémoire de travail de Baddeley</h3><p>Le concept de mémoire à court terme a été élargi par Baddeley & Hitch (1974) pour devenir la <strong>Mémoire de travail</strong>. Ce n'est pas un stock passif, mais un système actif de stockage ET de manipulation à court terme de l'information.</p><p>Il se compose de plusieurs éléments :</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Administrateur central (Central Executive) :</strong> Le 'chef d'orchestre'. Contrôle l'attention, planifie les tâches, coordonne les sous-systèmes.</li><li><strong>Boucle phonologique :</strong> Maintient et manipule les informations linguistiques (comme une voix intérieure et une oreille intérieure). Important pour retenir les numéros de téléphone, apprendre de nouveaux mots.</li><li><strong>Calepin visuo-spatial :</strong> Maintient et manipule les informations visuelles et spatiales (images mentales, orientation).</li><li><strong>Buffer épisodique (ajouté plus tard) :</strong> Intègre les informations des boucles et de la mémoire à long terme en un épisode cohérent.</li></ul><p>Ce modèle explique mieux pourquoi nous pouvons, par exemple, parler et nous orienter dans l'espace en même temps (sous-systèmes différents), mais avons du mal à effectuer deux tâches linguistiques simultanément (conflit dans la boucle phonologique).</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Combien de temps les informations restent-elles généralement dans la mémoire à court terme sans répétition ?", "a": ["1-2 secondes", "15-30 secondes", "Plusieurs minutes"], "correct": 1 },
+            { "q": "Quel composant de la mémoire de travail est responsable de l''œil mental' ?", "a": ["Boucle phonologique", "Administrateur central", "Calepin visuo-spatial"], "correct": 2 }
+          ],
+          "open": [
+            { "q": "Quelle est la principale différence entre la mémoire à court terme selon Miller et la mémoire de travail selon Baddeley ?", "solution": "La MCT selon Miller est principalement un stock passif à capacité limitée (7±2 chunks). La mémoire de travail selon Baddeley est un système plus actif, multi-composants, qui non seulement stocke mais aussi manipule et traite l'information (par ex. calcul mental, imagination spatiale), coordonné par l'Administrateur central." }
+          ],
+          "kreativ": "Lisez un numéro de téléphone à 7 chiffres. Fermez les yeux et répétez-le mentalement pendant 20 secondes. Quel composant de la mémoire de travail avez-vous principalement utilisé ?"
+        }
+      },
+      "8": {
+        "title": "Mémoire à long terme",
+        "grundwissen": "<div class=\"space-y-4\"><p>La mémoire à long terme (MLT) est notre stock d'informations sur de longues périodes (minutes à vie). Elle a une capacité énorme, potentiellement illimitée.</p><p>Division principale :</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Mémoire explicite (déclarative) :</strong> Souvenirs consciemment accessibles que nous pouvons verbaliser ('savoir que...').<ul class=\"list-disc list-inside space-y-1 pl-6\"><li><strong>Mémoire épisodique :</strong> Événements et expériences personnels (Qu'ai-je mangé hier au petit-déjeuner ? Mon premier jour d'école).</li><li><strong>Mémoire sémantique :</strong> Connaissances factuelles, significations des mots, concepts (Paris est la capitale de la France. Un chien a quatre pattes).</li></ul></li><li><strong>Mémoire implicite (non déclarative) :</strong> Souvenirs inconscients qui se manifestent dans le comportement ('savoir comment...').<ul class=\"list-disc list-inside space-y-1 pl-6\"><li><strong>Mémoire procédurale :</strong> Compétences et habitudes apprises (faire du vélo, taper à la machine, nager).</li><li><strong>Amorçage (Priming) :</strong> Influence sur la réponse à un stimulus par un stimulus présenté auparavant.</li><li><strong>Conditionnement classique :</strong> Réponses émotionnelles/physiologiques apprises.</li></ul></li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Techniques mnémoniques : Améliorer les performances d'apprentissage</h3><p>Les mnémoniques sont des aides-mémoire qui facilitent l'encodage (stockage) et la récupération d'informations, souvent par associations et organisation.</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Élaboration :</strong> Traiter le matériel d'apprentissage en profondeur, le lier aux connaissances existantes, trouver des exemples, expliquer dans ses propres mots. (Plus efficace que la simple mémorisation).</li><li><strong>Organisation :</strong> Structurer l'information (par ex. cartes mentales, créer des hiérarchies).</li><li><strong>Méthode des lieux (Loci) :</strong> Placer mentalement les éléments à mémoriser dans les lieux d'un itinéraire connu et parcourir l'itinéraire lors de la récupération.</li><li><strong>Acronymes & Acrostiches :</strong> Mots-clés (par ex. OCEAN pour le Big Five) ou phrases mnémoniques.</li><li><strong>Imagerie visuelle :</strong> Se faire des images mentales vives des informations à mémoriser.</li></ul><p><strong>Conseil pratique pour les études :</strong> Ne vous fiez pas uniquement à la répétition. Utilisez l'élaboration et l'organisation pour mieux ancrer les connaissances dans la MLT.</p></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Consolidation de la mémoire & Rôle de l'hippocampe</h3><p>Les nouveaux souvenirs explicites sont initialement fragiles. Le processus par lequel ils deviennent stables et ancrés en permanence dans la mémoire à long terme s'appelle la <strong>consolidation</strong>.</p><p>L'<strong>Hippocampe</strong> (dans le lobe temporal) joue un rôle clé :</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li>Il agit comme une sorte de 'réalisateur' ou d''index' qui relie entre eux les différents aspects d'un nouveau souvenir (visuel, auditif, contextuel), stockés dans différentes zones du cortex.</li><li>Pendant la consolidation (qui peut durer des heures, des jours ou plus), ces connexions corticales sont renforcées et le souvenir devient de plus en plus indépendant de l'hippocampe.</li></ul><p>Le célèbre patient H.M., à qui on avait retiré les deux hippocampes, ne pouvait plus former de nouveaux souvenirs explicites (amnésie antérograde), mais sa mémoire implicite restait intacte. Cela a démontré le rôle spécifique de l'hippocampe dans la formation de nouveaux souvenirs explicites.</p><p>Le <strong>sommeil</strong>, en particulier le sommeil profond, est crucial pour la consolidation des contenus de la mémoire.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Savoir que Berlin est la capitale de l'Allemagne relève de...", "a": ["La mémoire épisodique", "La mémoire sémantique", "La mémoire procédurale"], "correct": 1 },
+            { "q": "Quelle structure est cruciale pour la formation de nouveaux souvenirs explicites ?", "a": ["Amygdale", "Hippocampe", "Cervelet"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Quelle est la différence entre la mémoire épisodique et la mémoire sémantique ?", "solution": "Les deux font partie de la mémoire explicite. La mémoire épisodique stocke les événements personnels avec un contexte temporel et spatial (par ex. 'Ce que j'ai mangé à midi hier'). La mémoire sémantique stocke les connaissances factuelles générales sur le monde, détachées de l'expérience personnelle (par ex. 'Un chien est un mammifère')." }
+          ],
+          "kreativ": "Classez les souvenirs suivants : a) Votre souvenir de votre dernière visite au cinéma, b) La capacité à lacer vos chaussures, c) Savoir que 3x4=12."
+        }
+      },
+       "9": {
+        "title": "Mémoire implicite & Illusions mémorielles",
+        "grundwissen": "<div class=\"space-y-4\"><p>La mémoire implicite influence notre pensée et notre comportement sans souvenir conscient.</p><h3 class=\"text-xl font-semibold mb-2\">Formes de mémoire implicite</h3><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Mémoire procédurale :</strong> Apprentissage de compétences (motrices, cognitives). Devient automatisé par la pratique (par ex. faire du vélo, lire).</li><li><strong>Amorçage (Priming) :</strong> Le traitement d'un stimulus est facilité ou influencé par la présentation antérieure (souvent inconsciente) d'un stimulus apparenté. Exemple : Après avoir lu le mot 'JAUNE', on reconnaît le mot 'BANANE' plus rapidement.</li><li><strong>Conditionnement classique :</strong> Associations apprises entre stimuli (par ex. chien de Pavlov).</li></ul><h3 class=\"text-xl font-semibold mb-2\">La mémoire comme construction</h3><p>Se souvenir n'est pas une lecture passive d'un enregistrement, mais un processus actif de <strong>reconstruction</strong>. Nous assemblons des fragments stockés et comblons souvent inconsciemment les lacunes avec nos connaissances, nos attentes et nos déductions. Cela rend la mémoire efficace, mais aussi sujette aux erreurs, distorsions et illusions.</p></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">L'amorçage dans la publicité</h3><p>La publicité utilise les effets d'amorçage pour éveiller des associations et influencer les décisions d'achat :</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Logos & Couleurs de marque :</strong> Une présentation répétée peut amorcer des sentiments positifs (par conditionnement classique) ou des concepts spécifiques (par ex. 'luxe', 'sécurité').</li><li><strong>Choix des mots :</strong> Des termes comme 'naturel', 'frais', 'prouvé scientifiquement' peuvent déclencher des associations correspondantes et des évaluations positives.</li><li><strong>Contexte :</strong> Montrer un produit dans un certain environnement (par ex. famille heureuse, sportifs à succès) amorce des associations entre le produit et cet état.</li></ul><p>Ces effets agissent souvent de manière subtile et inconsciente.</p><h3 class=\"text-xl font-semibold mb-2\">Effet de mésinformation</h3><p>Les souvenirs peuvent être modifiés après l'événement original par des informations trompeuses. Elizabeth Loftus l'a montré dans de célèbres expériences : des témoins d'un accident de voiture estimaient la vitesse plus élevée lorsqu'on leur demandait à quelle vitesse les voitures 's'étaient fracassées' ('smashed') par rapport à 's'étaient touchées' ('hit'). Le choix des mots influençait le souvenir.</p></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Le Paradigme DRM : Faux souvenirs en laboratoire</h3><p>Le paradigme Deese-Roediger-McDermott (DRM) montre à quel point il est facile de créer de faux souvenirs de mots qui n'ont jamais été présentés.</p><p><strong>Déroulement :</strong> On présente des listes de mots fortement associés à un mot non mentionné (le 'leurre critique') (par ex. lit, oreiller, rêve, nuit... leurre : sommeil).</p><p><strong>Résultat :</strong> Lors du rappel ultérieur, de nombreux participants se 'souviennent' faussement, mais souvent avec une grande certitude, d'avoir aussi entendu le leurre critique ('sommeil').</p><p><strong>Explication :</strong> La présentation des mots de la liste active le réseau sémantique et donc aussi le leurre fortement associé. Cette forte activation est mal interprétée lors du rappel comme une perception réelle.</p><p><strong>Implications :</strong> Souligne la nature constructive de la mémoire et le manque potentiel de fiabilité des souvenirs, par ex. chez les témoins oculaires.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "L'amélioration de la capacité à résoudre une tâche après avoir été inconsciemment exposé à des stimuli pertinents est appelée...", "a": ["Apprentissage procédural", "Amorçage", "Chunking"], "correct": 1 },
+            { "q": "L'effet de mésinformation (Loftus) montre que les souvenirs...", "a": ["peuvent être modifiés par des informations ultérieures.", "sont toujours des copies exactes de la réalité.", "ne sont stockés que dans la mémoire implicite."], "correct": 0 }
+          ],
+          "open": [
+            { "q": "Expliquez la différence entre la mémoire procédurale et l'amorçage en tant que formes de mémoire implicite.", "solution": "La mémoire procédurale fait référence à l'apprentissage d'habiletés et d'habitudes ('savoir comment'), qui deviennent automatisées par la pratique (par ex. faire du vélo). L'amorçage fait référence à l'influence inconsciente sur le traitement d'un stimulus par un stimulus présenté antérieurement, basée sur des associations en mémoire." }
+          ],
+          "kreativ": "Pensez à la dernière dispute ou désaccord que vous avez eu. Est-il possible que votre souvenir de la conversation ait été inconsciemment 'construit' ou déformé par vos émotions ou vos pensées ultérieures à ce sujet ? Comment ?"
+        }
+      },
+      "10": {
+        "title": "Langage",
+        "grundwissen": "<div class=\"space-y-4\"><p>Le langage est un système de symboles (mots) et de règles (grammaire) utilisé pour communiquer des pensées et des sentiments.</p><h3 class=\"text-xl font-semibold mb-2\">Niveaux de la structure du langage</h3><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Phonologie :</strong> Étude des sons (phonèmes - plus petite unité sonore distinctive, par ex. /b/ vs /p/).</li><li><strong>Morphologie :</strong> Étude des composantes des mots (morphèmes - plus petite unité porteuse de sens, par ex. 'march', '-ons', 'in-').</li><li><strong>Syntaxe :</strong> Règles de formation des phrases (ordre des mots, structure de la phrase).</li><li><strong>Sémantique :</strong> Étude de la signification des mots et des phrases.</li><li><strong>Pragmatique :</strong> Règles d'utilisation du langage en contexte social (par ex. politesse, comprendre l'ironie).</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Hypothèse Sapir-Whorf : Le langage influence-t-il la pensée ?</h3><p>Cette hypothèse postule un lien entre la langue que nous parlons et la manière dont nous percevons et pensons le monde.</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Version forte (Déterminisme linguistique) :</strong> Le langage *détermine* la pensée (largement réfutée).</li><li><strong>Version faible (Relativisme linguistique) :</strong> Le langage *influence* ou *façonne* la pensée. Les catégories et structures de notre langue orientent notre attention et facilitent certaines façons de penser (trouve plus de soutien).</li></ul><p><strong>Exemple :</strong> Les langues qui distinguent grammaticalement les objets animés et inanimés pourraient inciter les locuteurs à penser différemment à l''âme' des choses. Ou : Les cultures avec de nombreux mots pour la neige perçoivent des distinctions plus fines.</p><p>Le langage élargit notre pensée, mais il ne la restreint pas complètement.</p></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Aphasie de Broca et de Wernicke</h3><p>Des lésions de zones cérébrales spécifiques (généralement l'hémisphère gauche) entraînent différents troubles du langage (aphasies) :</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Aphasie de Broca (lésion dans le lobe frontal) :</strong> Problèmes de <strong>production du langage</strong>. Le discours est lent, haché, agrammatical ('style télégraphique'), mais la compréhension est relativement bien préservée. Les personnes atteintes savent souvent ce qu'elles veulent dire mais ne peuvent pas l'exprimer couramment.</li><li><strong>Aphasie de Wernicke (lésion dans le lobe temporal) :</strong> Problèmes de <strong>compréhension du langage</strong>. Le discours est fluide, mais souvent vide de sens, plein de substitutions de mots ou de néologismes ('salade de mots'). Les personnes atteintes comprennent mal ce qui est dit et écrit et ne remarquent souvent pas leurs propres erreurs.</li></ul><p>Ces syndromes classiques montrent la spécialisation des régions cérébrales pour différents aspects du traitement du langage, bien que la recherche moderne indique un réseau plus complexe de zones impliquées.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Les règles de formation correcte des phrases dans une langue s'appellent...", "a": ["Phonologie", "Sémantique", "Syntaxe"], "correct": 2 },
+            { "q": "Quel trouble du langage est caractérisé par des problèmes de production du langage avec une compréhension relativement bonne ?", "a": ["Aphasie de Wernicke", "Aphasie de Broca", "Dyslexie"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Quelle est la différence entre les phonèmes et les morphèmes ?", "solution": "Les phonèmes sont les plus petites unités sonores qui *distinguent* le sens (par ex. /k/ dans 'cas' vs /m/ dans 'mas'). Ils ne portent pas de sens en eux-mêmes. Les morphèmes sont les plus petites unités qui *portent* un sens (par ex. le mot 'chat' ou le suffixe de pluriel '-s' dans 'chats')." }
+          ],
+          "kreativ": "La phrase 'Time flies like an arrow; fruit flies like a banana.' (Le temps file comme une flèche ; les mouches des fruits aiment la banane) joue sur l'ambiguïté linguistique (syntaxe et sémantique). Expliquez pourquoi la deuxième partie de la phrase semble humoristique ou absurde."
+        }
+      },
+       "11": {
+        "title": "Résolution de problèmes & Prise de décision",
+        "grundwissen": "<div class=\"space-y-4\"><p>La résolution de problèmes est le processus de dépassement des obstacles pour atteindre un objectif. La prise de décision est le choix d'une option parmi plusieurs alternatives.</p><h3 class=\"text-xl font-semibold mb-2\">Stratégies de résolution de problèmes</h3><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Algorithme :</strong> Une procédure étape par étape définie qui garantit la solution (par ex. formule mathématique, recette). Efficace, mais souvent long ou non disponible.</li><li><strong>Heuristique :</strong> Une règle empirique mentale ou un raccourci qui mène souvent rapidement à une solution, mais qui est sujette aux erreurs. Efficace pour les problèmes complexes.<br/><em>Exemples :</em><ul><li><em>Essai et erreur (Trial and Error).</em></li><li><em>Analyse moyens-fins : Réduire la différence entre l'état actuel et l'état objectif.</em></li><li><em>Travailler à rebours : Partir de l'état objectif pour revenir au début.</em></li></ul></li></ul><h3 class=\"text-xl font-semibold mb-2\">Obstacles à la résolution de problèmes</h3><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Set mental / Effet de Einstellung :</strong> S'en tenir à une stratégie de solution éprouvée, même si elle ne convient plus.</li><li><strong>Fixité fonctionnelle :</strong> Voir les objets uniquement dans leur fonction habituelle et ignorer les possibilités d'utilisation alternatives.</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><p>Les heuristiques de jugement sont des raccourcis mentaux que nous utilisons pour estimer les probabilités et prendre des décisions. Elles sont rapides, mais conduisent souvent à des erreurs systématiques (biais).</p><h3 class=\"text-xl font-semibold mb-2\">Heuristique de disponibilité</h3><p>Nous estimons la fréquence ou la probabilité d'un événement en fonction de la facilité avec laquelle des exemples nous viennent à l'esprit (à quel point ils sont 'disponibles' en mémoire). Les événements vifs, émotionnels ou récents sont plus disponibles.</p><p><strong>Exemple :</strong> Après un accident d'avion spectaculaire aux informations, de nombreuses personnes surestiment le risque de prendre l'avion par rapport à la voiture, bien que la conduite soit statistiquement plus dangereuse.</p><h3 class=\"text-xl font-semibold mb-2\">Heuristique de représentativité</h3><p>Nous estimons la probabilité que quelque chose appartienne à une catégorie en fonction de sa typicité ou de sa 'représentativité' pour cette catégorie, en ignorant souvent les informations sur les taux de base.</p><p><strong>Exemple :</strong> Quelqu'un qui est calme, aime lire et porte des lunettes – est-il plus probable qu'il soit bibliothécaire ou agriculteur ? Beaucoup parient sur bibliothécaire car la description correspond au stéréotype, bien qu'il y ait beaucoup plus d'agriculteurs que de bibliothécaires (taux de base).</p></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Biais de confirmation</h3><p>L'un des biais cognitifs les plus fondamentaux : La tendance à rechercher, interpréter et mémoriser les informations qui confirment nos croyances existantes, et à ignorer ou dévaloriser les informations qui les contredisent.</p><p><strong>Effets :</strong></p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li>Nous campons sur nos positions, même face à des preuves contraires.</li><li>Conduit à la polarisation dans les groupes ('bulles de filtres').</li><li>Entrave le progrès scientifique si les chercheurs ne recherchent que des données confirmatoires.</li></ul><p><strong>Contre-stratégie :</strong> Rechercher activement des informations qui pourraient réfuter sa propre opinion ('principe de falsification').</p><h3 class=\"text-xl font-semibold mb-2\">Effet de cadrage (Framing)</h3><p>La manière dont une décision ou une information est présentée ('cadrée') influence notre jugement, même si les faits sous-jacents sont identiques. Exemple : Un yaourt est plus susceptible d'être acheté s'il est annoncé comme '90% sans matières grasses' (cadre positif) que '10% de matières grasses' (cadre négatif).</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Une règle empirique mentale pour une résolution rapide de problèmes est appelée...", "a": ["Algorithme", "Heuristique", "Set mental"], "correct": 1 },
+            { "q": "La tendance à ne rechercher que des informations qui confirment sa propre opinion est le...", "a": ["Biais de disponibilité", "Biais de représentativité", "Biais de confirmation"], "correct": 2 }
+          ],
+          "open": [
+            { "q": "Qu'est-ce que la 'fixité fonctionnelle' et comment entrave-t-elle la résolution de problèmes ?", "solution": "La fixité fonctionnelle est le blocage cognitif qui consiste à ne voir un objet que dans sa fonction typique ou habituelle. Elle entrave la résolution de problèmes car on ignore ainsi les utilisations créatives et non conventionnelles de l'objet qui pourraient mener à la solution (par ex. utiliser une pince comme poids de pendule)." }
+          ],
+          "kreativ": "Vous devez décider d'acheter un nouveau logiciel coûteux. Quelles heuristiques pourraient influencer votre jugement et comment pourriez-vous essayer de décider de manière plus rationnelle ?"
+        }
+      },
+      "12": {
+        "title": "Intelligence Artificielle & Cognition",
+        "grundwissen": "<div class=\"space-y-4\"><p>L'Intelligence Artificielle (IA) tente de reproduire mécaniquement des aspects de la cognition humaine.</p><h3 class=\"text-xl font-semibold mb-2\">Concepts fondamentaux</h3><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Apprentissage automatique (Machine Learning, ML) :</strong> Algorithmes qui apprennent à partir de données, reconnaissent des motifs et font des prédictions sans être explicitement programmés.</li><li><strong>Réseaux neuronaux :</strong> Modèles de ML, inspirés de la structure du cerveau, composés de 'neurones' (nœuds) interconnectés en couches. L'apprentissage se fait par ajustement des poids des connexions.</li><li><strong>Apprentissage profond (Deep Learning) :</strong> Utilisation de réseaux neuronaux très profonds (multicouches) pour des tâches complexes (reconnaissance d'images, de parole).</li><li><strong>Traitement automatique du langage naturel (NLP) :</strong> Méthodes d'IA pour comprendre et générer le langage humain.</li></ul><p>L'IA moderne, en particulier le Deep Learning, a fait des progrès impressionnants dans des domaines autrefois considérés comme le domaine de la cognition humaine.</p></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Implications éthiques de l'IA dans le diagnostic & la thérapie</h3><p>L'utilisation de l'IA dans la santé et la psychologie présente un grand potentiel, mais aussi des défis éthiques considérables :</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Biais & Discrimination :</strong> Si les données d'entraînement sont déséquilibrées, l'IA peut apprendre et renforcer des préjugés (par ex. lors du diagnostic de certains groupes).</li><li><strong>Manque de transparence ('Boîte noire') :</strong> Il est souvent difficile de savoir comment les modèles d'IA complexes parviennent à leurs décisions, ce qui complique la vérification et la responsabilité.</li><li><strong>Responsabilité en cas d'erreur :</strong> Qui est responsable si un diagnostic par IA est erroné ou si une recommandation thérapeutique de l'IA cause un préjudice ?</li><li><strong>Protection des données & Confidentialité :</strong> L'IA a besoin de données de santé sensibles. Comment leur protection est-elle garantie ?</li><li><strong>Contact humain :</strong> L'IA peut-elle et doit-elle remplacer le thérapeute humain ? Perte d'empathie et de la relation thérapeutique.</li><li><strong>Autonomie du patient/client :</strong> Comment s'assurer que les recommandations de l'IA ne sapent pas l'autonomie ?</li></ul><p>Une utilisation responsable nécessite un examen minutieux, une réglementation et le maintien d'une supervision humaine.</p></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Architectures cognitives vs Modèles d'IA modernes</h3><p>Il existe différentes approches pour reproduire artificiellement la cognition :</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Architectures cognitives (par ex. ACT-R, SOAR) :</strong> Tentent de modéliser la *structure* de la cognition humaine à l'aide de modules explicites (mémoire, perception, résolution de problèmes) et de règles symboliques. Elles sont souvent plus transparentes et basées sur des théories psychologiques. L'objectif est de comprendre la cognition humaine.</li><li><strong>Modèles d'IA modernes (par ex. Deep Learning) :</strong> Se concentrent souvent sur la performance pour des tâches spécifiques. Ils apprennent des motifs à partir de grandes quantités de données, souvent sans modélisation explicite des processus cognitifs sous-jacents. Ils sont souvent plus performants, mais moins interprétables ('Boîte noire').</li></ul><p><strong>Points de comparaison :</strong></p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Explicabilité :</strong> Architectures généralement meilleures, Deep Learning moins bon.</li><li><strong>Apprentissage :</strong> Architectures souvent basées sur des règles, Deep Learning guidé par les données.</li><li><strong>Plausibilité biologique :</strong> Architectures souvent plus élevées, Deep Learning librement inspiré.</li><li><strong>Performance :</strong> Deep Learning souvent supérieur pour les tâches spécialisées.</li></ul><p>L'avenir réside peut-être dans des approches hybrides combinant les forces des deux directions (IA Neuro-symbolique).</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Les algorithmes qui apprennent à partir de données sans être explicitement programmés sont appelés...", "a": ["Réseaux neuronaux", "Architectures cognitives", "Apprentissage automatique (ML)"], "correct": 2 },
+            { "q": "Le problème de ne pas pouvoir retracer comment une IA est arrivée à sa décision est appelé...", "a": ["Problème de biais", "Problème de la boîte noire", "Problème de NLP"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Quelle est la principale différence entre une architecture cognitive comme ACT-R et un modèle de Deep Learning ?", "solution": "Une architecture cognitive (ACT-R) tente de reproduire la structure et le fonctionnement de la cognition humaine à l'aide de modules et de règles explicites et psychologiquement fondés (approche symbolique). Un modèle de Deep Learning apprend des motifs et des représentations directement à partir de grandes quantités de données à l'aide de réseaux neuronaux multicouches, sans nécessairement modéliser explicitement la structure cognitive humaine (approche connexionniste/sub-symbolique)." }
+          ],
+          "kreativ": "ChatGPT est un exemple de Grand Modèle de Langage (basé sur le Deep Learning). Dans quelles capacités cognitives est-il similaire à l'homme ou même supérieur, et où se situent ses limites (actuelles) par rapport à la cognition humaine ?"
+        }
+      }
+    }
+  },
+  "TopBar": {
+    "startseite": "Accueil",
+    "module": "Modules",
+    "quellen": "Sources",
+    "profil": "Profil",
+    "abmelden": "Se déconnecter",
+    "anmelden": "Se connecter"
+  }
 
 
 

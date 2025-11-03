@@ -14,16 +14,22 @@ import { useTranslations } from 'next-intl';
 
 // --- DATENSTRUKTUR FÜR MODUL 5 ---
 // Titel und Beschreibungen kommen jetzt aus den JSON-Dateien
-// Modul 5 hat 8 Lektionen
+// Modul 5 hat jetzt 12 Lektionen
 const cognitivePsychologyModulesBase = [
-  { id: 1, relevance: "green" },
-  { id: 2, relevance: "green" },
-  { id: 3, relevance: "orange" },
-  { id: 4, relevance: "green" },
-  { id: 5, relevance: "orange" },
-  { id: 6, relevance: "green" },
-  { id: 7, relevance: "orange" },
-  { id: 8, relevance: "red" },
+  // --- NEUE LEKTIONEN ---
+  { id: 1, relevance: "green" },    // Wie man richtig lernt
+  { id: 2, relevance: "green" },    // Qualität vs. Quantität
+  { id: 3, relevance: "orange" },   // Gleichgewichtslehre
+  { id: 4, relevance: "green" },    // Bloom Taxanomie
+  // --- ALTE LEKTIONEN (JETZT 5-12) ---
+  { id: 5, relevance: "green" },    // war 1: Einführung & Wahrnehmung
+  { id: 6, relevance: "green" },    // war 2: Aufmerksamkeit
+  { id: 7, relevance: "orange" },   // war 3: Sensorisches & Kurzzeitgedächtnis
+  { id: 8, relevance: "green" },    // war 4: Langzeitgedächtnis
+  { id: 9, relevance: "orange" },   // war 5: Implizites Gedächtnis
+  { id: 10, relevance: "green" },   // war 6: Sprache
+  { id: 11, relevance: "orange" },  // war 7: Problemlösen & Entscheiden
+  { id: 12, relevance: "red" },     // war 8: Künstliche Intelligenz
 ];
 
 // --- HILFS-KOMPONENTEN (unverändert) ---

@@ -32,7 +32,7 @@
       },
       "database": {
         "modules": "Module",
-        "modules_value": "50+",
+        "modules_value": "10",
         "reviews": "Bewertungen",
         "reviews_value": "Wöchentlich",
         "resources": "Ressourcen",
@@ -418,49 +418,71 @@
     "description": "Erforsche die mentalen Prozesse wie Wahrnehmung, Gedächtnis, Denken und Sprache."
   },
   "cognitivePsychologyModuleTitles": {
-    "1": "Einführung & Wahrnehmung",
-    "2": "Aufmerksamkeit",
-    "3": "Sensorisches & Kurzzeitgedächtnis",
-    "4": "Langzeitgedächtnis",
-    "5": "Implizites Gedächtnis & Gedächtnistäuschungen",
-    "6": "Sprache",
-    "7": "Problemlösen & Entscheiden",
-    "8": "Künstliche Intelligenz & Kognition"
+    "1": "Wie man richtig lernt",
+    "2": "Qualität vs. Quantität",
+    "3": "Gleichgewichtslehre",
+    "4": "Blooms Taxonomie",
+    "5": "Einführung & Wahrnehmung",
+    "6": "Aufmerksamkeit",
+    "7": "Sensorisches & Kurzzeitgedächtnis",
+    "8": "Langzeitgedächtnis",
+    "9": "Implizites Gedächtnis & Gedächtnistäuschungen",
+    "10": "Sprache",
+    "11": "Problemlösen & Entscheiden",
+    "12": "Künstliche Intelligenz & Kognition"
+  
   },
   "cognitivePsychologyModuleDescriptions": {
-    "1_grundwissen": "Verstehe den Unterschied zwischen 'Bottom-Up'- und 'Top-Down'-Verarbeitung.",
-    "1_anwendbarkeit": "Analysiere optische Täuschungen und ihre Bedeutung für das Design.",
-    "1_meisterklasse": "Diskutiere die Gestaltgesetze der Wahrnehmungsorganisation.",
-    "1_uebungen": "Teste deine Fähigkeit, 'Bottom-Up'- und 'Top-Down'-Prozesse zu identifizieren.",
-    "2_grundwissen": "Lerne die Filtertheorie (Broadbent) und die Dämpfungstheorie (Treisman) kennen.",
-    "2_anwendbarkeit": "Verstehe den 'Cocktailparty-Effekt' in deinem Alltag.",
-    "2_meisterklasse": "Diskutiere die Debatte um 'frühe' vs. 'späte' Selektion der Aufmerksamkeit.",
-    "2_uebungen": "Wende die Theorien auf Szenarien von selektiver Aufmerksamkeit an.",
-    "3_grundwissen": "Unterscheide ikonisches und echoisches Gedächtnis.",
-    "3_anwendbarkeit": "Verstehe die 'magische Zahl 7 +/- 2' und die Technik des 'Chunking'.",
-    "3_meisterklasse": "Analysiere Baddeleys Arbeitsgedächtnismodell (phonologische Schleife etc.).",
-    "3_uebungen": "Teste die Kapazität deines eigenen Kurzzeitgedächtnisses.",
-    "4_grundwissen": "Unterscheide zwischen episodischem, semantischem und prozeduralem Gedächtnis.",
-    "4_anwendbarkeit": "Wende Mnemotechniken an, um deine Lernleistung zu verbessern.",
-    "4_meisterklasse": "Diskutiere die Rolle des Hippocampus bei der Gedächtniskonsolidierung.",
-    "4_uebungen": "Klassifiziere Gedächtnisinhalte in episodisch, semantisch oder prozedural.",
-    "5_grundwissen": "Definiere Priming und prozedurales Lernen als Formen des impliziten Gedächtnisses.",
-    "5_anwendbarkeit": "Erkenne, wie Werbung Priming nutzt, um dein Verhalten zu beeinflussen.",
-    "5_meisterklasse": "Analysiere das 'DRM-Paradigma' zur Erzeugung falscher Erinnerungen.",
-    "5_uebungen": "Erlebe den Effekt von Gedächtnistäuschungen in einem Experiment.",
-    "6_grundwissen": "Lerne die Bausteine der Sprache kennen (Phoneme, Morpheme, Syntax).",
-    "6_anwendbarkeit": "Verstehe die 'Sapir-Whorf-Hypothese': Beeinflusst Sprache unser Denken?",
-    "6_meisterklasse": "Diskutiere die neurologischen Grundlagen: Broca- und Wernicke-Areal.",
-    "6_uebungen": "Identifiziere sprachliche Mehrdeutigkeiten und ihre Auflösung.",
-    "7_grundwissen": "Unterscheide Heuristiken (Faustregeln) von Algorithmen.",
-    "7_anwendbarkeit": "Erkenne die Verfügbarkeits- und Repräsentativitätsheuristik im Alltag.",
-    "7_meisterklasse": "Analysiere den 'Confirmation Bias' (Bestätigungsfehler) in der Entscheidungsfindung.",
-    "7_uebungen": "Löse Probleme und identifiziere die dabei verwendeten Heuristiken.",
-    "8_grundwissen": "Verstehe die Grundkonzepte von neuronalen Netzen und maschinellem Lernen.",
-    "8_anwendbarkeit": "Diskutiere die ethischen Implikationen von KI in der Diagnostik oder Therapie.",
-    "8_meisterklasse": "Vergleiche kognitive Architekturen (z.B. ACT-R) mit modernen KI-Modellen.",
-    "8_uebungen": "Analysiere, wie KI-Systeme (z.B. ChatGPT) kognitive Prozesse simulieren."
+    "1_grundwissen": "Grundlagen des effektiven Lernens: Spacing, Interleaving und Retrieval Practice.",
+    "1_anwendbarkeit": "Wende 'Active Recall' an, um dein Wissen statt passivem Lesen zu testen.",
+    "1_meisterklasse": "Verstehe die kognitiven Mechanismen hinter der 'Vergessenskurve' und wie man sie austrickst.",
+    "1_uebungen": "Erstelle einen Lernplan, der Spaced Repetition integriert.",
+    "2_grundwissen": "Warum tiefes Verständnis (Qualität) das reine Auswendiglernen (Quantität) übertrifft.",
+    "2_anwendbarkeit": "Analysiere das 'Deep Work'-Konzept von Cal Newport im Lernkontext.",
+    "2_meisterklasse": "Diskutiere den Unterschied zwischen 'Shallow Work' und 'Deep Work' in der Wissensaneignung.",
+    "2_uebungen": "Identifiziere deine eigenen 'Shallow Work'-Gewohnheiten und entwickle Strategien für 'Deep Work'.",
+    "3_grundwissen": "Das Konzept der Homöostase und des kognitiven Gleichgewichts nach Piaget.",
+    "3_anwendbarkeit": "Verstehe, wie Stress und kognitive Dissonanz das Gleichgewicht stören.",
+    "3_meisterklasse": "Diskutiere Assimilation und Akkommodation als Prozesse zur Wiederherstellung des kognitiven Gleichgewichts.",
+    "3_uebungen": "Analysiere ein Beispiel für kognitive Dissonanz und die Lösungsstrategien.",
+    "4_grundwissen": "Die sechs Stufen des Lernens: Erinnern, Verstehen, Anwenden, Analysieren, Evaluieren, Erschaffen.",
+    "4_anwendbarkeit": "Formuliere Lernziele und Prüfungsfragen für verschiedene Taxonomie-Stufen.",
+    "4_meisterklasse": "Kritische Betrachtung und Anwendung der revidierten Taxonomie im digitalen Zeitalter.",
+    "4_uebungen": "Ordne bestehende Aufgaben den Stufen von Blooms Taxonomie zu.",
+    "5_grundwissen": "Verstehe den Unterschied zwischen 'Bottom-Up'- und 'Top-Down'-Verarbeitung.",
+    "5_anwendbarkeit": "Analysiere optische Täuschungen und ihre Bedeutung für das Design.",
+    "5_meisterklasse": "Diskutiere die Gestaltgesetze der Wahrnehmungsorganisation.",
+    "5_uebungen": "Teste deine Fähigkeit, 'Bottom-Up'- und 'Top-Down'-Prozesse zu identifizieren.",
+    "6_grundwissen": "Lerne die Filtertheorie (Broadbent) und die Dämpfungstheorie (Treisman) kennen.",
+    "6_anwendbarkeit": "Verstehe den 'Cocktailparty-Effekt' in deinem Alltag.",
+    "6_meisterklasse": "Diskutiere die Debatte um 'frühe' vs. 'späte' Selektion der Aufmerksamkeit.",
+    "6_uebungen": "Wende die Theorien auf Szenarien von selektiver Aufmerksamkeit an.",
+    "7_grundwissen": "Unterscheide ikonisches und echoisches Gedächtnis.",
+    "7_anwendbarkeit": "Verstehe die 'magische Zahl 7 +/- 2' und die Technik des 'Chunking'.",
+    "7_meisterklasse": "Analysiere Baddeleys Arbeitsgedächtnismodell (phonologische Schleife etc.).",
+    "7_uebungen": "Teste die Kapazität deines eigenen Kurzzeitgedächtnisses.",
+    "8_grundwissen": "Unterscheide zwischen episodischem, semantischem und prozeduralem Gedächtnis.",
+    "8_anwendbarkeit": "Wende Mnemotechniken an, um deine Lernleistung zu verbessern.",
+    "8_meisterklasse": "Diskutiere die Rolle des Hippocampus bei der Gedächtniskonsolidierung.",
+    "8_uebungen": "Klassifiziere Gedächtnisinhalte in episodisch, semantisch oder prozedural.",
+    "9_grundwissen": "Definiere Priming und prozedurales Lernen als Formen des impliziten Gedächtnisses.",
+    "9_anwendbarkeit": "Erkenne, wie Werbung Priming nutzt, um dein Verhalten zu beeinflussen.",
+    "9_meisterklasse": "Analysiere das 'DRM-Paradigma' zur Erzeugung falscher Erinnerungen.",
+    "9_uebungen": "Erlebe den Effekt von Gedächtnistäuschungen in einem Experiment.",
+    "10_grundwissen": "Lerne die Bausteine der Sprache kennen (Phoneme, Morpheme, Syntax).",
+    "10_anwendbarkeit": "Verstehe die 'Sapir-Whorf-Hypothese': Beeinflusst Sprache unser Denken?",
+    "10_meisterklasse": "Diskutiere die neurologischen Grundlagen: Broca- und Wernicke-Areal.",
+    "10_uebungen": "Identifiziere sprachliche Mehrdeutigkeiten und ihre Auflösung.",
+    "11_grundwissen": "Unterscheide Heuristiken (Faustregeln) von Algorithmen.",
+    "11_anwendbarkeit": "Erkenne die Verfügbarkeits- und Repräsentativitätsheuristik im Alltag.",
+    "11_meisterklasse": "Analysiere den 'Confirmation Bias' (Bestätigungsfehler) in der Entscheidungsfindung.",
+    "11_uebungen": "Löse Probleme und identifiziere die dabei verwendeten Heuristiken.",
+    "12_grundwissen": "Verstehe die Grundkonzepte von neuronalen Netzen und maschinellem Lernen.",
+    "12_anwendbarkeit": "Diskutiere die ethischen Implikationen von KI in der Diagnostik oder Therapie.",
+    "12_meisterklasse": "Vergleiche kognitive Architekturen (z.B. ACT-R) mit modernen KI-Modellen.",
+    "12_uebungen": "Analysiere, wie KI-Systeme (z.B. ChatGPT) kognitive Prozesse simulieren."
   },
+
 
 
   "emotionMotivationOverview": {
@@ -1383,6 +1405,70 @@
     },
     "lessons": {
       "1": {
+        "title": "Wie man richtig lernt",
+        "grundwissen": "<div class=\"space-y-4\"><p>Effektives Lernen basiert auf kognitiven Prinzipien. Passives Wiederlesen ist ineffizient. Drei Säulen des erfolgreichen Lernens sind:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Retrieval Practice (Aktiver Abruf):</strong> Das aktive Testen des eigenen Wissens (z.B. durch Karteikarten, Selbstbefragung) ist weitaus effektiver als passives Lesen. Es stärkt die Abrufpfade im Gehirn.</li><li><strong>Spaced Repetition (Verteiltes Lernen):</strong> Das Lernen über einen längeren Zeitraum zu verteilen (z.B. 1 Stunde an 5 Tagen) ist besser als das 'Binge-Lernen' (5 Stunden an einem Tag).</li><li><strong>Interleaving (Verschränktes Lernen):</strong> Das Mischen verschiedener, aber verwandter Themen oder Problemtypen in einer Lernsitzung, anstatt ein Thema vollständig abzuschliessen, bevor man zum nächsten übergeht.</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Active Recall statt passives Markieren</h3><p>Viele Studierende verbringen Stunden damit, Lehrbücher zu lesen und Textmarker zu benutzen. Das Gehirn bleibt dabei passiv und signalisiert fälschlicherweise 'Vertrautheit' statt 'Verständnis'.</p><p><strong>Anwendung (Active Recall):</strong></p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li>Lies einen Abschnitt.</li><li>Schliesse das Buch und versuche, die Hauptideen in eigenen Worten zusammenzufassen (schriftlich oder mündlich).</li><li>Erstelle Fragen zu dem gelesenen Abschnitt und beantworte sie am nächsten Tag.</li><li>Nutze Karteikarten-Apps (Anki, Quizlet), die automatisch Spaced Repetition anwenden.</li></ul><p>Dieser 'Kampf' beim Erinnern ist das, was Lernen effektiv macht.</p></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Die Ebbinghaus-Vergessenskurve & Wünschenswerte Erschwernis</h3><p>Hermann Ebbinghaus zeigte, dass wir exponentiell schnell vergessen, wenn wir Gelerntes nicht wiederholen. Die 'Vergessenskurve' ist anfangs extrem steil.</p><p><strong>Spaced Repetition</strong> wirkt dem entgegen, indem man das Wissen genau dann wiederholt, wenn man kurz davor ist, es zu vergessen. Jeder Abruf flacht die Kurve ab.</p><p>Das Konzept der <strong>'Desirable Difficulty' (Wünschenswerte Erschwernis)</strong> besagt, dass Lernen nachhaltiger ist, wenn es mit Anstrengung verbunden ist. Leichte, flüssige Lernmethoden (wie Wiederlesen) fühlen sich gut an, führen aber zu schlechterer Langzeitbehaltung als anstrengende Methoden (wie Active Recall oder Interleaving).</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Was ist laut Vergessenskurve am ineffizientesten?", "a": ["Einmalig 5 Stunden am Stück lernen.", "Über 5 Tage je 1 Stunde lernen.", "Gelerntes aktiv abfragen."], "correct": 0 },
+            { "q": "Das Mischen verschiedener Problemtypen nennt man...", "a": ["Spacing", "Active Recall", "Interleaving"], "correct": 2 }
+          ],
+          "open": [
+            { "q": "Erkläre den Unterschied zwischen 'Vertrautheit' (Fluency) und echtem 'Verständnis' beim Lernen.", "solution": "Vertrautheit ist das trügerische Gefühl, etwas zu kennen, weil man es oft gesehen hat (z.B. beim Wiederlesen). Echtes Verständnis (Beherrschung) bedeutet, dass man das Wissen aktiv abrufen, in eigenen Worten erklären und auf neue Probleme anwenden kann." }
+          ],
+          "kreativ": "Erstelle einen 3-Tages-Lernplan für ein Thema deiner Wahl, der Spacing, Active Recall und Interleaving integriert."
+        }
+      },
+      "2": {
+        "title": "Qualität vs. Quantität",
+        "grundwissen": "<div class=\"space-y-4\"><p>Im Kontext des Lernens ist die Qualität der aufgewendeten Zeit wichtiger als die reine Quantität (Anzahl der Stunden).</p><p>Cal Newport prägte die Begriffe:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Deep Work (Tiefe Arbeit):</strong> Fähigkeit, sich ohne Ablenkung auf eine kognitiv anspruchsvolle Aufgabe zu konzentrieren. In diesem Zustand (Flow) wird Wissen schnell aufgenommen und komplexe Verbindungen hergestellt.</li><li><strong>Shallow Work (Oberflächliche Arbeit):</strong> Kognitiv wenig anspruchsvolle Aufgaben, die oft unter Ablenkung stattfinden (z.B. E-Mails checken, passives Lesen, Lernstoff 'organisieren').</li></ul><p>Viele Studierende verbringen viel Zeit mit 'Shallow Work', was quantitativ hoch, aber qualitativ niedrig ist.</p></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Deep Work im Studium</h3><p>Eine Stunde 'Deep Work' kann effektiver sein als drei Stunden 'Shallow Work'.</p><p><strong>Anwendung:</strong></p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Zeitblöcke:</strong> Plane feste, ununterbrochene Blöcke (z.B. 60-90 Minuten) nur für das Lernen ein.</li><li><strong>Ablenkungen eliminieren:</strong> Smartphone in einen anderen Raum, Benachrichtigungen aus, Browser-Tabs schliessen.</li><li><strong>Klares Ziel:</strong> Definiere genau, was du in diesem Block erreichen willst (z.B. 'Kapitel 3 verstehen und 10 Übungsfragen lösen', nicht nur 'lernen').</li><li><strong>Fokus-Training:</strong> Beginne mit kürzeren Blöcken (z.B. 25 Min, Pomodoro-Technik) und steigere die Dauer.</li></ul></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Monotasking und kognitive Rückstände</h3><p>Unser Gehirn ist nicht für Multitasking ausgelegt. Was wir 'Multitasking' nennen, ist eigentlich schnelles Umschalten zwischen Aufgaben ('Task Switching').</p><p>Jedes Umschalten, selbst ein kurzer Blick auf eine E-Mail, hinterlässt einen <strong>'Attention Residue' (kognitiven Rückstand)</strong>. Ein Teil deines Gehirns denkt immer noch über die vorherige Aufgabe nach, was die kognitive Leistungsfähigkeit für die Hauptaufgabe reduziert.</p><p>'Shallow Work' ist durch ständiges Task Switching gekennzeichnet. 'Deep Work' ist der Akt des Monotasking, der es dem Gehirn erlaubt, seine volle Kapazität auf ein Problem zu richten.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Was ist ein 'Attention Residue'?", "a": ["Ein Zustand maximaler Konzentration.", "Kognitive Rückstände nach dem Umschalten von Aufgaben.", "Eine Lernmethode."], "correct": 1 },
+            { "q": "Welche Tätigkeit ist ein klares Beispiel für 'Shallow Work'?", "a": ["Eine komplexe Programmieraufgabe lösen.", "Lernunterlagen sortieren, während man Musik hört.", "Eine mathematische Herleitung nachvollziehen."], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Erkläre, warum 'Deep Work' für das Verständnis komplexer Zusammenhänge wichtiger ist als 'Shallow Work'.", "solution": "Komplexe Zusammenhänge erfordern das Halten und Manipulieren vieler verschiedener Informationen im Arbeitsgedächtnis. 'Shallow Work', das von Ablenkungen und Task Switching geprägt ist, verhindert, dass diese tiefe Verarbeitungsstufe erreicht wird. 'Deep Work' (Monotasking) erlaubt dem Gehirn, die volle Kapazität des Arbeitsgedächtnisses zu nutzen, um diese Verbindungen herzustellen." }
+          ],
+          "kreativ": "Tracke deine Lerngewohnheiten für einen Tag. Wie viel Zeit verbringst du mit 'Deep Work' und wie viel mit 'Shallow Work'? Was sind deine grössten Ablenkungsquellen?"
+        }
+      },
+      "3": {
+        "title": "Gleichgewichtslehre",
+        "grundwissen": "<div class=\"space-y-4\"><p>In der Psychologie bezieht sich 'Gleichgewicht' auf zwei Hauptkonzepte:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Homöostase:</strong> Ein biologisches Prinzip, bei dem der Körper versucht, einen stabilen inneren Zustand (z.B. Temperatur, Blutzucker) aufrechtzuerhalten. Triebe (z.B. Hunger, Durst) entstehen, wenn dieses Gleichgewicht gestört ist, und motivieren Verhalten, um es wiederherzustellen.</li><li><strong>Kognitives Gleichgewicht (Piaget):</strong> Ein mentaler Zustand, in dem unsere bestehenden Denkschemata (Wissensstrukturen) mit den neuen Informationen aus der Umwelt übereinstimmen. Ein Ungleichgewicht (Äquilibration) treibt die kognitive Entwicklung an.</li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Kognitive Dissonanz als Ungleichgewicht</h3><p>Leon Festingers Theorie der <strong>kognitiven Dissonanz</strong> beschreibt ein psychologisches Ungleichgewicht. Es entsteht, wenn eine Person zwei widersprüchliche Kognitionen (Gedanken, Überzeugungen, Einstellungen) oder ein Verhalten hat, das zu ihren Überzeugungen im Widerspruch steht.</p><p><strong>Beispiel:</strong><br/>Kognition A: 'Rauchen ist tödlich.'<br/>Verhalten B: 'Ich rauche jeden Tag.'</p><p>Dieser Widerspruch erzeugt einen unangenehmen Spannungszustand (Dissonanz), der uns motiviert, das Gleichgewicht wiederherzustellen. Dies geschieht durch:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li>Verhaltensänderung (mit dem Rauchen aufhören).</li><li>Einstellungsänderung (die Gefahr des Rauchens verharmlosen).</li><li>Hinzufügen neuer Kognitionen (z.B. 'Helmut Schmidt hat auch geraucht und wurde 96').</li></ul></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Piagets Äquilibration: Assimilation & Akkommodation</h3><p>Jean Piaget sah die kognitive Entwicklung als einen ständigen Prozess des Strebens nach Gleichgewicht (Äquilibration).</p><p>Wenn ein Kind auf eine neue Information trifft, die nicht zu seinem Weltbild passt, entsteht ein Ungleichgewicht. Um es aufzulösen, gibt es zwei Mechanismen:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Assimilation:</strong> Die neue Information wird so angepasst, dass sie in ein bestehendes Schema passt. (Ein Kind sieht einen Dackel und sagt 'Hund', weil es bereits ein Schema für 'Hund' hat).</li><li><strong>Akkommodation:</strong> Das bestehende Schema wird verändert, um die neue Information aufzunehmen. (Das Kind sieht eine Kuh, sagt 'Hund', die Eltern korrigieren. Das Kind muss sein Schema 'vierbeiniges Tier' anpassen und ein neues Schema 'Kuh' erstellen).</li></ul><p>Lernen ist ein ständiger Tanz zwischen Assimilation und Akkommodation.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Ein Kind sieht einen Schmetterling und nennt ihn 'Vogel'. Dies ist ein Beispiel für...", "a": ["Akkommodation", "Assimilation", "Homöostase"], "correct": 1 },
+            { "q": "Kognitive Dissonanz ist ein Zustand...", "a": ["des kognitiven Gleichgewichts.", "der biologischen Homöostase.", "des psychologischen Ungleichgewichts."], "correct": 2 }
+          ],
+          "open": [
+            { "q": "Erkläre den Unterschied zwischen biologischer Homöostase und kognitivem Gleichgewicht.", "solution": "Homöostase ist ein physiologischer Prozess zur Aufrechterhaltung eines stabilen inneren Körperzustands (z.B. Temperatur). Kognitives Gleichgewicht ist ein mentaler Zustand, bei dem unsere internen Wissensstrukturen (Schemata) mit den externen Informationen übereinstimmen. Beide sind Gleichgewichtszustände, aber auf unterschiedlichen Ebenen (biologisch vs. kognitiv)." }
+          ],
+          "kreativ": "Beschreibe eine persönliche Erfahrung, bei der du kognitive Dissonanz erlebt hast und wie du sie (bewusst oder unbewusst) aufgelöst hast."
+        }
+      },
+      "4": {
+        "title": "Blooms Taxonomie",
+        "grundwissen": "<div class=\"space-y-4\"><p>Blooms Taxonomie ist ein hierarchisches Modell, das Lernziele in verschiedene Komplexitätsstufen einteilt. Es wird oft als Pyramide dargestellt, um zu zeigen, dass höhere Ebenen auf den unteren aufbauen.</p><p>Die (revidierten) sechs Stufen von unten nach oben:</p><ol class=\"list-decimal list-inside space-y-2 pl-4\"><li><strong>Erinnern (Remembering):</strong> Fakten abrufen, Definitionen kennen.</li><li><strong>Verstehen (Understanding):</strong> Konzepte erklären, in eigenen Worten wiedergeben.</li><li><strong>Anwenden (Applying):</strong> Wissen in neuen Situationen oder zur Lösung von Problemen nutzen.</li><li><strong>Analysieren (Analyzing):</strong> Informationen in Bestandteile zerlegen, Zusammenhänge und Strukturen erkennen.</li><li><strong>Evaluieren (Evaluating):</strong> Urteile fällen, Meinungen begründen, Kriterien anwenden.</li><li><strong>Erschaffen (Creating):</strong> Neue Produkte, Ideen oder Theorien entwickeln.</li></ol></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Lernziele und Prüfungsfragen formulieren</h3><p>Die Taxonomie hilft Lehrenden und Lernenden, über oberflächliches Faktenwissen hinauszugehen.</p><p><strong>Beispiele für Fragen auf verschiedenen Stufen (zum Thema 'Klimawandel'):</strong></p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Erinnern:</strong> 'Nenne drei Treibhausgase.'</li><li><strong>Verstehen:</strong> 'Erkläre den Treibhauseffekt in eigenen Worten.'</li><li><strong>Anwenden:</strong> 'Berechne den CO2-Fussabdruck für eine Beispiel-Reise.'</li><li><strong>Analysieren:</strong> 'Vergleiche die wirtschaftlichen Auswirkungen von Klimawandel auf Land A und Land B.'</li><li><strong>Evaluieren:</strong> 'Bewerte die Wirksamkeit des Pariser Klimaabkommens.'</li><li><strong>Erschaffen:</strong> 'Entwickle einen Plan zur Reduzierung der CO2-Emissionen an deiner Universität.'</li></ul><p>Beim Lernen solltest du versuchen, alle Stufen abzudecken, nicht nur das 'Erinnern'.</p></div>",
+        "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Die revidierte Taxonomie (Anderson & Krathwohl)</h3><p>Die ursprüngliche Taxonomie von Bloom (1956) verwendete Substantive (Wissen, Verständnis...). Die revidierte Version (2001) von Anderson und Krathwohl verwendet Verben (Erinnern, Verstehen...), um den aktiven Prozess des Lernens zu betonen.</p><p>Die grösste Änderung war an der Spitze: 'Synthese' wurde durch 'Erschaffen' ersetzt und als höchste Stufe positioniert, während 'Evaluieren' auf die zweithöchste Stufe rückte.</p><p>Im digitalen Zeitalter wird die Taxonomie oft erweitert, um digitale Werkzeuge zuzuordnen (z.B. 'Googeln' als Form des Erinnerns, 'Bloggen' als Form des Erschaffens). Sie bleibt ein fundamentales Werkzeug für die Bildungsplanung.</p></div>",
+        "uebungen": {
+          "quiz": [
+            { "q": "Was ist die höchste Stufe in der revidierten Taxonomie von Bloom?", "a": ["Analysieren", "Evaluieren", "Erschaffen"], "correct": 2 },
+            { "q": "Die Frage 'Erkläre Konzept X in eigenen Worten' testet welche Stufe?", "a": ["Erinnern", "Verstehen", "Anwenden"], "correct": 1 }
+          ],
+          "open": [
+            { "q": "Warum ist es für tiefes Lernen unzureichend, nur auf der Stufe 'Erinnern' stehen zu bleiben?", "solution": "Reines 'Erinnern' ist nur das Abrufen von isolierten Fakten (Auswendiglernen). Es bedeutet nicht, dass man die Zusammenhänge verstanden hat, das Wissen anwenden, kritisch bewerten oder damit etwas Neues schaffen kann. Tiefes Lernen erfordert die höheren Stufen der Taxonomie." }
+          ],
+          "kreativ": "Nimm das Thema 'Kognitive Dissonanz' (aus der vorherigen Lektion) und formuliere für die Stufen 'Analysieren' und 'Evaluieren' je eine Prüfungsfrage."
+        }
+      },
+      "5": {
         "title": "Einführung & Wahrnehmung",
         "grundwissen": "<div class=\"space-y-4\"><p>Unsere Wahrnehmung der Welt ist keine passive Kopie der Realität. Sie ist ein aktiver Prozess, der aus zwei Teilen besteht:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Empfindung (Sensation):</strong> Der Prozess, bei dem unsere Sinnesrezeptoren (Augen, Ohren, Haut etc.) physikalische Energie aus der Umwelt empfangen und in neuronale Signale umwandeln. Dies ist ein <strong>Bottom-Up-Prozess</strong> (datengesteuert).</li><li><strong>Wahrnehmung (Perception):</strong> Der Prozess, bei dem unser Gehirn diese sensorischen Informationen organisiert, interpretiert und ihnen eine Bedeutung verleiht. Dies ist ein <strong>Top-Down-Prozess</strong> (konzeptgesteuert), der stark von unseren Erfahrungen, Erwartungen und unserem Wissen beeinflusst wird.</li></ul><p>Stellen Sie sich vor, Sie sehen Buchstaben auf einem Schild. Die Lichtwellen, die von den Buchstaben reflektiert werden und auf Ihre Netzhaut treffen, lösen eine Empfindung aus (Bottom-Up). Dass Ihr Gehirn diese Formen als Wörter erkennt und deren Bedeutung versteht, basiert auf Ihren Vorkenntnissen und Erwartungen (Top-Down).</p></div>",
         "anwendbarkeit": "<div class=\"space-y-4\"><p>Optische Täuschungen sind faszinierende Beispiele dafür, wie unsere Top-Down-Prozesse (Erwartungen, gelerntes Wissen über die Welt) die Bottom-Up-Daten (das tatsächliche Bild auf der Netzhaut) überlagern oder fehlinterpretieren können.</p><h3 class=\"text-xl font-semibold mb-2\">Beispiel: Müller-Lyer-Täuschung</h3><p>Zwei gleich lange Linien erscheinen unterschiedlich lang, je nachdem, ob die Pfeilspitzen an ihren Enden nach innen oder aussen zeigen.</p><p></p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Bottom-Up:</strong> Die Linien auf der Netzhaut sind gleich lang.</li><li><strong>Top-Down:</strong> Unser Gehirn interpretiert die Linien aufgrund unserer Erfahrung mit dreidimensionalen Räumen (Ecken von Räumen/Gebäuden). Die Linie mit den nach aussen gerichteten Spitzen wirkt weiter entfernt und wird daher vom Gehirn als länger 'korrigiert'.</li></ul><p><strong>Bedeutung für Design:</strong> Designer nutzen diese Prinzipien. Vertikale Linien in Räumen oder an Kleidung können Höhe suggerieren, horizontale Linien Breite. Pfeile oder Linienführungen können den Blick lenken und Grösseneindrücke manipulieren.</p></div>",
@@ -1398,7 +1484,7 @@
           "kreativ": "Suchen Sie ein Logo einer bekannten Marke. Welche Gestaltgesetze werden darin verwendet, um die Wahrnehmung zu lenken oder eine Botschaft zu vermitteln?"
         }
       },
-      "2": {
+      "6": {
         "title": "Aufmerksamkeit",
         "grundwissen": "<div class=\"space-y-4\"><p>Aufmerksamkeit ist die selektive Konzentration auf bestimmte Aspekte der Umwelt, während andere ignoriert werden. Frühe Theorien versuchten zu erklären, wie diese Selektion funktioniert:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Filtertheorie (Broadbent, 1958):</strong> Aufmerksamkeit als früher 'Flaschenhals'. Sensorische Informationen gelangen in einen Speicher, ein Filter wählt basierend auf physikalischen Merkmalen (z.B. Tonhöhe, Ort) einen Kanal aus. Nur die Information dieses Kanals wird weiterverarbeitet (semantische Analyse). Unbeachtete Informationen werden komplett blockiert.</li><li><strong>Dämpfungstheorie (Treisman, 1964):</strong> Modifikation von Broadbent. Der Filter blockiert unbeachtete Informationen nicht vollständig, sondern schwächt ('dämpft') sie nur ab. Relevante oder intensive Reize (wie der eigene Name) können die Schwelle überschreiten und bewusst werden, auch wenn sie aus einem unbeachteten Kanal stammen.</li></ul></div>",
         "anwendbarkeit": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Der Cocktailparty-Effekt</h3><p>Dieses Phänomen beschreibt unsere Fähigkeit, uns in einer lauten Umgebung (wie einer Party) auf ein einzelnes Gespräch zu konzentrieren und andere Geräusche auszublenden.</p><p>Gleichzeitig können wir aber wichtige Reize aus der ignorierten Geräuschkulisse wahrnehmen, z.B. wenn jemand unseren Namen ruft.</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li>Die <strong>Filtertheorie</strong> kann das Hören des eigenen Namens *nicht* erklären, da dieser aus einem unbeachteten Kanal stammt und blockiert sein müsste.</li><li>Die <strong>Dämpfungstheorie</strong> kann es erklären: Die anderen Gespräche werden gedämpft, aber der eigene Name ist ein hochrelevanter Reiz, der auch den gedämpften Kanal durchdringen kann.</li></ul><p>Dies zeigt, dass die Selektion nicht immer absolut ist und die Bedeutung von Reizen eine Rolle spielt.</p></div>",
@@ -1414,9 +1500,9 @@
           "kreativ": "Warum ist es so schwer, einer Vorlesung zu folgen, wenn neben Ihnen jemand flüstert, auch wenn Sie versuchen, das Flüstern zu ignorieren? Erklären Sie dies mit Konzepten der Aufmerksamkeit."
         }
       },
-       "3": {
+       "7": {
         "title": "Sensorisches & Kurzzeitgedächtnis",
-        "grundwissen": "<div class=\"space-y-4\"><p>Das Gedächtnis beginnt mit sehr kurzlebigen sensorischen Speichern, bevor Informationen ins Kurzzeitgedächtnis gelangen.</p><h3 class=\"text-xl font-semibold mb-2\">Sensorisches Gedächtnis</h3><p>Hält eine exakte Kopie sensorischer Reize für sehr kurze Zeit fest:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Ikonisches Gedächtnis (visuell):</strong> Speichert visuelle Informationen für ca. 250-500 Millisekunden. Nötig, um z.B. beim Lesen Buchstaben zu Wörtern zu verbinden oder Bewegungen als flüssig wahrzunehmen.</li><li><strong>Echoisches Gedächtnis (auditiv):</strong> Speichert auditive Informationen für ca. 2-4 Sekunden. Nötig, um gesprochene Sprache zu verstehen (den Anfang eines Satzes noch 'präsent' zu haben, wenn das Ende kommt).</li></ul><p>Nur Informationen, denen Aufmerksamkeit geschenkt wird, werden an das Kurzzeitgedächtnis weitergeleitet.</p><h3 class=\"text-xl font-semibold mb-2\">Kurzzeitgedächtnis (Kटेस्ट)</h3><p>Ein Speicher mit begrenzter Kapazität und Dauer, der Informationen aktiv hält, die wir gerade bearbeiten.</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Dauer:</strong> Ohne aktive Wiederholung (Rehearsal) ca. 15-30 Sekunden.</li><li><strong>Kapazität:</strong> 'Magische Zahl' 7 ± 2 Informationseinheiten (Chunks) nach George Miller.</li></ul></div>",
+        "grundwissen": "<div class=\"space-y-4\"><p>Das Gedächtnis beginnt mit sehr kurzlebigen sensorischen Speichern, bevor Informationen ins Kurzzeitgedächtnis gelangen.</p><h3 class=\"text-xl font-semibold mb-2\">Sensorisches Gedächtnis</h3><p>Hält eine exakte Kopie sensorischer Reize für sehr kurze Zeit fest:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Ikonisches Gedächtnis (visuell):</strong> Speichert visuelle Informationen für ca. 250-500 Millisekunden. Nötig, um z.B. beim Lesen Buchstaben zu Wörtern zu verbinden oder Bewegungen als flüssig wahrzunehmen.</li><li><strong>Echoisches Gedächtnis (auditiv):</strong> Speichert auditive Informationen für ca. 2-4 Sekunden. Nötig, um gesprochene Sprache zu verstehen (den Anfang eines Satzes noch 'präsent' zu haben, wenn das Ende kommt).</li></ul><p>Nur Informationen, denen Aufmerksamkeit geschenkt wird, werden an das Kurzzeitgedächtnis weitergeleitet.</p><h3 class=\"text-xl font-semibold mb-2\">Kurzzeitgedächtnis (KTEST)</h3><p>Ein Speicher mit begrenzter Kapazität und Dauer, der Informationen aktiv hält, die wir gerade bearbeiten.</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Dauer:</strong> Ohne aktive Wiederholung (Rehearsal) ca. 15-30 Sekunden.</li><li><strong>Kapazität:</strong> 'Magische Zahl' 7 ± 2 Informationseinheiten (Chunks) nach George Miller.</li></ul></div>",
         "anwendbarkeit": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Die 'Magische Zahl 7 +/- 2' & Chunking</h3><p>George Miller (1956) bemerkte, dass Menschen typischerweise 5 bis 9 (also 7 ± 2) unzusammenhängende Informationseinheiten im Kurzzeitgedächtnis behalten können (z.B. Ziffern, Buchstaben, Wörter).</p><p>Wie können wir uns dann längere Informationen wie Telefonnummern merken? Durch <strong>Chunking</strong>: Wir gruppieren einzelne Elemente zu grösseren, bedeutungsvollen Einheiten ('Chunks').</p><p>Beispiel: Die Ziffernfolge <strong>0 7 9 1 2 3 4 5 6 7</strong> (10 Ziffern) ist schwer zu merken. Gruppiert als Telefonnummer <strong>079 123 45 67</strong> (3 Chunks) wird es einfach.</p><p>Durch Chunking können wir die *Menge* an Information pro Chunk erhöhen und so die effektive Kapazität des Kurzzeitgedächtnisses erweitern. Expertise in einem Bereich (z.B. Schach) beruht oft auf der Fähigkeit, komplexe Muster als Chunks zu erkennen.</p></div>",
         "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Baddeleys Arbeitsgedächtnismodell</h3><p>Das Konzept des Kurzzeitgedächtnisses wurde von Baddeley & Hitch (1974) zum **Arbeitsgedächtnis** erweitert. Es ist kein passiver Speicher, sondern ein aktives System zur kurzfristigen Speicherung UND Manipulation von Informationen.</p><p>Es besteht aus mehreren Komponenten:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Zentrale Exekutive:</strong> Der 'Dirigent'. Steuert Aufmerksamkeit, plant Aufgaben, koordiniert die Subsysteme.</li><li><strong>Phonologische Schleife:</strong> Hält und manipuliert sprachliche Informationen (wie eine innere Stimme und ein inneres Ohr). Wichtig für das Behalten von Telefonnummern, Lernen neuer Wörter.</li><li><strong>Visuell-räumlicher Notizblock:</strong> Hält und manipuliert visuelle und räumliche Informationen (mentale Bilder, Orientierung).</li><li><strong>Episodischer Puffer (später hinzugefügt):</strong> Integriert Informationen aus den Schleifen und dem Langzeitgedächtnis zu einer kohärenten Episode.</li></ul><p>Dieses Modell erklärt besser, warum wir z.B. gleichzeitig sprechen und uns räumlich orientieren können (verschiedene Subsysteme), aber schlecht zwei sprachliche Aufgaben gleichzeitig erledigen können (Konflikt in der phonologischen Schleife).</p></div>",
         "uebungen": {
@@ -1425,15 +1511,15 @@
             { "q": "Welche Komponente des Arbeitsgedächtnisses ist für das 'innere Auge' zuständig?", "a": ["Phonologische Schleife", "Zentrale Exekutive", "Visuell-räumlicher Notizblock"], "correct": 2 }
           ],
           "open": [
-            { "q": "Was ist der Hauptunterschied zwischen dem Kurzzeitgedächtnis nach Miller und dem Arbeitsgedächtnis nach Baddeley?", "solution": "Das Kटेस्ट nach Miller ist primär ein passiver Speicher mit begrenzter Kapazität (7±2 Chunks). Das Arbeitsgedächtnis nach Baddeley ist ein aktiveres, mehrkomponentiges System, das Informationen nicht nur speichert, sondern auch manipuliert und verarbeitet (z.B. Kopfrechnen, räumliches Vorstellen), koordiniert durch die Zentrale Exekutive." }
+            { "q": "Was ist der Hauptunterschied zwischen dem Kurzzeitgedächtnis nach Miller und dem Arbeitsgedächtnis nach Baddeley?", "solution": "Das KTEST nach Miller ist primär ein passiver Speicher mit begrenzter Kapazität (7±2 Chunks). Das Arbeitsgedächtnis nach Baddeley ist ein aktiveres, mehrkomponentiges System, das Informationen nicht nur speichert, sondern auch manipuliert und verarbeitet (z.B. Kopfrechnen, räumliches Vorstellen), koordiniert durch die Zentrale Exekutive." }
           ],
           "kreativ": "Lesen Sie sich eine 7-stellige Telefonnummer durch. Schliessen Sie die Augen und wiederholen Sie sie 20 Sekunden lang innerlich. Welche Komponente des Arbeitsgedächtnisses haben Sie gerade primär genutzt?"
         }
       },
-      "4": {
+      "8": {
         "title": "Langzeitgedächtnis",
-        "grundwissen": "<div class=\"space-y-4\"><p>Das Langzeitgedächtnis (Lटेस्ट) ist unser Speicher für Informationen über längere Zeiträume (Minuten bis Lebenszeit). Es hat eine riesige, potenziell unbegrenzte Kapazität.</p><p>Hauptunterteilung:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Explizites (deklaratives) Gedächtnis:</strong> Bewusst zugängliche Erinnerungen, die wir verbalisieren können ('Wissen, dass...').<ul class=\"list-disc list-inside space-y-1 pl-6\"><li><strong>Episodisches Gedächtnis:</strong> Persönliche Ereignisse und Erfahrungen (Was habe ich gestern gefrühstückt? Mein erster Schultag).</li><li><strong>Semantisches Gedächtnis:</strong> Faktenwissen, Wortbedeutungen, Konzepte (Paris ist die Hauptstadt Frankreichs. Ein Hund hat vier Beine).</li></ul></li><li><strong>Implizites (non-deklaratives) Gedächtnis:</strong> Unbewusste Erinnerungen, die sich im Verhalten zeigen ('Wissen, wie...').<ul class=\"list-disc list-inside space-y-1 pl-6\"><li><strong>Prozedurales Gedächtnis:</strong> Gelernte Fertigkeiten und Gewohnheiten (Fahrradfahren, Tippen, Schwimmen).</li><li><strong>Priming:</strong> Beeinflussung der Reaktion auf einen Reiz durch einen zuvor dargebotenen Reiz.</li><li><strong>Klassische Konditionierung:</strong> Gelernte emotionale/physiologische Reaktionen.</li></ul></li></ul></div>",
-        "anwendbarkeit": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Mnemotechniken: Lernleistung verbessern</h3><p>Mnemotechniken sind Gedächtnisstützen, die das Enkodieren (Einspeichern) und Abrufen von Informationen erleichtern, oft durch Assoziationen und Organisation.</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Elaborierung:</strong> Den Lernstoff tiefgehend verarbeiten, mit bestehendem Wissen verknüpfen, Beispiele finden, in eigenen Worten erklären. (Effektiver als blosses Auswendiglernen).</li><li><strong>Organisation:</strong> Informationen strukturieren (z.B. Mind Maps, Hierarchien bilden).</li><li><strong>Methode der Orte (Loci-Methode):</strong> Zu merkende Items mental an Orten einer bekannten Route ablegen und die Route beim Abruf abgehen.</li><li><strong>Akronyme & Akrostichons:</strong> Merkwörter (z.B. OCEAN für Big Five) oder Merksätze (z.B. 'Mein Vater erklärt...' für Planeten).</li><li><strong>Visuelle Vorstellungen:</strong> Sich lebhafte Bilder zu den zu merkenden Informationen machen.</li></ul><p><strong>Praxistipp fürs Studium:</strong> Verlassen Sie sich nicht nur auf Wiederholung. Nutzen Sie Elaborierung und Organisation, um Wissen besser im Lटेस्ट zu verankern.</p></div>",
+        "grundwissen": "<div class=\"space-y-4\"><p>Das Langzeitgedächtnis (LTEST) ist unser Speicher für Informationen über längere Zeiträume (Minuten bis Lebenszeit). Es hat eine riesige, potenziell unbegrenzte Kapazität.</p><p>Hauptunterteilung:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Explizites (deklaratives) Gedächtnis:</strong> Bewusst zugängliche Erinnerungen, die wir verbalisieren können ('Wissen, dass...').<ul class=\"list-disc list-inside space-y-1 pl-6\"><li><strong>Episodisches Gedächtnis:</strong> Persönliche Ereignisse und Erfahrungen (Was habe ich gestern gefrühstückt? Mein erster Schultag).</li><li><strong>Semantisches Gedächtnis:</strong> Faktenwissen, Wortbedeutungen, Konzepte (Paris ist die Hauptstadt Frankreichs. Ein Hund hat vier Beine).</li></ul></li><li><strong>Implizites (non-deklaratives) Gedächtnis:</strong> Unbewusste Erinnerungen, die sich im Verhalten zeigen ('Wissen, wie...').<ul class=\"list-disc list-inside space-y-1 pl-6\"><li><strong>Prozedurales Gedächtnis:</strong> Gelernte Fertigkeiten und Gewohnheiten (Fahrradfahren, Tippen, Schwimmen).</li><li><strong>Priming:</strong> Beeinflussung der Reaktion auf einen Reiz durch einen zuvor dargebotenen Reiz.</li><li><strong>Klassische Konditionierung:</strong> Gelernte emotionale/physiologische Reaktionen.</li></ul></li></ul></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Mnemotechniken: Lernleistung verbessern</h3><p>Mnemotechniken sind Gedächtnisstützen, die das Enkodieren (Einspeichern) und Abrufen von Informationen erleichtern, oft durch Assoziationen und Organisation.</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Elaborierung:</strong> Den Lernstoff tiefgehend verarbeiten, mit bestehendem Wissen verknüpfen, Beispiele finden, in eigenen Worten erklären. (Effektiver als blosses Auswendiglernen).</li><li><strong>Organisation:</strong> Informationen strukturieren (z.B. Mind Maps, Hierarchien bilden).</li><li><strong>Methode der Orte (Loci-Methode):</strong> Zu merkende Items mental an Orten einer bekannten Route ablegen und die Route beim Abruf abgehen.</li><li><strong>Akronyme & Akrostichons:</strong> Merkwörter (z.B. OCEAN für Big Five) oder Merksätze (z.B. 'Mein Vater erklärt...' für Planeten).</li><li><strong>Visuelle Vorstellungen:</strong> Sich lebhafte Bilder zu den zu merkenden Informationen machen.</li></ul><p><strong>Praxistipp fürs Studium:</strong> Verlassen Sie sich nicht nur auf Wiederholung. Nutzen Sie Elaborierung und Organisation, um Wissen besser im LTEST zu verankern.</p></div>",
         "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Gedächtniskonsolidierung & die Rolle des Hippocampus</h3><p>Neue explizite Erinnerungen sind anfangs fragil. Der Prozess, durch den sie stabil und dauerhaft im Langzeitgedächtnis verankert werden, heisst <strong>Konsolidierung</strong>.</p><p>Der <strong>Hippocampus</strong> (im Temporallappen) spielt dabei eine Schlüsselrolle:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li>Er fungiert wie eine Art 'Regisseur' oder 'Index', der die verschiedenen Aspekte einer neuen Erinnerung (visuell, auditiv, kontextuell), die in unterschiedlichen Bereichen des Kortex gespeichert sind, miteinander verknüpft.</li><li>Während der Konsolidierung (die Stunden, Tage oder länger dauern kann) werden diese kortikalen Verbindungen gestärkt und die Erinnerung wird zunehmend vom Hippocampus unabhängig.</li></ul><p>Der berühmte Patient H.M., dem beide Hippocampi entfernt wurden, konnte keine neuen expliziten Erinnerungen mehr bilden (anterograde Amnesie), sein implizites Gedächtnis blieb aber intakt. Dies zeigte die spezifische Rolle des Hippocampus für die Bildung neuer expliziter Erinnerungen.</p><p><strong>Schlaf</strong>, insbesondere der Tiefschlaf, ist entscheidend für die Konsolidierung von Gedächtnisinhalten.</p></div>",
         "uebungen": {
           "quiz": [
@@ -1446,7 +1532,7 @@
           "kreativ": "Klassifizieren Sie die folgenden Gedächtnisinhalte: a) Ihre Erinnerung an den letzten Kinobesuch, b) Die Fähigkeit, einen Schnürsenkel zu binden, c) Das Wissen, dass 3x4=12 ist."
         }
       },
-       "5": {
+       "9": {
         "title": "Implizites Gedächtnis & Gedächtnistäuschungen",
         "grundwissen": "<div class=\"space-y-4\"><p>Das implizite Gedächtnis beeinflusst unser Denken und Verhalten ohne bewusste Erinnerung.</p><h3 class=\"text-xl font-semibold mb-2\">Formen des impliziten Gedächtnisses</h3><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Prozedurales Gedächtnis:</strong> Erlernen von Fertigkeiten (motorisch, kognitiv). Wird durch Übung automatisiert (z.B. Fahrradfahren, Lesen).</li><li><strong>Priming:</strong> Die Verarbeitung eines Reizes wird durch die vorherige (oft unbewusste) Darbietung eines verwandten Reizes erleichtert oder beeinflusst. Beispiel: Nach dem Lesen des Wortes 'GELB' erkennt man das Wort 'BANANE' schneller.</li><li><strong>Klassische Konditionierung:</strong> Gelernte Assoziationen zwischen Reizen (z.B. Pawlowscher Hund).</li></ul><h3 class=\"text-xl font-semibold mb-2\">Gedächtnis als Konstruktion</h3><p>Erinnern ist kein passives Abspielen einer Aufzeichnung, sondern ein aktiver <strong>Rekonstruktionsprozess</strong>. Wir fügen gespeicherte Fragmente zusammen und füllen Lücken oft unbewusst mit unserem Wissen, Erwartungen und Schlussfolgerungen. Dies macht das Gedächtnis effizient, aber auch anfällig für Fehler, Verzerrungen und Täuschungen.</p></div>",
         "anwendbarkeit": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Priming in der Werbung</h3><p>Werbung nutzt Priming-Effekte, um Assoziationen zu wecken und Kaufentscheidungen zu beeinflussen:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Markenlogos & Farben:</strong> Wiederholte Präsentation kann positive Gefühle (durch klassische Konditionierung) oder bestimmte Konzepte (z.B. 'Luxus', 'Sicherheit') primen.</li><li><strong>Wortwahl:</strong> Begriffe wie 'natürlich', 'frisch', 'wissenschaftlich bewiesen' können entsprechende Assoziationen und positive Bewertungen auslösen.</li><li><strong>Kontext:</strong> Ein Produkt in einem bestimmten Umfeld (z.B. glückliche Familie, erfolgreiche Sportler) zu zeigen, primed Assoziationen zwischen dem Produkt und diesem Zustand.</li></ul><p>Diese Effekte wirken oft subtil und unbewusst.</p><h3 class=\"text-xl font-semibold mb-2\">Fehlinformationseffekt</h3><p>Erinnerungen können nach dem ursprünglichen Ereignis durch irreführende Informationen verändert werden. Elizabeth Loftus zeigte dies in berühmten Experimenten: Zeugen eines Autounfalls schätzten die Geschwindigkeit höher ein, wenn sie gefragt wurden, wie schnell die Autos 'zusammenkrachten' ('smashed') im Vergleich zu 'sich berührten' ('hit'). Die Wortwahl beeinflusste die Erinnerung.</p></div>",
@@ -1462,10 +1548,10 @@
           "kreativ": "Denken Sie an den letzten Streit oder die letzte Meinungsverschiedenheit, die Sie hatten. Ist es möglich, dass Ihre Erinnerung an das Gespräch durch Ihre Emotionen oder späteren Gedanken darüber unbewusst 'konstruiert' oder verzerrt wurde? Wie?"
         }
       },
-      "6": {
+      "10": {
         "title": "Sprache",
         "grundwissen": "<div class=\"space-y-4\"><p>Sprache ist ein System von Symbolen (Wörtern) und Regeln (Grammatik), das zur Kommunikation von Gedanken und Gefühlen dient.</p><h3 class=\"text-xl font-semibold mb-2\">Ebenen der Sprachstruktur</h3><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Phonologie:</strong> Lehre von den Lauten (Phoneme - kleinste bedeutungsunterscheidende Lauteinheit, z.B. /b/ vs. /p/).</li><li><strong>Morphologie:</strong> Lehre von den Wortbausteinen (Morpheme - kleinste bedeutungstragende Einheit, z.B. 'lauf', '-st', 'un-').</li><li><strong>Syntax:</strong> Regeln der Satzbildung (Wortstellung, Satzbau).</li><li><strong>Semantik:</strong> Lehre von der Bedeutung von Wörtern und Sätzen.</li><li><strong>Pragmatik:</strong> Regeln der Sprachverwendung im sozialen Kontext (z.B. Höflichkeit, Ironie verstehen).</li></ul></div>",
-        "anwendbarkeit": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Sapir-Whorf-Hypothese: Beeinflusst Sprache das Denken?</h3><p>Diese Hypothese postuliert einen Zusammenhang zwischen der Sprache, die wir sprechen, und der Art, wie wir die Welt wahrnehmen und darüber denken.</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Starke Version (Linguistischer Determinismus):</strong> Sprache *bestimmt* das Denken (weitgehend widerlegt).</li><li><strong>Schwache Version (Linguistischer Relativismus):</strong> Sprache *beeinflusst* oder *formt* das Denken. Die Kategorien und Strukturen unserer Sprache lenken unsere Aufmerksamkeit und erleichtern bestimmte Denkweisen (findet mehr Unterstützung).</li></ul><p><strong>Beispiel:</strong> Sprachen, die grammatikalisch zwischen belebten und unbelebten Objekten unterscheiden, könnten Sprecher dazu anregen, anders über die 'Beseeltheit' von Dingen nachzudenken. Oder: Kulturen mit vielen Wörtern für Schnee nehmen feinere Unterschiede wahr.</p><p>Sprache erweitert unser Denken, aber sie schränkt es nicht vollständig ein.</p></div>",
+        "anwendbarkeit": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Sapir-Whorf-Hypothese: Beeinflusst Sprache das Denken?</h3><p>Diese Hypothese postuliert einen Zusammenhang zwischen der Sprache, die wir sprechen, und der Art, wie wir die Welt wahrnehmen und darüber denken.</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Starke Version (Linguistischer Determinismus):</strong> Sprache *bestimmt* das Denken (weitgehend widerlegt).</li><li><strong>Schwache Version (Linguistischer Relativismus):</strong> Sprache *beeinflusst* oder *formt* das Denken. Die Kategorien und Strukturen unserer Sprache lenken unsere Aufmerksamkeit und erleichtern bestimmte Denkweisen (findet mehr Unterstützung).</li></ul><p><strong>Beispiel:</strong> Sprachen, die grammatisch zwischen belebten und unbelebten Objekten unterscheiden, könnten Sprecher dazu anregen, anders über die 'Beseeltheit' von Dingen nachzudenken. Oder: Kulturen mit vielen Wörtern für Schnee nehmen feinere Unterschiede wahr.</p><p>Sprache erweitert unser Denken, aber sie schränkt es nicht vollständig ein.</p></div>",
         "meisterklasse": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Broca- und Wernicke-Aphasie</h3><p>Schädigungen spezifischer Hirnareale (meist linke Hemisphäre) führen zu unterschiedlichen Sprachstörungen (Aphasien):</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Broca-Aphasie (Schädigung im Frontallappen):</strong> Probleme mit der <strong>Sprachproduktion</strong>. Sprache ist langsam, stockend, agrammatikalisch ('Telegrammstil'), aber das Verständnis ist relativ gut erhalten. Betroffene wissen oft, was sie sagen wollen, können es aber nicht flüssig ausdrücken.</li><li><strong>Wernicke-Aphasie (Schädigung im Temporallappen):</strong> Probleme mit dem <strong>Sprachverständnis</strong>. Sprache ist flüssig, aber oft inhaltlich leer, voller Wortverwechslungen oder Neologismen ('Wortsalat'). Betroffene verstehen Gesprochenes und Geschriebenes schlecht und bemerken ihre eigenen Fehler oft nicht.</li></ul><p>Diese klassischen Syndrome zeigen die Spezialisierung von Hirnregionen für verschiedene Aspekte der Sprachverarbeitung, auch wenn moderne Forschung ein komplexeres Netzwerk von beteiligten Arealen aufzeigt.</p></div>",
         "uebungen": {
           "quiz": [
@@ -1478,7 +1564,7 @@
           "kreativ": "Der Satz 'Die Zeit fliegt wie ein Pfeil; Obst fliegt wie eine Banane.' spielt mit sprachlicher Mehrdeutigkeit (Syntax und Semantik). Erklären Sie, warum der zweite Teil des Satzes humorvoll oder absurd wirkt."
         }
       },
-       "7": {
+       "11": {
         "title": "Problemlösen & Entscheiden",
         "grundwissen": "<div class=\"space-y-4\"><p>Problemlösen ist der Prozess, Hindernisse zu überwinden, um ein Ziel zu erreichen. Entscheiden ist die Auswahl einer Option aus mehreren Alternativen.</p><h3 class=\"text-xl font-semibold mb-2\">Strategien zum Problemlösen</h3><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Algorithmus:</strong> Eine definierte Schritt-für-Schritt-Prozedur, die garantiert zur Lösung führt (z.B. mathematische Formel, Rezept). Effektiv, aber oft zeitaufwendig oder nicht verfügbar.</li><li><strong>Heuristik:</strong> Eine mentale Faustregel oder Abkürzung, die oft schnell zu einer Lösung führt, aber fehleranfällig ist. Effizient für komplexe Probleme.<br/><em>Beispiele:</em><ul><li><em>Versuch und Irrtum (Trial and Error).</em></li><li><em>Mittel-Ziel-Analyse: Den Unterschied zwischen Ist- und Soll-Zustand verringern.</em></li><li><em>Rückwärtsarbeiten: Vom Zielzustand ausgehend zurück zum Anfang.</em></li></ul></li></ul><h3 class=\"text-xl font-semibold mb-2\">Hindernisse beim Problemlösen</h3><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Mentales Set / Einstellungseffekt:</strong> An einer bewährten Lösungsstrategie festhalten, auch wenn sie nicht mehr passt.</li><li><strong>Funktionale Gebundenheit:</strong> Objekte nur in ihrer gewohnten Funktion sehen und alternative Verwendungsmöglichkeiten übersehen.</li></ul></div>",
         "anwendbarkeit": "<div class=\"space-y-4\"><p>Urteilsheuristiken sind mentale Abkürzungen, die wir beim Einschätzen von Wahrscheinlichkeiten und beim Treffen von Entscheidungen verwenden. Sie sind schnell, führen aber oft zu systematischen Fehlern (Biases).</p><h3 class=\"text-xl font-semibold mb-2\">Verfügbarkeitsheuristik</h3><p>Wir schätzen die Häufigkeit oder Wahrscheinlichkeit eines Ereignisses danach ein, wie leicht uns Beispiele dafür einfallen (wie 'verfügbar' sie im Gedächtnis sind). Lebhafte, emotionale oder kürzlich erlebte Ereignisse sind leichter verfügbar.</p><p><strong>Beispiel:</strong> Nach einem spektakulären Flugzeugabsturz in den Nachrichten überschätzen viele Menschen das Risiko des Fliegens im Vergleich zum Autofahren, obwohl Autofahren statistisch gefährlicher ist.</p><h3 class=\"text-xl font-semibold mb-2\">Repräsentativitätsheuristik</h3><p>Wir schätzen die Wahrscheinlichkeit, dass etwas zu einer Kategorie gehört, danach ein, wie typisch oder 'repräsentativ' es für diese Kategorie erscheint, und ignorieren dabei oft Basisrateninformationen.</p><p><strong>Beispiel:</strong> Jemand, der ruhig ist, gerne liest und eine Brille trägt – ist er eher Bibliothekar oder Landwirt? Viele tippen auf Bibliothekar, weil die Beschreibung dem Stereotyp entspricht, obwohl es viel mehr Landwirte als Bibliothekare gibt (Basisrate).</p></div>",
@@ -1494,7 +1580,7 @@
           "kreativ": "Sie müssen entscheiden, ob Sie eine neue, teure Software kaufen. Welche Heuristiken könnten Ihr Urteil beeinflussen und wie könnten Sie versuchen, rationaler zu entscheiden?"
         }
       },
-      "8": {
+      "12": {
         "title": "Künstliche Intelligenz & Kognition",
         "grundwissen": "<div class=\"space-y-4\"><p>Künstliche Intelligenz (KI) versucht, Aspekte menschlicher Kognition maschinell nachzubilden.</p><h3 class=\"text-xl font-semibold mb-2\">Grundlegende Konzepte</h3><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Maschinelles Lernen (ML):</strong> Algorithmen, die aus Daten lernen, Muster erkennen und Vorhersagen treffen, ohne explizit programmiert zu sein.</li><li><strong>Neuronale Netze:</strong> ML-Modelle, inspiriert von der Struktur des Gehirns, bestehend aus vernetzten 'Neuronen' (Knoten) in Schichten. Lernen erfolgt durch Anpassung der Verbindungsstärken.</li><li><strong>Deep Learning:</strong> Einsatz sehr tiefer (vielschichtiger) neuronaler Netze für komplexe Aufgaben (Bild-, Spracherkennung).</li><li><strong>Natürliche Sprachverarbeitung (NLP):</strong> KI-Methoden zum Verstehen und Generieren menschlicher Sprache.</li></ul><p>Moderne KI, insbesondere Deep Learning, hat beeindruckende Fortschritte in Bereichen erzielt, die früher als Domäne menschlicher Kognition galten.</p></div>",
         "anwendbarkeit": "<div class=\"space-y-4\"><h3 class=\"text-xl font-semibold mb-2\">Ethische Implikationen von KI in Diagnostik & Therapie</h3><p>Der Einsatz von KI im Gesundheitswesen und in der Psychologie birgt grosses Potenzial, aber auch erhebliche ethische Herausforderungen:</p><ul class=\"list-disc list-inside space-y-2 pl-4\"><li><strong>Bias & Diskriminierung:</strong> Wenn Trainingsdaten unausgewogen sind, kann die KI Vorurteile lernen und verstärken (z.B. bei der Diagnose bestimmter Gruppen).</li><li><strong>Fehlende Transparenz ('Black Box'):</strong> Es ist oft unklar, wie komplexe KI-Modelle zu ihren Entscheidungen kommen, was die Überprüfung und Verantwortlichkeit erschwert.</li><li><strong>Verantwortlichkeit bei Fehlern:</strong> Wer haftet, wenn eine KI-Diagnose falsch ist oder eine KI-Therapieempfehlung schadet?</li><li><strong>Datenschutz & Vertraulichkeit:</strong> KI benötigt sensible Gesundheitsdaten. Wie wird deren Schutz gewährleistet?</li><li><strong>Menschlicher Kontakt:</strong> Kann und soll KI den menschlichen Therapeuten ersetzen? Verlust von Empathie und der therapeutischen Beziehung.</li><li><strong>Autonomie des Patienten/Klienten:</strong> Wie wird sichergestellt, dass KI-Empfehlungen die Autonomie nicht untergraben?</li></ul><p>Ein verantwortungsvoller Einsatz erfordert sorgfältige Prüfung, Regulierung und die Beibehaltung menschlicher Aufsicht.</p></div>",
@@ -2265,7 +2351,62 @@
   }
 
 
-}
+},
+
+"profilePage": {
+    "fallbackError": "Abo-Details konnten nicht geladen werden.",
+    "paymentSuccess": "🎉 Danke für dein Abonnement! Deine Zahlung war erfolgreich.",
+    "title": "Profil",
+    "progressCard": {
+      "title": "Studienfortschritt",
+      "viewModulesLink": "Module ansehen/abhaken",
+      "startExamLink": "Grosse Prüfung starten"
+    },
+    "subscriptionCard": {
+      "title": "Abonnement-Status",
+      "loading": "Lade Abo-Details...",
+      "statusLabel": "Status:",
+      "status": {
+        "active": "Premium Aktiv",
+        "none": "Kein Premium"
+      },
+      "planLabel": "Aktueller Plan:",
+      "plan": {
+        "monthly": "Monats-Abo",
+        "yearly": "Jahres-Abo"
+      },
+      "nextPaymentLabel": "Nächste Zahlung:",
+      "cancelledMessage": "Dein Abo ist gekündigt und endet am {date}",
+      "reactivateButton": "Abo reaktivieren",
+      "cancelButton": "Abonnement kündigen",
+      "noSubscription": "Wähle einen Plan, um vollen Zugriff zu erhalten.",
+      "subscribeButton": "Abonnieren"
+    },
+    "stripeButton": {
+      "loading": "Lade...",
+      "priceMonthly": "20 CHF / Monat",
+      "priceYearly": "200 CHF / Jahr",
+      "checkoutError": "Ein Fehler ist aufgetreten: {error}",
+      "unknownError": "Unbekannter Fehler"
+    },
+    "cancelModal": {
+      "title": "Abonnement kündigen?",
+      "confirmation": "Bist du sicher? Dein Abonnement bleibt bis zum Ende des aktuellen Abrechnungszeitraums am {date} aktiv.",
+      "buttonCancel": "Abbrechen",
+      "buttonConfirm": "Ja, kündigen",
+      "buttonLoading": "Wird gekündigt..."
+    }
+  },
+
+  "TopBar": {
+    "startseite": "Startseite",
+    "module": "Module",
+    "dashboard": "Dashboard",
+    "quellen": "Quellen",
+    "profil": "Profil",
+    "abmelden": "Abmelden",
+    "anmelden": "Anmelden"
+  }
 }
 
 

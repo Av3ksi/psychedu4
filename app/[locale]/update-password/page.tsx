@@ -1,7 +1,7 @@
 // app/[locale]/update-password/page.tsx
 'use client';
 
-import { useState } from 'react'; // useEffect wurde entfernt
+import { useState, useEffect } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useRouter } from 'next/navigation';
 
@@ -14,9 +14,45 @@ export default function UpdatePasswordPage() {
   const [success, setSuccess] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  // Der gesamte useEffect-Block wurde entfernt.
-  // Dein AuthContext übernimmt das Setzen der Session automatisch,
-  // indem er den Token aus der URL-Hash liest.
+  // NEUES STATE: Verfolgt, ob die Session aus der URL geladen wurde
+  const [isSessionReady, setIsSessionReady] = useState(false);
+
+  // Der useEffect-Hook ist wieder da und verbessert.
+  // Er liest den Token aus der URL und erstellt die temporäre Sitzung.
+  useEffect(() => {
+    // Wir erstellen eine async-Funktion innerhalb des Hooks,
+    // damit wir 'await' verwenden können.
+    const setSessionFromUrl = async () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const hashParams = new URLSearchParams(hash.substring(1));
+        const accessToken = hashParams.get('access_token');
+        const refreshToken = hashParams.get('refresh_token');
+        const type = hashParams.get('type');
+
+        if (type === 'recovery' && accessToken) {
+          // Warten, bis die Session vollständig gesetzt ist
+          const { error } = await supabase.auth.setSession({
+            access_token: accessToken,
+            refresh_token: refreshToken || '',
+          });
+
+          if (error) {
+            setError('Failed to set session. The link might be expired or invalid.');
+          } else {
+            // Erst jetzt ist es sicher, das Passwort-Update zu erlauben
+            setIsSessionReady(true);
+          }
+        } else {
+          setError('Invalid recovery link. Please try again.');
+        }
+      } else {
+        setError('No recovery information found in URL. The link may be broken.');
+      }
+    };
+
+    setSessionFromUrl();
+  }, [supabase.auth]); // Die Abhängigkeit ist korrekt
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,8 +60,6 @@ export default function UpdatePasswordPage() {
       setError('Passwords do not match');
       return;
     }
-    
-    // Du kannst hier auch eine Längenprüfung hinzufügen
     if (newPassword.length < 6) {
       setError('Password must be at least 6 characters long');
       return;
@@ -35,8 +69,8 @@ export default function UpdatePasswordPage() {
     setError('');
 
     try {
-      // Da der AuthContext die Session bereits aus der URL geladen hat,
-      // funktioniert dieser Aufruf jetzt wie erwartet.
+      // Dieser Aufruf funktioniert jetzt, da wir dank 'isSessionReady'
+      // wissen, dass die Authentifizierung vorhanden ist.
       const { error } = await supabase.auth.updateUser({
         password: newPassword
       });
@@ -46,12 +80,12 @@ export default function UpdatePasswordPage() {
       setSuccess(true);
       // Redirect to login after successful password update
       setTimeout(() => {
-        router.push('/login'); // Stelle sicher, dass '/login' deine korrekte Login-Route ist
-      }, 3000); // 3 Sekunden warten, damit der User die Nachricht sieht
+        router.push('/login');
+      }, 3000);
     } catch (error) {
       setError(error instanceof Error ? error.message : 'Failed to update password');
     } finally {
-      setIsLoading(false);
+      setIsLoading(false); // Dieser Block wird jetzt zuverlässig erreicht
     }
   };
 
@@ -79,7 +113,8 @@ export default function UpdatePasswordPage() {
           <form onSubmit={handleSubmit} className="mt-8 space-y-6">
             <div className="space-y-4">
               <div>
-                <label htmlFor="newPassword" 
+                <label 
+                  htmlFor="newPassword" 
                   className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
                 >
                   New Password
@@ -97,7 +132,8 @@ export default function UpdatePasswordPage() {
                 />
               </div>
               <div>
-                <label htmlFor="confirmPassword" 
+                <label 
+                  htmlFor="confirmPassword" 
                   className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
                 >
                   Confirm Password
@@ -117,10 +153,12 @@ export default function UpdatePasswordPage() {
             </div>
             <button
               type="submit"
-              disabled={isLoading}
+              // WICHTIGE ÄNDERUNG: Button ist deaktiviert, während die Session lädt ODER updatet
+              disabled={isLoading || !isSessionReady}
               className="w-full flex justify-center py-2 px-4 border border-transparent rounded-lg shadow-sm text-white bg-primary-darker hover:bg-blue-700 disabled:opacity-50"
             >
-              {isLoading ? 'Updating...' : 'Update Password'}
+              {/* Besserer Lade-Text */}
+              {!isSessionReady ? 'Loading Session...' : isLoading ? 'Updating...' : 'Update Password'}
             </button>
           </form>
         )}
