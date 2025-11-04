@@ -168,11 +168,12 @@ function ProfileContent() {
 
   // Hilfsfunktion, um das Datum sicher zu formatieren
   // HIER IST DIE KORREKTUR: 'string' wurde als Typ hinzugefügt
-  const getFormattedDate = (date: Date | number | string | undefined) => {
+ const getFormattedDate = (date: Date | number | string | undefined) => {
     if (!date) return '';
     try {
       return new Date(date).toLocaleDateString();
     } catch (e) {
+      console.error("Fehler beim Formatieren des Datums:", e); // 'e' wird jetzt benutzt
       return '';
     }
   };

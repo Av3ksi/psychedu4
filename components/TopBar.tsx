@@ -6,12 +6,10 @@ import { LogOut, User, BookOpen, FileText, Home, Menu, X } from 'lucide-react';
 // --- NEUE IMPORTS: useState, useEffect, useRef ---
 import { useState, useEffect, useRef } from 'react';
 // --- ENDE NEUE IMPORTS ---
-import { useSubscription } from '@/hooks/useSubscription';
 import { useTranslations } from 'next-intl';
 
 export default function TopBar() {
   const { user, signOut } = useAuth();
-  const { subscription } = useSubscription();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const t = useTranslations('TopBar');
