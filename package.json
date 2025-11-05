@@ -9,8 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ai-sdk/google-vertex": "^3.0.58",
     "@ai-sdk/openai": "^2.0.60",
-    "@ai-sdk/react": "^2.0.86",
+    "@ai-sdk/react": "^2.0.87",
     "@floating-ui/react": "^0.27.4",
     "@headlessui/react": "^2.2.0",
     "@stripe/mcp": "^0.2.1",
@@ -19,7 +20,7 @@
     "@supabase/supabase-js": "^2.47.10",
     "@types/stripe": "^8.0.416",
     "@vercel/analytics": "^1.4.1",
-    "ai": "^5.0.86",
+    "ai": "^5.0.87",
     "axios": "^1.7.9",
     "framer-motion": "^12.4.3",
     "lodash": "^4.17.21",

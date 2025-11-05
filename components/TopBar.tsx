@@ -14,7 +14,7 @@ export default function TopBar() {
   const pathname = usePathname();
   const t = useTranslations('TopBar');
 
-  // --- NEUER CODE: Scroll-Verhalten ---
+    // --- NEUER CODE: Scroll-Verhalten ---
   const [isVisible, setIsVisible] = useState(true);
   const lastScrollY = useRef(0);
 
@@ -101,9 +101,10 @@ export default function TopBar() {
     // --- MODIFIZIERTES NAV-ELEMENT ---
     // Fügt transition-transform, duration-300 und die translate-y Klassen hinzu
     <nav
-      className={`sticky top-0 z-50 bg-white dark:bg-neutral-dark border-b border-slate-200 dark:border-slate-700 p-4 transition-transform duration-300 ease-in-out ${
-        isVisible ? 'translate-y-0' : '-translate-y-full'
-      }`}
+  className={`sticky top-0 z-50 bg-white dark:bg-neutral-dark border-b border-slate-200 dark:border-slate-700 p-4 ${
+    isVisible ? 'translate-y-0' : '-translate-y-full'
+  } h-17`} // <-- HÖHE HINZUGEFÜGT
+
     >
     {/* --- ENDE MODIFIZIERTES NAV-ELEMENT --- */}
       <div className="max-w-7xl mx-auto flex justify-between items-center">
