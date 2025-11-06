@@ -1,23 +1,61 @@
 // app/api/chat/route.ts
-import { createVertex } from '@ai-sdk/google-vertex'; // KORREKTUR: Name geändert
-import { streamText } from 'ai';
-
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 
 export async function POST(req: Request) {
-  const { messages } = await req.json();
+  try {
+    const { messages } = await req.json();
+    
+    const userMessages = messages.filter((m: { role: string; content: string }) => 
+      m.role === 'user' && m.content.trim()
+    );
+    const lastMessage = userMessages[userMessages.length - 1]?.content || '';
+    
+    console.log('User message:', lastMessage);
 
-  const vertex = createVertex({ // KORREKTUR: Name geändert
-    project: process.env.GOOGLE_PROJECT_ID,
-    location: process.env.GOOGLE_LOCATION,
-    // API Key wird automatisch aus .env.local gelesen
-  });
+    // Verwende gemini-2.5-flash mit v1beta API
+    const response = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.GOOGLE_GENERATIVE_AI_API_KEY}`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          contents: [
+            {
+              parts: [{ text: lastMessage }],
+            },
+          ],
+        }),
+      }
+    );
 
-  const result = await streamText({
-    model: vertex('gemini-1.5-flash-latest'),
-    messages,
-    system: 'Du bist "Psychedu Assistent", ein hilfreicher Bot auf einer Lernplattform für Psychologie. Antworte freundlich und informativ auf Fragen zur Psychologie.',
-  });
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error('Google AI Error:', errorText);
+      throw new Error(`Google AI API error: ${response.status}`);
+    }
 
-  return result.toTextStreamResponse();
+    const data = await response.json();
+    const aiResponse = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Keine Antwort erhalten.';
+    
+    console.log('AI Response:', aiResponse);
+
+    return new Response(aiResponse, {
+      headers: {
+        'Content-Type': 'text/plain',
+      },
+    });
+
+  } catch (error) {
+    console.error('Chat API Error:', error);
+    
+    return new Response(
+      'Entschuldigung, es gab einen Fehler. Bitte versuche es erneut.', 
+      { 
+        status: 500,
+        headers: { 'Content-Type': 'text/plain' }
+      }
+    );
+  }
 }

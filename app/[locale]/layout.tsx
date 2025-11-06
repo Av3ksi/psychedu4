@@ -8,7 +8,7 @@ import ProtectedRoute from "@/contexts/ProtectedRoute";
 import { Analytics } from "@vercel/analytics/react";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import Script from "next/script";
+import ChatBot from "@/components/ChatBot"; // <-- NEU: ChatBot importieren
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -21,12 +21,11 @@ export default async function LocaleLayout({
   params,
 }: LayoutProps<"/[locale]">) {
   const { locale } = await params;
-
+  
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
 
-  // JSON-Übersetzungen manuell laden
   let messages;
   try {
     messages = (await import(`../../messages/${locale}.json`)).default;
@@ -35,33 +34,18 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  // Locale für statisches Rendering setzen
   setRequestLocale(locale);
 
   return (
     <html lang={locale} className="dark">
-      <head>
-        {/* --- Botpress Chatbot Integration --- */}
-        <Script
-          src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"
-          strategy="afterInteractive"
-        />
-        <Script
-          src="https://files.bpcontent.cloud/2025/11/03/19/20251103190902-64ZUPOTP.js"
-          strategy="afterInteractive"
-          defer
-        />
-      </head>
-
-
       <body className={geist.className}>
         <Analytics mode="auto" />
-
         <AuthProvider>
           <NextIntlClientProvider messages={messages}>
             <ProtectedRoute>
               <TopBar />
               <main>{children}</main>
+              <ChatBot /> {/* <-- NEU: ChatBot hinzufügen */}
             </ProtectedRoute>
           </NextIntlClientProvider>
         </AuthProvider>

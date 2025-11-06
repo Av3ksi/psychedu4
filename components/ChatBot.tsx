@@ -1,20 +1,73 @@
 // components/ChatBot.tsx
 'use client';
-
-import { useChat, type Message } from '@ai-sdk/react'; // Dieser Import ist korrekt
 import { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X, Send } from 'lucide-react';
 
+type Message = {
+  id: string;
+  role: 'user' | 'assistant';
+  content: string;
+};
+
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
-  
-  // Diese Namen (handle...) sind korrekt für 'ai/react'
-  const { messages, input, handleInputChange, handleSubmit } = useChat(); 
+  const [inputValue, setInputValue] = useState('');
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!inputValue.trim() || isLoading) return;
+
+    const userMessage: Message = {
+      id: Date.now().toString(),
+      role: 'user',
+      content: inputValue,
+    };
+
+    setMessages((prev) => [...prev, userMessage]);
+    setInputValue('');
+    setIsLoading(true);
+
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          messages: [...messages, userMessage],
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`API Fehler: ${response.status}`);
+      }
+
+      const aiResponse = await response.text();
+      
+      setMessages((prev) => [...prev, {
+        id: (Date.now() + 1).toString(),
+        role: 'assistant',
+        content: aiResponse,
+      }]);
+
+    } catch (error) {
+      console.error('Chat error:', error);
+      setMessages((prev) => [...prev, {
+        id: (Date.now() + 1).toString(),
+        role: 'assistant',
+        content: 'Entschuldigung, es gab einen Fehler. Bitte versuche es erneut.',
+      }]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   if (!isOpen) {
     return (
@@ -29,7 +82,7 @@ export default function ChatBot() {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 w-full max-w-md h-[70vh] bg-white dark:bg-neutral-dark rounded-lg shadow-xl flex flex-col border dark:border-slate-700 animate-in slide-in-from-bottom-5 duration-300 ease-out">
+    <div className="fixed bottom-6 right-6 z-50 w-full max-w-md h-[70vh] bg-white dark:bg-neutral-dark rounded-lg shadow-xl flex flex-col border dark:border-slate-700">
       {/* Header */}
       <div className="flex justify-between items-center p-4 border-b dark:border-slate-700">
         <h3 className="font-bold text-lg dark:text-white">Psychedu Assistent</h3>
@@ -50,10 +103,10 @@ export default function ChatBot() {
           </p>
         )}
         
-        {messages.map((m: Message) => (
+        {messages.map((m) => (
           <div key={m.id} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
             <div
-              className={`max-w-[80%] p-3 rounded-lg ${
+              className={`max-w-[80%] p-3 rounded-lg whitespace-pre-wrap ${
                 m.role === 'user'
                   ? 'bg-primary text-white'
                   : 'bg-slate-100 dark:bg-slate-700 dark:text-slate-200'
@@ -63,6 +116,19 @@ export default function ChatBot() {
             </div>
           </div>
         ))}
+        
+        {isLoading && (
+          <div className="flex justify-start">
+            <div className="max-w-[80%] p-3 rounded-lg bg-slate-100 dark:bg-slate-700 dark:text-slate-200">
+              <div className="flex gap-1">
+                <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></span>
+                <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></span>
+                <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></span>
+              </div>
+            </div>
+          </div>
+        )}
+        
         <div ref={messagesEndRef} />
       </div>
 
@@ -70,12 +136,17 @@ export default function ChatBot() {
       <form onSubmit={handleSubmit} className="p-4 border-t dark:border-slate-700">
         <div className="flex items-center gap-2">
           <input
-            value={input}
-            onChange={handleInputChange} 
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
             placeholder="Stell eine Frage..."
             className="flex-1 px-4 py-2 border rounded-full dark:bg-slate-700 dark:border-slate-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"
+            disabled={isLoading}
           />
-          <button type="submit" className="p-3 bg-primary text-white rounded-full hover:bg-primary-dark disabled:opacity-50" disabled={!input}>
+          <button 
+            type="submit" 
+            className="p-3 bg-primary text-white rounded-full hover:bg-primary-dark disabled:opacity-50" 
+            disabled={!inputValue.trim() || isLoading}
+          >
             <Send className="w-5 h-5" />
           </button>
         </div>

@@ -51,7 +51,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-[#0B1120] relative">
       {/* Sticky Navigation */}
-      <nav className="top-18 z-40 bg-white/80 dark:bg-neutral-darker/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-700">
+      <nav className="sticky top-18 z-40 bg-white/80 dark:bg-neutral-darker/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4 overflow-x-auto hide-scrollbar">
             {workflowSectionKeys.map((section, index) => (
