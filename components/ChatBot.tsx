@@ -1,7 +1,10 @@
 // components/ChatBot.tsx
 'use client';
 import { useState, useRef, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { MessageSquare, X, Send } from 'lucide-react';
+import { useAuth } from '@/contexts/AuthContext';
+import { useTranslations } from 'next-intl';
 
 type Message = {
   id: string;
@@ -15,6 +18,10 @@ export default function ChatBot() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  
+  const { user } = useAuth();
+  const pathname = usePathname();
+  const t = useTranslations('chatBot');
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -45,6 +52,16 @@ export default function ChatBot() {
         }),
       });
 
+      if (response.status === 429) {
+        const errorText = await response.text();
+        setMessages((prev) => [...prev, {
+          id: (Date.now() + 1).toString(),
+          role: 'assistant',
+          content: errorText,
+        }]);
+        return;
+      }
+
       if (!response.ok) {
         throw new Error(`API Fehler: ${response.status}`);
       }
@@ -62,19 +79,27 @@ export default function ChatBot() {
       setMessages((prev) => [...prev, {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        content: 'Entschuldigung, es gab einen Fehler. Bitte versuche es erneut.',
+        content: t('errorMessage'),
       }]);
     } finally {
       setIsLoading(false);
     }
   };
 
+  // Prüfe, ob wir auf einer Modul-Detailseite sind
+  const isModulePage = pathname ? /\/modules\/\d+/.test(pathname) : false;
+
+  // Zeige ChatBot nur für eingeloggte User UND auf Modul-Seiten
+  if (!user || !isModulePage) {
+    return null;
+  }
+
   if (!isOpen) {
     return (
       <button
         onClick={() => setIsOpen(true)}
         className="fixed bottom-6 right-6 z-50 p-4 bg-primary text-white rounded-full shadow-lg hover:bg-primary-dark transition-transform hover:scale-105"
-        aria-label="Chat öffnen"
+        aria-label={t('openChat')}
       >
         <MessageSquare className="w-6 h-6" />
       </button>
@@ -85,11 +110,11 @@ export default function ChatBot() {
     <div className="fixed bottom-6 right-6 z-50 w-full max-w-md h-[70vh] bg-white dark:bg-neutral-dark rounded-lg shadow-xl flex flex-col border dark:border-slate-700">
       {/* Header */}
       <div className="flex justify-between items-center p-4 border-b dark:border-slate-700">
-        <h3 className="font-bold text-lg dark:text-white">Psychedu Assistent</h3>
+        <h3 className="font-bold text-lg dark:text-white">{t('title')}</h3>
         <button 
           onClick={() => setIsOpen(false)} 
           className="dark:text-slate-300 hover:dark:text-white hover:bg-slate-100 dark:hover:bg-slate-700 rounded-full p-1"
-          aria-label="Chat schließen"
+          aria-label={t('closeChat')}
         >
           <X className="w-5 h-5" />
         </button>
@@ -99,7 +124,7 @@ export default function ChatBot() {
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.length === 0 && (
           <p className="text-sm text-center text-slate-500 dark:text-slate-400">
-            Hallo! Frag mich alles über Psychologie.
+            {t('welcomeMessage')}
           </p>
         )}
         
@@ -138,7 +163,7 @@ export default function ChatBot() {
           <input
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            placeholder="Stell eine Frage..."
+            placeholder={t('inputPlaceholder')}
             className="flex-1 px-4 py-2 border rounded-full dark:bg-slate-700 dark:border-slate-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"
             disabled={isLoading}
           />
@@ -146,6 +171,7 @@ export default function ChatBot() {
             type="submit" 
             className="p-3 bg-primary text-white rounded-full hover:bg-primary-dark disabled:opacity-50" 
             disabled={!inputValue.trim() || isLoading}
+            aria-label={t('sendMessage')}
           >
             <Send className="w-5 h-5" />
           </button>

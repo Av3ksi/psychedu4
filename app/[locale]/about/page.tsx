@@ -20,6 +20,7 @@ export default function AboutPage() {
           </Link>
         </div>
 
+        {/* Dein bestehender Inhalts-Container */}
         <div className="bg-white dark:bg-neutral-dark border border-slate-200 dark:border-slate-700 rounded-lg shadow p-8 prose prose-lg dark:prose-invert max-w-none">
           {/* Übersetze die Titel und Absätze */}
           <h1 className="text-3xl font-bold mb-6">{t('mainTitle')}</h1>
@@ -57,6 +58,21 @@ export default function AboutPage() {
             </li>
           </ul>
         </div>
+
+        {/* --- NEUER BUTTON-ABSCHNITT --- */}
+        <div className="mt-10 flex justify-center">
+          <a
+            href="/Impressum.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary no-underline"
+          >
+            {/* Verwendet den neuen JSON-Schlüssel */}
+            {t('legalButton')}
+          </a>
+        </div>
+        {/* --- ENDE NEUER BUTTON-ABSCHNITT --- */}
+
       </div>
     </div>
   );

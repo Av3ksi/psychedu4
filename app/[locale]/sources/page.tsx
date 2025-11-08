@@ -1,52 +1,82 @@
+// app/[locale]/sources/page.tsx
 'use client';
 
 import { Link } from '@/i18n/navigation';
 import { ArrowLeft } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function SourcesPage() {
+  const t = useTranslations('sourcesPage');
+  const openstaxUrl = "https://openstax.org/books/psychology-2e/pages/1-introduction";
+  const openstaxOrgUrl = "https://openstax.org";
+
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-[#0B1120]">
       <div className="max-w-4xl mx-auto p-6 md:p-8">
         <div className="mb-8">
           <Link href="/" className="flex items-center gap-2 text-primary hover:underline">
             <ArrowLeft className="w-5 h-5" />
-            <span>Zurück zur Startseite</span>
+            <span>{t('backLink')}</span>
           </Link>
         </div>
-        
-        <div className="bg-white dark:bg-neutral-dark border border-slate-200 dark:border-slate-700 rounded-lg shadow p-8 prose prose-lg dark:prose-invert max-w-none">
-          <h1 className="text-3xl font-bold mb-6">Quellenangabe und Lizenzinformationen</h1>
+
+        {/* --- HIER IST DIE ÄNDERUNG: 'prose'-Klassen wurden entfernt --- */}
+        <div className="bg-white dark:bg-neutral-dark border border-slate-200 dark:border-slate-700 rounded-lg shadow p-8">
           
-          <p>
-            Die Lerninhalte auf Psychedu basieren massgeblich auf dem hervorragenden, frei verfügbaren Lehrbuch <strong>&quotPsychology&quot</strong> von OpenStax. Wir sind OpenStax zutiefst dankbar für die Bereitstellung dieser hochwertigen Bildungsressource, die es uns ermöglicht, psychologisches Wissen zugänglich zu machen.
+          {/* Manuelle Tailwind-Klassen für Abstände und Schriftgrößen hinzugefügt */}
+          <h1 className="text-3xl font-bold mb-6 text-slate-900 dark:text-white">{t('heading')}</h1>
+          <p className="text-lg text-slate-700 dark:text-slate-300 mb-6">{t('intro')}</p>
+
+          <h2 className="text-2xl font-semibold mt-8 mb-4 text-slate-900 dark:text-white">{t('licenseTitle')}</h2>
+          <p className="text-lg text-slate-700 dark:text-slate-300 mb-6">
+            {t.rich('licenseIntro', {
+              strong: (chunks) => <strong className="font-semibold">{chunks}</strong>
+            })}
           </p>
 
-          <h2 className="text-2xl font-semibold mt-8">Lizenz und Namensnennung</h2>
-          <p>
-            Das Originalwerk von OpenStax ist unter der{' '}
-            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-              Creative Commons Attribution License v4.0 (CC BY)
-            </a>{' '}
-            lizenziert. Gemäss den Lizenzbestimmungen geben wir die folgende, von OpenStax geforderte Namensnennung an:
-          </p>
+          <h3 className="text-xl font-semibold mt-6 mb-4 text-slate-900 dark:text-white">{t('citationTitle')}</h3>
+          <ul className="list-disc pl-5 space-y-2 text-lg text-slate-700 dark:text-slate-300">
+            <li>
+              {t.rich('citationAuthors', {
+                strong: (chunks) => <strong className="font-semibold">{chunks}</strong>
+              })}
+            </li>
+            <li>
+              {t.rich('citationPublisher', {
+                strong: (chunks) => <strong className="font-semibold">{chunks}</strong>
+              })}
+            </li>
+            <li>
+              {t.rich('citationBookTitle', {
+                strong: (chunks) => <strong className="font-semibold">{chunks}</strong>
+              })}
+            </li>
+            <li>
+              {t.rich('citationDate', {
+                strong: (chunks) => <strong className="font-semibold">{chunks}</strong>
+              })}
+            </li>
+            <li>
+              {t.rich('citationLocation', {
+                strong: (chunks) => <strong className="font-semibold">{chunks}</strong>
+              })}
+            </li>
+            <li>
+              {t.rich('citationUrl', {
+                strong: (chunks) => <strong className="font-semibold">{chunks}</strong>
+              })}
+              {/* Manuelles Styling für den Link */}
+              <a href={openstaxUrl} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline break-all ml-1">{openstaxUrl}</a>
+            </li>
+          </ul>
 
-          <blockquote className="border-l-4 border-primary pl-4 italic text-slate-600 dark:text-slate-400 not-italic">
-            <h3 className="font-semibold text-slate-900 dark:text-white !mt-0">Zitierinformationen</h3>
-            <ul className="list-none p-0 my-2">
-              <li><strong>Autoren:</strong> Rose M. Spielman, William J. Jenkins, Marilyn D. Lovett</li>
-              <li><strong>Herausgeber/Webseite:</strong> OpenStax</li>
-              <li><strong>Buchtitel:</strong> Psychology 2e</li>
-              <li><strong>Veröffentlichungsdatum:</strong> 22. Oktober 2020</li>
-              <li><strong>Ort:</strong> Houston, Texas</li>
-              <li><strong>Buch-URL:</strong> <a href="https://openstax.org/books/psychology-2e" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://openstax.org/books/psychology-2e/pages/1-introduction</a></li>
-            </ul>
-          </blockquote>
-
-          <h2 className="text-2xl font-semibold mt-8">Vorgenommene Änderungen</h2>
-          <p>
-            Für die Psychedu-Plattform wurden die Inhalte aus &quotPsychology 2e&quot kuratiert, in eine modulare Struktur überführt, ins Deutsche übersetzt und durch interaktive Übungsformate ergänzt, um ein optimiertes Lernerlebnis zu schaffen. Wir ermutigen alle Nutzer, das vollständige Originalwerk, das kostenlos auf{' '}
-            <a href="https://openstax.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">openstax.org</a>{' '}
-            zugänglich ist, ebenfalls zu konsultieren.
+          <h2 className="text-2xl font-semibold mt-10 mb-4 text-slate-900 dark:text-white">{t('changesTitle')}</h2>
+          <p className="text-lg text-slate-700 dark:text-slate-300">
+            {t.rich('changesBody', {
+              strong: (chunks) => <strong className="font-semibold">{chunks}</strong>,
+              // Manuelles Styling für den Link
+              link: (chunks) => <a href={openstaxOrgUrl} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{chunks}</a>
+            })}
           </p>
         </div>
       </div>
