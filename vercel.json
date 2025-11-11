@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "https://psychedu.ch/:path*",
+      "destination": "https://psychedu.school/:path*",
+      "permanent": true
+    },
+    {
+      "source": "https://www.psychedu.ch/:path*",
+      "destination": "https://psychedu.school/:path*",
+      "permanent": true
+    }
+  ]
+}
