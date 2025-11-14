@@ -2,32 +2,39 @@ import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
 import { NextResponse } from 'next/server';
 
-export async function GET(request: Request) {
+export async function GET(
+  request: Request,
+  { params }: { params: { locale: string } }
+) {
   console.log('AuthCallback: Processing callback');
   const requestUrl = new URL(request.url);
   const code = requestUrl.searchParams.get('code');
-  const next = requestUrl.searchParams.get('next');
+  
+  // Locale aus Route-Parametern
+  const locale = params.locale || 'de';
 
-  if (code) {
+  if (!code) {
+    console.log('AuthCallback: No code present, redirecting to login');
+    return NextResponse.redirect(new URL(`/${locale}/login`, requestUrl.origin));
+  }
+
+  try {
     console.log('AuthCallback: Exchanging code for session');
     const supabase = createRouteHandlerClient({ cookies });
     const { error } = await supabase.auth.exchangeCodeForSession(code);
-    
+
     if (error) {
-      console.error('AuthCallback: Error:', error);
-      return NextResponse.redirect(new URL('/login?error=auth-failed', requestUrl.origin));
+      console.error('AuthCallback: Error:', error.message);
+      return NextResponse.redirect(
+        new URL(`/${locale}/login?error=auth-failed`, requestUrl.origin)
+      );
     }
 
-    // Redirect to the next page if provided, otherwise go to home
-    if (next) {
-      console.log('AuthCallback: Redirecting to:', next);
-      return NextResponse.redirect(new URL(next, requestUrl.origin));
-    }
+    console.log('AuthCallback: Success, redirecting to dashboard');
+    return NextResponse.redirect(new URL(`/${locale}/dashboard`, requestUrl.origin));
 
-    console.log('AuthCallback: Success, redirecting to home');
-    return NextResponse.redirect(new URL('/dashboard', requestUrl.origin));
+  } catch (err) {
+    console.error('AuthCallback: Unexpected error:', err);
+    return NextResponse.redirect(new URL(`/${locale}/login?error=unexpected`, requestUrl.origin));
   }
-
-  console.log('AuthCallback: No code present, redirecting to login');
-  return NextResponse.redirect(new URL('/login', requestUrl.origin));
-} 
+}
