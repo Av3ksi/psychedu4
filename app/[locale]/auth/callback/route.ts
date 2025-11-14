@@ -2,13 +2,13 @@ import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
 import { NextResponse } from 'next/server';
 
-export async function GET(
-  request: Request,
-  { params }: { params: { locale: string } }
-) {
+export async function GET(request: Request) {
   const requestUrl = new URL(request.url);
   const code = requestUrl.searchParams.get('code');
-  const locale = params.locale || 'de';
+  
+  // Extrahiere locale aus der URL
+  const pathname = requestUrl.pathname;
+  const locale = pathname.split('/')[1] || 'de';
 
   if (!code) {
     return NextResponse.redirect(new URL(`/${locale}/login`, requestUrl.origin));
